@@ -1,0 +1,109 @@
+:root{
+    /* Theme colors */
+    --primary-color: rgb(253, 253, 255);
+    --tangerine: rgb(255, 72, 0);
+    --text-color: #232323;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.round-input{
+    border-width: 0.1px;
+    font-size: 0.85rem;
+    /* background-color: #fbfbff; */
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+}
+.navbar{
+    height: 2.5rem;
+    font-size: 0.75rem;
+    color: #232323;
+    background-color: #00ffff;
+}
+.navbar a{
+    color: #232323;
+}
+.navbar-toggler{
+    margin-top: 0;
+}
+.navbar-toggler .navbar-toggler-icon{
+    margin-bottom: 5px;
+    display: block;
+    background-color: #000291;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    width: 22px;
+    height:1px;
+}
+.jumbo-con{
+    min-height: 100vh;
+    padding-top: 3px;
+}
+.jumbotron{
+    border-radius: 0.70rem;
+    background-color: #00ffff38;
+    box-shadow: inset;
+    margin-top: 4.4rem;
+    margin-bottom: 4.9rem;
+}
+@media (max-width:576px){
+    .login{
+        padding: 2rem;
+    }
+}
+.feature-icon p{
+    font-size: 0.9rem;
+}
+.redirect{
+    font-size: 0.85rem;
+}
+.coloured-btn{
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+    background-color: #000291;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    color: var(--primary-color);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+.coloured-btn:hover{
+    background-color: transparent;
+    border: 1.3px solid #000291;
+    color: #000291;
+}
+.coloured-btn:focus, .regular-btn:focus{
+    -webkit-box-shadow: none ;
+    -moz-box-shadow: none ;
+    -ms-box-shadow: none ;
+    -o-box-shadow: none ;
+    box-shadow: none;
+}
+.footer-section{
+    height: 2.5rem;
+    right: 0;
+    left: 0;
+    /* top: 94%; */
+    bottom: 0;
+    position: fixed;
+    background-color: #00ffff;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    color: #232323;
+}

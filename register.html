@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bait Dashboard | Registration</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- fontawesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- navigation section -->
+        <nav class="navbar fixed-top navbar-expand-sm ">
+            <a class="navbar-brand font-weight-bold" id="logo" href="index.html"> 
+                <img src="assets/eatout-logo.png" alt="">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item" data-toggle="collapse"  data-target=".navbar-collapse.show">
+                        <a class="nav-link" href="index.html">Licence <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse"  data-target=".navbar-collapse.show" >
+                        <a class="nav-link" href="menu.html">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navigation section end -->
+
+        <div class="jumbo-con d-flex align-items-center">
+            <div class="container">
+                <div class="jumbotron">
+                    <div class="row justify-content-center">
+                        <div class="info-section pl-md-5 col-md-6 px-md-4">
+                            <h3 class="font-weight-bold text-center text-md-left mb-4">Bait Admin</h3>
+                            <div class="info-section-list">
+                                <!-- <h4 class="text-center text-md-left">App Features</h4> -->
+                                <div class="container">
+                                    <div class="feature-icon d-flex">
+                                        <div class="icon-con pr-3">
+                                            <i class=" fas fa-solid fa-lg fa-user"></i>
+                                        </div>
+                                        <div>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt quos possimus suscipit perspiciatis ducimus?</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-icon d-flex">
+                                        <div class="icon-con pr-3">
+                                            <i class="fas fa-lg fa-chart-area"></i>
+                                        </div>
+                                        <div>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt quos possimus suscipit perspiciatis ducimus?</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-icon d-flex">
+                                        <div class="icon-con pr-3">
+                                            <i class="fas fa-lg fa-solid fa-clipboard-list"></i>
+                                        </div>
+                                        <div>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt quos possimus suscipit perspiciatis ducimus?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login col-md-6 col-xl-5 pl-md-5">
+                            <h3 class="font-weight-bold text-center text-md-left ml-md-5 mb-4">Signup</h3>
+                            <form id="Login" class="p-0 ml-md-5">
+                                <div id="username-row" class="form-row">
+                                    <div class="form-group col col-md-9">
+                                        <!-- <label for="fullname">Username:</label> -->
+                                        <input type="text" class="form-control round-input" name="username" placeholder="username"  id="username" required>
+                                    </div>
+                                </div>
+                                <div class="form-row py-md-2">
+                                    <div class="form-group col col-md-9">
+                                        <!-- <label for="fullname">password :</label> -->
+                                        <input type="password" class="form-control round-input" name="password" placeholder="password" id="password" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col col-md-9">
+                                        <!-- <label for="fullname">password :</label> -->
+                                        <input type="password" class="form-control round-input" name="password" placeholder="confirm-password" id="password" required>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="checkbox" value="RememberMe" id="rememberMe">
+                                        <label for="rememberMe">Remember me</label>
+                                    </div>
+                                </div> -->
+                                <div id="submit" class="form-row mt-2">
+                                    <div class="form-group col col-md-9">
+                                        <button type="submit" class="form-control btn coloured-btn font-weight-bold">signup</button>
+                                    </div>
+                                </div>
+                                <div id="submit" class="form-row mt-0">
+                                    <span class="redirect">Already have an account? login <a href="login.html">here</a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer section -->
+        <div class="footer-section pt-2">
+            <!-- <div class="container"></div> -->
+            <div class="d-flex justify-content-center py-auto">
+                <span class="copyright">© Copyright Brian Mwaniki 2022</span>
+            </div>
+        </div>
+        <!-- end of footer section -->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
