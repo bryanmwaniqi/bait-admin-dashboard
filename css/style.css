@@ -1,7 +1,7 @@
 :root{
     /* Theme colors */
     --primary-color: rgb(253, 253, 255);
-    --tangerine: rgb(255, 72, 0);
+    --dark-blue: #000291;
     --text-color: #232323;
 }
 *{
@@ -33,7 +33,7 @@
 .navbar-toggler .navbar-toggler-icon{
     margin-bottom: 5px;
     display: block;
-    background-color: #000291;
+    background-color: var(--dark-blue);
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     -ms-border-radius: 1px;
@@ -61,8 +61,20 @@
 .feature-icon p{
     font-size: 0.9rem;
 }
+.owl-dots .owl-dot {
+    outline: none;
+}
+/* button.owl-dot span{
+    background-color: var(--primary-color) !important;
+} */
+button.owl-dot.active span{
+    background-color: var(--dark-blue) !important;
+}
 .redirect{
     font-size: 0.85rem;
+}
+a.account-redirect{
+    color: var(--dark-blue);
 }
 .coloured-btn{
     -webkit-text-decoration: none;
@@ -70,7 +82,7 @@
     -ms-text-decoration: none;
     -o-text-decoration: none;
     text-decoration: none;
-    background-color: #000291;
+    background-color: var(--dark-blue);
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
@@ -85,8 +97,8 @@
 }
 .coloured-btn:hover{
     background-color: transparent;
-    border: 1.3px solid #000291;
-    color: #000291;
+    border: 1.3px solid var(--dark-blue);
+    color: var(--dark-blue);
 }
 .coloured-btn:focus, .regular-btn:focus{
     -webkit-box-shadow: none ;
@@ -99,11 +111,12 @@
     height: 2.5rem;
     right: 0;
     left: 0;
-    /* top: 94%; */
+ 
     bottom: 0;
     position: fixed;
     background-color: #00ffff;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     font-size: 0.75rem;
     color: #232323;
+    z-index: 1;
 }
