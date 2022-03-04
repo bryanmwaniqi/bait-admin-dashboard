@@ -8,6 +8,9 @@
     margin: 0;
     padding: 0;
 }
+i{
+    color: #3f3f3f;
+}
 .round-input{
     border-width: 0.1px;
     font-size: 0.85rem;
@@ -61,7 +64,7 @@
 .feature-icon p{
     font-size: 0.9rem;
 }
-.owl-dots .owl-dot {
+.owl-dots .owl-dot, button.navbar-toggler {
     outline: none;
 }
 /* button.owl-dot span{
@@ -95,12 +98,26 @@ a.account-redirect{
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
+span.form-icon{
+    position: absolute;
+    margin-left: 1rem;
+    /* height: 2rem; */
+    height:calc(1.5em + .70rem);
+    display: flex;
+    align-items: center;
+  }
+.form-group .form-control {
+    padding-left: 2.375rem;
+}
+.form-control:focus{
+    border-color: var(--dark-blue);
+}
 .coloured-btn:hover{
     background-color: transparent;
     border: 1.3px solid var(--dark-blue);
     color: var(--dark-blue);
 }
-.coloured-btn:focus, .regular-btn:focus{
+.coloured-btn:focus, .regular-btn:focus, .form-control:focus{
     -webkit-box-shadow: none ;
     -moz-box-shadow: none ;
     -ms-box-shadow: none ;
