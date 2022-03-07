@@ -1,8 +1,8 @@
 :root{
     /* Theme colors */
     --primary-color: rgb(253, 253, 255);
-    --dark-blue: #3c39ff;
-    --bg-color: rgb(0,245,255);
+    --dark-blue: #ff0077;
+    --bg-color: #5739ff;
     --text-color: #232323;
 }
 *{
@@ -29,7 +29,7 @@ form i{
     background-color: var(--bg-color);
 }
 .navbar a{
-    color: #232323;
+    color: #fff;
 }
 .navbar-toggler{
     margin-top: 0;
@@ -63,6 +63,10 @@ form i{
 }
 .feature-icon p, #login label{
     font-size: 0.85rem;
+    color: #fff;
+}
+.feature-icon i{
+    color: #fff;
 }
 .owl-dots .owl-dot, button.navbar-toggler {
     outline: none;
@@ -113,8 +117,8 @@ span.form-icon{
 }
 .coloured-btn:hover{
     background-color: transparent;
-    border: 1.3px solid var(--dark-blue);
-    color: var(--dark-blue);
+    border: 1.8px solid var(--dark-blue);
+    color: #fff;
 }
 .coloured-btn:focus, .regular-btn:focus, .form-control:focus{
     -webkit-box-shadow: none ;
