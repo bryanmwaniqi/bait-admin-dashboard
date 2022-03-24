@@ -1,14 +1,19 @@
 :root{
     /* Theme colors */
     --primary-color: rgb(253, 253, 255);
-    --dark-blue: #ff0077;
+    --pink: #ff0077;
     --bg-color: #5739ff;
     --text-color: #232323;
+    --body-color: #EFF2F5;
 }
 *{
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+.body-color{
+    background-color: var(--body-color);
 }
 form i{
     color: #3f3f3f;
@@ -23,10 +28,15 @@ form i{
     border-radius: 50px;
 }
 .navbar{
-    height: 2.5rem;
+    min-height: 2.5rem;
     font-size: 0.75rem;
     color: #232323;
     background-color: var(--bg-color);
+}
+@media (min-width:576px){
+    .navbar{
+        height: 2.7rem;
+    }
 }
 .navbar a{
     color: #fff;
@@ -37,7 +47,7 @@ form i{
 .navbar-toggler .navbar-toggler-icon{
     margin-bottom: 5px;
     display: block;
-    background-color: var(--dark-blue);
+    background-color: var(--pink);
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     -ms-border-radius: 1px;
@@ -75,13 +85,13 @@ button.owl-dot span{
     background-color: var(--primary-color) !important;
 }
 button.owl-dot.active span{
-    background-color: var(--dark-blue) !important;
+    background-color: var(--pink) !important;
 }
 .redirect{
     font-size: 0.85rem;
 }
 a.account-redirect{
-    color: var(--dark-blue);
+    color: var(--pink);
 }
 .coloured-btn{
     -webkit-text-decoration: none;
@@ -94,7 +104,7 @@ a.account-redirect{
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     border-radius: 50px;
-    background-color: var(--dark-blue);
+    background-color: var(--pink);
     color: #fff;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
@@ -117,7 +127,7 @@ span.form-icon{
 }
 .coloured-btn:hover{
     background-color: transparent;
-    border: 1.8px solid var(--dark-blue);
+    border: 1.8px solid var(--pink);
     color: #fff;
 }
 .coloured-btn:focus, .regular-btn:focus, .form-control:focus{
@@ -131,7 +141,7 @@ span.form-icon{
     display: none;
 }
 .checkbox-group:hover > .custom-checkbox, .default-checkbox:checked + .custom-checkbox{
-    border-color: var(--dark-blue);
+    border-color: var(--pink);
 }
 .custom-checkbox{
     width: 0.8rem;
@@ -149,7 +159,7 @@ span.form-icon{
     font-weight: 900;
     content: "\f14a";
     display: inline-block;
-    color: var(--dark-blue);
+    color: var(--pink);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -172,8 +182,12 @@ span.form-icon{
     border: 0;
     background-color: #fff;
 }
+/* sidebar styling */
+#sidebar  {
+    background-color: var(--bg-color);
+}
 .footer-section{
-    height: 2.5rem;
+    height: 2.7rem;
     right: 0;
     left: 0;
     bottom: 0;
