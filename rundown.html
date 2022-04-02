@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bait Dashboard | Registration</title>
+        <title>ecommerce Dashboard</title>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -25,6 +25,49 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="body-color">
+
+        <!-- main navbar section -->
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand-sm background-light bg-white">
+            <!-- sm screen and below sidemenu toggler -->
+            <button id="sideMenuToggler" class="navbar-toggler d-sm-none" type="button">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-sm-none" id="logo" href="offers-landing.html"> 
+                <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
+                <i class="fab fa-lg fa-html5"></i>
+                <span class="ml-1">Bait Logo</span>
+            </a>
+            <ul class="navbar-nav toggler-nav active mt-lg-0">
+                <li class="nav-item ml-4 logo " >
+                    <label class="sidemenu-toggle my-auto" for="sidemenu-toggler">
+                        <input class="toggle-input" type="checkbox" checked id="sidemenu-toggler">
+                        <div class="toggle-bg"></div>
+                    </label>
+                </li>
+            </ul>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link notification" data-toggle="dropdown" aria-expanded="false">
+                            <i class="far fa-bell"></i>
+                            <span class="badge badge-pill notification-badge text-lowercase">4</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse"  data-target=".navbar-collapse.show">
+                        <a class="nav-link" href="#">Licence <span class="sr-only"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of main navbar section -->
         
         <!-- sidebar and main content -->
         <div class="wrapper d-flex">
@@ -32,70 +75,79 @@
                 <div class="sidemenu pl-2">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                <i class="fas fa-lg fa-location-arrow"></i>
-                                <!-- <span class="">Bait</span> -->
+                            <a class="nav-link" href="#">
+                                <i class="fab fa-html5"></i>
+                                <span class="menu-link">Bait Logo</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                <i class="fas fa-lg fa-md fa-tachometer-alt"></i> 
-                                <!-- <span class="">Dashboard</span> -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-tachometer-alt"></i> 
+                                <span class="menu-link">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-md fa-clipboard-list"></i> 
-                                <!-- <span class="">Products</span>  -->
+                                <i class="fas fa-md fa-clipboard-list"></i> 
+                                <span class="menu-link">Products</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-md fa-file-invoice-dollar"></i> 
-                                <!-- <span class="">Orders</span>  -->
+                                <i class="fas fa-md fa-file-invoice-dollar"></i> 
+                                <span class="menu-link">Orders</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-md fa-users"></i> 
-                                <!-- <span class="">Customers</span>  -->
+                                <i class="fas fa-md fa-users"></i> 
+                                <span class="menu-link">Customers</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-md fa-chart-area"></i> 
-                                <!-- <span class="">Reports</span>  -->
+                                <i class="fas fa-md fa-chart-area"></i> 
+                                <span class="menu-link">Reports</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-md fa-money-bill"></i> 
-                                <!-- <span class="">sales</span>  -->
+                                <i class="fas fa-md fa-money-bill"></i> 
+                                <span class="menu-link">sales</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-shopping-cart"></i>
-                                <!-- <span class="">vendors</span>  -->
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="menu-link">vendors</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-md fa-cog" aria-hidden="true"></i> 
-                                <!-- <span class="">settings</span>  -->
+                                <i class="fas fa-md fa-cog" aria-hidden="true"></i> 
+                                <span class="menu-link">settings</span> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-store"></i>
-                                <!-- <span class="">Settings</span>  -->
+                                <i class="fas fa-store"></i>
+                                <span class="menu-link">Shop</span> 
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div id="main">
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <!-- <div class="d-flex justify-content-between">
+                        <div class="col-sm-8 bg-white">
+                            sales
+                        </div>
+                        <div class="col-sm-4 bg-dark">
+                            sales
+                        </div>
+                    </div> -->
+                </div>
             </div>
         </div>
         <!-- Optional JavaScript -->

@@ -32,17 +32,19 @@ form i{
     border-radius: 50px;
 }
 .navbar{
-    min-height: 2.5rem;
     font-size: 0.75rem;
     color: #232323;
     background-color: var(--bg-color);
 }
+.intro-navbar{
+    min-height: 2.5rem;
+}
 @media (min-width:576px){
-    .navbar{
+    .intro-navbar{
         height: 2.7rem;
     }
 }
-.navbar a{
+.intro-navbar a{
     color: #fff;
 }
 .navbar-toggler{
@@ -186,35 +188,125 @@ span.form-icon{
     border: 0;
     background-color: #fff;
 }
+#main-navbar{
+    /* padding: 0.1rem 0.5rem; */
+    /* min-height: 3.5rem; */
+}
+#main-navbar a{
+    color: var(--bg-color);
+}
+#main-navbar .navbar-toggler .navbar-toggler-icon{
+    background-color: var(--bg-color);
+}
+#main-navbar .toggler-nav{
+    margin-left: 2.5rem;
+    transition: all ease-in .3s;
+}
+#main-navbar .toggler-nav.active{
+    margin-left: 8.5rem;
+}
+@media (max-width:576px) {
+    #main-navbar .toggler-nav{
+        display: none;
+    }
+}
+.sidemenu-toggle{
+    display: inline-block;
+    cursor: pointer;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-input:checked ~ .toggle-bg{
+    background-color: var(--bg-color);
+}
+.toggle-input:checked + .toggler-nav{
+    margin-left: 3rem;
+}
+.toggle-bg{
+    position: relative;
+    width: 2.2rem;
+    height: 1.1rem;
+    background-color: #acacac;
+    border-radius: 3rem;
+    transition: background .2s;
+    display: flex;
+    align-items: center;
+}
+.toggle-bg::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    height: 0.85rem;
+    width: 0.85rem;
+    left: 0.15rem;
+    background-color: #fff;
+    transition: transform ease-in 0.2s;
+}
+.toggle-input:checked ~ .toggle-bg::after{
+    transform: translateX(1.1rem);
+}
+
+#main-navbar .navbar-nav li a{
+    padding: 0.4rem 1.25rem;
+    line-height: 1.8rem;
+    margin-left: 0;
+}
+
 /* sidebar styling */
 #sidebar{
+    /* position: absolute; */
     background-color: var(--bg-color);
     height: 100vh;
     overflow-x: hidden;
+    z-index: 1050;
+    width: 12rem;
+    transition: width ease-in .3s;
+}
+#sidebar.menu-verbose{
+    width: 4rem;
+}
+@media (max-width:576px) {
+    #sidebar{
+        z-index: 1020;
+        transform: translateX(-100%);
+        transition: transform ease-in .3s;
+    }
+    #sidebar.active{
+        transform: translateX(0);
+        transition: transform ease-in .3s;
+    }
 }
 #sidebar .navbar-nav li{
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
-#sidebar .navbar-nav li:hover{
+#sidebar .navbar-nav li.active{
     background-color: #EFF2F5;
+}
+#sidebar .navbar-nav li:nth-child(1){
+    margin-bottom: 0.5rem;
 }
 #sidebar .navbar-nav li:nth-child(1):hover{
     background-color: var(--bg-color);
 }
 #sidebar .navbar-nav li a{
     position: relative;
+    display: block;
+    white-space: nowrap;
     padding: 0.8rem 1.1rem;
     color: #fff;
     font-size: 0.9rem;
     line-height: 1.8rem;
 }
-#sidebar .navbar-nav li a i{
-    margin-right: 0.4rem;
-    height: 1.3rem;
-    width: 1.3rem;
+#sidebar .navbar-nav li:hover a i{
+    transform: scale(1.4);
+    transition: transform .2s;
 }
-#sidebar .navbar-nav li:not(:first-child):hover a::before{
+#sidebar .navbar-nav li a span{
+    margin-left: 1rem;
+}
+#sidebar .navbar-nav li.active a::before{
     content: '';
     position: absolute;
     border-radius: 0.5rem;
@@ -226,7 +318,10 @@ span.form-icon{
     box-shadow: 10px 10px 0 1px var(--body-color);
     pointer-events: none;
 }
-#sidebar .navbar-nav li:not(:first-child):hover a::after{
+#sidebar .navbar-nav li:not(:first-child):hover a{
+    color: var(--pink);
+}
+#sidebar .navbar-nav li.active a::after{
     content: '';
     position: absolute;
     border-radius: 0.5rem;
@@ -238,11 +333,27 @@ span.form-icon{
     box-shadow: 10px -10px 0 1px var(--body-color);
     pointer-events: none;
 }
-#sidebar .navbar-nav li:not(:first-child):hover a{
+#sidebar .navbar-nav li.active a{
     color: var(--bg-color);
 }
-.main{
-    /* margin-top: 2rem; */
+#main{
+    margin: 5rem 0.5rem 2rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+.notification i{
+    font-size: 1.2rem;
+}
+.notification{
+    position: relative;
+    cursor: pointer;
+}
+.notification-badge{
+    position: absolute;
+    top: 0.1rem;
+    right: 0.8rem;
+    background: var(--pink);
+    color: var(--body-color);
 }
 .footer-section{
     height: 2.7rem;
