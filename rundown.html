@@ -55,15 +55,27 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link notification" data-toggle="dropdown" aria-expanded="false">
-                            <i class="far fa-bell"></i>
-                            <span class="badge badge-pill notification-badge text-lowercase">4</span>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                      </li>
+                    <li class="nav-item notification d-flex align-items-center">
+                        <a class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-pill notification-badge">4</span>
                         </a>
                     </li>
-                    <li class="nav-item" data-toggle="collapse"  data-target=".navbar-collapse.show">
-                        <a class="nav-link" href="#">Licence <span class="sr-only"></span></a>
-                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="profile-pic text-center">
+                                <img class=" avatar" src="assets/avatar.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Username</a>
+                        </div>
+                      </li>
                 </ul>
             </div>
         </nav>
@@ -139,14 +151,14 @@
             </div>
             <div id="main">
                 <div class="container-fluid">
-                    <!-- <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
                         <div class="col-sm-8 bg-white">
                             sales
                         </div>
                         <div class="col-sm-4 bg-dark">
                             sales
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
