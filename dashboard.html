@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ecommerce Dashboard</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- fontawesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="body-color">
+
+        <!-- main navbar section -->
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand-sm background-light bg-white">
+            <!-- sm screen and below sidemenu toggler -->
+            <button id="sideMenuToggler" class="navbar-toggler d-sm-none" type="button">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-sm-none" id="logo" href="offers-landing.html"> 
+                <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
+                <i class="fab fa-lg fa-html5"></i>
+                <span class="ml-1">Bait Logo</span>
+            </a>
+            <ul class="navbar-nav toggler-nav active mt-lg-0">
+                <li class="nav-item ml-4 logo " >
+                    <label class="sidemenu-toggle my-auto" for="sidemenu-toggler">
+                        <input class="toggle-input" type="checkbox" id="sidemenu-toggler">
+                        <div class="toggle-bg"></div>
+                    </label>
+                </li>
+            </ul>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-plus-circle"></i>
+                        </a>
+                        <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="fas fa-user fa-sm mr-2"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="fas fa-cog fa-sm mr-2"></i>
+                                <span>Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <i class="fas fa-sign-out-alt mr-2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item notification d-flex align-items-center dropdown">
+                        <a id="notifications" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-pill notification-badge">4</span>
+                        </a>
+                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
+                            <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 bg-purple">
+                                <span class="text-white">Notifications</span>
+                                <div>
+                                    <span class="badge badge-pill bg-pink text-white">4 New</span>
+                                </div>
+                            </div>
+                            <div class="notification-list">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas text-warning fa-chart-area w-100 mb-2"></i> 
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1 mt-2">You're low on stock</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>                                    
+                                        <p class="small text-muted">1 hour ago</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas fa-bullseye text-success mb-2"></i>
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1">Cosmetics sales target hit</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>                                    
+                                        <p class="small text-muted">1 hour ago</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center mb-0" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas fa-file-invoice-dollar text-danger mb-2"></i>
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1">Overdelayed order</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>
+                                        <p class="small text-muted">2 days ago</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-divider my-0"></div>
+                            <a class="dropdown-item d-flex justify-content-center align-items-center notifications-link" href="#">
+                                <span class="">View More...</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="profile-pic text-center">
+                                <img class="" src="assets/avatar.jpg" alt="">
+                            </div>
+                        </a>
+                        <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="fas fa-user fa-sm mr-2"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="fas fa-cog fa-sm mr-2"></i>
+                                <span>Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <i class="fas fa-sign-out-alt mr-2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of main navbar section -->
+        
+        <!-- sidebar and main content -->
+        <div class="wrapper d-flex">
+            <div id="sidebar" class="d-none">
+                <div class="sidemenu pl-2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-lg fa-shopping-cart"></i>
+                                <span class="menu-link">Bait Logo</span>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-tachometer-alt"></i> 
+                                <span class="menu-link">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-clipboard-list"></i> 
+                                <span class="menu-link">Products</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-file-invoice-dollar"></i> 
+                                <span class="menu-link">Orders</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-users"></i> 
+                                <span class="menu-link">Customers</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-chart-area"></i> 
+                                <span class="menu-link">Analytics</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-money-bill"></i> 
+                                <span class="menu-link">sales</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="menu-link">vendors</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-cog" aria-hidden="true"></i> 
+                                <span class="menu-link">settings</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-store"></i>
+                                <span class="menu-link">Shop</span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div class="container-fluid py-3">
+                    <div class="row flex-column flex-md-row justify-content-center">
+                        <div class="col col-md-6">
+                            <div id="stats" class="row justify-content-between">
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white flex-column flex-fill p-2">
+                                        <h6 class="text-muted">Overall Sales</h6>
+                                        <h5 class="font-weight-bold"><span class="text-muted dollar align-top">$</span> 839,932</h5>
+                                        <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                        <span class="text-muted small">2.20%</span>
+                                    </div>
+                                    <div class="ml-auto d-flex flex-column bg-purple justify-content-center align-items-center px-3">
+                                        <i class="fas text-white fa-cart-arrow-down"></i>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white flex-fill p-2">
+                                        <h6 class="text-muted">Orders</h6>
+                                        <h5 class="font-weight-bold">14,243</h5>
+                                        <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                        <span class="small text-muted">0.90%</span> 
+                                    </div>
+                                    <div class="d-flex flex-column bg-purple justify-content-center align-items-center px-3">
+                                        <i class="fas text-white fa-md fa-clipboard-list"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="stats" class="row justify-content-between">
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white flex-fill p-2">
+                                        <h6 class="text-muted">Invoices</h6>
+                                        <h5 class="font-weight-bold">8,673</h5>
+                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                            <span class="small text-muted">2.25%</span>
+                                    </div>
+                                    <div class="d-flex flex-column bg-purple justify-content-center align-items-center px-3">
+                                        <i class="fas text-white fa-cash-register"></i> 
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white flex-fill p-2">
+                                        <h6 class="text-muted">Revenue</h6>
+                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 950,251</h5>
+                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                            <span class="small text-muted">1.05%</span>
+                                    </div>
+                                    <div class="d-flex flex-column bg-purple justify-content-center align-items-center px-3">
+                                        <i class="fas text-white fa-file-invoice-dollar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
+                                <div class="d-flex flex-fill flex-column align-items-center">
+                                    <h6 class="text-muted mb-3">Conversion Rate</h6>
+                                    <div class="pie-container d-flex flex-columnjustify-content-center align-items-center">
+                                        <div class="pie-progress-bar">
+                                            <svg class="conversion-rate">
+                                                <circle cx="65" cy="65" r="65"/>
+                                                <circle cx="65" cy="65" r="65"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h4 class="font-weight-bold mb-0">73%</h4>
+                                                <span class="small text-muted mb-1">todays traffic</span>
+                                                <i class="fas fa-xs success-percentage fa-arrow-up"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-fill flex-column align-items-center">
+                                    <h6 class="text-muted mb-3">Cart Abandonment</h6>
+                                    <div class="pie-container d-flex flex-columnjustify-content-center align-items-center">
+                                        <div class="pie-progress-bar">
+                                            <svg class="cart-abandonment">
+                                                <circle cx="65" cy="65" r="65"/>
+                                                <circle cx="65" cy="65" r="65"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h4 class="font-weight-bold mb-0">57%</h4>
+                                                <span class="small text-muted mb-1">todays traffic</span>
+                                                <i class="fas fa-xs danger-percentage fa-arrow-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-7 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted">Sales Overview</h6>
+                                <div>
+                                    <canvas id="salesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="text-muted">Best Sellers</h6>
+                                    <div class="d-flex">
+                                        <h6 class="text-purple mr-3">products</h6>
+                                        <h6 class="text-muted">categories</h6>
+                                    </div>
+                                </div>
+                                <!-- <div>
+                                    <canvas id="bestSellersChart"></canvas>
+                                </div> -->
+                                <div class="d-flex mb-4">
+                                    <div class="best-product-img text-center rounded-edges mr-4">
+                                        <img class="" src="assets/iphone.jpg" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="font-weight-bold">Iphone 6S 2015</h5>
+                                        <span class="text-muted">price of $5000</span>
+                                    </div>
+                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h5>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <div class="best-product-img text-center rounded-edges mr-4">
+                                        <img class="" src="assets/galaxy.jpg" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="font-weight-bold">Samsung Galaxy S6</h5>
+                                        <span class="text-muted">price of $4800</span>
+                                    </div>
+                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h5>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <div class="best-product-img text-center rounded-edges mr-4">
+                                        <img class="" src="assets/lip-gloss.jpg" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="font-weight-bold">Matte Lip gloss</h5>
+                                        <span class="text-muted">price of $500</span>
+                                    </div>
+                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h5>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <div class="best-product-img text-center rounded-edges mr-4">
+                                        <img class="" src="assets/hennessy-xo.jpg" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="font-weight-bold">Hennessy XO 500ml</h5>
+                                        <span class="text-muted">price of $360</span>
+                                    </div>
+                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h5>
+                                </div>
+                                <!-- <div class="d-flex">
+                                    <div class="best-product-img text-center rounded-edges mr-5">
+                                        <img class="" src="assets/iphone.jpg" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="font-weight-bold">Iphone 6S 2015</h5>
+                                        <span class="text-muted">price of $5000</span>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted">Sales Distribution</h6>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mt-2">
+                            <div class="row justify-content-between">
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white rounded-edges flex-column flex-fill p-2">
+                                        <h6 class="text-muted">USA</h6>
+                                        <h5 class="font-weight-bold"><span class="text-muted dollar align-top">$</span> 83,932</h5>
+                                        <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                        <span class="text-muted small">2.20%</span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white rounded-edges flex-fill p-2">
+                                        <h6 class="text-muted">Europe</h6>
+                                        <h5 class="font-weight-bold">1,243</h5>
+                                        <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                        <span class="small text-muted">0.90%</span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white flex-fill p-2">
+                                        <h6 class="text-muted">Asia</h6>
+                                        <h5 class="font-weight-bold">8,673</h5>
+                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                            <span class="small text-muted">2.25%</span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white rounded-edges flex-fill p-2">
+                                        <h6 class="text-muted">Africa</h6>
+                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 95,251</h5>
+                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                            <span class="small text-muted">1.05%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white rounded-edges flex-fill p-2">
+                                        <h6 class="text-muted">South America</h6>
+                                        <h5 class="font-weight-bold">8,673</h5>
+                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                            <span class="small text-muted">2.25%</span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 d-flex mb-4">
+                                    <div class="bg-white rounded-edges flex-fill p-2">
+                                        <h6 class="text-muted">Australia</h6>
+                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 95,251</h5>
+                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                            <span class="small text-muted">1.05%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

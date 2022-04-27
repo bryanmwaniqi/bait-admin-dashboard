@@ -20,10 +20,96 @@ $(function () {
                 $('.menu-link').toggleClass('d-none')
             }, 100);
         }
-    })
+    });
 
     // Mobile view sidemenu toggler
     $('#sideMenuToggler').on('click', function () {
-        $('#sidebar').toggleClass('active')
-    })
+        $('div#sidebar').toggleClass('active')
+    });
+
+    // show scrollbar on hover
+    $('#sideMenuToggler').on('click', function () {
+        $('').toggleClass('d-none')
+    });
+
+    // Overall sales bar chart
+    // const labels = Utils.months({count: 7});
+    const data = {
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+        datasets: [{
+            data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
+            backgroundColor: '#5d39ff',
+            hoverBackgroundColor: '#ff0077',
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 11,
+            borderSkipped: false
+        }]
+    };
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        // drawBorder: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    }
+                }
+            }
+        },
+    };
+    const salesChart = new Chart(
+        $('#salesChart'),
+        config
+    );
+
+    // best sellers horizontal bar chart
+    const bestSellersData = {
+        labels: ['electronics', 'cosmetics', 'fashion', 'food & drinks', 'art crafts', 'medical & health'],
+        datasets: [{
+            data: [75, 65, 59, 56, 50, 45],
+            backgroundColor: '#5d39ff',
+            hoverBackgroundColor: '#ff0077',
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 11,
+            borderSkipped: false,
+            base:0.5
+        }]
+    };
+    const bestSellersConfig = {
+        type: 'bar',
+        data: bestSellersData,
+        options: {
+            indexAxis: 'y',
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        // drawBorder: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    }
+                }
+            }
+        },
+    };
+    const bestSellersChart = new Chart(
+        $('#bestSellersChart'),
+        bestSellersConfig
+    );
 })

@@ -2,9 +2,9 @@
     /* Theme colors */
     --primary-color: rgb(253, 253, 255);
     --pink: #ff0077;
-    --bg-color: #5739ff;
+    --bg-color: #5d39ff;
     --text-color: #232323;
-    --body-color: #EFF2F5;
+    --body-color: #f4f4f8;
 }
 *{
     margin: 0;
@@ -12,9 +12,37 @@
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
+::-webkit-scrollbar{
+    width: 12.5px;
+}
+::-webkit-scrollbar-track{
+    scroll-margin-block: 1px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    border: 2px solid var(--body-color);
+    background-color: #858585;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #adadad;
+}
 img{
     object-fit: cover;
     object-position: center center;
+    width:100%;
+    height:100%;
+}
+.rounded-edges{
+    border-radius: 0.5rem;
+}
+.text-purple{
+    color: var(--bg-color);
+}
+.bg-pink{
+    background-color: var(--pink);
+}
+.bg-aqua{
+    background-color: rgb(0, 206, 206);
 }
 .content-wrapper{
     position: relative;
@@ -196,7 +224,7 @@ span.form-icon{
     /* padding: 0.1rem 0.5rem; */
     /* min-height: 3.5rem; */
 }
-#main-navbar a{
+#main-navbar a.nav-link{
     color: var(--bg-color);
 }
 #main-navbar .navbar-toggler .navbar-toggler-icon{
@@ -208,6 +236,63 @@ span.form-icon{
 }
 #main-navbar .toggler-nav.active{
     margin-left: 8.5rem;
+}
+#main-navbar #account-overview .dropdown-item{
+    color: #616161;
+    font-size: 0.9rem;
+}
+#main-navbar #account-overview .dropdown-item:hover{
+    color: var(--bg-color);
+}
+#main-navbar #account-overview .dropdown-item i{
+    font-size: 0.9rem;
+}
+#notification-dropdown ::-webkit-scrollbar {
+    width: 10px;
+}
+#notification-dropdown ::-webkit-scrollbar-thumb{
+    border: none;
+    background-color: #fff;
+}
+#notification-dropdown:hover ::-webkit-scrollbar-thumb{
+    border: 2px solid var(--body-color);
+    background-color: #858585;
+}
+#notification-dropdown{
+    width: 20rem;
+    max-height: 23rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.dropdown-header{
+    cursor: default;
+}
+.dropdown-header span{
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+}
+.notification-list{
+    max-height: 15rem;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.notification-list span{
+    line-height: 1.2rem;
+}
+.notifications-link{
+    color: #616161;
+}
+.notifications-link:hover{
+    color: var(--bg-color);
+    background-color: #fff !important;
+}
+.notification-icons-wrapper{
+    width: 2rem;
+    height: 2rem;
+}
+.notification-icons-wrapper i{
+    object-fit: contain;
 }
 @media (max-width:576px) {
     #main-navbar .toggler-nav{
@@ -276,9 +361,6 @@ span.form-icon{
     height: 2rem;
     overflow: hidden;
 }
-.avatar{
-    max-height: 100%;
-}
 
 /* sidebar styling */
 #sidebar{
@@ -302,15 +384,17 @@ span.form-icon{
     width: 10rem;
     transition: all ease-in .3s;
 }
-@media (max-width:576px) {
-    #sidebar{
-        z-index: 1020;
-        transform: translateX(-100%);
-        transition: transform ease-in .3s;
+@media (max-width:768px) {
+    #sidebar, #sidebar .sidemenu{
+         z-index: 1020; 
+        transform: translateX(-100%); 
+        display: none;
     }
-    #sidebar.active{
+    #sidebar.active, #sidebar.active .sidemenu{
         transform: translateX(0);
-        transition: transform ease-in .3s;
+        transition: all ease-in .3s;
+        width: 4rem;
+        display: block;
     }
 }
 #sidebar .navbar-nav li{
@@ -318,13 +402,10 @@ span.form-icon{
     border-bottom-left-radius: 0.5rem;
 }
 #sidebar .navbar-nav li.active{
-    background-color: #EFF2F5;
+    background-color: var(--body-color);
 }
 #sidebar .navbar-nav li:nth-child(1){
-    margin-bottom: 0.5rem;
-}
-#sidebar .navbar-nav li:nth-child(1):hover{
-    background-color: var(--bg-color);
+    margin-bottom: 0.8rem;
 }
 #sidebar .navbar-nav li a{
     position: relative;
@@ -335,7 +416,7 @@ span.form-icon{
     font-size: 0.9rem;
     line-height: 1.8rem;
 }
-#sidebar .navbar-nav li:hover a i{
+#sidebar .navbar-nav li:not(:first-child):hover a i{
     transform: scale(1.4);
     transition: transform .2s;
 }
@@ -372,13 +453,90 @@ span.form-icon{
 #sidebar .navbar-nav li.active a{
     color: var(--bg-color);
 }
+/* content section styling */
 #main{
     margin: 5rem 0.5rem 2rem;
     padding: 0.5rem;
     width: 100%;
     min-height: 100vh;
 }
-
+#stats .col .bg-white{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+#stats .col div:nth-child(2){
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.danger-percentage{
+    /* background-color: #e69dbf;
+    border-radius: 0.2rem;
+    padding: 0.2rem; */
+    /* font-size: 0.5rem; */
+    color: #ff0077;
+}
+.success-percentage{
+    /* background-color: #82aca2;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    font-size: 0.5rem; */
+    color: #0cb675;
+}
+.dollar{
+    font-size: 0.85rem;
+}
+.bg-purple{
+    background-color: var(--bg-color);
+}
+.pie-container{
+    position: relative;
+    width: 150px;      
+}
+.pie-container .pie-progress-bar{
+    position: relative;
+}
+.pie-progress-bar svg{
+    width: 150px;
+}
+.pie-progress-bar .percentage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.pie-progress-bar svg circle{
+    height: 150px;
+    width: 150px;
+    fill: none;
+    stroke-width: 1rem;
+    stroke: #f1f1f1;
+    transform: translate(10px, 10px);
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.pie-progress-bar svg.conversion-rate circle:nth-child(1){
+    stroke: var(--body-color);
+    stroke-dashoffset: 0;
+}
+.pie-progress-bar svg.conversion-rate circle:nth-child(2){
+    stroke: var(--bg-color);
+    stroke-dashoffset: calc(440 - (440 * 73) / 100);
+}
+.pie-progress-bar svg.cart-abandonment circle:nth-child(1){
+    stroke: var(--body-color);
+    stroke-dashoffset: 0;
+}
+.pie-progress-bar svg.cart-abandonment circle:nth-child(2){
+    stroke: var(--bg-color);
+    stroke-dashoffset: calc(440 - (440 * 57) / 100);
+}
+.best-product-img{
+    width: 3.8rem;
+    height: 3.8rem;
+    overflow: hidden;
+}
 .footer-section{
     height: 2.7rem;
     right: 0;
