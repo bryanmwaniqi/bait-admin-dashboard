@@ -52,6 +52,25 @@ img{
 .rounded-edges{
     border-radius: 0.5rem;
 }
+.rounded-btn{
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+    background-color: var(--bg-color);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    color: var(--primary-color);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
 .text-purple{
     color: var(--bg-color);
 }
@@ -148,7 +167,7 @@ button.owl-dot.active span{
 a.account-redirect{
     color: var(--pink);
 }
-.coloured-btn{
+/* .coloured-btn{
     -webkit-text-decoration: none;
     -moz-text-decoration: none;
     -ms-text-decoration: none;
@@ -166,7 +185,7 @@ a.account-redirect{
     -ms-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
-}
+} */
 span.form-icon{
     position: absolute;
     margin-left: 1rem;
@@ -180,12 +199,16 @@ span.form-icon{
     border-color: #7e7e7e;
     color: var(--text-color);
 }
-.coloured-btn:hover{
+.secondary-btn{
+    background-color: var(--pink);
+    color: var(--body-color);
+}
+.secondary-btn:hover{
     background-color: transparent;
     border: 1.8px solid var(--pink);
     color: #fff;
 }
-.coloured-btn:focus, .regular-btn:focus, .form-control:focus{
+.secondary:focus, .regular-btn:focus, .form-control:focus{
     -webkit-box-shadow: none ;
     -moz-box-shadow: none ;
     -ms-box-shadow: none ;
@@ -253,6 +276,11 @@ span.form-icon{
 }
 #main-navbar .toggler-nav.active{
     margin-left: 8.5rem;
+}
+#main-navbar .primary-btn:hover{
+    background-color: transparent;
+    border: 1.8px solid var(--bg-color);
+    color: var(--bg-color);
 }
 #main-navbar #account-overview .dropdown-item{
     color: #616161;
