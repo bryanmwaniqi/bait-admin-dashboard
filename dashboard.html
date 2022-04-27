@@ -329,53 +329,129 @@
                                 <div class="d-flex justify-content-between mb-3">
                                     <h6 class="text-muted">Best Sellers</h6>
                                     <div class="d-flex">
-                                        <h6 class="text-purple mr-3">products</h6>
-                                        <h6 class="text-muted">categories</h6>
+                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
+                                            <a href="#products" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">products</a>
+                                            <a href="#categories" class="mx-1 mx-sm-2" data-toggle="tab">categories</a>
+                                        </nav>
+                                        <!-- <h6 class="text-purple mr-3">products</h6>
+                                        <h6 class="text-muted">categories</h6> -->
                                     </div>
                                 </div>
                                 <!-- <div>
                                     <canvas id="bestSellersChart"></canvas>
                                 </div> -->
-                                <div class="d-flex mb-4">
-                                    <div class="best-product-img text-center rounded-edges mr-4">
-                                        <img class="" src="assets/iphone.jpg" alt="">
+                                <div class="tab-content menu-tab">
+                                    <!-- products tab content -->
+                                    <div id="products" class="tab-pane show fade active p-0">
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/iphone.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h5 class="font-weight-bold">Iphone 6S 2015</h5>
+                                                <span class="text-muted">price of $5000</span>
+                                            </div>
+                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h5>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/galaxy.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h5 class="font-weight-bold">Samsung Galaxy S6</h5>
+                                                <span class="text-muted">price of $4800</span>
+                                            </div>
+                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h5>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/lip-gloss.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h5 class="font-weight-bold">Matte Lip gloss</h5>
+                                                <span class="text-muted">price of $500</span>
+                                            </div>
+                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h5>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h5 class="font-weight-bold">Hennessy XO 500ml</h5>
+                                                <span class="text-muted">price of $360</span>
+                                            </div>
+                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h5>
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                        <span class="text-muted">price of $5000</span>
+                                    <!-- end of best sellers products tab content -->
+                                    
+                                    <!-- categories tab content -->
+                                    <div id="categories" class="tab-pane fade p-0">
+                                        <div class="mb-3">
+                                            <div class="d-flex mb-1">
+                                                <div class="d-flex flex-column">
+                                                    <h5 class="font-weight-bold mb-0">Electronics</h5>
+                                                    <span class="text-muted">phones, T.v's, sound, home-theaters, consoles</span>
+                                                </div>
+                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">67%</h5>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:70%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h5 class="font-weight-bold mb-0">cosmetics</h5>
+                                                    <span class="text-muted">lipstic, mascara, lipgloss, acrylics, mousse</span>
+                                                </div>
+                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h5 class="font-weight-bold mb-0">fashion</h5>
+                                                    <span class="text-muted">fabrics, tops, pants, shoes, accessories</span>
+                                                </div>
+                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">58%</h5>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:58%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h5 class="font-weight-bold mb-0">food & drinks</h5>
+                                                    <span class="text-muted">wine, whiskey, oil, rice, flour</span>
+                                                </div>
+                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">80%</h5>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:80%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h5 class="font-weight-bold mb-0">art crafts</h5>
+                                                    <span class="text-muted">bracelets, wristbands, bangles, wall watches</span>
+                                                </div>
+                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:40%"></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h5>
+                                    <!-- end of categories tab content -->
                                 </div>
-                                <div class="d-flex mb-4">
-                                    <div class="best-product-img text-center rounded-edges mr-4">
-                                        <img class="" src="assets/galaxy.jpg" alt="">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Samsung Galaxy S6</h5>
-                                        <span class="text-muted">price of $4800</span>
-                                    </div>
-                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h5>
-                                </div>
-                                <div class="d-flex mb-4">
-                                    <div class="best-product-img text-center rounded-edges mr-4">
-                                        <img class="" src="assets/lip-gloss.jpg" alt="">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Matte Lip gloss</h5>
-                                        <span class="text-muted">price of $500</span>
-                                    </div>
-                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h5>
-                                </div>
-                                <div class="d-flex mb-4">
-                                    <div class="best-product-img text-center rounded-edges mr-4">
-                                        <img class="" src="assets/hennessy-xo.jpg" alt="">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Hennessy XO 500ml</h5>
-                                        <span class="text-muted">price of $360</span>
-                                    </div>
-                                    <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h5>
-                                </div>
+                                
                                 <!-- <div class="d-flex">
                                     <div class="best-product-img text-center rounded-edges mr-5">
                                         <img class="" src="assets/iphone.jpg" alt="">

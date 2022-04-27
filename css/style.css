@@ -12,6 +12,23 @@
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
+a{
+    text-transform: none;
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+}
+a:hover{
+    color: var(--bg-color);
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+}
 ::-webkit-scrollbar{
     width: 12.5px;
 }
@@ -532,10 +549,26 @@ span.form-icon{
     stroke: var(--bg-color);
     stroke-dashoffset: calc(440 - (440 * 57) / 100);
 }
+/* best sellers section styling */
+#best-sellers a{
+    color: #858585;
+    font-weight: normal;
+}
+#best-sellers a.active{
+    color: var(--bg-color) !important; 
+}
 .best-product-img{
     width: 3.8rem;
     height: 3.8rem;
     overflow: hidden;
+}
+.progress{
+    border-radius: 0.5rem;
+    height: 0.6rem;
+}
+.round-progress{
+    border-radius: 0.5rem ;
+    background-color: var(--bg-color);
 }
 .footer-section{
     height: 2.7rem;
