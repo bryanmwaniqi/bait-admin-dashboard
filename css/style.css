@@ -619,6 +619,9 @@ i#action-toggle:hover{
 .order-section ::-webkit-scrollbar{
     height: 10px;
 }
+.status-badge{
+    min-width: 6rem;
+}
 .footer-section{
     height: 2.7rem;
     right: 0;
