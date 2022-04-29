@@ -167,25 +167,6 @@ button.owl-dot.active span{
 a.account-redirect{
     color: var(--pink);
 }
-/* .coloured-btn{
-    -webkit-text-decoration: none;
-    -moz-text-decoration: none;
-    -ms-text-decoration: none;
-    -o-text-decoration: none;
-    text-decoration: none;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-    border-radius: 50px;
-    background-color: var(--pink);
-    color: #fff;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-} */
 span.form-icon{
     position: absolute;
     margin-left: 1rem;
@@ -292,7 +273,7 @@ span.form-icon{
 #main-navbar #account-overview .dropdown-item i{
     font-size: 0.9rem;
 }
-#notification-dropdown ::-webkit-scrollbar {
+#notification-dropdown ::-webkit-scrollbar{
     width: 10px;
 }
 #notification-dropdown ::-webkit-scrollbar-thumb{
@@ -500,7 +481,7 @@ span.form-icon{
 }
 /* content section styling */
 #main{
-    margin: 5rem 0.5rem 2rem;
+    margin: 5rem 0.5rem 0.5rem;
     padding: 0.5rem;
     width: 100%;
     min-height: 100vh;
@@ -592,11 +573,51 @@ span.form-icon{
 }
 .progress{
     border-radius: 0.5rem;
-    height: 0.6rem;
+    height: 0.45rem;
 }
 .round-progress{
     border-radius: 0.5rem ;
     background-color: var(--bg-color);
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0rem 1rem;
+  }
+tbody tr td:first-child{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+tbody tr td:last-child{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+tbody tr{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+#orders-table td img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50px;
+}
+#orders-table td{
+    font-weight: bold;
+}
+i#action-toggle{
+    font-size: 1.5rem;
+}
+i#action-toggle:hover{
+    color: var(--bg-color) !important;
+}
+.action-icon{
+    width: 2rem;
+    height: 2rem;
+}
+#action-dropdown .dropdown-item:hover{
+    color: var(--bg-color);
+}
+.order-section ::-webkit-scrollbar{
+    height: 10px;
 }
 .footer-section{
     height: 2.7rem;
