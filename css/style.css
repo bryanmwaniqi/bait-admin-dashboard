@@ -683,3 +683,10 @@ i#action-toggle:hover{
 .analytics-description{
     max-width: 25rem;
 }
+
+/* profile page styling */
+.profile-page-pic{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+}
