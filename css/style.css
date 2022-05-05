@@ -668,6 +668,7 @@ i#action-toggle:hover{
 .status-badge{
     min-width: 6rem;
 }
+/* registration and login pages footer styling */
 .footer-section{
     height: 2.7rem;
     right: 0;
@@ -677,4 +678,8 @@ i#action-toggle:hover{
     font-size: 0.75rem;
     position: absolute;
     overflow: hidden;
+}
+/* analytics page styling */
+.analytics-description{
+    max-width: 25rem;
 }
