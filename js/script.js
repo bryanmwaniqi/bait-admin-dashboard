@@ -41,7 +41,7 @@ $(function () {
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
             borderRadius: 50,
-            barThickness: 11,
+            barThickness: 6,
             borderSkipped: false
         }]
     };

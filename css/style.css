@@ -436,17 +436,15 @@ span.form-icon{
     border-radius: 0.3rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* overflow: hidden; */
 }
-#sidebar .navbar-nav li:not(:first-child){
-    align-items: end;
+#sidebar .navbar-nav li:not(:first-child) a i{
+    margin-bottom: 0.4rem;    
 }
 #sidebar .navbar-nav li.active{
     background-color: #fff;
 }
 #sidebar .navbar-nav li{
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.65rem;
 }
 #sidebar .navbar-nav li:nth-child(1){
     width: 4rem;
@@ -459,13 +457,14 @@ span.form-icon{
     align-items: center;
     justify-content: center;
     color: #fff;
-    line-height: 1.8rem;
+    
 }
 #sidebar .navbar-nav li a i{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 #sidebar .navbar-nav li a span{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    /* line-height: 1.8rem; */
 }
 #sidebar .navbar-nav li:not(:first-child):hover a i{
     /* transform: scale(1.4);
@@ -607,6 +606,8 @@ img.country-flag{
     border-radius: 60px;
 }
 a.add-product{
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 2.5rem;
     height: 2.5rem;
     background: var(--bg-color);
@@ -614,10 +615,11 @@ a.add-product{
     color: #fff;
 }
 #table-search input{
-    border: none;
+    /* border: none; */
+    border-color: var(--bg-color);
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
-    background-color: #e7e7e7;
+    /* background-color: #e7e7e7; */
 }
 #table-search button{
     border-top-right-radius: 0.3rem;
