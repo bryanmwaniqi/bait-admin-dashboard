@@ -641,7 +641,7 @@ tbody tr{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-#orders-table td img{
+#orders-table td .customer{
     height: 3rem;
     width: 3rem;
     border-radius: 50px;

@@ -36,7 +36,7 @@ $(function () {
     const data = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
-            data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
+            data: [45, 59, 81, 65, 56, 55, 40, 55, 59, 75, 65, 56],
             backgroundColor: '#5d39ff',
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
@@ -46,7 +46,7 @@ $(function () {
         }]
     };
     const config = {
-        type: 'bar',
+        type: 'line',
         data: data,
         options: {
             plugins: {
@@ -76,6 +76,51 @@ $(function () {
         config
     );
 
+    // Overall sales bar chart
+    // const labels = Utils.months({count: 7});
+    const organicData = {
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+        datasets: [{
+            data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
+            backgroundColor: '#5d39ff',
+            hoverBackgroundColor: '#ff0077',
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 6,
+            borderSkipped: false
+        }]
+    };
+    const organicConfig = {
+        type: 'bar',
+        data: organicData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        // drawBorder: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    }
+                }
+            }
+        },
+    };
+    const organicChart = new Chart(
+        $('#organicChart'),
+        organicConfig
+    );
+
     // Instagram bar chart
     const igData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
@@ -91,7 +136,7 @@ $(function () {
     };
     const igConfig = {
         type: 'bar',
-        data: data,
+        data: igData,
         options: {
             plugins: {
                 legend: {
@@ -135,7 +180,7 @@ $(function () {
     };
     const fbConfig = {
         type: 'bar',
-        data: data,
+        data: fbData,
         options: {
             plugins: {
                 legend: {
@@ -179,7 +224,7 @@ $(function () {
     };
     const ytConfig = {
         type: 'bar',
-        data: data,
+        data: ytData,
         options: {
             plugins: {
                 legend: {
