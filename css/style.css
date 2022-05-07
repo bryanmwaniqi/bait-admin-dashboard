@@ -603,7 +603,7 @@ span.form-icon{
 img.country-flag{
     height: 1.5rem;
     width: 1.5rem;
-    border-radius: 60px;
+    border-radius: 20px;
 }
 a.add-product{
     padding-left: 1rem;
