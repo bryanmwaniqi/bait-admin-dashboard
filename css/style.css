@@ -690,3 +690,13 @@ i#action-toggle:hover{
     height: 5rem;
     border-radius: 50px;
 }
+
+/* orders page styling */
+.stat-icon-container{
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 0.3rem;
+}
+.laet{
+    color: rgba(47, 248, 255, 0.623);
+}
