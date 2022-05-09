@@ -387,6 +387,10 @@ span.form-icon{
     background: var(--pink);
     color: var(--body-color);
 }
+.profile-pic-container{
+    border-radius: 100%;
+    border: solid 1.2rem #BEAFFF;
+}
 .profile-pic{
     border-radius: 100%;
     width: 2rem;
@@ -641,7 +645,7 @@ tbody tr{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-#orders-table td .customer{
+.customer{
     height: 3rem;
     width: 3rem;
     border-radius: 50px;
@@ -679,6 +683,11 @@ i#action-toggle:hover{
     position: absolute;
     overflow: hidden;
 }
+@media (max-width:360px) {
+    .customer-value{
+        display: none;
+    }
+}
 /* analytics page styling */
 .analytics-description{
     max-width: 25rem;
@@ -689,6 +698,7 @@ i#action-toggle:hover{
     width: 5rem;
     height: 5rem;
     border-radius: 50px;
+    box-shadow:  var(--text-color) 0px 0px 7px -3px ;
 }
 
 /* orders page styling */
@@ -696,7 +706,4 @@ i#action-toggle:hover{
     height: 2.8rem;
     width: 2.8rem;
     border-radius: 0.3rem;
-}
-.laet{
-    color: rgba(47, 248, 255, 0.623);
 }
