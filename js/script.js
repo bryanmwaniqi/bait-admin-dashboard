@@ -33,16 +33,27 @@ $(function () {
 
     // Overall sales bar chart
     // const labels = Utils.months({count: 7});
+    var salesCtx = document.getElementById('salesChart').getContext('2d');
+    
+    var gradient = salesCtx .createLinearGradient(0, 0, 0, 307); 
+    gradient.addColorStop(0, 'rgba(93, 57, 255, 0.5)');
+    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
     const data = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 81, 65, 56, 55, 40, 55, 59, 75, 65, 56],
-            backgroundColor: '#5d39ff',
+            backgroundColor: gradient,
             hoverBackgroundColor: '#ff0077',
-            borderWidth: 0,
-            borderRadius: 50,
-            barThickness: 6,
-            borderSkipped: false
+            fill: true,
+            borderColor: '#5d39ff',
+            tension: 0.3,
+            hitRadius: 8,
+            pointRadius: 0,
+            borderWidth: 4,
+            pointBorderWidth: 0,
+            borderJoinStyle: 'round',
+            hoverRadius: 10,
         }]
     };
     const config = {
@@ -72,7 +83,7 @@ $(function () {
         },
     };
     const salesChart = new Chart(
-        $('#salesChart'),
+        salesCtx,
         config
     );
 
