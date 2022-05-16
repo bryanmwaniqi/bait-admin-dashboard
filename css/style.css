@@ -389,7 +389,7 @@ span.form-icon{
 }
 .profile-pic-container{
     border-radius: 100%;
-    border: solid 1.2rem #BEAFFF;
+    border: solid 1.2rem rgba(190,175,255,0.5);
 }
 .profile-pic{
     border-radius: 100%;
@@ -511,14 +511,14 @@ span.form-icon{
     width: 100%;
     min-height: 100vh;
 }
-#stats .col .bg-white{
+/* #stats .col .bg-white{
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
 #stats .col div:nth-child(2){
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-}
+} */
 .danger-percentage{
     /* background-color: #e69dbf;
     border-radius: 0.2rem;
@@ -533,9 +533,9 @@ span.form-icon{
     font-size: 0.5rem; */
     color: #0cb675;
 }
-.dollar{
+/* .dollar{
     font-size: 0.85rem;
-}
+} */
 .bg-purple{
     background-color: var(--bg-color);
 }
@@ -618,17 +618,17 @@ a.add-product{
     border-radius: 0.3rem;
     color: #fff;
 }
-#table-search input{
-    /* border: none; */
+/* #table-search input{
+    border: none;
     border-color: var(--bg-color);
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
-    /* background-color: #e7e7e7; */
+    background-color: #e7e7e7;
 }
 #table-search button{
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
-}
+} */
 table {
     border-collapse: separate;
     border-spacing: 0rem 1rem;

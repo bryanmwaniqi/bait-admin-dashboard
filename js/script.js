@@ -48,12 +48,12 @@ $(function () {
             fill: true,
             borderColor: '#5d39ff',
             tension: 0.3,
-            hitRadius: 8,
+            hitRadius: 15,
             pointRadius: 0,
             borderWidth: 4,
             pointBorderWidth: 0,
             borderJoinStyle: 'round',
-            hoverRadius: 10,
+            hoverRadius: 12,
         }]
     };
     const config = {
@@ -70,7 +70,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
@@ -115,7 +115,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
@@ -159,7 +159,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
@@ -203,7 +203,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
@@ -247,7 +247,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
@@ -293,7 +293,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
@@ -348,7 +348,7 @@ $(function () {
                     beginAtZero: true,
                     grid: {
                         display: false,
-                        // drawBorder: false
+                        drawBorder: false
                     }
                 },
                 x: {
