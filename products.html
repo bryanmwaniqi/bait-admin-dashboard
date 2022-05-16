@@ -259,290 +259,39 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-7 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted">Sales Overview</h6>
-                                <div>
-                                    <canvas id="salesChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-5 mt-2 mb-4">
+                        <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h6 class="text-muted">Best Sellers</h6>
+                                    <h6 class="text-muted">Products Catalog</h6>
                                     <div class="d-flex">
                                         <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
-                                            <a href="#products" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">products</a>
-                                            <a href="#categories" class="mx-1 mx-sm-2" data-toggle="tab">categories</a>
+                                            <a href="#products-list" class="mx-2 mx-sm-" data-toggle="tab" role="button">
+                                                <i class="fas  fa-th-large"></i>
+                                            </a>
+                                            <a href="#products-table" class="mx-2 mx-sm-2 active" data-toggle="tab">
+                                                <i class="fas  fa-list"></i>
+                                            </a>
                                         </nav>
-                                        <!-- <h6 class="text-purple mr-3">products</h6>
-                                        <h6 class="text-muted">categories</h6> -->
                                     </div>
                                 </div>
-                                <!-- <div>
-                                    <canvas id="bestSellersChart"></canvas>
-                                </div> -->
+                                <!-- Product catalog tabs -->
                                 <div class="tab-content menu-tab">
-                                    <!-- products tab content -->
-                                    <div id="products" class="tab-pane show fade active p-0">
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/iphone.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                                <span class="text-muted">price of $5000</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/galaxy.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Samsung Galaxy S6</h5>
-                                                <span class="text-muted">price of $4800</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/lip-gloss.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Matte Lip gloss</h5>
-                                                <span class="text-muted">price of $500</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Hennessy XO 500ml</h5>
-                                                <span class="text-muted">price of $360</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h5>
-                                        </div>
+                                    <!-- Products list tab content -->
+                                    <div id="products-list" class="tab-pane show fade active p-0">
+                                        <!-- <div></div> -->
                                     </div>
-                                    <!-- end of best sellers products tab content -->
+                                    <!-- end of products list tab content -->
                                     
                                     <!-- categories tab content -->
-                                    <div id="categories" class="tab-pane fade p-0">
-                                        <div class="mb-3">
-                                            <div class="d-flex mb-1">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">Electronics</h5>
-                                                    <span class="text-muted small">phones, T.v's, sound, home-theaters, consoles</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">67%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:70%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">cosmetics</h5>
-                                                    <span class="text-muted small">lipstic, mascara, lipgloss, acrylics, mousse</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">fashion</h5>
-                                                    <span class="text-muted small">fabrics, tops, pants, shoes, accessories</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">58%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:58%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">food & drinks</h5>
-                                                    <span class="text-muted small">wine, whiskey, oil, rice, flour</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">80%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:80%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-2">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">art crafts</h5>
-                                                    <span class="text-muted small">bracelets, wristbands, bangles, wall watches</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
+                                    <div id="products-table" class="tab-pane fade p-0">
+                                        <div></div>
                                     </div>
                                     <!-- end of categories tab content -->
                                 </div>
-                                
-                                <!-- <div class="d-flex">
-                                    <div class="best-product-img text-center rounded-edges mr-5">
-                                        <img class="" src="assets/iphone.jpg" alt="">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                        <span class="text-muted">price of $5000</span>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
-                    <div class="row flex-column flex-md-row justify-content-center">
-                        <div class="col-12 col-lg-6 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted">Sales Distribution</h6>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 mt-2">
-                            <div class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-column flex-fill p-2">
-                                        <h6 class="text-muted">USA</h6>
-                                        <h5 class="font-weight-bold"><span class="text-muted dollar align-top">$</span> 83,932</h5>
-                                        <!-- <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i> -->
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-canada-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Europe</h6>
-                                        <h5 class="font-weight-bold">1,243</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-great-britain-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-germany-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-florida-flag-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill p-2">
-                                        <h6 class="text-muted">Asia</h6>
-                                        <h5 class="font-weight-bold">8,673</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-china-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-japan-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-china-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Africa</h6>
-                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 95,251</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-kenya-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-south-africa-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-egypt-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">South America</h6>
-                                        <h5 class="font-weight-bold">8,673</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-brazil-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-mexico-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-argentina-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Australia</h6>
-                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 95,251</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-australia-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <div class="col">
                             <div class="bg-white rounded-edges p-3 h-100 order-section">
