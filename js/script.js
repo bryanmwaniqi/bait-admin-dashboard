@@ -31,6 +31,7 @@ $(function () {
         $('').toggleClass('d-none')
     });
 
+
     // Overall sales bar chart
     // const labels = Utils.months({count: 7});
     var salesCtx = document.getElementById('salesChart').getContext('2d');

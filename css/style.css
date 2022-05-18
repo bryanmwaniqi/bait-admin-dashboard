@@ -403,6 +403,7 @@ span.form-icon{
     background-color: var(--bg-color);
     height: 100%;
     overflow-x: hidden;
+    overflow-y: scroll;
     z-index: 1050;
     width: 6.5rem;
     transition: all ease-in .3s;
@@ -410,6 +411,23 @@ span.form-icon{
 /* #sidebar.menu-verbose, #sidebar.menu-verbose .sidemenu{
     width: 4rem;
     transition: all ease-in .3s
+} */
+/* #sidebar ::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    border: 2px solid var(--bg-color);
+    background-color: var(--body-color);
+} */
+#sidebar ::-webkit-scrollbar-thumb{
+    border: none;
+    background-color: var(--bg-color);
+}
+#sidebar:hover ::-webkit-scrollbar-thumb{
+    border: 2px solid var(--bg-color);
+    background-color: #858585;
+    background-color: var(--body-color);
+}
+/* #sidebar ::-webkit-scrollbar{
+    width: 10px;
 } */
 .sidemenu{
     position: fixed;
@@ -440,6 +458,7 @@ span.form-icon{
     border-radius: 0.3rem;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #sidebar .navbar-nav li:not(:first-child) a i{
     margin-bottom: 0.4rem;    
@@ -453,7 +472,10 @@ span.form-icon{
 #sidebar .navbar-nav li:nth-child(1){
     width: 4rem;
     height: 4rem;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    /* display: flex;
+    justify-content: center; */
 }
 #sidebar .navbar-nav li a{
     display: flex;
@@ -629,19 +651,19 @@ a.add-product{
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
 } */
-table {
+#orders-table {
     border-collapse: separate;
     border-spacing: 0rem 1rem;
   }
-tbody tr td:first-child{
+  #orders-table tbody tr td:first-child{
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
-tbody tr td:last-child{
+#orders-table tbody tr td:last-child{
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
-tbody tr{
+#orders-table tbody tr{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
