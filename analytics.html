@@ -12,6 +12,9 @@
         <!-- fontawesome css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
+        <!-- font awesome 6 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,62 +248,73 @@
             <div id="main">
                 <div class="container-fluid py-2">
                     <div class="row flex-column flex-md-row justify-content-center">
-                        <div class="col col-md-6 h-100">
-                            <div id="stats" class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
-                                        <div class="">
-                                            <h6 class="text-muted">Overall Sales</h6>
-                                            <h6 class="font-weight-bold">839,932</h6>
-                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
-                                            <span class="small text-muted">1.25%</span>
-                                        </div>
-                                        <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-clone text-white"></i>
-                                        </div>
-                                    </div>
+                        <div class="col col-sm-3 d-flex mb-4">
+                            <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
+                                <div class="">
+                                    <h6 class="text-muted">Overall Sales</h6>
+                                    <h6 class="font-weight-bold">839,932</h6>
+                                    <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                    <span class="small text-muted">1.25%</span>
                                 </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
-                                        <div class="">
-                                            <h6 class="text-muted">Orders</h6>
-                                            <h6 class="font-weight-bold">14,423</h6>
-                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
-                                            <span class="small text-muted">0.90%</span>
-                                        </div>
-                                        <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-clone text-white"></i>
-                                        </div>
-                                    </div>
+                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-clone text-white"></i>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col col-sm-3 d-flex mb-4">
+                            <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
+                                <div class="">
+                                    <h6 class="text-muted">Orders</h6>
+                                    <h6 class="font-weight-bold">14,423</h6>
+                                    <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                    <span class="small text-muted">0.90%</span>
+                                </div>
+                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-clone text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-3 d-flex mb-4">
+                            <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
+                                <div class="">
+                                    <h6 class="text-muted">Overall Sales</h6>
+                                    <h6 class="font-weight-bold">8,673</h6>
+                                    <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
+                                    <span class="small text-muted">2.25%</span>
+                                </div>
+                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-clone text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-3 d-flex mb-4">
+                            <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
+                                <div class="">
+                                    <h6 class="text-muted">Overall Sales</h6>
+                                    <h6 class="font-weight-bold">1,932,932</h6>
+                                    <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
+                                    <span class="small text-muted">1.05%</span>
+                                </div>
+                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fas text-white fa-file-invoice-dollar"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col col-md-6 h-100">
                             <div id="stats" class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
-                                        <div class="">
-                                            <h6 class="text-muted">Overall Sales</h6>
-                                            <h6 class="font-weight-bold">8,673</h6>
-                                            <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
-                                            <span class="small text-muted">2.25%</span>
-                                        </div>
-                                        <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-clone text-white"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
-                                        <div class="">
-                                            <h6 class="text-muted">Overall Sales</h6>
-                                            <h6 class="font-weight-bold">1,932,932</h6>
-                                            <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
-                                            <span class="small text-muted">1.05%</span>
-                                        </div>
-                                        <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                            <i class="fas text-white fa-file-invoice-dollar"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                                
+                            </div>
+                            <div id="stats" class="row justify-content-between">
+                                
+                            </div>
+                        </div> -->
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted mb-3">Traffic Breakdown</h6>
                             </div>
                         </div>
                         <div class="col col-md-6 mb-4">
@@ -337,155 +351,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-7 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted">Sales Overview</h6>
-                                <div>
-                                    <canvas id="salesChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-5 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h6 class="text-muted">Best Sellers</h6>
-                                    <div class="d-flex">
-                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
-                                            <a href="#products" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">products</a>
-                                            <a href="#categories" class="mx-1 mx-sm-2" data-toggle="tab">categories</a>
-                                        </nav>
-                                        <!-- <h6 class="text-purple mr-3">products</h6>
-                                        <h6 class="text-muted">categories</h6> -->
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <canvas id="bestSellersChart"></canvas>
-                                </div> -->
-                                <div class="tab-content menu-tab">
-                                    <!-- products tab content -->
-                                    <div id="products" class="tab-pane show fade active p-0">
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/iphone.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                                <span class="text-muted">price of $5000</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/galaxy.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Samsung Galaxy S6</h5>
-                                                <span class="text-muted">price of $4800</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/lip-gloss.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Matte Lip gloss</h5>
-                                                <span class="text-muted">price of $500</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Hennessy XO 500ml</h5>
-                                                <span class="text-muted">price of $360</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h5>
-                                        </div>
-                                    </div>
-                                    <!-- end of best sellers products tab content -->
-                                    
-                                    <!-- categories tab content -->
-                                    <div id="categories" class="tab-pane fade p-0">
-                                        <div class="mb-3">
-                                            <div class="d-flex mb-1">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">Electronics</h5>
-                                                    <span class="text-muted small">phones, T.v's, sound, home-theaters, consoles</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">67%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:70%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">cosmetics</h5>
-                                                    <span class="text-muted small">lipstic, mascara, lipgloss, acrylics, mousse</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">fashion</h5>
-                                                    <span class="text-muted small">fabrics, tops, pants, shoes, accessories</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">58%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:58%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">food & drinks</h5>
-                                                    <span class="text-muted small">wine, whiskey, oil, rice, flour</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">80%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:80%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-2">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">art crafts</h5>
-                                                    <span class="text-muted small">bracelets, wristbands, bangles, wall watches</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end of categories tab content -->
-                                </div>
-                                
-                                <!-- <div class="d-flex">
-                                    <div class="best-product-img text-center rounded-edges mr-5">
-                                        <img class="" src="assets/iphone.jpg" alt="">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                        <span class="text-muted">price of $5000</span>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>

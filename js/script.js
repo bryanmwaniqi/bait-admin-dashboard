@@ -32,7 +32,7 @@ $(function () {
     });
 
 
-    // Overall sales bar chart
+    // Overall sales line chart
     // const labels = Utils.months({count: 7});
     var salesCtx = document.getElementById('salesChart').getContext('2d');
     
@@ -90,7 +90,7 @@ $(function () {
 
     // Overall sales bar chart
     // const labels = Utils.months({count: 7});
-    const organicData = {
+    const salesBarData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
@@ -102,9 +102,9 @@ $(function () {
             borderSkipped: false
         }]
     };
-    const organicConfig = {
+    const salesBarConfig = {
         type: 'bar',
-        data: organicData,
+        data: salesBarData,
         options: {
             plugins: {
                 legend: {
@@ -128,13 +128,13 @@ $(function () {
             }
         },
     };
-    const organicChart = new Chart(
-        $('#organicChart'),
-        organicConfig
+    const salesBarChart = new Chart(
+        $('#salesBarChart'),
+        salesBarConfig
     );
 
-    // Instagram bar chart
-    const igData = {
+    // Orders bar chart
+    const ordersData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
@@ -146,9 +146,9 @@ $(function () {
             borderSkipped: false
         }]
     };
-    const igConfig = {
+    const ordersConfig = {
         type: 'bar',
-        data: igData,
+        data: ordersData,
         options: {
             plugins: {
                 legend: {
@@ -172,13 +172,13 @@ $(function () {
             }
         },
     };
-    const igChart = new Chart(
-        $('#igChart'),
-        igConfig
+    const ordersChart = new Chart(
+        $('#ordersChart'),
+        ordersConfig
     );
 
-    // facebook bar chart
-    const fbData = {
+    // Invoices bar chart
+    const invoicesData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
@@ -190,9 +190,9 @@ $(function () {
             borderSkipped: false
         }]
     };
-    const fbConfig = {
+    const invoicesConfig = {
         type: 'bar',
-        data: fbData,
+        data: invoicesData,
         options: {
             plugins: {
                 legend: {
@@ -216,13 +216,13 @@ $(function () {
             }
         },
     };
-    const fbChart = new Chart(
-        $('#fbChart'),
-        fbConfig
+    const invoicesChart = new Chart(
+        $('#invoicesChart'),
+        invoicesConfig
     );
 
-    // Youtube bar chart
-    const ytData = {
+    // Returns bar chart
+    const returnsData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
@@ -234,9 +234,9 @@ $(function () {
             borderSkipped: false
         }]
     };
-    const ytConfig = {
+    const returnsConfig = {
         type: 'bar',
-        data: ytData,
+        data: returnsData,
         options: {
             plugins: {
                 legend: {
@@ -260,9 +260,9 @@ $(function () {
             }
         },
     };
-    const ytChart = new Chart(
-        $('#ytChart'),
-        ytConfig
+    const returnsChart = new Chart(
+        $('#returnsChart'),
+        returnsConfig
     );
 
     // best sellers horizontal bar chart

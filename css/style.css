@@ -472,7 +472,7 @@ span.form-icon{
 #sidebar .navbar-nav li:nth-child(1){
     width: 4rem;
     height: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     margin-top: 0.5rem;
     /* display: flex;
     justify-content: center; */
