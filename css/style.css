@@ -3,6 +3,7 @@
     --primary-color: rgb(253, 253, 255);
     --bg-color: #5d39ff;
     --pink: #ff0077;
+    --pink-rgb: 255, 0, 119;
     --text-color: #232323;
     --body-color: #f4f4f8;
 }
@@ -389,7 +390,7 @@ span.form-icon{
 }
 .profile-pic-container{
     border-radius: 100%;
-    border: solid 1.2rem rgba(190,175,255,0.5);
+    border: solid 1.2rem rgba(var(--pink-rgb), 0.6);
 }
 .profile-pic{
     border-radius: 100%;
@@ -709,6 +710,15 @@ i#action-toggle:hover{
     .customer-value{
         display: none;
     }
+}
+#main div.container-fluid{
+    position: relative;
+    min-height: 100vh;
+}
+.footer-content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 /* analytics page styling */
 .analytics-description{
