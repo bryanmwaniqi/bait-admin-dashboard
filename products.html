@@ -252,16 +252,26 @@
                 <div class="container-fluid py-2">
                     <div class="row flex-column flex-md-row justify-content-center">
                         <div class="col col-md-6 mb-4">
-                            <div class="bg-white h-100 rounded-edges p-3">
-                                <h6 class="text-muted">Overall Stock</h6>
-                                <h5 class="font-weight-bold">798,673</h5>
+                            <div class="bg-white h-100 rounded-edges p-3 d-flex align-items-center justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h6 class="text-muted">Overall Stock</h6>
+                                    <h5 class="font-weight-bold">798,673</h5>
+                                </div>
+                                <i class="fa-solid fa-xl danger-percentage fa-arrow-trend-down"></i>
                             </div>
                         </div>
                         <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted">Total ordered Products</h6>
-                                <h5 class="font-weight-bold">325,671</h5>
+                            <div class="bg-white h-100 rounded-edges p-3 d-flex align-items-center justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h6 class="text-muted">Total ordered Products</h6>
+                                    <h5 class="font-weight-bold">325,671</h5>
+                                </div>
+                                <i class="fa-solid fa-xl success-percentage fa-arrow-trend-up"></i>
                             </div>
+                            <!-- <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted"></h6>
+                                <h5 class="font-weight-bold"></h5>
+                            </div> -->
                         </div>
                     </div>
                     <div class="row">
@@ -788,221 +798,6 @@
                                         </a>
                                     </div>
                                 </div>
-                                <table id="orders-table" class="table table-responsive-lg table-borderless table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Order ID</th>
-                                            <th>Customer</th>
-                                            <th>Order Date</th>
-                                            <th>Qty</th>
-                                            <th>Total</th>
-                                            <th>status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-0001</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/avatar.jpg" alt="">
-                                                <span class="">Scott McGoldbridge</span>
-                                            </td>
-                                            <td class="align-middle text-muted">14 Apr, 2022</td>
-                                            <td class="align-middle text-muted">12</td>
-                                            <td class="align-middle text-muted">$1,239</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-purple status-badge text-white p-2">pending</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-6901</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-2.jpg" alt="">
-                                                <span class="">Peter Gorvian</span>
-                                            </td>
-                                            <td class="align-middle text-muted">11 Apr, 2022</td>
-                                            <td class="align-middle text-muted">8</td>
-                                            <td class="align-middle text-muted">$802</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-warning status-badge text-white p-2">Approved</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-1393</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-3.jpg" alt="">
-                                                <span class="">Claire Anne</span>
-                                            </td>
-                                            <td class="align-middle text-muted">10 Apr, 2022</td>
-                                            <td class="align-middle text-muted">16</td>
-                                            <td class="align-middle text-muted">$9,154</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-success status-badge text-white p-2">Shipped</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-0712</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-4.jpg" alt="">
-                                                <span class="">Mitchy Mohammed</span>
-                                            </td>
-                                            <td class="align-middle text-muted">08 Apr, 2022</td>
-                                            <td class="align-middle text-muted">10</td>
-                                            <td class="align-middle text-muted">$1,239</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-pink status-badge text-white p-2">rejected</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-1482</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-5.jpg" alt="">
-                                                <span class="">Lee Maywather</span>
-                                            </td>
-                                            <td class="align-middle text-muted">01 Apr, 2022</td>
-                                            <td class="align-middle text-muted">4</td>
-                                            <td class="align-middle text-muted">$20,239</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-purple status-badge text-white p-2">pending</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>

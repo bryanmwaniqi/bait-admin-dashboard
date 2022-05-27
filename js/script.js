@@ -9,6 +9,13 @@ $(function () {
         autoplayHoverPause: true
     });
 
+    $('#clients-carousel').owlCarousel({
+        items: 1,
+        margin: 3,
+        center: true,
+        dots: true
+    });
+
     // sidemenu text toggler
     // let sideToggler = $('.toggle-input')
     // $('.sidemenu-toggle').on('click', function () {
@@ -366,4 +373,10 @@ $(function () {
         $('#targetSalesChart'),
         targetConfig
     );
+
+    // Showing year sales chart based on selected option in sales page
+    // $("#yearSales").change(function() {          
+    //     var value = $("#yearSales option:selected").val();
+    //     $('#tabbable li).find(a[href=#'+value+']').click();
+    // });​
 })
