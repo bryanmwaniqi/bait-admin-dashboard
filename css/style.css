@@ -61,6 +61,7 @@ img{
 }
 .primary-btn{
     background-color: var(--primary-color);
+    border: 1.8px solid var(--primary-color);
     color: var(--body-color);
 }
 .rounded-btn{
@@ -270,7 +271,6 @@ span.form-icon{
 }
 .primary-btn:hover{
     background-color: transparent;
-    border: 1.8px solid var(--primary-color);
     color: var(--primary-color);
 }
 #main-navbar #account-overview .dropdown-item{
@@ -722,10 +722,9 @@ i#action-toggle:hover{
 /* Top customers section styling */
 #clients-carousel{
     position: relative;
-    top: -2.2rem;
+    top: -2.25rem;
 }
 #clients-carousel .item{
-    /* overflow: hidden; */
     padding: 0;
     color: #fff;
 }

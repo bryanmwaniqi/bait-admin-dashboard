@@ -233,13 +233,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span class="menu-link">vendors</span> 
+                                <span class="menu-link">Account</span> 
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="invoice.html">
                                 <i class="fas fa-store"></i>
-                                <span class="menu-link">Shop</span> 
+                                <span class="menu-link">Invoice</span> 
                             </a>
                         </li>
                     </ul>
@@ -280,7 +280,7 @@
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between mb-4">
                                     <h6 class="text-muted">Profile Details</h6>
-                                    <a href="" class="btn primary-btn">Update</a>
+                                    <a href="#profile" class="btn primary-btn">Update</a>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-around flex-wrap">
                                     <div class="pie-container d-flex flex-column justify-content-center align-items-center">
@@ -292,7 +292,7 @@
                                             <div class="percentage d-flex flex-column justify-content-center align-items-center">
                                                 <h4 class="font-weight-bold mb-0">65%</h4>
                                                 <div class="d-flex flex-wrap">
-                                                    <span class="small text-muted mb-1">profile completion</span>
+                                                    <span class="small text-muted mb-1">completion</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -372,7 +372,18 @@
                     <div class="row">
                         <div class="col mb-5">
                             <div class="bg-white rounded-edges p-3 h-100 order-section">
-                                <h6 class="text-muted">Update Profile</h6>
+                                <div class="d-flex">
+                                    <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
+                                        <a href="#profile" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">Update Profile</a>
+                                        <a href="#activity" class="mx-1 mx-sm-2" data-toggle="tab">Activity</a>
+                                    </nav>
+                                </div>
+                                <div class="tab-content menu-tab">
+                                    <div id="profile" class="tab-pane show fade active">
+                                        <div></div>
+                                    </div>
+                                    <div id="activity" class="tab-pane fade"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
