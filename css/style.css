@@ -101,6 +101,20 @@ img{
 form i{
     color: #3f3f3f;
 }
+.primary-input{
+    background-color: var(--body-color);
+    border: none;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+}
+.primary-input:focus{
+    background-color: var(--body-color);
+}
 .round-input{
     border-width: 0.1px;
     font-size: 0.85rem;
