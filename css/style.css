@@ -269,6 +269,16 @@ span.form-icon{
 #main-navbar .toggler-nav.active{
     /* margin-left: 8.5rem; */
 }
+#main-navbar #search-input{
+    padding-left: 2.375rem;
+    background-color: var(--body-color);
+    border: none;
+}
+#main-navbar .form-icon i{
+    color: #a8a8a8;
+    font-size: 1rem;
+    margin-top: 0.1rem;
+}
 .primary-btn:hover{
     background-color: transparent;
     color: var(--primary-color);
