@@ -29,8 +29,17 @@ $(function () {
     // });
 
     // Mobile view sidemenu toggler
-    $('#sideMenuToggler').on('click', function () {
+    $('#sideMenuToggler').on('click', function (e) {
+        e.stopPropagation();
         $('div#sidebar').toggleClass('active')
+        // $('div.shadow-overlay').toggleClass('active');
+    });
+
+    $(document).on('click', function(e) {
+        if (e.target.id != "sideMenuToggler" && e.target.id != "sidebar") {
+            $('#sidebar').removeClass("active");
+            // $('div.shadow-overlay').removeClass('active');
+        }
     });
 
     // show scrollbar on hover

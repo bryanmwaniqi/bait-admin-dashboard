@@ -467,15 +467,13 @@ span.form-icon{
         position: absolute;
     }
     #sidebar{
-        z-index: 1020; 
-        transform: translateX(-100%); 
-        /* display: none; */
+        z-index: 1020;
+        left: -7rem; 
     }
     #sidebar.active{
-        transform: translateX(0);
+        left: 0;
         transition: all ease-in .3s;
         width: 6rem;
-        /* display: block; */
     }
 }
 #sidebar .navbar-nav li{
@@ -553,6 +551,23 @@ span.form-icon{
 #sidebar .navbar-nav li.active a{
     color: var(--primary-color);
 }
+/* @media (max-width:992px) {
+    .shadow-overlay{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 1019;
+        opacity: 0;
+        background-color: #fff;
+        transition: all ease-in .3s;
+    }
+    .shadow-overlay.active{
+        opacity: 0.8;
+    }
+} */
+
 /* content section styling */
 #main{
     margin: 5rem 0.5rem 0.5rem;
