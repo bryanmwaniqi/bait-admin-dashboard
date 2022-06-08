@@ -88,9 +88,9 @@ img{
 .bg-pink{
     background-color: var(--secondary-color);
 }
-/* .bg-aqua{
-    background-color: rgb(0, 206, 206);
-} */
+.table tr td, .table tr th{
+    vertical-align: middle;
+}
 .content-wrapper{
     position: relative;
     min-height: 100vh;
@@ -224,26 +224,32 @@ span.form-icon{
 .checkbox-control, .default-checkbox{
     display: none;
 }
-.checkbox-group:hover > .custom-checkbox, .default-checkbox:checked + .custom-checkbox{
+/* .checkbox-group:hover > .custom-checkbox, .default-checkbox:checked + .custom-checkbox{
     border-color: var(--secondary-color);
-}
+} */
 .custom-checkbox{
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
     -webkit-border-radius: 10%;
     -moz-border-radius: 10%;
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
     border-radius: 10%;
-    border: 1px solid #fff;
+    background-color: #cacaca;
     margin-right: 0.5em;
+}
+#login-remember-me{
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #fff;
 }
 .custom-checkbox::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f14a";
     display: inline-block;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -254,6 +260,9 @@ span.form-icon{
     -ms-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+}
+#login-remember-me::before{
+    color: var(--secondary-color);
 }
 .default-checkbox:checked + .custom-checkbox::before{
     -webkit-transform: scale(1.2);
@@ -710,7 +719,7 @@ a.add-product{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-.customer{
+.round-img{
     height: 3rem;
     width: 3rem;
     border-radius: 50px;
@@ -907,3 +916,6 @@ select.custom option{
 select.custom option:hover{
     background-color: var(--secondary-color);
 }
+
+/* Products page */
+
