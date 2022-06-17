@@ -230,10 +230,10 @@
                                 <span class="menu-link">sales</span> 
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span class="menu-link">vendors</span> 
+                                <span class="menu-link">email</span> 
                             </a>
                         </li>
                         <li class="nav-item">
@@ -247,610 +247,470 @@
             </div>
             <div id="main">
                 <div class="container-fluid py-2">
-                    <div class="row flex-column flex-md-row justify-content-center">
-                        <div class="col col-md-6">
-                            <div id="stats" class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-column flex-fill p-2">
-                                        <h6 class="text-muted">Overall Sales</h6>
-                                        <h5 class="font-weight-bold"><span class="text-muted dollar align-top">$</span> 839,932</h5>
-                                        <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
-                                        <span class="text-muted small">2.20%</span>
-                                    </div>
-                                    <div class="ml-auto d-flex flex-column bg-purple justify-content-center align-items-center px-3">
-                                        <i class="fas text-white fa-cart-arrow-down"></i>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill p-2">
-                                        <h6 class="text-muted">Orders</h6>
-                                        <h5 class="font-weight-bold">14,243</h5>
-                                        <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
-                                        <span class="small text-muted">0.90%</span> 
-                                    </div>
-                                    <div class="d-flex flex-column bg-purple justify-content-center align-items-center px-3">
-                                        <i class="fas text-white fa-md fa-clipboard-list"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="stats" class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill p-2">
-                                        <h6 class="text-muted">Invoices</h6>
-                                        <h5 class="font-weight-bold">8,673</h5>
-                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
-                                            <span class="small text-muted">2.25%</span>
-                                    </div>
-                                    <div class="d-flex flex-column bg-purple justify-content-center align-items-center px-3">
-                                        <i class="fas text-white fa-cash-register"></i> 
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill p-2">
-                                        <h6 class="text-muted">Site Traffic</h6>
-                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top"></span> 1,192,251</h5>
-                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
-                                            <span class="small text-muted">1.05%</span>
-                                    </div>
-                                    <div class="d-flex flex-column bg-purple justify-content-center align-items-center px-3">
-                                        <i class="fas text-white fa-file-invoice-dollar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
-                                <div class="d-flex flex-fill flex-column align-items-center">
-                                    <h6 class="text-muted mb-3">Conversion Rate</h6>
-                                    <div class="pie-container d-flex flex-columnjustify-content-center align-items-center">
-                                        <div class="pie-progress-bar">
-                                            <svg class="conversion-rate">
-                                                <circle cx="65" cy="65" r="65"/>
-                                                <circle cx="65" cy="65" r="65"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h4 class="font-weight-bold mb-0">73%</h4>
-                                                <span class="small text-muted mb-1">todays traffic</span>
-                                                <i class="fas fa-xs success-percentage fa-arrow-up"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-fill flex-column align-items-center">
-                                    <h6 class="text-muted mb-3">Cart Abandonment</h6>
-                                    <div class="pie-container d-flex flex-columnjustify-content-center align-items-center">
-                                        <div class="pie-progress-bar">
-                                            <svg class="cart-abandonment">
-                                                <circle cx="65" cy="65" r="65"/>
-                                                <circle cx="65" cy="65" r="65"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h4 class="font-weight-bold mb-0">57%</h4>
-                                                <span class="small text-muted mb-1">todays traffic</span>
-                                                <i class="fas fa-xs danger-percentage fa-arrow-down"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row">
-                        <div class="col-12 col-md-7 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted">Sales Overview</h6>
-                                <div>
-                                    <canvas id="salesChart"></canvas>
-                                </div>
+                        <div class="col mb-4">
+                            <div class="flex-fill d-flex align-items-center">
+                                <span class="form-icon">
+                                    <i class="fas fa-search text-muted"></i>
+                                </span>
+                                <input type="text" class="form-control basic-input" autocomplete="off" placeholder="Search...">
                             </div>
-                        </div>
-                        <div class="col-12 col-md-5 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h6 class="text-muted">Best Sellers</h6>
-                                    <div class="d-flex">
-                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
-                                            <a href="#products" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">products</a>
-                                            <a href="#categories" class="mx-1 mx-sm-2" data-toggle="tab">categories</a>
+                        </div>    
+                    </div>
+
+                    <div class="row flex-column flex-md-row justify-content-center mb-4">
+                        <div class="col mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="row">
+                                    <div class="col col-md-3 d-flex flex-column">
+                                        <button id="compose" class="btn  secondary-btn d-flex justify-content-center align-items-center mb-3">
+                                            <i class="fa-solid fa-pen mr-2"></i>
+                                            Compose
+                                        </button>
+                                        <nav id="email-nav" class="nav d-flex flex-column font-weight-bold mb-3">
+                                            <a href="#inbox" class="d-flex email-nav-item align-items-center active" data-toggle="tab" role="button">
+                                                <i class="fa-solid fa-inbox mr-2"></i>
+                                                <span class="mr-2">inbox</span> 
+                                                <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-pink text-white email-badge">6</span>
+                                            </a>
+                                            <a href="#starred" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                                <i class="fas fa-star mr-2"></i>
+                                                <span class="mr-2">starred</span> 
+                                                <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 success-bg text-white email-badge">1</span>
+                                            </a>
+                                            <a href="#draft" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                                <i class="fa-solid fa-file-lines mr-2"></i>
+                                                <span class="mr-2">draft</span> 
+                                                <!-- <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-pink text-white email-badge">1</span> -->
+                                            </a>
+                                            <a href="#sent" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                                <i class="fa-solid fa-paper-plane mr-2"></i>
+                                                <span class="mr-2">sent</span> 
+                                                <!-- <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-warning text-white email-badge">2</span> -->
+                                            </a>
+                                            <a href="#spam" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                                <i class="fa-solid fa-circle-exclamation mr-2"></i>
+                                                <span class="mr-2">spam</span> 
+                                                <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-warning text-white email-badge">2</span>
+                                            </a>
                                         </nav>
                                     </div>
+                                    <div class="col-md-9 col-12">
+                                        <div id="email-tab">
+                                            <div class="email-actions d-flex justify-content-between align-items-center py-2">
+                                                <div class="d-flex">
+                                                    <label for="all-emails" class="checkbox-group d-flex align-items-center mr-1">
+                                                        <input type="checkbox" id="all-emails" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                    <div class="email-icon-container d-flex justify-content-center mr-2">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </div>
+                                                    <div class="dropdown">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <div class="email-icon-container d-flex justify-content-center">
+                                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                            </div>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-envelope-open"></i>
+                                                                </div>
+                                                                <span>Mark as Read</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-paper-plane"></i>
+                                                                </div>
+                                                                <span>starred</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <span class="pagination-text mr-3 align-self-center">1-11 of 50</span>
+                                                    <div class="d-flex email-pagination">
+                                                        <a href="#" id="previous" class="d-flex align-items-center justify-content-center mr-3">
+                                                            <i class="fa-solid fa-angle-left"></i>
+                                                        </a>
+                                                        <a href="#" id="next" class="d-flex align-items-center justify-content-center">
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="inbox" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                    <ul class="email-list">
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-1" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-1" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-2" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-2" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-3" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-3" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-4" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-4" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-5" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-5" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-6" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-6" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-7" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-7" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-8" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-8" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="starred" role="tabpanel" aria-labelledby="starred">starred</div>
+                                                <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draft">draft</div>
+                                                <div class="tab-pane fade" id="sent" role="tabpanel" aria-labelledby="sent">sent</div>
+                                                <div class="tab-pane fade" id="spam" role="tabpanel" aria-labelledby="spam">spam</div>
+                                            </div>
+                                        </div>
+                                        <div id="read-email-tab" class=" d-none">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex py-2 px-1 align-items-center">
+                                                    <div id="back-to-email" class="email-icon-container mr-2 mr-md-4">
+                                                        <i class="fa-solid fa-arrow-left"></i>
+                                                    </div>
+                                                    <div id="back-to-email" class="email-icon-container mr-2">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                    </div>
+                                                    <div id="back-to-email" class="email-icon-container mr-2">
+                                                        <i class="fa-solid fa-box-archive"></i>
+                                                    </div>
+                                                    <div id="back-to-email" class="email-icon-container mr-2">
+                                                        <i class="fa-solid fa-envelope"></i>
+                                                    </div>
+                                                    <div id="back-to-email" class="email-icon-container">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </div>
+                                                    <div class="d-flex ml-auto">
+                                                        <span class="pagination-text mr-3 align-self-center">3 of 50</span>
+                                                        <div class="d-flex email-pagination">
+                                                            <a href="#" id="previous" class="d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-angle-left"></i>
+                                                            </a>
+                                                            <a href="#" id="next" class="d-flex align-items-center justify-content-center">
+                                                                <i class="fa-solid fa-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center py-3 px-1 justify-content-between">
+                                                    <div class="d-flex flex-column">
+                                                        <h5 class="">Template #1523424 has been approved to webstore</h5>
+                                                        <div class="d-flex">
+                                                            <span class="badge success-bg text-white p-2 mr-1">sales</span>
+                                                            <span class="badge bg-warning text-white p-2">products</span>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn primary-btn d-sm-flex align-items-center d-none">
+                                                        <i class="fa-solid fa-print mr-md-1"></i>
+                                                        <span>print</span>
+                                                    </button>
+                                                </div>
+                                                <div class="py-2 px-2">
+                                                    <div id="accordion" class="email-accordion">
+                                                        <div class="card">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-1" data-toggle="collapse" data-target="#email-chat-1-collapse" aria-expanded="true" aria-controls="email-chat-1-collapse">
+                                                            <div class="d-flex">
+                                                                <img class="round-img mr-2" src="assets/client-3.jpg" alt="">
+                                                                <div class="d-flex flex-column">
+                                                                    <span class="text-muted">mitchymoh@envato.com</span>
+                                                                    <span class="text-muted small">to me cc: 12 others</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex ml-auto align-items-center">
+                                                                <div class="d-flex flex-column align-items-end mr-2">
+                                                                    <span class="small text-muted">jun 4, 2022</span>
+                                                                    <span class="small text-muted">9:03AM</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <div class="email-icon-container d-flex justify-content-center">
+                                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fa-solid fa-envelope-open"></i>
+                                                                            </div>
+                                                                            <span>Reply</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-paper-plane"></i>
+                                                                            </div>
+                                                                            <span>forward</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </div>
+                                                                            <span>Delete</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                      
+                                                          <div id="email-chat-1-collapse" class="collapse" aria-labelledby="email-chat-1" data-parent="#accordion">
+                                                            <div class="card-body">
+                                                                <span>Dear Brian,</span> <br> 
+                                                                <span class="mt-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, harum?</span> <br>
+                                                                <span>Regards,</span> <br>
+                                                                <span>Mitchy Moh</span>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="card">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-2" data-toggle="collapse" data-target="#email-chat-2-collapse" aria-expanded="true" aria-controls="email-chat-2-collapse">
+                                                            <div class="d-flex">
+                                                                <img class="round-img mr-2" src="assets/avatar.jpg" alt="">
+                                                                <div class="d-flex flex-column">
+                                                                    <span class="text-muted">neybait@bait.com</span>
+                                                                    <span class="text-muted small">to mitchymoh@envato.com</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex ml-auto align-items-center">
+                                                                <div class="d-flex flex-column align-items-end mr-2">
+                                                                    <span class="small text-muted">jun 4, 2022</span>
+                                                                    <span class="small text-muted">9:03AM</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <div class="email-icon-container d-flex justify-content-center">
+                                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                                        <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fa-solid fa-envelope-open"></i>
+                                                                            </div>
+                                                                            <span>Reply</span>
+                                                                        </a> -->
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-paper-plane"></i>
+                                                                            </div>
+                                                                            <span>forward</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </div>
+                                                                            <span>Delete</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                          <div id="email-chat-2-collapse" class="collapse" aria-labelledby="email-chat-2" data-parent="#accordion">
+                                                            <div class="card-body">
+                                                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="card">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-3" data-toggle="collapse" data-target="#email-chat-3-collapse" aria-expanded="true" aria-controls="email-chat-3-collapse">
+                                                            <div class="d-flex">
+                                                                <img class="round-img mr-2" src="assets/client-3.jpg" alt="">
+                                                                <div class="d-flex flex-column">
+                                                                    <span class="text-muted">mitchymoh@envato.com</span>
+                                                                    <span class="text-muted small">to me cc: 12 others</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex ml-auto align-items-center">
+                                                                <div class="d-flex flex-column align-items-end mr-2">
+                                                                    <span class="small text-muted">jun 4, 2022</span>
+                                                                    <span class="small text-muted">9:03AM</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <div class="email-icon-container d-flex justify-content-center">
+                                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fa-solid fa-envelope-open"></i>
+                                                                            </div>
+                                                                            <span>Reply</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-paper-plane"></i>
+                                                                            </div>
+                                                                            <span>forward</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </div>
+                                                                            <span>Delete</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                          <div id="email-chat-3-collapse" class="collapse show" aria-labelledby="email-chat-3" data-parent="#accordion">
+                                                            <div class="card-body">
+                                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                                <button class="btn primary-btn d-flex align-items-center mt-4">
+                                                                    <i class="fa-solid fa-reply mr-2"></i>
+                                                                    <span>reply</span>
+                                                                </button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tab-content menu-tab">
-                                    <!-- products tab content -->
-                                    <div id="products" class="tab-pane show fade active p-0">
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/iphone.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                                <span class="text-muted">price of $5000</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/galaxy.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Samsung Galaxy S6</h5>
-                                                <span class="text-muted">price of $4800</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/lip-gloss.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Matte Lip gloss</h5>
-                                                <span class="text-muted">price of $500</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h5>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h5 class="font-weight-bold">Hennessy XO 500ml</h5>
-                                                <span class="text-muted">price of $360</span>
-                                            </div>
-                                            <h5 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h5>
-                                        </div>
-                                    </div>
-                                    <!-- end of best sellers products tab content -->
-                                    
-                                    <!-- categories tab content -->
-                                    <div id="categories" class="tab-pane fade p-0">
-                                        <div class="mb-3">
-                                            <div class="d-flex mb-1">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">Electronics</h5>
-                                                    <span class="text-muted small">phones, T.v's, sound, home-theaters, consoles</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">67%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:70%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">cosmetics</h5>
-                                                    <span class="text-muted small">lipstic, mascara, lipgloss, acrylics, mousse</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">fashion</h5>
-                                                    <span class="text-muted small">fabrics, tops, pants, shoes, accessories</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">58%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:58%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">food & drinks</h5>
-                                                    <span class="text-muted small">wine, whiskey, oil, rice, flour</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">80%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:80%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-2">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h5 class="font-weight-bold mb-0">art crafts</h5>
-                                                    <span class="text-muted small">bracelets, wristbands, bangles, wall watches</span>
-                                                </div>
-                                                <h5 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h5>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end of categories tab content -->
-                                </div>
-                                
-                                <!-- <div class="d-flex">
-                                    <div class="best-product-img text-center rounded-edges mr-5">
-                                        <img class="" src="assets/iphone.jpg" alt="">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <h5 class="font-weight-bold">Iphone 6S 2015</h5>
-                                        <span class="text-muted">price of $5000</span>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
                     <div class="row flex-column flex-md-row justify-content-center">
-                        <div class="col-12 col-lg-6 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted">Sales Distribution</h6>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 mt-2">
-                            <div class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-column flex-fill p-2">
-                                        <h6 class="text-muted">USA</h6>
-                                        <h5 class="font-weight-bold"><span class="text-muted dollar align-top">$</span> 83,932</h5>
-                                        <!-- <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i> -->
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-canada-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Europe</h6>
-                                        <h5 class="font-weight-bold">1,243</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-great-britain-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-germany-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-florida-flag-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white flex-fill p-2">
-                                        <h6 class="text-muted">Asia</h6>
-                                        <h5 class="font-weight-bold">8,673</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-china-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-japan-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-china-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Africa</h6>
-                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 95,251</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-kenya-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-south-africa-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-egypt-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between">
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">South America</h6>
-                                        <h5 class="font-weight-bold">8,673</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-brazil-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-mexico-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-argentina-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-6 d-flex mb-4">
-                                    <div class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Australia</h6>
-                                        <h5 class="font-weight-bold"> <span class="text-muted dollar align-top">$</span> 95,251</h5>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-australia-48.png" alt="">
-                                                <span class="text-muted small ml-2">37,109</span>
-                                            </div>
-                                            <div class="d-flex mr-3 align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">13,726</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                                <span class="text-muted small ml-2">11,539</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="col"></div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <div class="bg-white rounded-edges p-3 h-100 order-section">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-muted">Recent Orders</h6>
-                                    <div class="d-flex align-items-center">
-                                        <div class="input-group" id="table-search">
-                                            <input type="text" class="form-control" placeholder="Search">
-                                            <div class="input-group-append">
-                                                <button class="btn bg-purple text-white" type="button">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <a href="add-order.html" class="d-flex align-items-center justify-content-center mr-lg-5 mr-md-4 mr-1 ml-3 add-product">
-                                            <i class="fas fa-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <table id="orders-table" class="table table-responsive-lg table-borderless table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Order ID</th>
-                                            <th>Customer</th>
-                                            <th>Order Date</th>
-                                            <th>Qty</th>
-                                            <th>Total</th>
-                                            <th>status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-0001</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/avatar.jpg" alt="">
-                                                <span class="">Scott McGoldbridge</span>
-                                            </td>
-                                            <td class="align-middle text-muted">14 Apr, 2022</td>
-                                            <td class="align-middle text-muted">12</td>
-                                            <td class="align-middle text-muted">$1,239</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-purple status-badge text-white p-2">pending</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-6901</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-2.jpg" alt="">
-                                                <span class="">Peter Gorvian</span>
-                                            </td>
-                                            <td class="align-middle text-muted">11 Apr, 2022</td>
-                                            <td class="align-middle text-muted">8</td>
-                                            <td class="align-middle text-muted">$802</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-warning status-badge text-white p-2">Approved</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-1393</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-3.jpg" alt="">
-                                                <span class="">Claire Anne</span>
-                                            </td>
-                                            <td class="align-middle text-muted">10 Apr, 2022</td>
-                                            <td class="align-middle text-muted">16</td>
-                                            <td class="align-middle text-muted">$9,154</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-success status-badge text-white p-2">Shipped</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-0712</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-4.jpg" alt="">
-                                                <span class="">Mitchy Mohammed</span>
-                                            </td>
-                                            <td class="align-middle text-muted">08 Apr, 2022</td>
-                                            <td class="align-middle text-muted">10</td>
-                                            <td class="align-middle text-muted">$1,239</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-pink status-badge text-white p-2">rejected</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle text-muted">BC-1482</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3" src="assets/client-5.jpg" alt="">
-                                                <span class="">Lee Maywather</span>
-                                            </td>
-                                            <td class="align-middle text-muted">01 Apr, 2022</td>
-                                            <td class="align-middle text-muted">4</td>
-                                            <td class="align-middle text-muted">$20,239</td>
-                                            <td class="align-middle text-muted">
-                                                <span class="badge bg-purple status-badge text-white p-2">pending</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <div class="col"></div>
                     </div>
                     <div class="row text-muted mt-4 align-items-center footer-content">
                         <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-start">

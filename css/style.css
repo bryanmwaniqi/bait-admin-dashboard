@@ -207,12 +207,16 @@ span.form-icon{
 }
 .secondary-btn{
     background-color: var(--secondary-color);
+    border: 1.8px solid var(--secondary-color);
     color: var(--body-color);
 }
 .secondary-btn:hover{
     background-color: transparent;
     border: 1.8px solid var(--secondary-color);
     color: #fff;
+}
+#compose:hover{
+    color: var(--secondary-color);
 }
 .secondary:focus, .regular-btn:focus, .form-control:focus{
     -webkit-box-shadow: none ;
@@ -231,11 +235,11 @@ span.form-icon{
     width: 1rem;
     height: 1rem;
     cursor: pointer;
-    -webkit-border-radius: 10%;
-    -moz-border-radius: 10%;
-    -ms-border-radius: 10%;
-    -o-border-radius: 10%;
-    border-radius: 10%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+    border-radius: 15%;
     background-color: #cacaca;
     margin-right: 0.5em;
 }
@@ -918,4 +922,103 @@ select.custom option:hover{
 }
 
 /* Products page */
+.basic-input{
+    border: 1px solid #fff;
+    padding-left: 2.5rem;
+}
+.basic-input:focus{
+    border: 1px solid var(--primary-color);
+}
 
+/* email page styling */
+.email-badge{
+    min-width: 1.2rem;
+    height: 0.6rem;
+}
+#email-nav a{
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    color: #858585;
+    font-weight: normal;
+    /* margin: 0.05rem; */
+}
+#email-nav a.active{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.email-icon-container{
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.email-actions{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+.email-icon-container i{
+    color: #858585;
+}
+.email-icon-container:hover i{
+    color: var(--primary-color);
+}
+.pagination-text, .email-item-date{
+    color: #858585;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.email-item-date{
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+#next,#previous{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--body-color);
+    border-radius: 0.3rem;
+}
+#next i,#previous i{
+    color: var(--primary-color);
+}
+#next:hover i,#previous:hover i{
+    color: var(--body-color);
+}
+#next:hover,#previous:hover{
+    background-color: var(--primary-color);
+}
+ul.email-list{
+    list-style: none;
+}
+.email-item{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+.email-item:hover{
+    background-color: var(--body-color);
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+.email-body, .email-header{
+    color: #858585;
+}
+@media (min-width:768px) {
+    .email-header{
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+.email-body{
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.email-accordion .card{
+    margin-bottom: 0.5rem;
+    border: none;
+}
+.email-accordion .card .card-header{
+    cursor: pointer;
+    border: none;
+}

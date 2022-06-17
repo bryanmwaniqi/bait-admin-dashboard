@@ -47,6 +47,17 @@ $(function () {
         $('').toggleClass('d-none')
     });
 
+    // email list item onclick logic
+    $('li.email-item').on('click', function () {
+        $('#email-tab').toggleClass('d-none');
+        $('#read-email-tab').toggleClass('d-none');
+    });
+
+    // read email back-to-email list arrow
+    $('#back-to-email').on('click', function () {
+        $('#email-tab').toggleClass('d-none');
+        $('#read-email-tab').toggleClass('d-none');
+    });
 
     // Overall sales line chart
     // const labels = Utils.months({count: 7});
