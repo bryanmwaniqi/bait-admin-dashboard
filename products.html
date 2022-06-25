@@ -282,11 +282,11 @@
                                 <div class="d-flex justify-content-between mb-3">
                                     <h6 class="text-muted">Products Catalog</h6>
                                     <div class="d-flex">
-                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
-                                            <a href="#products-list" class="mx-2 mx-sm-" data-toggle="tab" role="button">
+                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-2">
+                                            <a href="#products-list" class="mx-2 mx-sm-2 active" data-toggle="tab" role="button">
                                                 <i class="fas  fa-th-large"></i>
                                             </a>
-                                            <a href="#products-table" class="mx-2 mx-sm-2 active" data-toggle="tab">
+                                            <a href="#products-table" class="mx-2 mx-sm-2" data-toggle="tab">
                                                 <i class="fas  fa-list"></i>
                                             </a>
                                         </nav>
@@ -296,7 +296,277 @@
                                 <div class="tab-content menu-tab">
                                     <!-- Products list tab content -->
                                     <div id="products-list" class="tab-pane show fade active p-0">
-                                        <!-- <div></div> -->
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div class="d-flex flex-column px-3">
+                                                    <a href="add-product.html" class="btn primary-btn mb-3">New Product</a>
+                                                    <div class="d-none d-sm-block">
+                                                        <div id="category-select" class="select-dropdown flex-fill mb-3">
+                                                            <input type="text" class="textbox" placeholder="select category" readonly>
+                                                            <div class="select-dropdown-options">
+                                                                <div>All</div>
+                                                                <div>Electronics</div>
+                                                                <div>Cosmetics</div>
+                                                                <div>Fashion</div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="sub-category-select" class="select-dropdown flex-fill mb-3">
+                                                            <input type="text" class="textbox" placeholder="select sub-category" readonly>
+                                                            <div class="select-dropdown-options">
+                                                                <div>All</div>
+                                                                <div>phones</div>
+                                                                <div>Tvs</div>
+                                                                <div>game-console</div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="brand-select" class="select-dropdown flex-fill mb-3">
+                                                            <input type="text" class="textbox" placeholder="select Brand" readonly>
+                                                            <div class="select-dropdown-options">
+                                                                <div>All</div>
+                                                                <div>Samsung</div>
+                                                                <div>Iphone</div>
+                                                                <div>LG</div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="model-select" class="select-dropdown flex-fill mb-3">
+                                                            <input type="text" class="textbox" placeholder="select model" readonly>
+                                                            <div class="select-dropdown-options">
+                                                                <div>All</div>
+                                                                <div>Galaxy Z fold</div>
+                                                                <div>Galaxy Z flip</div>
+                                                                <div>Galaxy A22</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn secondary-btn mt-3 py-2 mb-3 d-none d-sm-block">Apply</button>
+                                                    <div class="py-3 mb-2">
+                                                        <h6 class="text-muted">Price Range</h6>
+                                                        <div class="price-input">
+                                                            <div class="field">
+                                                                <input type="number" class="input-min text-muted" value="2500">
+                                                            </div>
+                                                            <div class="separator">-</div>
+                                                            <div class="field">
+                                                                <input type="number" class="input-max text-muted" value="7500">
+                                                            </div>
+                                                        </div>
+                                                        <div class="slider">
+                                                            <div class="progress"></div>
+                                                        </div>
+                                                        <div class="range-input">
+                                                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="10">
+                                                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="10">
+                                                        </div>
+                                                    </div>
+                                                    <div id="product-tags" class="py-3">
+                                                        <h6 class="text-muted mb-3">Product Tags</h6>
+                                                        <label for="tag-1" class="checkbox-group d-flex align-items-center">
+                                                            <input type="checkbox" id="tag-1" class="default-checkbox">
+                                                            <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                            <span class="text-muted">Female</span> 
+                                                        </label>
+                                                        <label for="male-tag" class="checkbox-group d-flex align-items-center">
+                                                            <input type="checkbox" id="male-tag" class="default-checkbox">
+                                                            <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                            <span class="text-muted">Male</span>
+                                                        </label>
+                                                        <label for="unisex-tag" class="checkbox-group d-flex align-items-center">
+                                                            <input type="checkbox" id="unisex-tag" class="default-checkbox">
+                                                            <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                            <span class="text-muted">Unisex</span>
+                                                        </label>
+                                                        <label for="kids-tag" class="checkbox-group d-flex align-items-center">
+                                                            <input type="checkbox" id="kids-tag" class="default-checkbox">
+                                                            <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                            <span class="text-muted">Kids</span>
+                                                        </label>
+                                                        <label for="refurbished-tag" class="checkbox-group d-flex align-items-center">
+                                                            <input type="checkbox" id="refurbished-tag" class="default-checkbox">
+                                                            <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                            <span class="text-muted">Refurbished</span>
+                                                        </label>
+                                                        <label for="designer-tag" class="checkbox-group d-flex align-items-center">
+                                                            <input type="checkbox" id="designer-tag" class="default-checkbox">
+                                                            <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                            <span class="text-muted">Designer</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-9 d-flex flex-column">
+                                                <div id="products-gridlist-header" class="d-flex align-items-center px-3 mb-3">
+                                                    <div class="d-flex align-items-center flex-fill ml-auto">
+                                                        <span class="form-icon">
+                                                            <i class="fas fa-search text-muted"></i>
+                                                        </span>
+                                                        <input type="text" class="form-control secondary-input" autocomplete="off" placeholder="Search...">
+                                                    </div>
+                                                </div>
+                                                <div id="products-gridlist-body" class="d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div class="product-item d-flex flex-column">
+                                                        <a class="d-flex flex-column" href="product-info.html">
+                                                            <div class="product-item-container rounded-edges">
+                                                                <img class="product-item-img" src="assets/samsung-pixabay.png" alt="">
+                                                            </div>
+                                                            <h6 class="product-name">Samsung Galaxy Z fold</h6>
+                                                            <span class="small text-muted">Lorem, ipsum dolor sit amet consectetur kuriesc adipisicing. amiri mui</span>
+                                                        </a>
+                                                        <div class="d-flex align-items-center justify-content-between my-2">
+                                                            <span class="price">$2293</span>
+                                                            <button  class="btn primary-btn d-flex align-items-center justify-content-center p-2">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="reviews d-flex align-items-center  mt-0">
+                                                            <div class="rating py-2 ">
+                                                                <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 small mr-auto">(516)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-item d-flex flex-column">
+                                                        <a class="d-flex flex-column" href="product-info.html">
+                                                            <div class="product-item-container rounded-edges">
+                                                                <img class="product-item-img" src="assets/commercial-iphone.png" alt="">
+                                                            </div>
+                                                            <h6 class="product-name">Iphone 13 pro max</h6>
+                                                            <span class="small text-muted">Lorem, ipsum dolor sit amet consectetur kuriesc adipisicing. amiri mui</span>
+                                                        </a>
+                                                        <div class="d-flex align-items-center justify-content-between my-2 flex-wrap">
+                                                            <span class="price">$890</span>
+                                                            <button  class="btn primary-btn d-flex align-items-center justify-content-center p-2">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="reviews d-flex align-items-center  mt-0">
+                                                            <div class="rating py-2 ">
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                            </div>
+                                                            <span class="ml-2 small mr-auto">(119)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-item d-flex flex-column">
+                                                        <a class="d-flex flex-column" href="product-info.html">
+                                                            <div class="product-item-container rounded-edges">
+                                                                <img class="product-item-img" src="assets/samsung-pixabay.png" alt="">
+                                                            </div>
+                                                            <h6 class="product-name">Samsung Galaxy Z flip</h6>
+                                                            <span class="small text-muted">Lorem ipsum dolor sit, amet consectetur kuriesc adipisicing Animi.</span>
+                                                        </a>
+                                                        <div class="d-flex align-items-center justify-content-between my-2 flex-wrap">
+                                                            <span class="price">$1298</span>
+                                                            <button  class="btn primary-btn d-flex align-items-center justify-content-center p-2">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="reviews d-flex align-items-center  mt-0">
+                                                            <div class="rating py-2 ">
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 small mr-auto">(33)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-item d-flex flex-column">
+                                                        <a class="d-flex flex-column" href="product-info.html">
+                                                            <div class="product-item-container rounded-edges">
+                                                                <img class="product-item-img" src="assets/samsung-pixabay.png" alt="">
+                                                            </div>
+                                                            <h6 class="product-name">Samsung Galaxy Z fold</h6>
+                                                            <span class="small text-muted">Lorem ipsum dolor, sit amet consectetur kuriesc adipisicing elit. Ad?</span>
+                                                        </a>
+                                                        <div class="d-flex align-items-center justify-content-between my-2 flex-wrap">
+                                                            <span class="price">$100</span>
+                                                            <button  class="btn primary-btn d-flex align-items-center justify-content-center p-2">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="reviews d-flex align-items-center  mt-0">
+                                                            <div class="rating py-2 ">
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 small mr-auto">(989)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-item d-flex flex-column">
+                                                        <a class="d-flex flex-column" href="product-info.html">
+                                                            <div class="product-item-container rounded-edges">
+                                                                <img class="product-item-img" src="assets/samsung-pixabay.png" alt="">
+                                                            </div>
+                                                            <h6 class="product-name">Samsung Galaxy Z fold</h6>
+                                                            <span class="small text-muted">Lorem, ipsum dolor sit amet consectetur kuriesc adipisicing.</span>
+                                                        </a>
+                                                        <div class="d-flex align-items-center justify-content-between my-2 flex-wrap">
+                                                            <span class="price">$780</span>
+                                                            <button  class="btn primary-btn d-flex align-items-center justify-content-center p-2">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="reviews d-flex align-items-center  mt-0">
+                                                            <div class="rating py-2 ">
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 small mr-auto">(44)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-item d-flex flex-column">
+                                                        <a class="d-flex flex-column" href="product-info.html">
+                                                            <div class="product-item-container rounded-edges">
+                                                                <img class="product-item-img" src="assets/samsung-pixabay.png" alt="">
+                                                            </div>
+                                                            <h6 class="product-name">Samsung Galaxy Z fold</h6>
+                                                            <span class="small text-muted">Lorem, ipsum dolor sit amet consectetur kuriesc adipisicing.</span>
+                                                        </a>
+                                                        <div class="d-flex align-items-center justify-content-between my-2 flex-wrap">
+                                                            <span class="price">$1420</span>
+                                                            <button  class="btn primary-btn d-flex align-items-center justify-content-center p-2">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="reviews d-flex align-items-center  mt-0">
+                                                            <div class="rating py-2 ">
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 small mr-auto">(1890)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex ml-auto my-4 px-3">
+                                                    <span class="pagination-text mr-3 align-self-center">1-11 of 50</span>
+                                                    <div class="d-flex email-pagination">
+                                                        <a href="#" id="previous" class="d-flex align-items-center justify-content-center mr-3">
+                                                            <i class="fa-solid fa-angle-left"></i>
+                                                        </a>
+                                                        <a href="#" id="next" class="d-flex align-items-center justify-content-center">
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- end of products list tab content -->
                                     
