@@ -1,4 +1,5 @@
 $(function () {
+    // Owl carousel sliders
     // Dashboard features carousel
     $('#features-slider').owlCarousel({
         items: 1,
@@ -15,18 +16,6 @@ $(function () {
         center: true,
         dots: true
     });
-
-    // sidemenu text toggler
-    // let sideToggler = $('.toggle-input')
-    // $('.sidemenu-toggle').on('click', function () {
-    //     if (sideToggler.is(':checked')) {
-    //         $('#sidebar').toggleClass('menu-verbose')
-    //         $('.toggler-nav').toggleClass('active')
-    //         setTimeout(() => {
-    //             $('.menu-link').toggleClass('d-none')
-    //         }, 100);
-    //     }
-    // });
 
     // Mobile view sidemenu toggler
     $('#sideMenuToggler').on('click', function (e) {

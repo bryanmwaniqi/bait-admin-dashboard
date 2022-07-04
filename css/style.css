@@ -28,7 +28,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     -webkit-text-decoration: none;
     -moz-text-decoration: none;
     -ms-text-decoration: none;
@@ -1013,12 +1013,17 @@ select.custom option:hover{
     color: var(--text-color);
 }
 .product-item-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 14.5rem;
     background-color: var(--body-color);
     overflow: hidden;
     margin-bottom: 1rem;
 }
 .product-item-img{
+    width: 90%;
+    height: 90%;
     object-fit: contain;
 }
 .price{
@@ -1163,6 +1168,126 @@ input[type="range"]::-moz-range-thumb{
     -moz-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
+/* Product-info styling */
+.product-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+    background-color: var(--body-color);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+@media (max-width:430px) {
+    .product-img-container{
+        height: 20rem;
+    }
+}
+.product-description{
+    font-size: 0.9rem;
+}
+#increment, #decrement{
+    background-color: var(--body-color);
+}
+#product-tally{
+    max-width: 5rem;
+}
+#product-tally:focus{
+    border-color: var(--primary-color);
+}
+.product-variation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--body-color);
+    border: 1px solid var(--body-color);
+    border-radius: 0.22rem;
+    cursor: pointer;
+}
+.product-variation.active, .product-variation:hover{
+    border: 1px solid var(--primary-color);
+}
+.product-variation-img{
+    object-fit: contain;
+    width: 85%;
+    height: 85%;
+}
+.color-variation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.2rem;
+    padding: 0.2rem;
+    border-radius: 0.22rem;
+    margin-right: 1rem;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.color-variation.active, .color-variation:hover{
+    border: 1px solid var(--primary-color);
+}
+.color{
+    border-radius: 0.22rem;
+    width: 100%;
+    height: 100%;
+}
+#color-1{
+    background-color: #0004ff;
+}
+#color-2{
+    background-color: #ff9100;
+}
+#color-3{
+    background-color: #ff008c;
+}
+#color-4{
+    background-color: #1d0029;
+}
+.size-variation{
+    display: flex;
+    width: 4rem;
+    border-radius: 0.22rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border: 1px solid #919191;
+    cursor: pointer;
+    justify-content: center;
+    color: #919191;
+}
+.size-variation:hover{
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.image-wrapper{
+    position: relative;
+}
+.image-wrapper:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.reviewer-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.client-review-wrapper{
+    max-width: 4.8rem;
+}
+.review-description{
+    font-size: 0.9rem;
+}
+#overall-rating{
+    background-color: #e0deff;
+    border-radius: 0.15rem;
+}
+table#specs tbody td{
+    color: #616161;
+}
 
 /* email page styling */
 .email-badge{
@@ -1210,13 +1335,13 @@ input[type="range"]::-moz-range-thumb{
     background-color: var(--body-color);
     border-radius: 0.3rem;
 }
-#next i,#previous i{
+#next i,#previous i,#increment i,#decrement i{
     color: var(--primary-color);
 }
-#next:hover i,#previous:hover i{
+#next:hover i,#previous:hover i,#increment:hover i,#decrement:hover i{
     color: var(--body-color);
 }
-#next:hover,#previous:hover{
+#next:hover,#previous:hover,#increment:hover,#decrement:hover{
     background-color: var(--primary-color);
 }
 ul.email-list{
