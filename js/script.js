@@ -27,8 +27,19 @@ $(function () {
     $(document).on('click', function(e) {
         if (e.target.id != "sideMenuToggler" && e.target.id != "sidebar") {
             $('#sidebar').removeClass("active");
-            // $('div.shadow-overlay').removeClass('active');
-        }
+        }  
+    });
+
+
+    // Show & hide sub-menu on sidemenu item click
+    $('li.account-dropdown').on('click', function () {
+        $(this).children('.sub-menu').toggleClass('active');
+    });
+    
+    $('#main').on('click', function(e) {
+        if ($('.sub-menu').hasClass('active')) {
+            $('.sub-menu').removeClass("active");
+        }  
     });
 
     // show scrollbar on hover
@@ -152,6 +163,34 @@ $(function () {
         });
     });
 
+     // All regions traffic doughnut chart
+     const allRegionsData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [200, 50, 100, 80, 90],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const allRegionsConfig = {
+        type: 'doughnut',
+        data: allRegionsData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const allRegionsChart = new Chart(
+        $('#allRegionsChart'),
+        allRegionsConfig
+    );
+
     // Overall sales line chart
     // const labels = Utils.months({count: 7});
     var salesCtx = document.getElementById('salesChart').getContext('2d');
@@ -191,7 +230,6 @@ $(function () {
                 y: {
                     beginAtZero: true,
                     grid: {
-                        display: false,
                         drawBorder: false
                     }
                 },
@@ -489,33 +527,12 @@ $(function () {
     );
 
     // Traffic Doughnut charts
-    // All regions traffic doughnut chart
-    const allRegionsData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [200, 50, 100, 80, 90],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const allRegionsConfig = {
-        type: 'doughnut',
-        data: allRegionsData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const allRegionsChart = new Chart(
-        $('#allRegionsChart'),
-        allRegionsConfig
-    );
+   
+
+    // const regionsChart = new Chart(
+    //     $('#regionsChart'),
+    //     allRegionsConfig
+    // );
 
     // europe region traffic doughnut chart
     const europeRegionData = {

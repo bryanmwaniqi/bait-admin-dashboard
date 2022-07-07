@@ -30,18 +30,20 @@
     <body class="body-color">
 
         <!-- main navbar section -->
-        <nav id="main-navbar" class="navbar fixed-top navbar-expand-sm background-light bg-white">
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
             <!-- sm screen and below sidemenu toggler -->
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
                 <i class="fas fa-bars"></i>
             </button>
-            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-sm-none" id="logo" href="offers-landing.html"> 
+            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
                 <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
                 <i class="fab fa-lg fa-html5"></i>
                 <span class="ml-1">Bait Logo</span>
             </a>
             <ul class="navbar-nav toggler-nav active mt-lg-0">
-                
+                <li class="nav-item d-flex align-items-center">
+                    <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
+                </li>
             </ul>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -50,11 +52,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item d-flex align-items-center">
-                        <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
-                    </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-flex align-items-center">
                         <a class="nav-link d-flex align-items-center" href="#">
@@ -64,7 +61,7 @@
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
                         </a>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
+                    <li id="language" class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
                         </a>
@@ -87,7 +84,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
+                    <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-plus-circle"></i>
                         </a>
@@ -247,57 +244,57 @@
             </div>
             <div id="main">
                 <div class="container-fluid py-2">
-                    <div class="row flex-column flex-md-row justify-content-center">
+                    <div class="row flex-column flex-sm-row justify-content-center">
                         <div class="col col-sm-3 d-flex mb-4">
                             <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
                                 <div class="">
                                     <h6 class="text-muted">Overall Sales</h6>
-                                    <h6 class="font-weight-bold">839,932</h6>
+                                    <h5 class="font-weight-bold">839,932</h5>
                                     <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
-                                    <span class="small text-muted">1.25%</span>
+                                    <span class="small text-muted">1.25% Decrease</span>
                                 </div>
-                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-clone text-white"></i>
-                                </div>
+                                <!-- <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-md fa-money-bill text-white"></i>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col col-sm-3 d-flex mb-4">
                             <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
                                 <div class="">
                                     <h6 class="text-muted">Orders</h6>
-                                    <h6 class="font-weight-bold">14,423</h6>
+                                    <h5 class="font-weight-bold">14,423</h5>
                                     <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
-                                    <span class="small text-muted">0.90%</span>
+                                    <span class="small text-muted">0.90% Increase</span>
                                 </div>
-                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-clone text-white"></i>
-                                </div>
+                                <!-- <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-file-invoice-dollar text-white"></i>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col col-sm-3 d-flex mb-4">
                             <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
                                 <div class="">
-                                    <h6 class="text-muted">Overall Sales</h6>
-                                    <h6 class="font-weight-bold">8,673</h6>
+                                    <h6 class="text-muted">Invoices</h6>
+                                    <h5 class="font-weight-bold">8,673</h5>
                                     <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
-                                    <span class="small text-muted">2.25%</span>
+                                    <span class="small text-muted">2.25% Increase</span>
                                 </div>
-                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-clone text-white"></i>
-                                </div>
+                                <!-- <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-store text-white"></i>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col col-sm-3 d-flex mb-4">
                             <div class="bg-white flex-fill rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
                                 <div class="">
-                                    <h6 class="text-muted">Overall Sales</h6>
-                                    <h6 class="font-weight-bold">1,932,932</h6>
+                                    <h6 class="text-muted">Returns</h6>
+                                    <h5 class="font-weight-bold">1,932,932</h5>
                                     <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
-                                    <span class="small text-muted">1.05%</span>
+                                    <span class="small text-muted">1.05% Decrease</span>
                                 </div>
-                                <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
-                                    <i class="fas text-white fa-file-invoice-dollar"></i>
-                                </div>
+                                <!-- <div class="stat-icon-container bg-purple d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid text-white fa-arrow-right-arrow-left"></i>
+                                </div> -->
                             </div>
                         </div> 
                     </div>
@@ -305,6 +302,48 @@
                         <div class="col col-md-6 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <h6 class="text-muted mb-3">Traffic Breakdown</h6>
+                                <div class="d-flex justify-content-around align-items-center flex-wrap">
+                                    <div class="traffic-doughnut-chart mb-2">
+                                        <canvas id="allRegionsChart"></canvas>
+                                    </div>
+                                    <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center">
+                                                <div id="organic" class="doughnut-key"></div>
+                                                <span class="text-muted">Organic Search</span>
+                                            </div> 
+                                            <span >721,416</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center">
+                                                <div id="google" class="doughnut-key"></div>
+                                                <span class="text-muted">Google ads</span>
+                                            </div>
+                                            <span>251,938</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center">
+                                                <div id="youtube" class="doughnut-key"></div>
+                                                <span class="text-muted">Youtube</span>
+                                            </div>
+                                            <span>99,071</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center">
+                                                <div id="instagram" class="doughnut-key"></div>
+                                                <span class="text-muted">Instagram</span>
+                                            </div>
+                                            <span class="">78,231</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center">
+                                                <div id="facebook" class="doughnut-key"></div>
+                                                <span class="text-muted">Facebook</span>
+                                            </div>
+                                            <span>24,906</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col col-md-6 mb-4">

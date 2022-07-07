@@ -30,18 +30,20 @@
     <body class="body-color">
 
         <!-- main navbar section -->
-        <nav id="main-navbar" class="navbar fixed-top navbar-expand-sm background-light bg-white">
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
             <!-- sm screen and below sidemenu toggler -->
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
                 <i class="fas fa-bars"></i>
             </button>
-            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-sm-none" id="logo" href="offers-landing.html"> 
+            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
                 <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
                 <i class="fab fa-lg fa-html5"></i>
                 <span class="ml-1">Bait Logo</span>
             </a>
             <ul class="navbar-nav toggler-nav active mt-lg-0">
-                
+                <li class="nav-item d-flex align-items-center">
+                    <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
+                </li>
             </ul>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -50,11 +52,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item d-flex align-items-center">
-                        <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
-                    </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-flex align-items-center">
                         <a class="nav-link d-flex align-items-center" href="#">
@@ -64,7 +61,7 @@
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
                         </a>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
+                    <li id="language" class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
                         </a>
@@ -87,7 +84,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
+                    <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-plus-circle"></i>
                         </a>
@@ -247,16 +244,145 @@
             </div>
             <div id="main">
                 <div class="container-fluid py-2">
-                    <div class="row">
+                    <div class="row mb-4">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h6 class="text-muted">Invoice</h6>
-                                    <btn class="btn primary-btn">print</btn>
+                                    <btn class="btn primary-btn">
+                                        <i class="fa-solid fa-print mr-2"></i>
+                                        print
+                                    </btn>
                                 </div>
-                                <div>
-                                    <p>something here</p>
-                                </div>
+                                <!-- <div class="pt-1"> -->
+                                    <table id="invoice-table" class="table table-responsive-sm table-borderless">
+                                        <thead class="">
+                                            <tr class="text-end">
+                                                <th class="pb-0" colspan="3" scope="col">
+                                                    <div class="d-flex flex-column justify-content-end pb-0 mb-0">
+                                                        <span>e-statista</span> 
+                                                        <address class="mb-0">
+                                                            <!-- Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>  -->
+                                                            <!-- Visit us at:<br> -->
+                                                            e-statista.com<br>
+                                                            P.O Box 12320, Queensland<br>
+                                                            Melbourne, Australia
+                                                            </address>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" class="pb-0 text-right">
+                                                    <div class="d-flex flex-column">
+                                                        <span>Date: 23/07/022</span>
+                                                        <span>Order No: #4432</span>
+                                                        <span>Invoice No: #6231</span>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr class="">
+                                                <th class=""><hr class="my-1"></th>
+                                                <th class=""><hr class="my-1"></th>
+                                                <th class=""><hr class="my-1"></th>
+                                                <th class=""><hr class="my-1"></th>
+                                            </tr>
+                                        </thead>
+                                        <thead class="invoice-header">
+                                            <tr class="">
+                                                <th scope="col text-muted py-0 mb-0 align-bottom">Product</th>
+                                                <th scope="col text-muted py-0 my-0 align-bottom">Price</th>
+                                                <th scope="col text-muted py-0 my-0 align-bottom">Quantity</th>
+                                                <th scope="col text-muted py-0 my-0 align-bottom">Total</th>
+                                            </tr>
+                                            <tr class="">
+                                                <th class=""><hr class=" my-1"></th>
+                                                <th class=""><hr class=" my-1"></th>
+                                                <th class=""><hr class=" my-1"></th>
+                                                <th class=""><hr class=" my-1"></th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/hennessy-xo.jpg" alt="">
+                                                    <span class="text-secondary">Hennessy XO 500ml</span>
+                                                </td>
+                                                <td class="text-secondary">$120.00</td>
+                                                <td class="text-secondary">2</td>
+                                                <td class="text-secondary">240.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/iphone.jpg" alt="">
+                                                    <span class="text-secondary">Iphone 6S 2015</span>
+                                                </td>
+                                                <td class="text-secondary">$1250.50</td>
+                                                <td class="text-secondary">1</td>
+                                                <td class="text-secondary">1250.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/galaxy.jpg" alt="">
+                                                    <span class="text-secondary">Samsung Galaxy S6</span>
+                                                </td>
+                                                <td class="text-secondary">$299.00</td>
+                                                <td class="text-secondary">3</td>
+                                                <td class="text-secondary">897.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/avatar.jpg" alt="">
+                                                    <span class="text-secondary">Scott McGoldbridge</span>
+                                                </td>
+                                                <td class="text-secondary">$12.00</td>
+                                                <td class="text-secondary">3</td>
+                                                <td class="text-secondary">36</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/lip-gloss.jpg" alt="">
+                                                    <span class="text-secondary">Matte Lip gloss</span>
+                                                </td>
+                                                <td class="text-secondary">$99.99</td>
+                                                <td class="text-secondary">10</td>
+                                                <td class="text-secondary">990.90</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/avatar.jpg" alt="">
+                                                    <span class="text-secondary">Scott McGoldbridge</span>
+                                                </td>
+                                                <td class="text-secondary">$315.50</td>
+                                                <td class="text-secondary">2</td>
+                                                <td class="text-secondary">331.00</td>
+                                            </tr>
+                                            <tr class="bg-white">
+                                                <td colspan="2">
+                                                </td>
+                                                <td scope="row" class="text-secondary font-weight-bold">Sub-Total</td>
+                                                <td class="text-secondary font-weight-bold">14,925.40</td>
+                                            </tr>
+                                            <tr class="bg-white">
+                                                <td colspan="2">
+                                                </td>
+                                                <td scope="row" class="text-secondary font-weight-bold">Shipping</td>
+                                                <td class="text-secondary font-weight-bold">10.00</td>
+                                            </tr>
+                                            <tr class="bg-white">
+                                                <td colspan="2">
+                                                </td>
+                                                <td scope="row" class="font-weight-bold pb-0">Total</td>
+                                                <td class="font-weight-bold pb-0">14,935.40</td>
+                                            </tr>
+                                            <tr class="bg-white">
+                                                <td colspan="2">
+                                                </td>
+                                                <td scope="row" class="py-0"><hr></td>
+                                                <td class="py-0"><hr></td>
+                                            </tr>
+                                        </tbody>
+                                      </table>
+                                      <!-- <hr> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>

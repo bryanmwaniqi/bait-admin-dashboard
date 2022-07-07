@@ -30,18 +30,20 @@
     <body class="body-color">
 
         <!-- main navbar section -->
-        <nav id="main-navbar" class="navbar fixed-top navbar-expand-sm background-light bg-white">
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
             <!-- sm screen and below sidemenu toggler -->
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
                 <i class="fas fa-bars"></i>
             </button>
-            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-sm-none" id="logo" href="offers-landing.html"> 
+            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
                 <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
                 <i class="fab fa-lg fa-html5"></i>
                 <span class="ml-1">Bait Logo</span>
             </a>
             <ul class="navbar-nav toggler-nav active mt-lg-0">
-                
+                <li class="nav-item d-flex align-items-center">
+                    <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
+                </li>
             </ul>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -50,11 +52,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item d-flex align-items-center">
-                        <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
-                    </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-flex align-items-center">
                         <a class="nav-link d-flex align-items-center" href="#">
@@ -64,7 +61,7 @@
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
                         </a>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
+                    <li id="language" class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
                         </a>
@@ -87,7 +84,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
+                    <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-plus-circle"></i>
                         </a>
@@ -268,7 +265,7 @@
                         <div class="col-12 col-md-3 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-2 h-100 d-flex align-items-center justify-content-between">
                                 <div class="">
-                                    <h6 class="text-muted">Shipped</h6>
+                                    <h6 class="text-muted">Delivered</h6>
                                     <h6 class="font-weight-bold">257,901</h6>
                                 </div>
                                 <div class="stat-icon-container success-bg d-flex align-items-center justify-content-center">
