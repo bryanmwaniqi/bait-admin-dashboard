@@ -276,9 +276,9 @@
                     <div class="row mb-4">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <div class="d-flex justify-content-between mb-3">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
                                     <h6 class="text-muted">Products Catalog</h6>
-                                    <div class="d-flex">
+                                    <div class="d-flex align-items-center">
                                         <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-2">
                                             <a href="#products-list" class="mx-2 mx-sm-2 active" data-toggle="tab" role="button">
                                                 <i class="fas  fa-th-large"></i>
@@ -287,6 +287,9 @@
                                                 <i class="fas  fa-list"></i>
                                             </a>
                                         </nav>
+                                        <a href="add-product.html" class="btn primary-btn">
+                                            Add Product
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Product catalog tabs -->
@@ -570,12 +573,12 @@
                                     <!-- Products table tab content -->
                                     <div id="products-table" class="tab-pane fade p-0">
                                         <div>
-                                            <table id="product-catalog" class="table" style="width:100%">
+                                            <table class="table table-responsive-sm table-borderless table-hover" style="width:100%">
                                                 <thead>
                                                     <tr>
                                                         <th class="align-middle">
-                                                            <label for="product-title" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-title" class="default-checkbox">
+                                                            <label for="all-products-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="all-products-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </th>
@@ -591,15 +594,15 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-1-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-1-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
+                                                            <img class="mr-3 round-edge-img" src="assets/iphone.jpg" alt="">
+                                                            <span class="">Iphone 6 pro-max 2015</span>
                                                         </td>
                                                         <td>Electronics</td>
                                                         <td>$120</td>
@@ -637,15 +640,15 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-2-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-2-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
+                                                            <img class="mr-3 round-edge-img" src="assets/galaxy.jpg" alt="">
+                                                            <span class="">Samsung Galaxy 6S</span>
                                                         </td>
                                                         <td>Electronics</td>
                                                         <td>$120</td>
@@ -683,15 +686,15 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-3-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-3-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
+                                                            <img class="mr-3 round-edge-img" src="assets/lip-gloss.jpg" alt="">
+                                                            <span class="">Matte Lip Gloss</span>
                                                         </td>
                                                         <td>Electronics</td>
                                                         <td>$120</td>
@@ -729,15 +732,15 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-4-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-4-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
+                                                            <img class="mr-3 round-edge-img" src="assets/hennessy-xo.jpg" alt="">
+                                                            <span class="">Hennesy-xo 500ml</span>
                                                         </td>
                                                         <td>Cosmetics</td>
                                                         <td>$120</td>
@@ -775,14 +778,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-5-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-5-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -821,14 +824,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-6-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-6-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -867,14 +870,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-7-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-7-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -913,14 +916,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-8-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-8-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -959,14 +962,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-9-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-9-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -1005,14 +1008,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-10-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-10-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -1051,14 +1054,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-11-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-11-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -1097,244 +1100,14 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
+                                                            <label for="product-12-check" class="checkbox-group d-flex align-items-center">
+                                                                <input type="checkbox" id="product-12-check" class="default-checkbox">
                                                                 <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                             </label>
                                                         </td>
                                                         <td>#0101</td>
                                                         <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
-                                                        </td>
-                                                        <td>Electronics</td>
-                                                        <td>$120</td>
-                                                        <td>61</td>
-                                                        <td>
-                                                            <span class="badge success-bg status-badge text-white p-2">In stock</span>
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            <div class="dropdown dropup">
-                                                                <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                                </a>
-                                                                <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                                    <a class="dropdown-item d-flex align-items-center" href="product-info.html">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fa-solid fa-barcode"></i>
-                                                                        </div>
-                                                                        <span>Details</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-layer-group"></i>
-                                                                        </div>
-                                                                        <span>Restock</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </div>
-                                                                        <span>Delete</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
-                                                                <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
-                                                            </label>
-                                                        </td>
-                                                        <td>#0101</td>
-                                                        <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
-                                                        </td>
-                                                        <td>Electronics</td>
-                                                        <td>$120</td>
-                                                        <td>61</td>
-                                                        <td>
-                                                            <span class="badge success-bg status-badge text-white p-2">In stock</span>
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            <div class="dropdown dropup">
-                                                                <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                                </a>
-                                                                <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                                    <a class="dropdown-item d-flex align-items-center" href="product-info.html">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fa-solid fa-barcode"></i>
-                                                                        </div>
-                                                                        <span>Details</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-layer-group"></i>
-                                                                        </div>
-                                                                        <span>Restock</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </div>
-                                                                        <span>Delete</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
-                                                                <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
-                                                            </label>
-                                                        </td>
-                                                        <td>#0101</td>
-                                                        <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
-                                                        </td>
-                                                        <td>Electronics</td>
-                                                        <td>$120</td>
-                                                        <td>61</td>
-                                                        <td>
-                                                            <span class="badge success-bg status-badge text-white p-2">In stock</span>
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            <div class="dropdown dropup">
-                                                                <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                                </a>
-                                                                <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                                    <a class="dropdown-item d-flex align-items-center" href="product-info.html">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fa-solid fa-barcode"></i>
-                                                                        </div>
-                                                                        <span>Details</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-layer-group"></i>
-                                                                        </div>
-                                                                        <span>Restock</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </div>
-                                                                        <span>Delete</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
-                                                                <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
-                                                            </label>
-                                                        </td>
-                                                        <td>#0101</td>
-                                                        <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
-                                                        </td>
-                                                        <td>Electronics</td>
-                                                        <td>$120</td>
-                                                        <td>61</td>
-                                                        <td>
-                                                            <span class="badge success-bg status-badge text-white p-2">In stock</span>
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            <div class="dropdown dropup">
-                                                                <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                                </a>
-                                                                <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                                    <a class="dropdown-item d-flex align-items-center" href="product-info.html">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fa-solid fa-barcode"></i>
-                                                                        </div>
-                                                                        <span>Details</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-layer-group"></i>
-                                                                        </div>
-                                                                        <span>Restock</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </div>
-                                                                        <span>Delete</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
-                                                                <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
-                                                            </label>
-                                                        </td>
-                                                        <td>#0101</td>
-                                                        <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
-                                                            <span class="">Iphone X</span>
-                                                        </td>
-                                                        <td>Electronics</td>
-                                                        <td>$120</td>
-                                                        <td>61</td>
-                                                        <td>
-                                                            <span class="badge success-bg status-badge text-white p-2">In stock</span>
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            <div class="dropdown dropup">
-                                                                <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                                </a>
-                                                                <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                                    <a class="dropdown-item d-flex align-items-center" href="product-info.html">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fa-solid fa-barcode"></i>
-                                                                        </div>
-                                                                        <span>Details</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-layer-group"></i>
-                                                                        </div>
-                                                                        <span>Restock</span>
-                                                                    </a>
-                                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                                        <div class="action-icon mr-1 d-flex align-items-center">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </div>
-                                                                        <span>Delete</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <label for="product-select" class="checkbox-group d-flex align-items-center">
-                                                                <input type="checkbox" id="product-select" class="default-checkbox">
-                                                                <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
-                                                            </label>
-                                                        </td>
-                                                        <td>#0101</td>
-                                                        <td>
-                                                            <img class="mr-3 round-img" src="assets/client-3.jpg" alt="">
+                                                            <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
                                                             <span class="">Iphone X</span>
                                                         </td>
                                                         <td>Electronics</td>
@@ -1399,12 +1172,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap4.min.js"></script>
         <script src="js/script.js"></script>
-        <script>
-            // products datatable
-            $('#product-catalog').DataTable();
-        </script>
     </body>
 </html>

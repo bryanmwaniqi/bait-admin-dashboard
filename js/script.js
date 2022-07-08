@@ -163,6 +163,8 @@ $(function () {
         });
     });
 
+
+
      // All regions traffic doughnut chart
      const allRegionsData = {
         datasets: [{
@@ -195,7 +197,7 @@ $(function () {
     // const labels = Utils.months({count: 7});
     var salesCtx = document.getElementById('salesChart').getContext('2d');
     
-    var gradient = salesCtx .createLinearGradient(0, 0, 0, 307); 
+    var gradient = salesCtx.createLinearGradient(0, 0, 0, 307); 
     gradient.addColorStop(0, 'rgba(93, 57, 255, 0.5)');
     gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
 

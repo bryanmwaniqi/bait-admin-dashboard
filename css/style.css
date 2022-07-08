@@ -57,7 +57,7 @@ img{
     height:100%;
 }
 .rounded-edges{
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
 }
 .primary-btn{
     background-color: var(--primary-color);
@@ -96,9 +96,6 @@ img{
 .bg-pink{
     background-color: var(--secondary-color);
 }
-.table tr td, .table tr th{
-    vertical-align: middle;
-}
 .content-wrapper{
     position: relative;
     min-height: 100vh;
@@ -132,6 +129,32 @@ form i{
     -o-border-radius: 50px;
     border-radius: 50px;
 }
+/* Common Table Styling */
+.table {
+    border-collapse: separate;
+    border-spacing: 0rem 0.65rem;
+}
+.table tr td:first-child{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.table tr td:last-child{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.table td{
+    color: #838383;
+}
+.table td, .table th{
+    font-size: 0.93rem;
+}
+.table tbody tr{
+    background-color: var(--body-color);
+}
+.table tr td, .table tr th{
+    vertical-align: middle;
+}
+/* End of common table styling */
 .navbar{
     font-size: 0.75rem;
     color: #232323;
@@ -594,6 +617,9 @@ span.form-icon{
     width: 100%;
     min-height: 100vh;
 }
+.analytics-description{
+    max-width: 25rem;
+}
 @media (max-width:576px) {
     #main{
         margin: 5rem 0rem 0.5rem;
@@ -751,30 +777,11 @@ a.add-product{
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
 } */
-#orders-table {
-    border-collapse: separate;
-    border-spacing: 0rem 1rem;
-}
-#orders-table tr td:first-child{
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-}
-#orders-table tr td:last-child{
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-#orders-table tbody tr{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
-.round-img{
+/* .round-img{
     height: 3rem;
     width: 3rem;
     border-radius: 50px;
-}
-#orders-table td{
-    font-weight: bold;
-}
+} */
 i#action-toggle{
     font-size: 1.5rem;
 }
@@ -853,9 +860,7 @@ i#action-toggle:hover{
     width: 100%;
 }
 /* analytics page styling */
-.analytics-description{
-    max-width: 25rem;
-}
+
 
 /* profile page styling */
 .profile-pic-container{
@@ -958,7 +963,7 @@ select.custom{
     color: #fff;
     border: none;
     border-radius: 0.25rem;
-    padding: 0.7rem 1rem;
+    padding: 0.5rem 1rem;
     outline: none;
     appearance: none;
     -webkit-appearance: none;
@@ -968,6 +973,9 @@ select.custom{
     background-size: 0.8rem;
     background-position: right 0.8rem top 50%;
     padding-right: 2.8rem;
+}
+select#comparison-year{
+    background-color: var(--secondary-color);
 }
 select.custom option{
     background-color: #fff;
@@ -1365,43 +1373,14 @@ ul.email-list{
     cursor: pointer;
     border: none;
 }
-/* Invoice  */
-#invoice-table{
-    /* border-collapse: collapse; */
-}
-#invoice-table tbody tr{
-    border: 0.55rem solid #fff;
-}
-#invoice-table tbody tr{
-    background-color: var(--body-color);
-}
+/* Invoice Page Styling */
 #invoice-table thead th{
     vertical-align: bottom;
-    /* font-weight: 500; */
-    /* font-size: 1.1rem; */
-}
-.invoice-header tr:first-child{
-    /* background-color: var(--body-color); */
-    /* color: #fff; */
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
 }
 #invoice-table thead tr:nth-child(2) th{
     padding: 0rem;
-    /* padding-top: 1.1rem;
-    padding-bottom: 1.1rem; */
-}
-#invoice-table tr td:first-child, #invoice-table tr th:first-child{
-    border-top-left-radius: 1.1rem;
-    border-bottom-left-radius: 1.1rem;
-}
-#invoice-table tr td:last-child, #invoice-table tr th:last-child{
-    border-top-right-radius: 1.1rem;
-    border-bottom-right-radius: 1.1rem;
-}
-#invoice-table tr th:first-child{
-    border-bottom-left-radius: 1.2rem;
-}
-#invoice-table tr th:last-child{
-    border-bottom-right-radius: 1.2rem;
 }
 #invoice-table tbody tr td:not(:first-child), .invoice-header tr:first-child th:not(:first-child){
     text-align: center;
