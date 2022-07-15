@@ -703,6 +703,9 @@ span.form-icon{
     border-radius: 0.5rem ;
     background-color: var(--primary-color);
 }
+.sales-traffic-container{
+    align-content: space-between;
+}
 .sales-traffic .col > div{
     cursor: pointer;
     border-style: solid;
@@ -725,8 +728,8 @@ span.form-icon{
     border-color: var(--primary-color);
 }
 .traffic-doughnut-chart{
-    width: 10rem;
-    height: 10rem;
+    width: 9.65rem;
+    height: 9.65rem;
 }
 .traffic-source{
     width: 13rem;
@@ -777,11 +780,11 @@ a.add-product{
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
 } */
-/* .round-img{
+.round-img{
     height: 3rem;
     width: 3rem;
     border-radius: 50px;
-} */
+}
 i#action-toggle{
     font-size: 1.5rem;
 }
@@ -951,10 +954,23 @@ i#action-toggle:hover{
 
 
 /* orders page styling */
-.stat-icon-container{
+/* .stat-icon-container{
     height: 2.8rem;
     width: 2.8rem;
     border-radius: 0.3rem;
+} */
+.status-info{
+    position: relative;
+    overflow: hidden;
+}
+.status-info::after{
+    content: '';
+    width: 9px;
+    height: 65%;
+    position: absolute;
+    right: -4px;
+    border-radius: 0.3rem 0 0 0.3rem;
+    background-color: var(--primary-color);
 }
 
 /* sales page styling */
@@ -1181,6 +1197,15 @@ input[type="range"]::-moz-range-thumb{
     -moz-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
+.page-numbers span:hover{
+    cursor: pointer;
+}
+.page-numbers span{
+    color: #838383;
+}
+.page-numbers span.active{
+    color: var(--primary-color);
+}
 /* Product-info styling */
 .product-img-container{
     display: flex;
@@ -1280,6 +1305,12 @@ input[type="range"]::-moz-range-thumb{
 }
 table#specs tbody td{
     color: #616161;
+}
+.reviews-anchor{
+    color: #999999;
+}
+.reviews-anchor:hover{
+    color: var(--primary-color);
 }
 
 /* email page styling */

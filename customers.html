@@ -42,7 +42,7 @@
             </a>
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
-                    <button class="btn primary-btn rounded-btn ml-2">Track Order</button>
+                    <button class="btn primary-btn rounded-btn py-1 ml-2">Track Order</button>
                 </li>
             </ul>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -264,35 +264,540 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-4 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center justify-content-between">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center justify-content-between status-info">
                                 <div class="">
                                     <h6 class="text-muted">Active Customers</h6>
                                     <h6 class="font-weight-bold">257,901</h6>
                                 </div>
-                                <div class="stat-icon-container success-bg d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-paper-plane text-white"></i>
-                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center justify-content-between">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center justify-content-between status-info">
                                 <div class="">
                                     <h6 class="text-muted">Inactive Customers</h6>
                                     <h6 class="font-weight-bold">65,231</h6>
                                 </div>
-                                <div class="stat-icon-container bg-pink d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-paper-plane text-white"></i>
-                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center justify-content-between">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center justify-content-between status-info">
                                 <div class="">
                                     <h6 class="text-muted">Passive Customers</h6>
                                     <h6 class="font-weight-bold">24,098</h6>
                                 </div>
-                                <div class="stat-icon-container bg-warning d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-paper-plane text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-5">
+                            <div class="bg-white rounded-edges p-3 h-100 order-section">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-muted">Recent Orders</h6>
+                                    <a href="add-product.html" class="btn primary-btn">
+                                        Add Customer
+                                    </a>
+                                </div>
+
+                                <!-- Orders Table -->
+                                <div id="orders-table" class="d-flex flex-column">
+                                    <table class="table table-responsive-sm table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="align-middle">
+                                                    <label for="all-products-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="all-products-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </th>
+                                                <th>Id</th>
+                                                <th>Customer</th>
+                                                <th>Country</th>
+                                                <th>Member-Since</th>
+                                                <th>Orders</th>
+                                                <th>Last-order</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-1-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-1-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0101</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-11.jpg" alt="">
+                                                    <span class="">Anastacia jii</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
+                                                </td>
+                                                <td>02 Jul, 2021</td>
+                                                <td>31</td>
+                                                <td class="align-middle">10 Apr, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-2-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-2-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0102</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-2.jpg" alt="">
+                                                    <span class="">Scott Larson</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-canada-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">10 Jul, 2021</td>
+                                                <td>23</td>
+                                                <td class="align-middle">29 Jan, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-3-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-3-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0103</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
+                                                    <span class="">Mitchy Mohammed</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-france-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">25 Apr, 2021</td>
+                                                <td>45</td>
+                                                <td class="align-middle">02 May, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-4-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-4-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0104</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-4.jpg" alt="">
+                                                    <span class="">Anne McKenzie</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">17 Jan, 2022</td>
+                                                <td>9</td>
+                                                <td class="align-middle">27 Feb, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-5-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-5-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0105</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-5.jpg" alt="">
+                                                    <span class="">Morgan Kia</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-kenya-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">03 Oct, 2020</td>
+                                                <td>14</td>
+                                                <td class="align-middle">18 Jan, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-6-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-6-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0106</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-6.jpg" alt="">
+                                                    <span class="">Precious Claire</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">11 Aug, 2021</td>
+                                                <td>2</td>
+                                                <td class="align-middle">12 Jul, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-7-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-7-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0107</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-7.jpg" alt="">
+                                                    <span class="">Pak Suen</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">21 Dec, 2021</td>
+                                                <td>07</td>
+                                                <td class="align-middle">16 Apr, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-8-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-8-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0108</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-8.jpg" alt="">
+                                                    <span class="">Xenia Pete</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-australia-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">10 Apr, 2022</td>
+                                                <td>1</td>
+                                                <td class="align-middle">05 Jun, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-9-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-9-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0109</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-9.jpg" alt="">
+                                                    <span class="">Wavy so Wavy</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">26 Jun, 2021</td>
+                                                <td>5</td>
+                                                <td class="align-middle">04 Aug, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="product-10-check" class="checkbox-group d-flex align-items-center">
+                                                        <input type="checkbox" id="product-10-check" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                </td>
+                                                <td>#0110</td>
+                                                <td>
+                                                    <img class="mr-3 round-edge-img" src="assets/client-10.jpg" alt="">
+                                                    <span class="">Ike Chuke</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <img class="country-flag" src="assets/icons8-china-48.png" alt="">
+                                                </td>
+                                                <td class="align-middle">10 Apr, 2021</td>
+                                                <td>19</td>
+                                                <td class="align-middle">22 Jun, 2022</td>
+                                                <td class="align-middle">
+                                                    <div class="dropdown dropup">
+                                                        <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
+                                                        </a>
+                                                        <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                            <a class="dropdown-item d-flex align-items-center" href="product-info.html">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-user"></i>
+                                                                </div>
+                                                                <span>Details</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fa-solid fa-pen"></i>
+                                                                </div>
+                                                                <span>Update</span>
+                                                            </a>
+                                                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                <div class="action-icon mr-1 d-flex align-items-center">
+                                                                    <i class="fas fa-trash-alt"></i>
+                                                                </div>
+                                                                <span>Delete</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- Pagination -->
+                                    <div class="d-flex align-self-end my-2">
+                                        <div class="d-flex pagination">
+                                            <a href="#" id="previous" class="d-flex align-items-center justify-content-center mr-3">
+                                                <i class="fa-solid fa-angle-left"></i>
+                                            </a>
+                                            <div class="page-numbers d-flex align-items-center">
+                                                <span class="active mr-3">1</span>
+                                                <span class="mr-3">2</span>
+                                                <span class="mr-3">3</span>
+                                                <span class="mr-3">4</span>
+                                            </div>
+                                            <a href="#" id="next" class="d-flex align-items-center justify-content-center">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
