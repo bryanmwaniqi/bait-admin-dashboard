@@ -388,36 +388,73 @@
                                     <div id="profile" class="tab-pane show fade active">
                                         <form class="p-sm-2">
                                             <div class="form-row p-2">
-                                                <div class="form-group col col-md-4 px-3">
+                                                <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="firstName" class="required">First name</label>
-                                                    <input type="text" class="form-control primary-input" id="firstName" aria-describedby="emailHelp" placeholder="first name">                                                </div>
-                                                <div class="form-group col col-md-4 px-3">
+                                                    <input type="text" class="form-control primary-input" id="firstName" placeholder="first name">                                                </div>
+                                                <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="lastName">Last name</label>
                                                     <input type="text" class="form-control primary-input" id="lastName" placeholder="last name">
                                                 </div>
-                                                <div class="form-group col col-md-4 px-3">
+                                                <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="exampleFormControlFile1">Profile image</label>
                                                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                                 </div>
                                             </div>
                                             <div class="form-row p-2">
-                                                <div class="form-group col col-md-4 px-3">
-                                                    <label for="exampleInputEmail1">Email address</label>
+                                                <div class="form-group col-12 col-md-4 px-md-3">
+                                                    <label for="exampleInputEmail1" class="required">Email address</label>
                                                     <input type="email" class="form-control primary-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                                 </div>
-                                                <div class="form-group col col-md-4 px-3">
+                                                <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="exampleInputPassword1" class="required">Phone</label>
                                                     <input type="password" class="form-control primary-input" id="exampleInputPassword1" placeholder="+254 1234 5678">
                                                 </div>
-                                                <div class="form-group col-md-4 px-3">
-                                                    <label for="exampleInputPassword1">Address</label>
-                                                    <input type="password" class="form-control primary-input" id="exampleInputPassword1" placeholder="Password">
+                                                <div class="form-group col-12 col-md-4 px-md-3">
+                                                    <label for="exampleInputPassword1">Phone 2</label>
+                                                    <input type="password" class="form-control primary-input" id="exampleInputPassword1" placeholder="+254 8765 4321">
                                                 </div>
                                             </div>
-                                            <div class="d-flex justify-content-end px-3">
+                                            <div class="form-row p-2">
+                                                <div class="form-group col-12 col-md-4 px-md-3">
+                                                    <label for="city">City</label>
+                                                    <input type="text" class="form-control primary-input" id="city" placeholder="city">
+                                                </div>
+                                                <div class="form-group col-12 col col-md-4 px-md-3">
+                                                    <label for="street-address">Street Address</label>
+                                                    <input type="text" class="form-control primary-input" id="street-address" placeholder="street">
+                                                </div>
+                                                <div class="form-group col-12 col-md-4 px-md-3">
+                                                    <label for="ZIP">ZIP Code</label>
+                                                    <input type="text" class="form-control primary-input" id="ZIP" placeholder="zip">
+                                                </div>
+                                            </div>
+                                            <div id="socials" class="form-row p-2">
+                                                <div class="form-group col-12 col-md-4 px-md-3">
+                                                    <label for="facebook-social">Facebook</label>
+                                                    <span class="socials-icon">
+                                                        <i class="fa-brands fa-facebook"></i>
+                                                    </span>
+                                                    <input type="email" class="form-control primary-input" id="facebook-social" placeholder="Username">
+                                                </div>
+                                                <div class="form-group col-12 col col-md-4 px-md-3">
+                                                    <label for="instagram-social">Instagram</label>
+                                                    <span class="socials-icon">
+                                                        <i class="fa-brands fa-instagram"></i>
+                                                    </span>
+                                                    <input type="password" class="form-control primary-input" id="instagram-social" placeholder="Username">
+                                                </div>
+                                                <div class="form-group col-12 col-md-4 px-md-3">
+                                                    <label for="twitter-social">Twitter</label>
+                                                    <span class="socials-icon">
+                                                        <i class="fa-brands fa-twitter"></i>
+                                                    </span>
+                                                    <input type="password" class="form-control primary-input" id="twitter-social" placeholder="Username">
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-end px-3 py-4">
                                                 <button class="btn mr-3 body-color">Cancel</button>
-                                                <button type="submit" class="btn primary-btn text-white">Save</button>
+                                                <button type="submit" class="btn primary-btn">Update</button>
                                             </div>
                                         </form>
                                     </div>

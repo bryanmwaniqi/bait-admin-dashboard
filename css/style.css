@@ -111,11 +111,6 @@ form i{
     border: none;
     padding: 1.5rem 0.8rem;
     font-size: 0.85rem;
-    /* -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-    border-radius: 50px; */
 }
 .primary-input:focus{
     background-color: var(--body-color);
@@ -229,7 +224,7 @@ span.form-icon{
     height:calc(1.5em + .70rem);
     display: flex;
     align-items: center;
-  }
+}
 .form-row .account-form {
     border: none;
     padding-left: 2.375rem;
@@ -927,6 +922,16 @@ label.required::after{
     color: var(--secondary-color);
     margin-left: 0.2rem;
     font-weight: bold;
+}
+#socials input{
+    padding-left: 2.375rem;
+}
+span.socials-icon{
+    position: absolute;
+    margin-left: 0.9rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 /* settings page styling */
