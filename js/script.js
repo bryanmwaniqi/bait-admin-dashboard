@@ -123,61 +123,79 @@ $(function () {
         $(this).toggleClass('active')
     });
 
-    // Price Range slider Logic
-    // const rangeInput = document.querySelectorAll(".range-input input"),
-    // priceInput = document.querySelectorAll(".price-input input"),
-    // range = document.querySelector(".slider .progress");
-    // let priceGap = 1000;
-    // priceInput.forEach(input =>{
-    //     input.addEventListener("input", e =>{
-    //         let minPrice = parseInt(priceInput[0].value),
-    //         maxPrice = parseInt(priceInput[1].value);
-            
-    //         if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
-    //             if(e.target.className === "input-min"){
-    //                 rangeInput[0].value = minPrice;
-    //                 range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
-    //             }else{
-    //                 rangeInput[1].value = maxPrice;
-    //                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-    //             }
-    //         }
-    //     });
-    // });
-    // rangeInput.forEach(input =>{
-    //     input.addEventListener("input", e =>{
-    //         let minVal = parseInt(rangeInput[0].value),
-    //         maxVal = parseInt(rangeInput[1].value);
-    //         if((maxVal - minVal) < priceGap){
-    //             if(e.target.className === "range-min"){
-    //                 rangeInput[0].value = maxVal - priceGap
-    //             }else{
-    //                 rangeInput[1].value = minVal + priceGap;
-    //             }
-    //         }else{
-    //             priceInput[0].value = minVal;
-    //             priceInput[1].value = maxVal;
-    //             range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
-    //             range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-    //         }
-    //     });
-    // });
-
-
-    // Traffic breakdown stacked bar chart
-    // Chart.register(ChartjsPluginStacked100.default);
-
-    const stackedBarData = {
-        labels: ['Organic', 'Facebook', 'Instagram', 'Google', 'youtube', 'Bing'],
+    // sales vs expenses v profits chart
+    const salesComparisonData = {
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun'],
         datasets: [{
-            data: [45, 59, 75, 26, 56, 19],
+            data: [45, 59, 71, 65, 56, 55],
+            label: 'Sales',
             backgroundColor: '#5d39ff',
             borderWidth: 0,
             borderRadius: 50,
-            barThickness: 16,
+            borderSkipped: true
+        }, {
+            data: [35, 45, 40, 50, 41, 35],
+            label: 'Expenses',
+            backgroundColor: '#dcdce9',
+            borderWidth: 0,
+            borderRadius: 50,
+            borderSkipped: true
+        }, {
+            data: [40, 51, 65, 60, 45, 45],
+            label: 'Profit',
+            backgroundColor: 'rgb(0, 206, 206)',
+            borderWidth: 0,
+            borderRadius: 50,
+            borderSkipped: true
+        }]
+    };
+    const salesComparisonConfig = {
+        type: 'bar',
+        data: salesComparisonData,
+        options: {
+            categoryPercentage: 0.3,
+            barPercentage: 0.6,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        drawBorder: false
+                    }
+                },
+                x: {
+                    barValueSpacing: 20,
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    }
+                }
+            }
+        },
+    };
+    const salesComparisonChart = new Chart(
+        $('#salesComparisonChart'),
+        salesComparisonConfig
+    );
+
+    // Traffic breakdown stacked bar chart
+
+    const stackedBarData = {
+        labels: ['Organic', 'Instagram', 'Google', 'Facebook', 'youtube'],
+        datasets: [{
+            data: [45, 59, 75, 26, 56],
+            backgroundColor: [
+                '#5d39ff',
+                '#C13584',
+                '#F4B400',
+                '#4267B2',
+                '#FF0000'
+            ],
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 14,
             borderSkipped: false
         },{
-            data: [100, 100, 100, 100, 100, 100],
+            data: [100, 100, 100, 100, 100],
             backgroundColor: '#f4f4f8',
             borderWidth: 0,
             borderRadius: 50,
@@ -297,6 +315,7 @@ $(function () {
             }
         },
     };
+
     const salesChart = new Chart(
         salesCtx,
         config
@@ -529,26 +548,20 @@ $(function () {
     const targetData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
-            data: [45, 59, 81, 65, 56, 55, 40, 55, 59, 75, 65, 56],
-            label: 'Targeted sales',
+            data: [45, 59, 81, 65, 56, 40, 55, 60, 65, 75, 55, 43],
+            label: 'Actual sales',
             backgroundColor: '#5d39ff',
-            hoverBackgroundColor: '#ff0077',
+            barThickness: 20,
             borderWidth: 0,
             borderRadius: 50,
-            // barPercentage: 0.8,
-            // categoryPercentage: 0.5,
-            // barThickness: 12,
             borderSkipped: false
         }, {
-            data: [35, 45, 70, 50, 50, 35, 20, 40, 50, 70, 54, 48],
-            label: 'Actual Sales',
-            backgroundColor: '#c4c4c4',
-            hoverBackgroundColor: '#ff0077',
+            data: [60, 81, 115, 80, 70, 65, 68, 95, 115, 81, 69, 60],
+            label: 'Target Sales',
+            backgroundColor: '#f4f4f8',
             borderWidth: 0,
+            barThickness: 20,
             borderRadius: 50,
-            // barPercentage: 0.8,
-            // categoryPercentage: 0.5,
-            // barThickness: 12,
             borderSkipped: false
         }]
     };
@@ -556,13 +569,10 @@ $(function () {
         type: 'bar',
         data: targetData,
         options: {
-            categoryPercentage: 0.6,
-            barPercentage: 0.5,
             scales: {
                 y: {
                     beginAtZero: true,
                     grid: {
-                        display: false,
                         drawBorder: false
                     }
                 },
@@ -571,7 +581,8 @@ $(function () {
                     grid: {
                         display: false,
                         drawBorder: false
-                    }
+                    },
+                    stacked: true
                 }
             }
         },

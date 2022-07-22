@@ -42,7 +42,7 @@
             </a>
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
-                    <button class="btn primary-btn rounded-btn py-1 ml-2">Track Order</button>
+                    <a href="orders.html" class="btn primary-btn rounded-btn py-1 ml-2">Track Order</a>
                 </li>
             </ul>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -1093,118 +1093,57 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col-12 mt-2 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex align-items-center">
-                                <div class="d-flex flex-column justify-content-center align-items-center px-4">
-                                    <h5 class="font-weight-bold">Need Insights?</h5>
-                                    <p class="text-muted text-center insights-description px-5">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error voluptas beatae eaque est esse nesciunt velit dolorem ut qui blanditiis, consectetur repellat accusamus aut.
-                                    </p>
-                                    <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                        <a class="btn primary-btn px-4 mr-3 mb-2 rounded-btn" href="add-order.html">Reports</a>
-                                        <a class="btn primary-outline-btn px-4 mr-3 mb-2 rounded-btn" href="add-order.html">Insights</a>
-                                    </div>
+                    <div class="row mb-5 mb-md-4">
+                        <div class="col col-md-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted mb-3">Traffic Breakdown</h6>
+                                <div>
+                                    <canvas id="stackedBarChart"></canvas>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                    <div class="row mb-4">
-                        <div class="col mb-4">
-                            <div class="bg-white rounded-edges p-3">
-                                <h6 class="text-muted mb-4">Top customers</h6>
-                                <div class="row">
-                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
-                                        <img src="assets/client-3.jpg" alt="" class="top-customer-img align-self-center"> 
-                                        <div class="d-flex flex-column customer-container rounded-edges">
-                                            <h6 class="font-weight-bold text-center mt-3">Mitchy Sakari</h6>
-                                            <p class="small text-center text-secondary">Member since 11 Mar, 2021</p>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Orders</span>
-                                                <span class="text-secondary">432</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Amount spent</span>
-                                                <span class="text-secondary">$26,524</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Last Order</span>
-                                                <span class="text-secondary">10 Jul, 2022</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <span class="text-secondary">Highest Order</span>
-                                                <span class="text-secondary">$3,524</span>
+                        <div class="col col-md-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-3">
+                                            <svg class="conversion-rate">
+                                                <circle cx="62" cy="62" r="62"/>
+                                                <circle cx="62" cy="62" r="62"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h3 class="font-weight-bold mb-0">73%</h3>
                                             </div>
                                         </div>
+                                        <h6 class="font-weight-bold">Conversion Rate</h6>
+                                        <!-- <div class="d-flex align-items-center">
+                                            <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
+                                            <span class="small text-muted">1.05%</span>
+                                        </div> -->
+                                        <span class="small text-center text-muted">
+                                            Lorem ipsum dolor sit amet consectetur elit.
+                                        </span>
                                     </div>
-                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
-                                        <img src="assets/client-5.jpg" alt="" class="top-customer-img align-self-center"> 
-                                        <div class="d-flex flex-column customer-container rounded-edges">
-                                            <h6 class="font-weight-bold text-center mt-3">Lee Mayweather</h6>
-                                            <p class="small text-center text-secondary">Member since 09 Jan, 2021</p>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Orders</span>
-                                                <span class="text-secondary">316</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Amount spent</span>
-                                                <span class="text-secondary">$26,524</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Last Order</span>
-                                                <span class="text-secondary">10 Jul, 2022</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <span class="text-secondary">Highest Order</span>
-                                                <span class="text-secondary">$3,524</span>
+                                </div>
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-3">
+                                            <svg class="cart-abandonment">
+                                                <circle cx="62" cy="62" r="62"/>
+                                                <circle cx="62" cy="62" r="62"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h3 class="font-weight-bold mb-0">57%</h3>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
-                                        <img src="assets/client-4.jpg" alt="" class="top-customer-img align-self-center"> 
-                                        <div class="d-flex flex-column customer-container rounded-edges">
-                                            <h6 class="font-weight-bold text-center mt-3">Claire Rice</h6>
-                                            <p class="small text-center text-secondary">Member since 20 Aug, 2020</p>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Orders</span>
-                                                <span class="text-secondary">212</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Amount spent</span>
-                                                <span class="text-secondary">$26,524</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Last Order</span>
-                                                <span class="text-secondary">10 Jul, 2022</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <span class="text-secondary">Highest Order</span>
-                                                <span class="text-secondary">$3,524</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
-                                        <img src="assets/client-9.jpg" alt="" class="top-customer-img align-self-center"> 
-                                        <div class="d-flex flex-column customer-container rounded-edges">
-                                            <h6 class="font-weight-bold text-center mt-3">Wavy So Wavy</h6>
-                                            <p class="small text-center text-secondary">Member since 01 Feb, 2022</p>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Orders</span>
-                                                <span class="text-secondary">118</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Amount spent</span>
-                                                <span class="text-secondary">$26,524</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <span class="text-secondary">Last Order</span>
-                                                <span class="text-secondary">10 Jul, 2022</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <span class="text-secondary">Highest Order</span>
-                                                <span class="text-secondary">$3,524</span>
-                                            </div>
-                                        </div>
+                                        <h6 class="font-weight-bold">Cart Abandonment</h6>
+                                        <!-- <div class="d-flex align-items-center">
+                                            <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
+                                            <span class="small text-muted">2.25%</span>
+                                        </div> -->
+                                        <span class="small text-center text-muted">
+                                            Lorem ipsum dolor sit amet consectetur elit.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -1267,10 +1206,10 @@
                     </div> -->
                     <div class="row text-muted mt-4 align-items-center footer-content">
                         <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-start">
-                            <span class="mb-2 mt-1">Designed By Bait</span>
+                            <span class="mb-2">Designed By Bait</span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-end">
-                            <span class="copyright mb-2 mt-1">© Copyright Brian Mwaniki 2020</span>
+                            <span class="copyright mb-2">© Copyright Brian Mwaniki 2020</span>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@
             </a>
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
-                    <button class="btn primary-btn rounded-btn py-1 ml-2">Track Order</button>
+                    <a href="orders.html" class="btn primary-btn rounded-btn py-1 ml-2">Track Order</a>
                 </li>
             </ul>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -287,88 +287,271 @@
                         </div> 
                     </div>
                     <div class="row">
-                        <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Traffic Breakdown</h6>
-                                <div>
-                                    <canvas id="stackedBarChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
-                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
-                                    <!-- <h6 class="text-muted mb-3">Conversion Rate</h6> -->
-                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
-                                        <div class="pie-progress-bar mb-3">
-                                            <svg class="conversion-rate">
-                                                <circle cx="65" cy="65" r="65"/>
-                                                <circle cx="65" cy="65" r="65"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h3 class="font-weight-bold mb-0">73%</h3>
-                                            </div>
-                                        </div>
-                                        <h6 class="font-weight-bold">Conversion Rate</h6>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
-                                            <span class="small text-muted">1.05%</span>
-                                        </div>
-                                        <span class="small text-center text-muted">
-                                            Lorem ipsum dolor sit amet consectetur elit.
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
-                                    <!-- <h6 class="text-muted mb-3">Cart Abandonment</h6> -->
-                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
-                                        <div class="pie-progress-bar mb-3">
-                                            <svg class="cart-abandonment">
-                                                <circle cx="65" cy="65" r="65"/>
-                                                <circle cx="65" cy="65" r="65"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h3 class="font-weight-bold mb-0">57%</h3>
-                                            </div>
-                                        </div>
-                                        <h6 class="font-weight-bold">Cart Abandonment</h6>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
-                                            <span class="small text-muted">2.25%</span>
-                                        </div>
-                                        <span class="small text-center text-muted">
-                                            Lorem ipsum dolor sit amet consectetur elit.
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h6 class="text-muted mb-2">Sales Analytics</h6>
                                     <div class="d-flex mb-2">
-                                        <!-- <div class="selector mr-3">
-                                            <select id="comparison-year" class="custom">
-                                                <option selected value="2021">2021</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2020">2020</option>
-                                            </select>
-                                        </div> -->
                                         <div class="selector">
                                             <select class="custom">
-                                                <option selected value="6-years">past 6-years</option>
-                                                <option value="12-years">past 12-years</option>
-                                                <option value="6-months">past 6-months</option>
-                                                <option value="12-months">past 12-months</option>
+                                                <option selected value="6-month">past 6-months</option>
+                                                <option value="6-years">past 6-years</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <canvas id="salesAnalytics"></canvas>
+                                    <canvas id="salesComparisonChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="text-muted">Best Selling categories</h6>
+                                    <div class="d-flex">
+                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
+                                            <a href="#category-revenue" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">Revenue</a>
+                                            <a href="#category-quantity" class="mx-1 mx-sm-2" data-toggle="tab">Quantity</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="tab-content menu-tab">
+                                    <!-- category best sellers revenue tab content -->
+                                    <div id="category-revenue" class="tab-pane show fade active p-0">
+                                        <div class="mb-3">
+                                            <div class="d-flex mb-1">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">Electronics</h6>
+                                                    <span class="text-muted small">phones, T.v's, sound, home-theaters, consoles</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">$678,943</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:70%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">cosmetics</h6>
+                                                    <span class="text-muted small">lipstic, mascara, lipgloss, acrylics, mousse</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">$578,943</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">fashion</h6>
+                                                    <span class="text-muted small">fabrics, tops, pants, shoes, accessories</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">$478,943</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:58%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">food & drinks</h6>
+                                                    <span class="text-muted small">wine, whiskey, oil, rice, flour</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">$378,943</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:80%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">art crafts</h6>
+                                                    <span class="text-muted small">bracelets, wristbands, bangles, wall watches</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">$278,943</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:40%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of category best sellers revenue tab content -->
+                                    
+                                    <!-- category best sellers quantity tab content -->
+                                    <div id="category-quantity" class="tab-pane fade p-0">
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">cosmetics</h6>
+                                                    <span class="text-muted small">lipstic, mascara, lipgloss, acrylics, mousse</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">21,896</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex mb-1">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">Electronics</h6>
+                                                    <span class="text-muted small">phones, T.v's, sound, home-theaters, consoles</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">11,529</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:70%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">fashion</h6>
+                                                    <span class="text-muted small">fabrics, tops, pants, shoes, accessories</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">8,904</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:58%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">food & drinks</h6>
+                                                    <span class="text-muted small">wine, whiskey, oil, rice, flour</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">7,381</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:80%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold mb-0">art crafts</h6>
+                                                    <span class="text-muted small">bracelets, wristbands, bangles, wall watches</span>
+                                                </div>
+                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">568</h6>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar round-progress" style="width:40%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of category best sellers quantity tab content -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="text-muted">Best Selling Products</h6>
+                                    <div class="d-flex">
+                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
+                                            <a href="#revenue" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">Revenue</a>
+                                            <a href="#quantity" class="mx-1 mx-sm-2" data-toggle="tab">Quantity</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="tab-content menu-tab">
+                                    <!-- product best sellers revenue tab content -->
+                                    <div id="revenue" class="tab-pane show fade active p-0">
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/iphone.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Iphone 6S 2015</h6>
+                                                <span class="text-muted">10 units @ $5000</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h6>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/galaxy.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
+                                                <span class="text-muted">9 units @ $764</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h6>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/lip-gloss.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Matte Lip gloss</h6>
+                                                <span class="text-muted">1461 units @ $50</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h6>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
+                                                <span class="text-muted">10 units @ $360</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h6>
+                                        </div>
+                                    </div>
+                                    <!-- end of product best sellers revenue tab content -->
+                                    
+                                    <!-- product best sellers quantity tab content -->
+                                    <div id="quantity" class="tab-pane fade p-0">
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/lip-gloss.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Matte Lip gloss</h6>
+                                                <span class="text-muted">1461 units @ $50</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 42,189</h6>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/iphone.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Iphone 6S 2015</h6>
+                                                <span class="text-muted">10 units @ $5000</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 51,932</h6>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
+                                                <span class="text-muted">10 units @ $360</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 38,407</h6>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <div class="best-product-img text-center rounded-edges mr-4">
+                                                <img class="" src="assets/galaxy.jpg" alt="">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
+                                                <span class="text-muted">9 units @ $764</span>
+                                            </div>
+                                            <h6 class="font-weight-bold ml-auto align-self-center"><span class="text-muted dollar align-top">$</span> 49,321</h6>
+                                        </div>
+                                    </div>
+                                    <!-- end of product best sellers quantity tab content -->
                                 </div>
                             </div>
                         </div>

@@ -830,6 +830,7 @@ i#action-toggle:hover{
     background-color: var(--body-color);
     padding: 2.5rem 1rem 1rem 1rem;
     margin-top: 2.5rem;
+    /* color: rgb(155, 155, 155); */
 }
 .customer-container span{
     font-size: 0.9rem;
@@ -867,11 +868,13 @@ i#action-toggle:hover{
 }
 .footer-content{
     position: absolute;
+    padding-top: 2rem;
     bottom: 0;
     font-size: 0.9rem;
     width: 100%;
 }
 /* End of top customers styling section */
+
 /* analytics page styling */
 
 
