@@ -10,12 +10,12 @@ $(function () {
         autoplayHoverPause: true
     });
 
-    $('#clients-carousel').owlCarousel({
-        items: 1,
-        margin: 3,
-        center: true,
-        dots: true
-    });
+    // $('#clients-carousel').owlCarousel({
+    //     items: 1,
+    //     margin: 3,
+    //     center: true,
+    //     dots: true
+    // });
 
     // Mobile view sidemenu toggler
     $('#sideMenuToggler').on('click', function (e) {
@@ -124,46 +124,99 @@ $(function () {
     });
 
     // Price Range slider Logic
-    const rangeInput = document.querySelectorAll(".range-input input"),
-    priceInput = document.querySelectorAll(".price-input input"),
-    range = document.querySelector(".slider .progress");
-    let priceGap = 1000;
-    priceInput.forEach(input =>{
-        input.addEventListener("input", e =>{
-            let minPrice = parseInt(priceInput[0].value),
-            maxPrice = parseInt(priceInput[1].value);
+    // const rangeInput = document.querySelectorAll(".range-input input"),
+    // priceInput = document.querySelectorAll(".price-input input"),
+    // range = document.querySelector(".slider .progress");
+    // let priceGap = 1000;
+    // priceInput.forEach(input =>{
+    //     input.addEventListener("input", e =>{
+    //         let minPrice = parseInt(priceInput[0].value),
+    //         maxPrice = parseInt(priceInput[1].value);
             
-            if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
-                if(e.target.className === "input-min"){
-                    rangeInput[0].value = minPrice;
-                    range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
-                }else{
-                    rangeInput[1].value = maxPrice;
-                    range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-                }
-            }
-        });
-    });
-    rangeInput.forEach(input =>{
-        input.addEventListener("input", e =>{
-            let minVal = parseInt(rangeInput[0].value),
-            maxVal = parseInt(rangeInput[1].value);
-            if((maxVal - minVal) < priceGap){
-                if(e.target.className === "range-min"){
-                    rangeInput[0].value = maxVal - priceGap
-                }else{
-                    rangeInput[1].value = minVal + priceGap;
-                }
-            }else{
-                priceInput[0].value = minVal;
-                priceInput[1].value = maxVal;
-                range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
-                range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-            }
-        });
-    });
+    //         if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+    //             if(e.target.className === "input-min"){
+    //                 rangeInput[0].value = minPrice;
+    //                 range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+    //             }else{
+    //                 rangeInput[1].value = maxPrice;
+    //                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+    //             }
+    //         }
+    //     });
+    // });
+    // rangeInput.forEach(input =>{
+    //     input.addEventListener("input", e =>{
+    //         let minVal = parseInt(rangeInput[0].value),
+    //         maxVal = parseInt(rangeInput[1].value);
+    //         if((maxVal - minVal) < priceGap){
+    //             if(e.target.className === "range-min"){
+    //                 rangeInput[0].value = maxVal - priceGap
+    //             }else{
+    //                 rangeInput[1].value = minVal + priceGap;
+    //             }
+    //         }else{
+    //             priceInput[0].value = minVal;
+    //             priceInput[1].value = maxVal;
+    //             range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+    //             range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+    //         }
+    //     });
+    // });
 
 
+    // Traffic breakdown stacked bar chart
+    // Chart.register(ChartjsPluginStacked100.default);
+
+    const stackedBarData = {
+        labels: ['Organic', 'Facebook', 'Instagram', 'Google', 'youtube', 'Bing'],
+        datasets: [{
+            data: [45, 59, 75, 26, 56, 19],
+            backgroundColor: '#5d39ff',
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 16,
+            borderSkipped: false
+        },{
+            data: [100, 100, 100, 100, 100, 100],
+            backgroundColor: '#f4f4f8',
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 16,
+            borderSkipped: false
+        }]
+    };
+
+    const stackedBarConfig = {
+        type: 'bar',
+        data: stackedBarData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    stacked: true
+                }
+            }
+        },
+    };
+    const stackedBarChart = new Chart(
+        $('#stackedBarChart'),
+        stackedBarConfig
+    );
 
      // All regions traffic doughnut chart
      const allRegionsData = {
@@ -489,7 +542,7 @@ $(function () {
         }, {
             data: [35, 45, 70, 50, 50, 35, 20, 40, 50, 70, 54, 48],
             label: 'Actual Sales',
-            backgroundColor: 'rgba(93, 57, 255, 0.5)',
+            backgroundColor: '#c4c4c4',
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
             borderRadius: 50,

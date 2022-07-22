@@ -156,7 +156,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="profile-pic text-center">
-                                <img class="" src="assets/avatar.jpg" alt="">
+                                <img class="" src="assets/client-2.jpg" alt="">
                             </div>
                         </a>
                         <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -287,23 +287,82 @@
                         </div> 
                     </div>
                     <div class="row">
+                        <div class="col col-md-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted mb-3">Traffic Breakdown</h6>
+                                <div>
+                                    <canvas id="stackedBarChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <!-- <h6 class="text-muted mb-3">Conversion Rate</h6> -->
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-3">
+                                            <svg class="conversion-rate">
+                                                <circle cx="65" cy="65" r="65"/>
+                                                <circle cx="65" cy="65" r="65"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h3 class="font-weight-bold mb-0">73%</h3>
+                                            </div>
+                                        </div>
+                                        <h6 class="font-weight-bold">Conversion Rate</h6>
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
+                                            <span class="small text-muted">1.05%</span>
+                                        </div>
+                                        <span class="small text-center text-muted">
+                                            Lorem ipsum dolor sit amet consectetur elit.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <!-- <h6 class="text-muted mb-3">Cart Abandonment</h6> -->
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-3">
+                                            <svg class="cart-abandonment">
+                                                <circle cx="65" cy="65" r="65"/>
+                                                <circle cx="65" cy="65" r="65"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h3 class="font-weight-bold mb-0">57%</h3>
+                                            </div>
+                                        </div>
+                                        <h6 class="font-weight-bold">Cart Abandonment</h6>
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
+                                            <span class="small text-muted">2.25%</span>
+                                        </div>
+                                        <span class="small text-center text-muted">
+                                            Lorem ipsum dolor sit amet consectetur elit.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h6 class="text-muted mb-2">Sales Analytics</h6>
                                     <div class="d-flex mb-2">
-                                        <div class="selector mr-3">
+                                        <!-- <div class="selector mr-3">
                                             <select id="comparison-year" class="custom">
                                                 <option selected value="2021">2021</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2020">2020</option>
                                             </select>
-                                        </div>
+                                        </div> -->
                                         <div class="selector">
                                             <select class="custom">
-                                                <option selected value="2022">2022</option>
-                                                <option value="2021">2021</option>
-                                                <option value="2020">2020</option>
+                                                <option selected value="6-years">past 6-years</option>
+                                                <option value="12-years">past 12-years</option>
+                                                <option value="6-months">past 6-months</option>
+                                                <option value="12-months">past 12-months</option>
                                             </select>
                                         </div>
                                     </div>
@@ -314,84 +373,100 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Traffic Breakdown</h6>
-                                <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                    <div class="traffic-doughnut-chart mb-2">
-                                        <canvas id="allRegionsChart"></canvas>
-                                    </div>
-                                    <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                            <div class="d-flex align-items-center">
-                                                <div id="organic" class="doughnut-key"></div>
-                                                <span class="text-muted">Organic Search</span>
-                                            </div> 
-                                            <span >721,416</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                            <div class="d-flex align-items-center">
-                                                <div id="google" class="doughnut-key"></div>
-                                                <span class="text-muted">Google ads</span>
+                    <div class="row mb-4">
+                        <div class="col mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <h6 class="text-muted mb-4">Top customers</h6>
+                                <div class="row">
+                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
+                                        <img src="assets/client-3.jpg" alt="" class="top-customer-img align-self-center"> 
+                                        <div class="d-flex flex-column customer-container rounded-edges">
+                                            <h6 class="font-weight-bold text-center mt-3">Mitchy Sakari</h6>
+                                            <p class="small text-center text-secondary">Member since 11 Mar, 2021</p>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Orders</span>
+                                                <span class="text-secondary">432</span>
                                             </div>
-                                            <span>251,938</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                            <div class="d-flex align-items-center">
-                                                <div id="youtube" class="doughnut-key"></div>
-                                                <span class="text-muted">Youtube</span>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Amount spent</span>
+                                                <span class="text-secondary">$26,524</span>
                                             </div>
-                                            <span>99,071</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                            <div class="d-flex align-items-center">
-                                                <div id="instagram" class="doughnut-key"></div>
-                                                <span class="text-muted">Instagram</span>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Last Order</span>
+                                                <span class="text-secondary">10 Jul, 2022</span>
                                             </div>
-                                            <span class="">78,231</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                            <div class="d-flex align-items-center">
-                                                <div id="facebook" class="doughnut-key"></div>
-                                                <span class="text-muted">Facebook</span>
-                                            </div>
-                                            <span>24,906</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
-                                <div class="d-flex flex-fill flex-column align-items-center">
-                                    <h6 class="text-muted mb-3">Conversion Rate</h6>
-                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
-                                        <div class="pie-progress-bar">
-                                            <svg class="conversion-rate">
-                                                <circle cx="65" cy="65" r="65"/>
-                                                <circle cx="65" cy="65" r="65"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h4 class="font-weight-bold mb-0">73%</h4>
-                                                <span class="small text-muted mb-1">todays traffic</span>
-                                                <i class="fas fa-xs success-percentage fa-arrow-up"></i>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-secondary">Highest Order</span>
+                                                <span class="text-secondary">$3,524</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="d-flex flex-fill flex-column align-items-center">
-                                    <h6 class="text-muted mb-3">Cart Abandonment</h6>
-                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
-                                        <div class="pie-progress-bar">
-                                            <svg class="cart-abandonment">
-                                                <circle cx="65" cy="65" r="65"/>
-                                                <circle cx="65" cy="65" r="65"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h4 class="font-weight-bold mb-0">57%</h4>
-                                                <span class="small text-muted mb-1">todays traffic</span>
-                                                <i class="fas fa-xs danger-percentage fa-arrow-down"></i>
+                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
+                                        <img src="assets/client-5.jpg" alt="" class="top-customer-img align-self-center"> 
+                                        <div class="d-flex flex-column customer-container rounded-edges">
+                                            <h6 class="font-weight-bold text-center mt-3">Lee Mayweather</h6>
+                                            <p class="small text-center text-secondary">Member since 09 Jan, 2021</p>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Orders</span>
+                                                <span class="text-secondary">316</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Amount spent</span>
+                                                <span class="text-secondary">$26,524</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Last Order</span>
+                                                <span class="text-secondary">10 Jul, 2022</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-secondary">Highest Order</span>
+                                                <span class="text-secondary">$3,524</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
+                                        <img src="assets/client-4.jpg" alt="" class="top-customer-img align-self-center"> 
+                                        <div class="d-flex flex-column customer-container rounded-edges">
+                                            <h6 class="font-weight-bold text-center mt-3">Claire Rice</h6>
+                                            <p class="small text-center text-secondary">Member since 20 Aug, 2020</p>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Orders</span>
+                                                <span class="text-secondary">212</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Amount spent</span>
+                                                <span class="text-secondary">$26,524</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Last Order</span>
+                                                <span class="text-secondary">10 Jul, 2022</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-secondary">Highest Order</span>
+                                                <span class="text-secondary">$3,524</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-md-3 d-flex flex-column px-3">
+                                        <img src="assets/client-9.jpg" alt="" class="top-customer-img align-self-center"> 
+                                        <div class="d-flex flex-column customer-container rounded-edges">
+                                            <h6 class="font-weight-bold text-center mt-3">Wavy So Wavy</h6>
+                                            <p class="small text-center text-secondary">Member since 01 Feb, 2022</p>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Orders</span>
+                                                <span class="text-secondary">118</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Amount spent</span>
+                                                <span class="text-secondary">$26,524</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span class="text-secondary">Last Order</span>
+                                                <span class="text-secondary">10 Jul, 2022</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-secondary">Highest Order</span>
+                                                <span class="text-secondary">$3,524</span>
                                             </div>
                                         </div>
                                     </div>
@@ -417,6 +492,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script> -->
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -831,6 +831,20 @@ i#action-toggle:hover{
     min-height: 100vh;
 }
 /* Top customers section styling */
+.customer-container{
+    background-color: var(--body-color);
+    padding: 2.5rem 1rem 1rem 1rem;
+    margin-top: 2.5rem;
+}
+.customer-container span{
+    font-size: 0.9rem;
+}
+.top-customer-img{
+    height: 5rem !important;
+    width: 5rem !important;
+    border-radius: 50px;
+    position: absolute;
+}
 #clients-carousel{
     position: relative;
     top: -2.25rem;
@@ -862,6 +876,7 @@ i#action-toggle:hover{
     font-size: 0.9rem;
     width: 100%;
 }
+/* End of top customers styling section */
 /* analytics page styling */
 
 
@@ -1268,7 +1283,7 @@ input[type="range"]::-moz-range-thumb{
     width: 85%;
     height: 85%;
 }
-.color-variation{
+/* .color-variation{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1282,13 +1297,13 @@ input[type="range"]::-moz-range-thumb{
 }
 .color-variation.active, .color-variation:hover{
     border: 1px solid var(--primary-color);
-}
-.color{
+} */
+/* .color{
     border-radius: 0.22rem;
     width: 100%;
     height: 100%;
-}
-#color-1{
+} */
+/* #color-1{
     background-color: #0004ff;
 }
 #color-2{
@@ -1299,7 +1314,7 @@ input[type="range"]::-moz-range-thumb{
 }
 #color-4{
     background-color: #1d0029;
-}
+} */
 .size-variation{
     display: flex;
     width: 4rem;
