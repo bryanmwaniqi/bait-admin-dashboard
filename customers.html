@@ -291,15 +291,32 @@
                     <div class="row">
                         <div class="col mb-5">
                             <div class="bg-white rounded-edges p-3 h-100 order-section">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-muted">Recent Orders</h6>
-                                    <a href="add-product.html" class="btn primary-btn">
-                                        Add Customer
-                                    </a>
-                                </div>
+                                <h6 class="text-muted">Customers</h6>
 
-                                <!-- Orders Table -->
-                                <div id="orders-table" class="d-flex flex-column">
+                                <!-- Customers Table -->
+                                <div class="d-flex justify-content-between mt-3 flex-wrap">
+                                    <div class="d-flex mb-2">
+                                        <span class="form-icon">
+                                            <i class="fas fa-search text-muted mt-1"></i>
+                                        </span>
+                                        <input type="text" id="search-input" class="form-control" placeholder="Search...">
+                                    </div>
+                                    <div class="btn-group mb-2" role="group" aria-label="Table action icons">
+                                        <button type="button" class="btn pale-btn">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                        <button type="button" class="btn pale-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+                                        <button type="button" class="btn pale-btn">
+                                            <i class="star-toggle far fa-star"></i>
+                                        </button>
+                                        <a href="add-customer.html" class="btn pale-btn">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </a>
+                                      </div>
+                                </div>
+                                <div id="customers-table" class="d-flex flex-column">
                                     <table class="table table-responsive-sm table-borderless table-hover">
                                         <thead>
                                             <tr>

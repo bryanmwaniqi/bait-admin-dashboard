@@ -59,6 +59,7 @@ img{
 .rounded-edges{
     border-radius: 0.4rem;
 }
+/* Custom buttons */
 .primary-btn{
     background-color: var(--primary-color);
     border: 1.8px solid var(--primary-color);
@@ -90,6 +91,17 @@ img{
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
+.pale-btn{
+    background-color: var(--body-color);
+    color: var(--primary-color);
+}
+.pale-btn:hover{
+    background-color: var(--primary-color);
+    color: var(--body-color);
+}
+/* .btn-group .btn:not(:last-child) {
+    border-right: none; 
+} */
 .text-purple{
     color: var(--primary-color);
 }
@@ -318,10 +330,7 @@ span.form-icon{
 #main-navbar .toggler-nav{
     transition: all ease-in .3s;   
 }
-#main-navbar .toggler-nav.active{
-    /* margin-left: 8.5rem; */
-}
-#main-navbar #search-input{
+#search-input{
     padding-left: 2.375rem;
     background-color: var(--body-color);
     border: none;
@@ -755,7 +764,7 @@ img.country-flag{
     width: 1.5rem;
     border-radius: 20px;
 }
-a.add-product{
+/* a.add-product{
     padding-left: 1rem;
     padding-right: 1rem;
     width: 2.5rem;
@@ -763,7 +772,7 @@ a.add-product{
     background: var(--primary-color);
     border-radius: 0.3rem;
     color: #fff;
-}
+} */
 /* #table-search input{
     border: none;
     border-color: var(--primary-color);
@@ -830,7 +839,6 @@ i#action-toggle:hover{
     background-color: var(--body-color);
     padding: 2.5rem 1rem 1rem 1rem;
     margin-top: 2.5rem;
-    /* color: rgb(155, 155, 155); */
 }
 .customer-container span{
     font-size: 0.9rem;
