@@ -53,12 +53,17 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-flex align-items-center">
+                    <li class="nav-item d-sm-flex align-items-center d-none">
                         <a class="nav-link d-flex align-items-center" href="#">
                             <span class="form-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
+                        </a>
+                    </li>
+                    <li class="nav-item d-sm-none align-items-center d-flex">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
                         </a>
                     </li>
                     <li id="language" class="nav-item d-flex align-items-center dropdown">
@@ -386,19 +391,47 @@
                                 </div>
                                 <div class="tab-content menu-tab">
                                     <div id="profile" class="tab-pane show fade active">
+                                        <div class="customer-pic-container d-flex p-2 mx-md-4 p-md-4 justify-content-between">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex my-1 flex-wrap">
+                                                    <div class="d-flex customer-pic mr-4 mb-2">
+                                                        <img src="assets/client-2.jpg" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-between mb-2">
+                                                        <h6 class="font-weight-bold">Profile Picture</h6>
+                                                        <div class="d-flex flex-column">
+                                                            <span class="small text-muted">user@souktheme.com</span>
+                                                        <span class="small text-muted">+254 712 345 678</span>
+                                                        </div>
+                                                        <button type="button" class="btn primary-btn upload-btn">
+                                                            <i class="fa-solid fa-pen mr-2"></i> 
+                                                            upload
+                                                            <input type="file">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <span class="small text-muted">Allowed file formats: .jpeg, .jpg, .png, .gif</span>
+                                            </div>
+                                            <!-- <a href="#customer-details" class="btn d-none d-sm-block primary-btn align-self-center mr-md-2">Edit Details</a> -->
+                                        </div>
                                         <form class="p-sm-2">
                                             <div class="form-row p-2">
                                                 <div class="form-group col-12 col-md-4 px-md-3">
-                                                    <label for="firstName" class="required">First name</label>
+                                                    <label for="firstName" class="required">Full name</label>
                                                     <input type="text" class="form-control primary-input" id="firstName" placeholder="first name">                                                </div>
-                                                <div class="form-group col-12 col-md-4 px-md-3">
-                                                    <label for="lastName">Last name</label>
-                                                    <input type="text" class="form-control primary-input" id="lastName" placeholder="last name">
-                                                </div>
-                                                <div class="form-group col-12 col-md-4 px-md-3">
-                                                    <label for="exampleFormControlFile1">Profile image</label>
-                                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                                </div>
+                                                    <div class="form-group col-12 col-md-4 px-md-3">
+                                                        <label for="lastName">DOB</label>
+                                                        <input type="date" class="form-control primary-input" id="lastName" placeholder="Date of Birth">
+                                                    </div>
+                                                    <div class="form-group col-12 col-md-4 px-md-3">
+                                                        <label for="customerId">Country</label>
+                                                        <select class="form-control category-selectors form-control-lg" id="exampleFormControlSelect1">
+                                                            <option>Australia</option>
+                                                            <option>China</option>
+                                                            <option>Kenya</option>
+                                                            <option>USA</option>
+                                                        </select>
+                                                    </div>
                                             </div>
                                             <div class="form-row p-2">
                                                 <div class="form-group col-12 col-md-4 px-md-3">
@@ -432,21 +465,21 @@
                                             <div id="socials" class="form-row p-2">
                                                 <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="facebook-social">Facebook</label>
-                                                    <span class="socials-icon">
+                                                    <span class="input-icon">
                                                         <i class="fa-brands fa-facebook"></i>
                                                     </span>
                                                     <input type="text" class="form-control primary-input" id="facebook-social" placeholder="Username">
                                                 </div>
                                                 <div class="form-group col-12 col col-md-4 px-md-3">
                                                     <label for="instagram-social">Instagram</label>
-                                                    <span class="socials-icon">
+                                                    <span class="input-icon">
                                                         <i class="fa-brands fa-instagram"></i>
                                                     </span>
                                                     <input type="text" class="form-control primary-input" id="instagram-social" placeholder="Username">
                                                 </div>
                                                 <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="twitter-social">Twitter</label>
-                                                    <span class="socials-icon">
+                                                    <span class="input-icon">
                                                         <i class="fa-brands fa-twitter"></i>
                                                     </span>
                                                     <input type="text" class="form-control primary-input" id="twitter-social" placeholder="Username">

@@ -53,12 +53,17 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-flex align-items-center">
+                    <li class="nav-item d-sm-flex align-items-center d-none">
                         <a class="nav-link d-flex align-items-center" href="#">
                             <span class="form-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
+                        </a>
+                    </li>
+                    <li class="nav-item d-sm-none align-items-center d-flex">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
                         </a>
                     </li>
                     <li id="language" class="nav-item d-flex align-items-center dropdown">

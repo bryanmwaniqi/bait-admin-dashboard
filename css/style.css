@@ -455,8 +455,8 @@ span.form-icon{
     position: relative;
     cursor: pointer;
 }
-@media (max-width:415px) {
-    .notification, #language, #entity-addition{
+@media (max-width:350px) {
+    .notification, #language{
         display: none !important;
     }
 }
@@ -824,11 +824,6 @@ i#action-toggle:hover{
     position: absolute;
     overflow: hidden;
 }
-/* @media (max-width:360px) {
-    .customer-value{
-        display: none;
-    }
-} */
 
 #main div.container-fluid{
     position: relative;
@@ -937,7 +932,7 @@ label.required::after{
 #socials input{
     padding-left: 2.375rem;
 }
-span.socials-icon{
+span.input-icon{
     position: absolute;
     margin-left: 0.9rem;
     height: 3rem;
@@ -1471,4 +1466,75 @@ ul.email-list{
     height: 2.6rem;
     border-radius: 0.25rem;
 }
+/* add product page styling */
+.product-images,.product-tag{
+    background-color: var(--body-color);
+    border-radius: 0.25rem;
+}
+.product-images .round-edge-img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.cancel-icon{
+    cursor: pointer;
+    color: #838383;
+}
+.cancel-icon:hover{
+    color: var(--primary-color);
+}
+input.iconed{
+    padding-left: 2.275rem;
+}
+.category-selectors{
+    background: var(--body-color);
+    border: 1px solid var(--body-color);
+    font-size: 0.9rem;
+    height: 3rem;
+}
+.category-selectors:focus{
+    background: var(--body-color);
+    border: 1px solid var(--body-color);
+}
+#product-tags::after{
+    content: 'The tags you add will be used for SEO';
+    font-size: 0.8rem;
+    color:#858585;
+    bottom: 7px;
+    position: absolute;
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+/* add product page styling end */
 
+/* add customer page styling */
+.customer-pic-container{
+    background-color: var(--body-color);
+    border-radius: 0.3rem;
+}
+.customer-pic-container i.customer-avatar{
+    color: #fff;
+    font-size: 8.5rem;
+}
+.customer-pic{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.25rem;
+}
+.customer-pic img{
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+.upload-btn{
+    position: relative;
+    overflow: hidden;
+    padding: 0.2rem;
+    max-width: 7rem;
+}
+.upload-btn input[type='file']{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(2);
+    opacity: 0;
+}
+/* end of customer styling */

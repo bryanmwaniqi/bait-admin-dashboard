@@ -53,12 +53,17 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-flex align-items-center">
+                    <li class="nav-item d-sm-flex align-items-center d-none">
                         <a class="nav-link d-flex align-items-center" href="#">
                             <span class="form-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
+                        </a>
+                    </li>
+                    <li class="nav-item d-sm-none align-items-center d-flex">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
                         </a>
                     </li>
                     <li id="language" class="nav-item d-flex align-items-center dropdown">
@@ -245,9 +250,171 @@
             <div id="main">
                 <div class="container-fluid py-2">
                     <div class="row mb-4">
+                        <div class="col">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="text-muted">Product Images</h6>
+                                    <button class="btn primary-btn py-1">Add Image</button>
+                                </div>
+                                <div class="row product-images-container">
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="product-images d-flex justify-content-between p-2">
+                                            <img class="round-edge-img mr-1 mr-md-0" src="assets/shoe-1.jpg" alt="">
+                                            <div class="d-flex flex-column mr-1 mr-md-0">
+                                                <h6 class="font-weight-bold">Product image 1</h6>
+                                                <span class="small text-muted">Allowed file formats: .jpeg, .jpg, .png, .gif</span>
+                                            </div>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="product-images d-flex justify-content-between p-2">
+                                            <img class="round-edge-img mr-1 mr-md-0" src="assets/shoe-2.jpg" alt="">
+                                            <div class="d-flex flex-column mr-1 mr-md-0">
+                                                <h6 class="font-weight-bold">Product image 2</h6>
+                                                <span class="small text-muted">Allowed file formats: .jpeg, .jpg, .png, .gif</span>
+                                            </div>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="product-images d-flex justify-content-between p-2">
+                                            <img class="round-edge-img mr-1 mr-md-0" src="assets/shoe-3.jpg" alt="">
+                                            <div class="d-flex flex-column mr-1 mr-md-0">
+                                                <h6 class="font-weight-bold">Product image 3</h6>
+                                                <span class="small text-muted">Allowed file formats: .jpeg, .jpg, .png, .gif</span>
+                                            </div>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3">
-                                <h6 class="text-muted">Product Entry</h6>
+                                <h6 class="text-muted">Product Details</h6>
+                                <form class="p-sm-2 mt-3">
+                                    <div class="form-row p-2">
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="productName" class="required">Product Name</label>
+                                            <input type="text" class="form-control primary-input" id="productName" placeholder="product name">                                                </div>
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="sku" class="required">SKU</label>
+                                            <input type="text" class="form-control primary-input" id="sku" placeholder="stock keeping unit">
+                                        </div>
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="quantity">Quantity</label>
+                                            <input type="text" class="form-control primary-input" id="quantity" placeholder="10">
+                                        </div>
+                                    </div>
+                                    <div class="form-row p-2">
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="exampleInputEmail1" class="required">Price</label>
+                                            <span class="input-icon">
+                                                <i class="fa-solid fa-dollar-sign"></i>
+                                            </span>
+                                            <input type="text" class="iconed form-control primary-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="price">
+                                            <small id="emailHelp" class="form-text text-muted">To set currency, go to settings page.</small>
+                                        </div>
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="exampleInputPassword1" class="required">Tax</label>
+                                            <span class="input-icon">
+                                                <i class="fa-solid fa-dollar-sign"></i>
+                                            </span>
+                                            <input type="text" class="iconed form-control primary-input" id="exampleInputPassword1" placeholder="value added tax">
+                                            <small id="emailHelp" class="form-text text-muted">To set currency, go to settings page.</small>
+                                        </div>
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="exampleInputPassword1">Retail price</label>
+                                            <span class="input-icon">
+                                                <i class="fa-solid fa-dollar-sign"></i>
+                                            </span>
+                                            <input type="text" class="iconed form-control primary-input" id="exampleInputPassword1" placeholder="final price">
+                                            <small id="emailHelp" class="form-text text-muted">To set currency, go to settings page.</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-row p-2">
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="city">Category</label>
+                                            <select class="form-control category-selectors form-control-lg" id="exampleFormControlSelect1">
+                                                <option>Electronics</option>
+                                                <option>Cosmetics</option>
+                                                <option>Fashion</option>
+                                                <option>Food & Drinks</option>
+                                                <option>Art crafts</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-12 col col-md-4 px-md-3">
+                                            <label for="street-address">Sub Category</label>
+                                            <select class="form-control category-selectors form-control-lg" id="exampleFormControlSelect1">
+                                                <option>Phones</option>
+                                                <option>Tablets</option>
+                                                <option>T.v's</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-12 col-md-4 px-md-3">
+                                            <label for="ZIP">Brand</label>
+                                            <select class="form-control category-selectors form-control-lg" id="exampleFormControlSelect1">
+                                                <option>Iphone</option>
+                                                <option>Samsung</option>
+                                                <option>Nokia</option>
+                                                <option>Tecno</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row ">
+                                        <div class="form-group px-md-4">
+                                            <label for="facebook-social">Product Description</label>
+                                            <textarea class="form-control primary-input" name="" id="" cols="180" rows="10" placeholder="Type description here..."></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div id="product-tags" class="bg-white rounded-edges px-3 py-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="text-muted">Product Tags</h6>
+                                    <button class="btn primary-btn py-1">Add Tag</button>
+                                </div>
+                                <div class="row product-images-container">
+                                    <div class="col-md-3 col-12 mb-3">
+                                        <div class="product-tag d-flex justify-content-between p-2 align-items-center">
+                                            <h6 class="font-weight-bold text-secondary m-2">Brand new</h6>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 mb-3">
+                                        <div class="product-tag d-flex justify-content-between p-2 align-items-center">
+                                            <h6 class="font-weight-bold text-secondary m-2">Generic</h6>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 mb-3">
+                                        <div class="product-tag d-flex justify-content-between p-2 align-items-center">
+                                            <h6 class="font-weight-bold text-secondary m-2">Unisex</h6>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12 mb-3">
+                                        <div class="product-tag d-flex justify-content-between p-2 align-items-center">
+                                            <h6 class="font-weight-bold text-secondary m-2">Summer</h6>
+                                            <i class="fa-solid fa-xmark align-self-center cancel-icon m-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col mb-3">
+                            <div class="d-flex justify-content-end px-3 py-4">
+                                <button type="button" class="btn btn-secondary mr-3">Cancel</button>
+                                <button type="submit" class="btn primary-btn">Save</button>
                             </div>
                         </div>
                     </div>
