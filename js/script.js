@@ -125,23 +125,23 @@ $(function () {
 
     // sales vs expenses v profits chart
     const salesComparisonData = {
-        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun'],
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
         datasets: [{
-            data: [45, 59, 71, 65, 56, 55],
+            data: [65, 59, 71, 65, 56, 55, 72],
             label: 'Sales',
             backgroundColor: '#5d39ff',
             borderWidth: 0,
             borderRadius: 50,
             borderSkipped: true
         }, {
-            data: [35, 45, 40, 50, 41, 35],
+            data: [55, 45, 40, 50, 41, 35, 55],
             label: 'Expenses',
             backgroundColor: '#dcdce9',
             borderWidth: 0,
             borderRadius: 50,
             borderSkipped: true
         }, {
-            data: [40, 51, 65, 60, 45, 45],
+            data: [60, 51, 65, 60, 45, 45, 66],
             label: 'Profit',
             backgroundColor: 'rgb(0, 206, 206)',
             borderWidth: 0,

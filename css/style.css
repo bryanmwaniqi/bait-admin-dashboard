@@ -406,42 +406,6 @@ span.form-icon{
         display: none;
     }
 } */
-/* .sidemenu-toggle{
-    display: inline-block;
-    cursor: pointer;
-}
-.toggle-input{
-    display: none;
-}
-.toggle-input:checked ~ .toggle-bg{
-    background-color: var(--primary-color);
-}
-.toggle-input:checked + .toggler-nav{
-    margin-left: 3rem;
-}
-.toggle-bg{
-    position: relative;
-    width: 2.2rem;
-    height: 1.1rem;
-    background-color: #acacac;
-    border-radius: 3rem;
-    transition: background .2s;
-    display: flex;
-    align-items: center;
-}
-.toggle-bg::after{
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    height: 0.85rem;
-    width: 0.85rem;
-    left: 0.15rem;
-    background-color: #fff;
-    transition: transform ease-in 0.2s;
-}
-.toggle-input:checked ~ .toggle-bg::after{
-    transform: translateX(1.1rem);
-} */
 
 #main-navbar .navbar-nav li a{
     padding: 0.4rem 1rem;
@@ -830,27 +794,27 @@ i#action-toggle:hover{
     min-height: 100vh;
 }
 /* Top customers section styling */
-.customer-container{
+/* .customer-container{
     background-color: var(--body-color);
     padding: 2.5rem 1rem 1rem 1rem;
     margin-top: 2.5rem;
-}
-.customer-container span{
+} */
+/* .customer-container span{
     font-size: 0.9rem;
-}
-.top-customer-img{
+} */
+/* .top-customer-img{
     height: 5rem !important;
     width: 5rem !important;
     border-radius: 50px;
     position: absolute;
-}
+} */
 #clients-carousel{
     position: relative;
     top: -2.25rem;
 }
 #clients-carousel .item{
     padding: 0;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 #top-customer{
     overflow: hidden;
@@ -949,27 +913,43 @@ span.input-icon{
 .color-scheme{
     display: none;
 }
+.form-check-inline > label{
+    background-color: var(--body-color);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+.form-check-inline:hover > label{
+    background-color: #d9d9e6;
+}
 .form-check-inline:hover > label, .color-scheme:checked + .custom-radio + span{
-    border-color: var(--success-color);
-    color: var(--success-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+/* .color-scheme:checked + .custom-radio{
+    background-color: var(--primary-color);
+    color: #fff;
+} */
+.form-check-inline:hover .custom-radio{
+    border-color: var(--primary-color);
 }
 .custom-radio{
     width: 0.9rem;
     height: 0.9rem;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    border-radius: 0.2rem;
     border: 1px solid #adadad;
     margin-right: 0.5em;
 }
 .custom-radio::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f058";
+    content: "\f14a";
     display: inline-block;
-    color: var(--success-color);
+    color: var(--primary-color);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -991,13 +971,58 @@ span.input-icon{
 .color-scheme:checked + .custom-radio{
     border: 0;
     border-radius: 50%;
-    /* background-color: #fff; */
 }
+.pale-bg{
+    background-color: var(--body-color);
+    border-radius: 0.25rem
+}
+.remove-integration{
+    color: #838383;
+    font-size: 0.9rem;
+}
+.integration-toggle{
+    display: inline-block;
+    cursor: pointer;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-input:checked ~ .toggle-bg{
+    background-color: var(--primary-color);
+}
+.toggle-input:checked + .toggler-nav{
+    margin-left: 3rem;
+}
+.toggle-bg{
+    position: relative;
+    width: 2.2rem;
+    height: 1.1rem;
+    background-color: #b1b1b1;
+    border-radius: 3rem;
+    transition: background .2s;
+    display: flex;
+    align-items: center;
+}
+.toggle-bg::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    height: 0.85rem;
+    width: 0.85rem;
+    left: 0.15rem;
+    background-color: #fff;
+    transition: transform ease-in 0.2s;
+}
+.toggle-input:checked ~ .toggle-bg::after{
+    transform: translateX(1.1rem);
+}
+
+/* end of settings page styling */
 
 
 /* orders page styling */
 /* .stat-icon-container{
-    height: 2.8rem;
+    height: 3.8rem;
     width: 2.8rem;
     border-radius: 0.3rem;
 } */
