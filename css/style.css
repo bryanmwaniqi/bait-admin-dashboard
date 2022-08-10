@@ -65,6 +65,10 @@ img{
     border: 1.8px solid var(--primary-color);
     color: var(--body-color);
 }
+.primary-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+}
 .primary-outline-btn{
     border: 1.8px solid var(--primary-color);
     color: var(--primary-color);
@@ -99,9 +103,15 @@ img{
     background-color: var(--primary-color);
     color: var(--body-color);
 }
-/* .btn-group .btn:not(:last-child) {
-    border-right: none; 
-} */
+.success-btn{
+    background-color: var(--success-color);
+    border: 1.8px solid var(--success-color);
+    color: #fff;
+}
+.success-btn:hover{
+    background-color: transparent;
+    color: var(--success-color);
+}
 .text-purple{
     color: var(--primary-color);
 }
@@ -330,6 +340,10 @@ span.form-icon{
 #main-navbar .toggler-nav{
     transition: all ease-in .3s;   
 }
+.track-btn{
+    padding-top: 0.12rem !important;
+    padding-bottom: 0.12rem !important;
+}
 #search-input{
     padding-left: 2.375rem;
     background-color: var(--body-color);
@@ -339,10 +353,6 @@ span.form-icon{
     color: #a8a8a8;
     font-size: 1rem;
     margin-top: 0.1rem;
-}
-.primary-btn:hover{
-    background-color: transparent;
-    color: var(--primary-color);
 }
 #main-navbar #account-overview .dropdown-item{
     color: #616161;
@@ -808,23 +818,23 @@ i#action-toggle:hover{
     border-radius: 50px;
     position: absolute;
 } */
-#clients-carousel{
+/* #clients-carousel{
     position: relative;
     top: -2.25rem;
 }
 #clients-carousel .item{
     padding: 0;
     color: rgb(255, 255, 255);
-}
-#top-customer{
+} */
+/* #top-customer{
     overflow: hidden;
 }
 .top-customer{
     height: 4.5rem !important;
     width: 4.5rem !important;
     border-radius: 50px;
-}
-#clients-carousel .owl-dot span{
+} */
+/* #clients-carousel .owl-dot span{
     background: none !important;
     border-color: #fff !important;
     border-width: 1.3px !important;
@@ -832,7 +842,7 @@ i#action-toggle:hover{
 }
 #clients-carousel .owl-dot span:hover, #clients-carousel button.active span{
     background: #fff !important;
-}
+} */
 .footer-content{
     position: absolute;
     padding-top: 2rem;
@@ -843,7 +853,9 @@ i#action-toggle:hover{
 /* End of top customers styling section */
 
 /* analytics page styling */
-
+#success-select{
+    background-color: var(--success-color);
+}
 
 /* profile page styling */
 .profile-pic-container{
@@ -920,6 +932,12 @@ span.input-icon{
 }
 .form-check-inline:hover > label{
     background-color: #d9d9e6;
+}
+.custom-radio + span{
+    color: #6c757d;
+}
+.form-check-inline:hover > label span{
+    color: var(--primary-color);
 }
 .form-check-inline:hover > label, .color-scheme:checked + .custom-radio + span{
     border-color: var(--primary-color);
@@ -1118,9 +1136,7 @@ select.custom option:hover{
     margin-bottom: 1rem;
 }
 .product-item-img{
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .price{
     font-weight: bold;
@@ -1288,18 +1304,39 @@ input[type="range"]::-moz-range-thumb{
         height: 20rem;
     }
 }
+.price-badge{
+    background-color: var(--body-color);
+    border-radius: 0.27rem;
+    max-width: 9rem;
+    height: 3rem;
+}
+.scraped-price{
+    position: relative;
+}
+.scraped-price::after{
+    content: '';
+    position: absolute;
+    background-color: #6c757d;
+    left: 0;
+    right: 0;
+    height: 0.15rem;
+    top: 50%;
+}
+.discounted-price{
+    color: var(--primary-color);
+}
 .product-description{
     font-size: 0.9rem;
 }
-#increment, #decrement{
+/* #increment, #decrement{
     background-color: var(--body-color);
-}
-#product-tally{
+} */
+/* #product-tally{
     max-width: 5rem;
 }
 #product-tally:focus{
     border-color: var(--primary-color);
-}
+} */
 .product-variation{
     display: flex;
     align-items: center;
@@ -1315,9 +1352,7 @@ input[type="range"]::-moz-range-thumb{
     border: 1px solid var(--primary-color);
 }
 .product-variation-img{
-    object-fit: contain;
-    width: 85%;
-    height: 85%;
+    object-fit: cover;
 }
 /* .color-variation{
     display: flex;
@@ -1360,11 +1395,14 @@ input[type="range"]::-moz-range-thumb{
     border: 1px solid #919191;
     cursor: pointer;
     justify-content: center;
-    color: #919191;
+    color: #6c757d;
 }
 .size-variation:hover{
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
+}
+.product-info-btn{
+    width: 9rem;
 }
 #overall-rating{
     background-color: var(--body-color);

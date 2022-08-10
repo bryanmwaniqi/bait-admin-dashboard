@@ -123,6 +123,72 @@ $(function () {
         $(this).toggleClass('active')
     });
 
+    // Overall products line chart
+
+    // conversion rate line chart
+    const conversionData = {
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
+        datasets: [{
+          data: [38, 59, 45, 40, 45, 40, 45],
+          fill: false,
+          borderColor: '#5d39ff',
+          hoverBackgroundColor: '#5d39ff',
+          pointRadius: 4,
+          hitRadius: 8,
+          hoverRadius: 8,
+          tension: 0.1
+        }]
+    };
+
+    const conversionConfig = {
+        type: 'line',
+        data: conversionData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        },
+    };
+
+    const conversionChart = new Chart(
+        $('#conversionChart'),
+        conversionConfig
+    );
+
+    // Cart Abandonment Rate Chart
+    const cartAbandonmentData = {
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
+        datasets: [{
+          data: [45, 40, 45, 40, 45, 59, 38],
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          hoverBackgroundColor: 'rgb(0, 206, 206)',
+          pointRadius: 4,
+          hitRadius: 8,
+          hoverRadius: 8,
+          tension: 0.1
+        }]
+    };
+
+    const cartAbandonmentConfig = {
+        type: 'line',
+        data: cartAbandonmentData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        },
+    };
+
+    const cartAbandonmentChart = new Chart(
+        $('#cartAbandonmentChart'),
+        cartAbandonmentConfig
+    );
+
     // sales vs expenses v profits chart
     const salesComparisonData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
@@ -265,7 +331,6 @@ $(function () {
     );
 
     // Overall sales line chart
-    // const labels = Utils.months({count: 7});
     var salesCtx = document.getElementById('salesChart').getContext('2d');
     
     var gradient = salesCtx.createLinearGradient(0, 0, 0, 307); 
@@ -497,6 +562,8 @@ $(function () {
         $('#returnsChart'),
         returnsConfig
     );
+
+    
 
     // best sellers horizontal bar chart
     const bestSellersData = {
