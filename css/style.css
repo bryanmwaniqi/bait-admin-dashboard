@@ -607,7 +607,7 @@ span.form-icon{
 .danger-percentage{
     color: #ff0077;
 }
-.success-percentage{
+.success-percentage, .success-text{
     color: #0cb675;
 }
 .success-bg{
