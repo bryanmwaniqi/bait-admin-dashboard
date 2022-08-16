@@ -2,10 +2,9 @@
     /* Theme colors */
     --primary-color: #5d39ff;
     --secondary-color: #ff0077;
-    /* --secondary-color-rgb: 255, 0, 119; */
     --text-color: #232323;
     --body-color: #f4f4f8;
-    --success-color: rgb(0, 206, 206);
+    --success-color: #00cece;
 }
 *{
     margin: 0;
@@ -35,6 +34,10 @@ a:hover{
     -o-text-decoration: none;
     text-decoration: none;
     cursor: pointer;
+}
+a:active {
+    text-decoration: none;
+    background-color: inherit !important;
 }
 ::-webkit-scrollbar{
     width: 12.5px;
@@ -145,6 +148,15 @@ form i{
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     border-radius: 50px;
+}
+.primary-search{
+    font-size: 0.87rem;
+    padding-left: 2.2rem;
+    background-color: var(--body-color);
+    border: none;
+}
+.primary-search:focus{
+    background-color: var(--body-color);
 }
 /* Common Table Styling */
 .table {
@@ -348,6 +360,17 @@ span.form-icon{
     padding-left: 2.375rem;
     background-color: var(--body-color);
     border: none;
+}
+span.search-icon{
+    position: absolute;
+    margin-left: 0.8rem;
+    height:calc(1.2em + .70rem);
+    display: flex;
+    align-items: center;
+}
+.form-icon i{
+    font-size: 1rem;
+    margin-top: 0.1rem;
 }
 #main-navbar .form-icon i{
     color: #a8a8a8;
@@ -1418,7 +1441,7 @@ table#specs tbody td{
     color: var(--primary-color);
 }
 
-/* email page styling */
+/* email inbox page styling */
 .email-badge{
     min-width: 1.2rem;
     height: 0.6rem;
@@ -1429,9 +1452,16 @@ table#specs tbody td{
     color: #858585;
     font-weight: normal;
 }
+.email-nav-item{
+    margin-bottom: 0.4rem;
+}
 #email-nav a.active{
     background-color: var(--primary-color);
     color: #fff;
+}
+#email-nav .email-nav-item:not(.active):hover{
+    background-color: var(--body-color);
+    color: var(--primary-color);
 }
 .email-icon-container{
     cursor: pointer;
@@ -1486,6 +1516,12 @@ ul.email-list{
     border-radius: 0.2rem;
     cursor: pointer;
 }
+.email-header{
+    width: 8rem;
+}
+.email-body, .email-chat, .email-header{
+    font-size: 0.9rem;
+}
 .email-body, .email-header{
     color: #858585;
 }
@@ -1495,8 +1531,13 @@ ul.email-list{
         overflow: hidden;
     }
 }
+@media (max-width:768px) {
+    .email-header{
+        width: 5rem;
+    }
+}
 .email-body{
-    max-width: 80%;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

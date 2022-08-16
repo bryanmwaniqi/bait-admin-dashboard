@@ -94,10 +94,6 @@
                             <i class="fas fa-plus-circle"></i>
                         </a>
                         <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item d-flex align-items-center" href="add-order.html">
-                                <i class="fas fa-user fa-sm mr-3"></i>
-                                <span>Add New Order</span>
-                            </a>
                             <a class="dropdown-item d-flex align-items-center" href="add-product.html">
                                 <i class="fas fa-cog fa-sm mr-3"></i>
                                 <span>Add New Product</span>
@@ -233,9 +229,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span class="menu-link">vendors</span> 
+                            <a class="nav-link" href="inbox.html">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="menu-link">email</span> 
                             </a>
                         </li>
                         <li class="nav-item">
@@ -301,10 +297,10 @@
                                 <!-- Customers Table -->
                                 <div class="d-flex justify-content-between mt-3 flex-wrap">
                                     <div class="d-flex mb-2">
-                                        <span class="form-icon">
+                                        <span class="search-icon">
                                             <i class="fas fa-search text-muted mt-1"></i>
                                         </span>
-                                        <input type="text" id="search-input" class="form-control" placeholder="Search...">
+                                        <input type="text" class="form-control primary-search" placeholder="Search...">
                                     </div>
                                     <div class="btn-group mb-2" role="group" aria-label="Table action icons">
                                         <button type="button" class="btn pale-btn">
@@ -319,7 +315,7 @@
                                         <a href="add-customer.html" class="btn pale-btn">
                                             <i class="fa-solid fa-plus"></i>
                                         </a>
-                                      </div>
+                                    </div>
                                 </div>
                                 <div id="customers-table" class="d-flex flex-column">
                                     <table class="table table-responsive-sm table-borderless table-hover">
