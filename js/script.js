@@ -123,7 +123,8 @@ $(function () {
         $(this).toggleClass('active')
     });
 
-    // Overall products line chart
+    
+
 
     // conversion rate line chart
     const conversionData = {
@@ -330,64 +331,7 @@ $(function () {
         allRegionsConfig
     );
 
-    // Overall sales line chart
-    var salesCtx = document.getElementById('salesChart').getContext('2d');
-    
-    var gradient = salesCtx.createLinearGradient(0, 0, 0, 307); 
-    gradient.addColorStop(0, 'rgba(93, 57, 255, 0.5)');
-    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-
-
-    const data = {
-        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
-        datasets: [{
-            data: [45, 59, 81, 65, 56, 55, 40, 55, 59, 75, 65, 56],
-            backgroundColor: gradient,
-            hoverBackgroundColor: '#ff0077',
-            fill: true,
-            borderColor: '#5d39ff',
-            tension: 0.3,
-            hitRadius: 15,
-            pointRadius: 0,
-            borderWidth: 4,
-            pointBorderWidth: 0,
-            borderJoinStyle: 'round',
-            hoverRadius: 12,
-        }]
-    };
-    const config = {
-        type: 'line',
-        data: data,
-        options: {
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        drawBorder: false
-                    }
-                },
-                x: {
-                    grid: {
-                        display: false,
-                        drawBorder: false
-                    }
-                }
-            }
-        },
-    };
-
-    const salesChart = new Chart(
-        salesCtx,
-        config
-    );
-
     // Overall sales bar chart
-    // const labels = Utils.months({count: 7});
     const salesBarData = {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
@@ -563,37 +507,45 @@ $(function () {
         returnsConfig
     );
 
-    
 
-    // best sellers horizontal bar chart
-    const bestSellersData = {
-        labels: ['electronics', 'cosmetics', 'fashion', 'food & drinks', 'art crafts', 'medical & health'],
+    // Overall sales line chart
+    var lineGradientCtx = document.getElementById('lineGradientChart').getContext('2d');
+
+    var gradient = lineGradientCtx.createLinearGradient(0, 0, 0, 307); 
+    gradient.addColorStop(0, 'rgba(93, 57, 255, 0.5)');
+    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+
+    const data = {
+        labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
-            data: [75, 65, 59, 56, 50, 45],
-            backgroundColor: '#5d39ff',
+            data: [45, 59, 81, 65, 56, 55, 40, 55, 59, 75, 65, 56],
+            backgroundColor: gradient,
             hoverBackgroundColor: '#ff0077',
-            borderWidth: 0,
-            borderRadius: 50,
-            barThickness: 11,
-            borderSkipped: false,
-            base:0.5
+            fill: true,
+            borderColor: '#5d39ff',
+            tension: 0.3,
+            hitRadius: 15,
+            pointRadius: 0,
+            borderWidth: 4,
+            pointBorderWidth: 0,
+            borderJoinStyle: 'round',
+            hoverRadius: 12,
         }]
     };
-    const bestSellersConfig = {
-        type: 'bar',
-        data: bestSellersData,
+    const config = {
+        type: 'line',
+        data: data,
         options: {
             plugins: {
                 legend: {
                     display: false
                 }
             },
-            indexAxis: 'y',
             scales: {
                 y: {
                     beginAtZero: true,
                     grid: {
-                        display: false,
                         drawBorder: false
                     }
                 },
@@ -606,9 +558,10 @@ $(function () {
             }
         },
     };
-    const bestSellersChart = new Chart(
-        $('#bestSellersChart'),
-        bestSellersConfig
+ 
+    const lineGradientChart = new Chart(
+        lineGradientCtx,
+        config
     );
 
      // Overall target vs sales bar chart

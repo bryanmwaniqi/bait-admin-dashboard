@@ -669,8 +669,8 @@ span.form-icon{
     color: var(--primary-color) !important; 
 }
 .best-product-img{
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
     overflow: hidden;
 }
 .progress{

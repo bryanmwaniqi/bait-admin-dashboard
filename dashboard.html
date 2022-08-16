@@ -33,7 +33,7 @@
         <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
             <!-- sm screen and below sidemenu toggler -->
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars text-purple"></i>
             </button>
             <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none " id="logo" href="offers-landing.html"> 
                 <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
@@ -337,9 +337,9 @@
                     <div class="row">
                         <div class="col-12 col-md-7 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Expenses</h6>
+                                <h6 class="text-muted mb-3">Sales v Targets</h6>
                                 <div class="h-100">
-                                    <canvas id="salesChart"></canvas>
+                                    <canvas id="mixed-chart" height="152"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -1101,7 +1101,7 @@
                     <div class="row mb-5 mb-md-4">
                         <div class="col col-md-6 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Traffic Breakdown</h6>
+                                <h6 class="text-muted mb-3">Traffic % Breakdown</h6>
                                 <div>
                                     <canvas id="stackedBarChart"></canvas>
                                 </div>
@@ -1118,13 +1118,13 @@
                                             </svg>
                                             <div class="percentage d-flex flex-column justify-content-center align-items-center">
                                                 <h3 class="font-weight-bold mb-0">73%</h3>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                                    <span class="small text-muted">2.55%</span>
+                                                </div>
                                             </div>
                                         </div>
                                         <h6 class="font-weight-bold">Conversion Rate</h6>
-                                        <!-- <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-percentage fa-arrow-up mr-1"></i>
-                                            <span class="small text-muted">1.05%</span>
-                                        </div> -->
                                         <span class="small text-center text-muted">
                                             Lorem ipsum dolor sit amet consectetur elit.
                                         </span>
@@ -1139,13 +1139,13 @@
                                             </svg>
                                             <div class="percentage d-flex flex-column justify-content-center align-items-center">
                                                 <h3 class="font-weight-bold mb-0">57%</h3>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                                    <span class="small text-muted">0.55%</span>
+                                                </div>
                                             </div>
                                         </div>
                                         <h6 class="font-weight-bold">Cart Abandonment</h6>
-                                        <!-- <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-percentage fa-arrow-down mr-1"></i>
-                                            <span class="small text-muted">2.25%</span>
-                                        </div> -->
                                         <span class="small text-center text-muted">
                                             Lorem ipsum dolor sit amet consectetur elit.
                                         </span>
@@ -1229,5 +1229,68 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script> -->
         <script src="js/script.js"></script>
+        <script>
+            // mixed chart
+            var mixedGradientCtx = document.getElementById('mixed-chart').getContext('2d');
+
+            var mixedGradient = mixedGradientCtx.createLinearGradient(0, 0, 0, 307); 
+            mixedGradient.addColorStop(0, 'rgba(93, 57, 255, 0.8)');
+            mixedGradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+
+
+            new Chart(mixedGradientCtx, {
+                data: {
+                    type: 'line',
+                    labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+                    datasets: [{
+                        type: "line",
+                        borderColor: "#5d39ff",
+                        backgroundColor: mixedGradient,
+                        tension: 0.3,
+                        hitRadius: 15,
+                        pointRadius: 0,
+                        borderWidth: 3,
+                        hoverRadius: 10,
+                        hoverPointRadius: 8,
+                        hoverBackgroundColor: "#5d39ff",
+                        data: [20, 30, 50, 40, 30, 32, 26, 35, 40, 55, 40, 30],
+                        fill: true
+                        },{
+                        type: "bar",
+                        borderRadius: 50,
+                        barThickness: 25,
+                        backgroundColor: "#ececf0",
+                        data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Population growth (millions): Europe & Africa'
+                    },
+                    legend: { display: false },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                drawBorder: false,
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
