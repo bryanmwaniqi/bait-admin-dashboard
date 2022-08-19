@@ -150,13 +150,57 @@ form i{
     border-radius: 50px;
 }
 .primary-search{
+    flex: 1 !important;
     font-size: 0.87rem;
-    padding-left: 2.2rem;
-    background-color: var(--body-color);
+    background-color: transparent;
     border: none;
+    height: 2.4rem;
 }
 .primary-search:focus{
     background-color: var(--body-color);
+}
+.secondary-search{
+    flex: 1 !important;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: none;
+    height: 2.4rem;
+}
+.secondary-search:focus{
+    background-color: #fff;
+}
+.search-bar{
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    padding-right: 5px;
+    width: 16rem;
+    height: 2.6rem;
+}
+@media (max-width:500px) {
+    .search-bar{
+        width: 100%;
+    }  
+    .table-icons{
+        width: 100%;
+    }
+}
+.search-bar button{
+    background-color: #5d39ffbb;
+    height: 33px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar button:hover{
+    background-color: var(--primary-color);
+}
+.search-bar button i{
+    font-size: 0.8rem;
+    color: #fff;
 }
 /* Common Table Styling */
 .table {
@@ -173,6 +217,12 @@ form i{
 }
 .table td{
     color: #838383;
+    font-size: 0.8rem;
+    padding-top: 0.37rem;
+    padding-bottom: 0.37rem;
+}
+.table td .dropdown-item{
+    color: #555555;
 }
 .table td, .table th{
     font-size: 0.93rem;
@@ -182,6 +232,9 @@ form i{
 }
 .table tr td, .table tr th{
     vertical-align: middle;
+}
+table td label, table th label{
+    margin-top: 0.55rem;
 }
 /* End of common table styling */
 .navbar{

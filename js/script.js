@@ -10,18 +10,10 @@ $(function () {
         autoplayHoverPause: true
     });
 
-    // $('#clients-carousel').owlCarousel({
-    //     items: 1,
-    //     margin: 3,
-    //     center: true,
-    //     dots: true
-    // });
-
     // Mobile view sidemenu toggler
     $('#sideMenuToggler').on('click', function (e) {
         e.stopPropagation();
         $('div#sidebar').toggleClass('active')
-        // $('div.shadow-overlay').toggleClass('active');
     });
 
     $(document).on('click', function(e) {
@@ -104,26 +96,21 @@ $(function () {
     });
 
     // Toggling product select-dropdown filters
-    $('#category-select').on('click', function() {
-        // if ($(this).siblings.hasClass('active')) {
-            
-        // }
-        $(this).siblings().removeClass('active');
-        $(this).toggleClass('active');
-    });
-    $('#sub-category-select').on('click', function() {
-        $(this).siblings().removeClass('active');
-        $(this).toggleClass('active');
-    });
-    $('#brand-select').on('click', function() {
-        $(this).siblings().removeClass('active');
-        $(this).toggleClass('active');
-    });
-    $('#model-select').on('click', function() {
-        $(this).toggleClass('active')
-    });
-
-    
+    // $('#category-select').on('click', function() {
+    //     $(this).siblings().removeClass('active');
+    //     $(this).toggleClass('active');
+    // });
+    // $('#sub-category-select').on('click', function() {
+    //     $(this).siblings().removeClass('active');
+    //     $(this).toggleClass('active');
+    // });
+    // $('#brand-select').on('click', function() {
+    //     $(this).siblings().removeClass('active');
+    //     $(this).toggleClass('active');
+    // });
+    // $('#model-select').on('click', function() {
+    //     $(this).toggleClass('active')
+    // });
 
 
     // conversion rate line chart
@@ -198,22 +185,19 @@ $(function () {
             label: 'Sales',
             backgroundColor: '#5d39ff',
             borderWidth: 0,
-            borderRadius: 50,
-            borderSkipped: true
+            borderRadius: 50
         }, {
             data: [55, 45, 40, 50, 41, 35, 55],
             label: 'Expenses',
             backgroundColor: '#dcdce9',
             borderWidth: 0,
-            borderRadius: 50,
-            borderSkipped: true
+            borderRadius: 50
         }, {
             data: [60, 51, 65, 60, 45, 45, 66],
             label: 'Profit',
             backgroundColor: 'rgb(0, 206, 206)',
             borderWidth: 0,
-            borderRadius: 50,
-            borderSkipped: true
+            borderRadius: 50
         }]
     };
     const salesComparisonConfig = {
@@ -242,6 +226,175 @@ $(function () {
     const salesComparisonChart = new Chart(
         $('#salesComparisonChart'),
         salesComparisonConfig
+    );
+
+    // Traffic Doughnut charts
+    // All regions traffic doughnut chart
+    const allRegionsData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [200, 50, 100, 80, 90],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const allRegionsConfig = {
+        type: 'doughnut',
+        data: allRegionsData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const allRegionsChart = new Chart(
+        $('#allRegionsChart'),
+        allRegionsConfig
+    );
+
+    // europe region traffic doughnut chart
+    const europeRegionData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [ 50, 200, 80, 90, 100],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const europeRegionConfig = {
+        type: 'doughnut',
+        data: europeRegionData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const europeRegionChart = new Chart(
+        $('#europeRegionChart'),
+        europeRegionConfig
+    );
+
+    // usa region traffic doughnut chart
+    const usaRegionData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [ 90, 80, 100, 200, 50],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const usaRegionConfig = {
+        type: 'doughnut',
+        data: usaRegionData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const usaRegionChart = new Chart(
+        $('#usaRegionChart'),
+        usaRegionConfig
+    );
+
+    // asia region traffic doughnut chart
+    const asiaRegionData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [ 50, 80, 90, 100, 200],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const asiaRegionConfig = {
+        type: 'doughnut',
+        data: asiaRegionData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const asiaRegionChart = new Chart(
+        $('#asiaRegionChart'),
+        asiaRegionConfig
+    );
+
+    // africa region traffic doughnut chart
+    const africaRegionData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [ 80, 50, 200, 80, 90],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const africaRegionConfig = {
+        type: 'doughnut',
+        data: africaRegionData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const africaRegionChart = new Chart(
+        $('#africaRegionChart'),
+        africaRegionConfig
+    );
+
+    // australia region traffic doughnut chart
+    const australiaRegionData = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [ 100, 80, 90, 200, 50],
+            backgroundColor: [
+                '#5d39ff',
+                '#4267B2',
+                '#F4B400',
+                '#C13584',
+                '#FF0000'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const australiaRegionConfig = {
+        type: 'doughnut',
+        data: australiaRegionData,
+        options:{
+            cutout: 55
+        },
+    };
+    
+    const australiaRegionChart = new Chart(
+        $('#australiaRegionChart'),
+        australiaRegionConfig
     );
 
     // Traffic breakdown stacked bar chart
@@ -301,34 +454,6 @@ $(function () {
     const stackedBarChart = new Chart(
         $('#stackedBarChart'),
         stackedBarConfig
-    );
-
-     // All regions traffic doughnut chart
-     const allRegionsData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [200, 50, 100, 80, 90],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const allRegionsConfig = {
-        type: 'doughnut',
-        data: allRegionsData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const allRegionsChart = new Chart(
-        $('#allRegionsChart'),
-        allRegionsConfig
     );
 
     // Overall sales bar chart
@@ -610,154 +735,5 @@ $(function () {
     const targetSalesChart = new Chart(
         $('#targetSalesChart'),
         targetConfig
-    );
-
-    // Traffic Doughnut charts
-   
-
-    // const regionsChart = new Chart(
-    //     $('#regionsChart'),
-    //     allRegionsConfig
-    // );
-
-    // europe region traffic doughnut chart
-    const europeRegionData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [ 50, 200, 80, 90, 100],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const europeRegionConfig = {
-        type: 'doughnut',
-        data: europeRegionData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const europeRegionChart = new Chart(
-        $('#europeRegionChart'),
-        europeRegionConfig
-    );
-
-    // usa region traffic doughnut chart
-    const usaRegionData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [ 90, 80, 100, 200, 50],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const usaRegionConfig = {
-        type: 'doughnut',
-        data: usaRegionData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const usaRegionChart = new Chart(
-        $('#usaRegionChart'),
-        usaRegionConfig
-    );
-
-    // asia region traffic doughnut chart
-    const asiaRegionData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [ 50, 80, 90, 100, 200],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const asiaRegionConfig = {
-        type: 'doughnut',
-        data: asiaRegionData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const asiaRegionChart = new Chart(
-        $('#asiaRegionChart'),
-        asiaRegionConfig
-    );
-
-    // africa region traffic doughnut chart
-    const africaRegionData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [ 80, 50, 200, 80, 90],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const africaRegionConfig = {
-        type: 'doughnut',
-        data: africaRegionData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const africaRegionChart = new Chart(
-        $('#africaRegionChart'),
-        africaRegionConfig
-    );
-
-    // australia region traffic doughnut chart
-    const australiaRegionData = {
-        datasets: [{
-            label: 'My First Dataset',
-            data: [ 100, 80, 90, 200, 50],
-            backgroundColor: [
-                '#5d39ff',
-                '#4267B2',
-                '#F4B400',
-                '#C13584',
-                '#FF0000'
-            ],
-            hoverOffset: 4
-        }]
-    };
-    const australiaRegionConfig = {
-        type: 'doughnut',
-        data: australiaRegionData,
-        options:{
-            cutout: 55
-        },
-    };
-    
-    const australiaRegionChart = new Chart(
-        $('#australiaRegionChart'),
-        australiaRegionConfig
-    );
-
+    );  
 })
