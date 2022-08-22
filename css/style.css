@@ -12,6 +12,9 @@
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
+button:focus{
+    outline: none;
+}
 .btn:focus, .btn:active, .btn.active, .btn:focus:active {
     background-image: none;
     outline: none;
@@ -61,6 +64,10 @@ img{
 }
 .rounded-edges{
     border-radius: 0.4rem;
+}
+/* Utility Classes */
+.mid-size-text{
+    font-size: 0.95rem;
 }
 /* Custom buttons */
 .primary-btn{
@@ -188,7 +195,7 @@ form i{
     }
 }
 .search-bar button{
-    background-color: #5d39ffbb;
+    background-color: var(--primary-color);
     height: 33px;
     width: 35px;
     display: flex;
@@ -196,7 +203,8 @@ form i{
     justify-content: center;
 }
 .search-bar button:hover{
-    background-color: var(--primary-color);
+    background-color: #5d39ffbb;
+    color: #fff;
 }
 .search-bar button i{
     font-size: 0.8rem;
@@ -636,7 +644,7 @@ span.search-icon{
 #sidebar .navbar-nav li.active a.nav-link{
     color: var(--primary-color);
 }
-.sub-menu{
+/* .sub-menu{
     position: fixed;
     padding: 0.6rem 0;
     width: 10rem;
@@ -652,17 +660,17 @@ span.search-icon{
 .sub-menu a:hover{
     background: var(--body-color);
     color: var(--primary-color);
-}
-.account-dropdown{
+} */
+/* .account-dropdown{
     position: relative;
-}
-.sub-menu.active{
+} */
+/* .sub-menu.active{
     background-color: #fff;
     border: 1px solid #c9c9c9;
 }
 .sub-menu.active a{
     display: block;
-}
+} */
 
 /* content section styling */
 #main{
@@ -1499,11 +1507,40 @@ table#specs tbody td{
     min-width: 1.2rem;
     height: 0.6rem;
 }
+.label-addition{
+    color: var(--primary-color);
+}
+.label-addition:hover{
+    cursor: pointer;
+}
+.label-1{
+    background: var(--success-color);
+}
+.label-2{
+    background: #ffae00;
+}
+.label-3{
+    background: var(--secondary-color);
+}
+.email-label{
+    border-radius: 50px;
+    width: 0.6rem;
+    height: 0.6rem;
+    /* margin-top: 0.3rem; */
+    margin-right: 0.5rem;
+}
 #email-nav a{
     padding: 0.7rem;
     border-radius: 0.3rem;
     color: #858585;
     font-weight: normal;
+}
+.email-search-btn{
+    color: #fff;
+    width: 6rem !important;
+}
+.email-search-btn i{
+    margin-top: 0.25rem;
 }
 .email-nav-item{
     margin-bottom: 0.4rem;
@@ -1602,6 +1639,18 @@ ul.email-list{
 .email-accordion .card .card-header{
     cursor: pointer;
     border: none;
+}
+#receiver{
+    position: relative;
+}
+#receiverEmail{
+    padding-left: 2.3rem; 
+}
+.receiverlabel{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* color: var(--secondary-color); */
 }
 /* Invoice Page Styling */
 #invoice-table thead th{

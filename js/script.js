@@ -24,15 +24,15 @@ $(function () {
 
 
     // Show & hide sub-menu on sidemenu item click
-    $('li.account-dropdown').on('click', function () {
-        $(this).children('.sub-menu').toggleClass('active');
-    });
+    // $('li.account-dropdown').on('click', function () {
+    //     $(this).children('.sub-menu').toggleClass('active');
+    // });
     
-    $('#main').on('click', function(e) {
-        if ($('.sub-menu').hasClass('active')) {
-            $('.sub-menu').removeClass("active");
-        }  
-    });
+    // $('#main').on('click', function(e) {
+    //     if ($('.sub-menu').hasClass('active')) {
+    //         $('.sub-menu').removeClass("active");
+    //     }  
+    // });
 
     // show scrollbar on hover
     $('#sideMenuToggler').on('click', function () {
