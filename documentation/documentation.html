@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+    <!-- Box icons font cdn -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar d-flex flex-column align-items-center">
+            <div class="logo-container w-100">
+                <span class="fw-bold display-8 h6">Souk Marketplace</span>
+            </div>
+            <ul class="nav flex-column w-100" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="introduction-tab" data-bs-toggle="tab" data-bs-target="#introduction" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Introduction</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="gettingStarted-tab" data-bs-toggle="tab" data-bs-target="#gettingStarted" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">Getting Started</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="presentation" data-bs-toggle="tab" data-bs-target="#dependencies" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">Dependencies</button>
+                  </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="presentation" data-bs-toggle="tab" data-bs-target="#html" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="presentation" data-bs-toggle="tab" data-bs-target="#css" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">CSS</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="presentation" data-bs-toggle="tab" data-bs-target="#js" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">JS</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="presentation" data-bs-toggle="tab" data-bs-target="#charts" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">Charts</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="presentation" data-bs-toggle="tab" data-bs-target="#support" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="false">Support</button>
+                </li>
+              </ul>
+        </div>
+        <div class="content d-flex flex-column">
+            <div class="overlay"></div>
+            <div class="toggler-container">
+                <i id="toggler" class='bx bx-menu-alt-left bx-lg'></i>
+            </div>
+            <div class="tab-content" id="documentation-content">
+                <div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <h2 class="fw-bold">Souk Admin Dashboard</h2>
+                    <span class="text-secondary small">Version 1.0.0</span>
+                    <p class="mt-4 mid-size-text">
+                        Souk is a minimalistic HTML e-commerce admin dashboard template designed using bootstrap and 
+                        consideration to UI and UX principles, to achieve not only an aesthetically appealing user interface 
+                        but also ensure practicality to whichever developer uses it as a base for developing an 
+                        e-commerce backend.
+                        With a single glimpse of the dashboard page, one is able to get a clear picture of the performance and 
+                        progress of the business serving the data being laid bare and also analysed.
+                        This template can also be used as a multipurpose dashboard with a little twitching here and there, given
+                        the versatility in its design.
+                    </p>
+                    <h6 class="fw-bold">Features</h6>
+                    <ul>
+                        <li>Responsive</li>
+                        <li>Multipage template</li>
+                        <li>W3C validated code</li>
+                        <li>Email application</li>
+                        <li>Analytics Reports</li>
+                        <li>Data visualization charts</li>
+                        <li>Minimalist design</li>
+                        <li>Bootstrap 4</li>
+                    </ul>
+                    <h6 class="fw-bold">Folder structure</h6>
+                    <p>This project structure is as follows:</p>
+                    <ul>
+                        <li>assets</li>
+                        <li>css</li>
+                        <li>documentation</li>
+                        <li>js</li>
+                        <li>*.html files</li>
+                    </ul>
+                    <h6 class="fw-bold">Dependencies</h6>
+                    <p>Take note of the following dependencies used in the development of this awesome template:</p>
+                    <ul>
+                        <li>HTML 5</li>
+                        <li>CSS 3</li>
+                        <li>JS ES6</li>
+                        <li>Bootstrap 4</li>
+                        <li>jQuery</li>
+                        <li>Fontawesome 6</li>
+                        <li>Google fonts</li>
+                        <li>Owl carousel</li>
+                        <li>Chart JS</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="gettingStarted" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <h2 class="fw-bold">Getting Started</h2>
+                </div>
+                <div class="tab-pane fade" id="dependencies" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <h2 class="fw-bold">The Dependencies</h2>
+                </div>
+                <div class="tab-pane fade" id="html" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                    <h2 class="fw-bold">HTML Structure</h2>
+                    <p>
+                        The HTML version used in this project is HTML 5. Some of the HTML markup is common to several HTML 
+                        pages and is applied and styled as is in the various pages that share common markup such as the main
+                        navbar, sidebar menu, footer, etc.
+                        A breakdown of the general flow of the markup is as follows;
+                    </p>
+                    <span class="fw-bold">CSS and other 3rd party dependencies links.</span>
+                    <ul>
+                        <li>Fontawesome 6 CDN link</li>
+                        <li>Google Fonts CSS link</li>
+                        <li>Bootstrap CDN links</li>
+                        <li>Owl-carousel CSS CDN link</li>
+                        <li>Custom CSS link</li>
+                    </ul>
+                    <span class="fw-bold">Body markup</span>
+                    <ul>
+                        <li>Main navbar</li>
+                        <li>Sidebar menu</li>
+                        <li>Main content</li>
+                        <li>Footer</li>
+                    </ul>
+                    <span class="fw-bold">JS dependencies</span>
+                    <ul>
+                        <li>jQuery CDN link</li>
+                        <li>Popper JS CDN link</li>
+                        <li>Bootstrap JS CDN links</li>
+                        <li>Owl-carousel CSS CDN link</li>
+                        <li>Chart CSS link</li>
+                        <li>Custom CSS link</li>
+                    </ul>
+                    <span class="fw-bold">HTML pages</span> <br>
+                    <span class="">The HTML pages designed in this template include:-</span>
+                    <ul>
+                        <li>Index page - for presentation purposes</li>
+                        <li>Dashboard page</li>
+                        <li>Sales page</li>
+                        <li>Analytics page</li>
+                        <li>Products page</li>
+                        <li>Orders page</li>
+                        <li>Customers page</li>
+                        <li>Profile page</li>
+                        <li>Invoice page</li>
+                        <li>Add-customer page</li>
+                        <li>Add-product page</li>
+                        <li>Settings page</li>
+                        <li>Email page</li>
+                        <li>Registration page</li>
+                        <li>Login page</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <h2 class="fw-bold">Custom CSS</h2>
+                    <p>
+                        The custom CSS file, style.css, is located in the css folder and its structure is as follows;
+                        The more general styles are at the top of the css file, e.g variables, tables, buttons, utility classes etc.
+                        This is immmediately followed by specific CSS classes and id's which are grouped in terms of 
+                        pages using CSS comments, like the first page should be the dashboard page then the rest of pages follow.
+                        Each grouping of page styling has a header and a footer comment to demarcate the styling.
+                        For the circular SVG shapes, to determine the percentage of the circle, the calculation should be as follows
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <h2 class="fw-bold">Custom Javascript</h2>
+                </div>
+                <div class="tab-pane fade" id="charts" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                    <h2 class="fw-bold">Charts</h2>
+                </div>
+                <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                    <h2 class="fw-bold">Support</h2>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            let toggler = $('#toggler')
+            let sidebar = $('.sidebar')
+            let content = $('.content')
+
+            toggler.on('click', function () {
+                sidebar.toggleClass('active-sidebar')
+                $('.overlay').toggleClass('enabled')
+            })
+            
+            $(document).on('click', function(e) {
+                if (e.target.id != "toggler" && e.target.className != "sidebar") {
+                    sidebar.removeClass('active-sidebar')
+                    $('.overlay').removeClass('enabled')
+                    // content.removeClass('active-content')
+                }  
+            });
+        })
+    </script>
+</body>
+</html>

@@ -195,7 +195,8 @@ form i{
     }
 }
 .search-bar button{
-    background-color: var(--primary-color);
+    background-color: #d8d8e6;
+    color: var(--primary-color);
     height: 33px;
     width: 35px;
     display: flex;
@@ -203,11 +204,14 @@ form i{
     justify-content: center;
 }
 .search-bar button:hover{
-    background-color: #5d39ffbb;
+    background-color: var(--primary-color);
     color: #fff;
 }
 .search-bar button i{
     font-size: 0.8rem;
+    color: var(--primary-color)
+}
+.search-bar button:hover i{
     color: #fff;
 }
 /* Common Table Styling */
@@ -337,7 +341,9 @@ span.form-icon{
     color: var(--secondary-color);
 }
 #compose:hover{
-    color: var(--secondary-color);
+    background-color: #ff004c;
+    border: 1.8px solid var(--secondary-color);
+    color: #fff;
 }
 .secondary:focus, .regular-btn:focus, .form-control:focus{
     -webkit-box-shadow: none ;
@@ -349,9 +355,6 @@ span.form-icon{
 .checkbox-control, .default-checkbox{
     display: none;
 }
-/* .checkbox-group:hover > .custom-checkbox, .default-checkbox:checked + .custom-checkbox{
-    border-color: var(--secondary-color);
-} */
 .custom-checkbox{
     width: 1rem;
     height: 1rem;
@@ -865,6 +868,22 @@ i#action-toggle:hover{
 }
 .status-badge{
     min-width: 6rem;
+}
+.primary-badge{
+    background-color: rgba(93,57,255, 0.3);
+    color: rgba(93,57,255);
+}
+.warning-badge{
+    background-color: rgba(255, 187, 51, 0.3);
+    color: rgba(255, 187, 51)
+}
+.success-badge{
+    background-color: rgba(0, 206, 206, 0.3);
+    color: rgba(0, 206, 206)
+}
+.danger-badge{
+    background-color: rgba(255, 0, 119, 0.3);
+    color: rgba(255, 0, 119)
 }
 @media (max-width:400px) {
     .insights-description{
@@ -1522,11 +1541,11 @@ table#specs tbody td{
 .label-3{
     background: var(--secondary-color);
 }
-.email-label{
+.label-tag{
     border-radius: 50px;
-    width: 0.6rem;
-    height: 0.6rem;
-    /* margin-top: 0.3rem; */
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-top: 0.2rem;
     margin-right: 0.5rem;
 }
 #email-nav a{

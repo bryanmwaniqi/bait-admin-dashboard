@@ -328,7 +328,19 @@
                     <div class="row">
                         <div class="col-12 col-md-7 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Sales v Targets</h6>
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <h6 class="text-muted mb-3">Sales v Targets</h6>
+                                    <div class="d-flex mb-3">
+                                        <div class="d-flex align-items-center mr-3 mr-md-4">
+                                            <div class="label-tag bg-pink"></div>
+                                            <span class="text-secondary ">targets</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-tag bg-purple"></div>
+                                            <span class="text-secondary">sales</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="h-100">
                                     <canvas id="mixed-chart" height="152"></canvas>
                                 </div>
@@ -337,7 +349,7 @@
                         <div class="col-12 col-md-5 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h6 class="text-muted">Best Sellers</h6>
+                                    <h6 class="text-muted mb-2">Best Sellers</h6>
                                     <div class="d-flex">
                                         <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
                                             <a href="#products" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">products</a>
@@ -357,7 +369,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Iphone 6S 2015</h6>
-                                                <span class="text-muted">10 units @ $5000</span>
+                                                <span class="text-muted mid-size-text">10 units @ $5000</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $51,932</h6>
                                         </div>
@@ -367,7 +379,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
-                                                <span class="text-muted">9 units @ $764</span>
+                                                <span class="text-muted mid-size-text">9 units @ $764</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $49,321</h6>
                                         </div>
@@ -377,7 +389,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Matte Lip gloss</h6>
-                                                <span class="text-muted">1461 units @ $50</span>
+                                                <span class="text-muted mid-size-text">1461 units @ $50</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $42,189</h6>
                                         </div>
@@ -387,7 +399,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
-                                                <span class="text-muted">10 units @ $360</span>
+                                                <span class="text-muted mid-size-text">10 units @ $360</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $38,407</h6>
                                         </div>
@@ -839,7 +851,7 @@
                                             <td class="align-middle">12</td>
                                             <td class="align-middle">$1,239</td>
                                             <td class="align-middle">
-                                                <span class="badge bg-purple status-badge text-white p-2">pending</span>
+                                                <span class="badge primary-badge status-badge p-2">pending</span>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="dropdown dropup">
@@ -882,7 +894,7 @@
                                             <td class="align-middle">8</td>
                                             <td class="align-middle">$802</td>
                                             <td class="align-middle">
-                                                <span class="badge bg-warning status-badge text-white p-2">Approved</span>
+                                                <span class="badge warning-badge status-badge p-2">Approved</span>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="dropdown dropup">
@@ -925,7 +937,7 @@
                                             <td class="align-middle">16</td>
                                             <td class="align-middle">$9,154</td>
                                             <td class="align-middle">
-                                                <span class="badge success-bg status-badge text-white p-2">Delivered</span>
+                                                <span class="badge success-badge status-badge p-2">Delivered</span>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="dropdown dropup">
@@ -968,7 +980,7 @@
                                             <td class="align-middle">10</td>
                                             <td class="align-middle">$1,239</td>
                                             <td class="align-middle">
-                                                <span class="badge bg-pink status-badge text-white p-2">rejected</span>
+                                                <span class="badge danger-badge status-badge p-2">rejected</span>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="dropdown dropup">
@@ -1011,7 +1023,7 @@
                                             <td class="align-middle">4</td>
                                             <td class="align-middle">$20,239</td>
                                             <td class="align-middle">
-                                                <span class="badge bg-purple status-badge text-white p-2">pending</span>
+                                                <span class="badge primary-badge status-badge p-2">pending</span>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="dropdown dropup">
@@ -1054,7 +1066,7 @@
                                             <td class="align-middle">16</td>
                                             <td class="align-middle">$9,154</td>
                                             <td class="align-middle">
-                                                <span class="badge bg-warning status-badge text-white p-2">Approved</span>
+                                                <span class="badge warning-badge status-badge p-2">Approved</span>
                                             </td>
                                             <td class="align-middle">
                                                 <div class="dropdown dropup">
@@ -1206,11 +1218,11 @@
                             display: false
                         }
                     },
-                    title: {
-                        display: true,
-                        text: 'Population growth (millions): Europe & Africa'
-                    },
-                    legend: { display: false },
+                    // title: {
+                    //     display: true,
+                    //     text: 'Population growth (millions): Europe & Africa'
+                    // },
+                    // legend: { display: false },
                     scales: {
                         y: {
                             beginAtZero: true,
