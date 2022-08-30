@@ -14,11 +14,18 @@ $(function () {
     $('#sideMenuToggler').on('click', function (e) {
         e.stopPropagation();
         $('div#sidebar').toggleClass('active')
+        setTimeout(function(){
+            $('.overlay').toggleClass('enabled')
+        },100);
+        
     });
 
     $(document).on('click', function(e) {
         if (e.target.id != "sideMenuToggler" && e.target.id != "sidebar") {
             $('#sidebar').removeClass("active");
+            setTimeout(function(){
+                $('.overlay').removeClass('enabled')
+            },100);
         }  
     });
 
@@ -151,8 +158,8 @@ $(function () {
         datasets: [{
           data: [45, 40, 45, 40, 45, 59, 38],
           fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          hoverBackgroundColor: 'rgb(0, 206, 206)',
+          borderColor: '#ff0077',
+          hoverBackgroundColor: '#ff0077',
           pointRadius: 4,
           hitRadius: 8,
           hoverRadius: 8,

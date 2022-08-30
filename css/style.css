@@ -69,6 +69,18 @@ img{
 .mid-size-text{
     font-size: 0.95rem;
 }
+.danger-text{
+    color: #ff0077;
+}
+.success-text{
+    color: #0cb675;
+}
+.success-bg{
+    background-color: var(--success-color);
+}
+.bg-purple{
+    background-color: var(--primary-color);
+}
 /* Custom buttons */
 .primary-btn{
     background-color: var(--primary-color);
@@ -239,7 +251,7 @@ form i{
 .table td, .table th{
     font-size: 0.93rem;
 }
-.table tbody tr{
+.table:not(#specs) tbody tr{
     background-color: var(--body-color);
 }
 .table tr td, .table tr th{
@@ -534,7 +546,6 @@ span.search-icon{
         margin-left: 5.5rem;
     }
 }
-
 .notification-badge{
     position: absolute;
     top: 0.5rem;
@@ -557,7 +568,7 @@ span.search-icon{
     overflow-y: scroll;
     z-index: 1050;
     width: 6.5rem;
-    transition: all ease-in .3s;
+    transition: all ease-in .2s;
 }
 /* #sidebar.menu-verbose, #sidebar.menu-verbose .sidemenu{
     width: 4rem;
@@ -587,7 +598,7 @@ span.search-icon{
     z-index: 1050;
     height: 100vh;
     width: 6rem;
-    transition: all ease-in .3s;
+    transition: all ease-in .2s;
 }
 @media (max-width:992px) {
     #sidebar{
@@ -599,8 +610,23 @@ span.search-icon{
     }
     #sidebar.active{
         left: 0;
-        transition: all ease-in .3s;
+        transition: all ease-in .2s;
         width: 6rem;
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.4);
+        transition: all ease-in .2s;
+    }
+    .overlay.enabled {
+        display: initial;
+        transition: all ease-in .2s;
     }
 }
 #sidebar .navbar-nav li{
@@ -691,18 +717,6 @@ span.search-icon{
         padding: 0rem;
     }
 }
-.danger-percentage{
-    color: #ff0077;
-}
-.success-percentage, .success-text{
-    color: #0cb675;
-}
-.success-bg{
-    background-color: var(--success-color);
-}
-.bg-purple{
-    background-color: var(--primary-color);
-}
 .pie-container{
     position: relative;
     width: 150px;      
@@ -724,7 +738,7 @@ span.search-icon{
     height: 150px;
     width: 150px;
     fill: none;
-    stroke-width: 1rem;
+    stroke-width: 0.75rem;
     stroke: #f1f1f1;
     transform: translate(10px, 10px);
     stroke-linecap: round;
@@ -956,8 +970,8 @@ i#action-toggle:hover{
 /* End of top customers styling section */
 
 /* analytics page styling */
-#success-select{
-    background-color: var(--success-color);
+#secondary-select{
+    background-color: var(--secondary-color);
 }
 
 /* profile page styling */
@@ -1507,12 +1521,30 @@ input[type="range"]::-moz-range-thumb{
 .product-info-btn{
     width: 9rem;
 }
-#overall-rating{
-    background-color: var(--body-color);
-    border-radius: 0.15rem;
+table#specs {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 0.25rem;
+}
+table#specs th{
+    border-color: rgb(145, 145, 145);
+    border-bottom: none;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 table#specs tbody td{
     color: #616161;
+    border-color: rgb(145, 145, 145);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* table#specs tbody td:last-child{
+    border-bottom-left-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+} */
+#overall-rating{
+    background-color: var(--body-color);
+    border-radius: 0.15rem;
 }
 .reviews-anchor{
     color: #999999;

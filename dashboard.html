@@ -181,6 +181,8 @@
         </nav>
         <!-- End of main navbar section -->
 
+        <div class="overlay"></div>
+
         <!-- sidebar and main content -->
         <div class="wrapper d-flex">
             <div id="sidebar" class="">
@@ -269,7 +271,7 @@
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Overall Sales</h6>
                                     <div class="d-flex align-items-center">
-                                        <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                        <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
                                         <span class="small text-muted">0.90%</span>
                                     </div>
                                 </div>
@@ -284,7 +286,7 @@
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Orders</h6>
                                     <div class="d-flex align-items-center">
-                                        <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                        <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
                                         <span class="small text-muted">2.55%</span>
                                     </div>
                                 </div>
@@ -299,7 +301,7 @@
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Invoices</h6>
                                     <div class="d-flex align-items-center">
-                                        <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                        <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
                                         <span class="small text-muted">0.90%</span>
                                     </div>
                                 </div>
@@ -314,7 +316,7 @@
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Returned Products</h6>
                                     <div class="d-flex align-items-center">
-                                        <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                        <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
                                         <span class="small text-muted">1.05%</span>
                                     </div>
                                 </div>
@@ -482,7 +484,7 @@
                                         <h6 class="text-muted">All</h6>
                                         <h5 class="font-weight-bold"> 1,286,932</h5>
                                         <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-2"></i>
+                                            <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
                                             <span class="small text-muted">2.86%</span>
                                         </div>
                                     </div>
@@ -492,7 +494,7 @@
                                         <h6 class="text-muted">Europe</h6>
                                         <h5 class="font-weight-bold">1,243</h5>
                                         <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-2"></i>
+                                            <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
                                             <span class="small text-muted">0.90%</span>
                                         </div> 
                                     </div>
@@ -502,7 +504,7 @@
                                         <h6 class="text-muted">USA</h6>
                                         <h5 class="font-weight-bold">126,243</h5>
                                         <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-2"></i>
+                                            <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
                                             <span class="small text-muted">2.86%</span>
                                         </div>
                                     </div>
@@ -514,7 +516,7 @@
                                         <h6 class="text-muted">Asia</h6>
                                         <h5 class="font-weight-bold">8,673</h5>
                                         <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-2"></i>
+                                            <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
                                             <span class="small text-muted">0.90%</span>
                                         </div>
                                     </div>
@@ -524,7 +526,7 @@
                                         <h6 class="text-muted">Africa</h6>
                                         <h5 class="font-weight-bold"> 95,251</h5>
                                         <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-percentage fa-arrow-down mr-2"></i>
+                                            <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
                                             <span class="small text-muted">2.86%</span>
                                         </div>
                                     </div>
@@ -534,7 +536,7 @@
                                         <h6 class="text-muted">Australia</h6>
                                         <h5 class="font-weight-bold">26,743</h5>
                                         <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-percentage fa-arrow-up mr-2"></i>
+                                            <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
                                             <span class="small text-muted">0.90%</span>
                                         </div>
                                     </div>
@@ -814,17 +816,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 order-section">
+                        <div class="col col-lg-9 mb-4 order-1 order-lg-0">
+                            <div class="bg-white rounded-edges p-3 pb-1 h-100 order-section">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="text-muted">Recent Orders</h6>
                                     <div class="d-flex align-items-center">
-                                        <a href="aproducts.html" class="d-flex align-items-center justify-content-center btn primary-btn">
+                                        <a href="aproducts.html" class="d-flex align-items-center justify-content-center btn primary-btn py-1">
                                             view all
                                         </a>
                                     </div>
                                 </div>
-                                <table id="orders-table" class="table table-responsive-lg table-borderless table-hover mb-0">
+                                <table id="orders-table" class="table table-responsive table-borderless table-hover mb-0">
                                     <thead>
                                         <tr>
                                             <th>Order ID</th>
@@ -1053,51 +1055,36 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="align-middle">BC-1393</td>
-                                            <td class="d-flex align-items-center align-middle">
-                                                <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
-                                                <span class="">Claire Anne</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
-                                            </td>
-                                            <td class="align-middle">10 Apr, 2022</td>
-                                            <td class="align-middle">16</td>
-                                            <td class="align-middle">$9,154</td>
-                                            <td class="align-middle">
-                                                <span class="badge warning-badge status-badge p-2">Approved</span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="dropdown dropup">
-                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i id="action-toggle" class="fas text-muted fa-ellipsis-h"></i>
-                                                    </a>
-                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-layer-group"></i>
-                                                            </div>
-                                                            <span>Stock</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-paper-plane"></i>
-                                                            </div>
-                                                            <span>Dispatch</span>
-                                                        </a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <div class="action-icon mr-1 d-flex align-items-center">
-                                                                <i class="fas fa-trash-alt"></i>
-                                                            </div>
-                                                            <span>Delete</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 mb-4 order-0 order-lg-1">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
+                                    <div>
+                                        <span class="success-text mid-size-text">delivered</span>
+                                        <h3 class="mb-0 text-secondary">257,901</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
+                                    <div>
+                                        <span class="danger-text mid-size-text">rejected</span>
+                                        <h3 class="mb-0 text-secondary">3,075</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
+                                    <div>
+                                        <span class="text-purple mid-size-text">pending</span>
+                                        <h3 class="mb-0 text-secondary">49,901</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill">
+                                    <div>
+                                        <span class="text-warning mid-size-text">approved</span>
+                                        <h3 class="mb-0 text-secondary">89,419</h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1122,7 +1109,7 @@
                                             <div class="percentage d-flex flex-column justify-content-center align-items-center">
                                                 <h3 class="font-weight-bold mb-0">73%</h3>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs danger-percentage fa-arrow-down mr-1"></i>
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
                                                     <span class="small text-muted">2.55%</span>
                                                 </div>
                                             </div>
@@ -1143,7 +1130,7 @@
                                             <div class="percentage d-flex flex-column justify-content-center align-items-center">
                                                 <h3 class="font-weight-bold mb-0">57%</h3>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs success-percentage fa-arrow-up mr-1"></i>
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
                                                     <span class="small text-muted">0.55%</span>
                                                 </div>
                                             </div>
