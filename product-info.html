@@ -35,22 +35,21 @@
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
                 <i class="fas fa-bars text-purple"></i>
             </button>
-            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
-                <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
+            <!-- <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
                 <i class="fab fa-lg fa-html5"></i>
                 <span class="ml-1">Bait Logo</span>
-            </a>
+            </a> -->
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
                     <a href="orders.html" class="btn primary-btn track-btn rounded-btn ml-2">Track Order</a>
                 </li>
             </ul>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            <!-- <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-sm-flex align-items-center d-none">
@@ -249,27 +248,31 @@
                 <div class="container-fluid py-2">
                     <div class="row">
                         <div class="col mb-4">
-                            <div class="bg-white rounded-edges p-3">
+                            <div class="bg-white rounded-edges p-1 p-sm-3">
                                 <div class="row p-3 justify-content-around">
                                     <div class="col-md-5 d-flex flex-column pr-3">
-                                        <div class="product-img-container rounded-edges">
-                                            <img src="assets/shoe-1.jpg" alt="" class="product-item-img">
+                                        <div class="product-img-container rounded-edges p-3">
+                                            <img src="assets/headphone-pink.png" alt="" class="product-item-img">
+                                            <span class="badge success-badge discount-badge p-2">-10%</span>    
                                         </div>
                                         <div class="d-flex justify-content-center mb-3">
                                             <div class="product-variation mr-4 active">
-                                                <img src="assets/shoe-2.jpg" alt="" class="product-variation-img">
+                                                <img src="assets/headphone-pink.png" alt="" class="product-variation-img">
                                             </div>
                                             <div class="product-variation mr-4">
-                                                <img src="assets/shoe-3.jpg" alt="" class="product-variation-img">
+                                                <img src="assets/headphone-pink.png" alt="" class="product-variation-img">
                                             </div>
-                                            <div class="product-variation ">
-                                                <img src="assets/shoe-1.jpg" alt="" class="product-variation-img">
+                                            <div class="product-variation mr-4">
+                                                <img src="assets/headphone-pink.png" alt="" class="product-variation-img">
+                                            </div>
+                                            <div class="product-variation">
+                                                <img src="assets/headphone-pink.png" alt="" class="product-variation-img">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col col-md-7 d-flex flex-column justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <h5 class="mb-0 font-weight-bold">Nike Airmax Pro Sketchers</h5>
+                                            <h5 class="mb-0 font-weight-bold">Beats Bluetooth Headphones</h5>
                                             <div class="reviews d-flex align-items-center align-self-stretch mt-0">
                                                 <div class="rating py-2 ">
                                                     <i class="fas fa-star fa-xs checked text-warning"></i>
@@ -283,12 +286,15 @@
                                             </div>
                                             <hr class="my-1">
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between px-2 price-badge mb-2">
-                                            <h6 class="scraped-price text-muted font-weight-bold mb-0">$ 90.50</h6>
-                                            <h6 class="discounted-price font-weight-bold mb-0">$ 78.20</h6>
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between px-2 price-badge mb-2">
+                                                <h6 class="scraped-price text-muted font-weight-bold mb-0">$ 90.50</h6>
+                                                <h6 class="discounted-price font-weight-bold mb-0">$ 78.20</h6>
+                                            </div>
+                                            <span class="badge solid-success-badge p-2 mb-2">In-Stock</span>
                                         </div>
-                                        <span class="small text-purple">Only 4 pairs left</span>
-                                        <p class="product-description text-muted d-none d-sm-block">
+                                        <span class="small text-muted">Only 4 units left</span>
+                                        <p class="product-description text-secondary d-none d-sm-block">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                             Adipisci ullam quidem harum deserunt earum, nobis tempore amet quod, 
                                             voluptates ab veniam magnam quisquam asperiores repellat vero, 
@@ -297,7 +303,7 @@
                                         <div class="d-flex flex-column mb-3">
                                             <h6 class="font-weight-bold mb-2">Size:</h6>
                                             <div class="d-flex align-items-center flex-wrap">
-                                                <div class="size-variation mr-3 mb-1">
+                                                <div class="size-variation active mr-3 mb-1">
                                                     5.5"
                                                 </div>
                                                 <div class="size-variation mr-3 mb-1">
@@ -370,6 +376,98 @@
                             </div>
                         </div>
                     </div>
+                    <!-- <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex mb-2">
+                                    <img src="assets/client-11.jpg" class="round-edge-img mr-3" alt="Reviewer-image">
+                                    <div class="d-flex flex-column">
+                                        <h6 class="font-weight-bold text-secondary mb-1">Anastacia Jii</h6>
+                                        <div class="d-flex align-items-center">
+                                            <div class="rating">
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                            </div>
+                                            <span class="ml-2 text-muted small mr-auto">5/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column client-review">
+                                    <p class="text-muted review-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Cum iure quo sequi veniam, cumque obcaecati corrupti distinctio, quos expedita quas esse 
+                                        eveniet enim vitae quia labore perspiciatis modi nobis illo 
+                                        voluptatibus dolorum aspernatur accusamus minima.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted small mb-2">2nd Jun,2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex mb-2">
+                                    <img src="assets/client-11.jpg" class="round-edge-img mr-3" alt="Reviewer-image">
+                                    <div class="d-flex flex-column">
+                                        <h6 class="font-weight-bold text-secondary mb-1">Anastacia Jii</h6>
+                                        <div class="d-flex align-items-center">
+                                            <div class="rating">
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                            </div>
+                                            <span class="ml-2 text-muted small mr-auto">5/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column client-review">
+                                    <p class="text-muted review-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Cum iure quo sequi veniam, cumque obcaecati corrupti distinctio, quos expedita quas esse 
+                                        eveniet enim vitae quia labore perspiciatis modi nobis illo 
+                                        voluptatibus dolorum aspernatur accusamus minima.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted small mb-2">2nd Jun,2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex mb-2">
+                                    <img src="assets/client-11.jpg" class="round-edge-img mr-3" alt="Reviewer-image">
+                                    <div class="d-flex flex-column">
+                                        <h6 class="font-weight-bold text-secondary mb-1">Anastacia Jii</h6>
+                                        <div class="d-flex align-items-center">
+                                            <div class="rating">
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                            </div>
+                                            <span class="ml-2 text-muted small mr-auto">5/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column client-review">
+                                    <p class="text-muted review-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Cum iure quo sequi veniam, cumque obcaecati corrupti distinctio, quos expedita quas esse 
+                                        eveniet enim vitae quia labore perspiciatis modi nobis illo 
+                                        voluptatibus dolorum aspernatur accusamus minima.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted small mb-2">2nd Jun,2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                     <div class="row reviews-carousel mb-4">
                         <div class="col mb-4">
                             <div id="reviews" class="bg-white rounded-edges p-3 mb-2">
@@ -426,69 +524,93 @@
                                     </div>
                                     <div class="col-md-9 d-flex flex-column mb-3">  
                                         <div class="row align-items-center px-md-5 mb-2">
-                                            <div class="col-md-8 d-flex flex-column align-items-center align-items-md-start">
-                                                <div class="d-flex">
-                                                    <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
+                                            <div class="col d-flex flex-column review">
+                                                <div class="d-flex mb-2">
+                                                    <img src="assets/client-3.jpg" class="round-edge-img mr-3" alt="Reviewer-image">
                                                     <div class="d-flex flex-column">
-                                                        <span class="text-secondary">Mitchy sakari</span>
-                                                        <span class="font-weight-bold success-text small">Verified Purchase</span>
+                                                        <h6 class="font-weight-bold text-secondary mb-1">Claire Anne</h6>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="rating">
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs text-warning"></i>
+                                                            </div>
+                                                            <span class="ml-2 text-muted small mr-auto">5/5</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="rating py-2">
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs text-warning"></i>
+                                                <div class="d-flex flex-column client-review">
+                                                    <p class="text-muted review-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                        Cum iure quo sequi veniam, cumque obcaecati corrupti distinctio, quos expedita quas esse 
+                                                        eveniet enim vitae quia labore perspiciatis modi nobis illo 
+                                                        voluptatibus dolorum aspernatur accusamus minima.
+                                                    </p>
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="text-muted small mb-2">2nd Jun,2022</span>
+                                                    </div>
                                                 </div>
-                                                <p class="text-center text-muted text-md-left review-description">
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, repudiandae itaque.
-                                                </p>
-                                                <span class="text-muted small mb-3">25th Jun,2022</span>
                                             </div>
                                         </div>
                                         <div class="row align-items-center px-md-5 mb-2">
-                                            <div class="col-md-8 d-flex flex-column align-items-center align-items-md-start">
-                                                <div class="d-flex">
-                                                    <img class="mr-3 round-edge-img" src="assets/client-5.jpg" alt="">
+                                            <div class="col d-flex flex-column review">
+                                                <div class="d-flex mb-2">
+                                                    <img src="assets/client-11.jpg" class="round-edge-img mr-3" alt="Reviewer-image">
                                                     <div class="d-flex flex-column">
-                                                        <span class="text-secondary">Nick Keene</span>
-                                                        <span class="font-weight-bold small success-text">Verified Purchase</span>
+                                                        <h6 class="font-weight-bold text-secondary mb-1">Anastacia Jii</h6>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="rating">
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 text-muted small mr-auto">3/5</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="rating py-2">
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs"></i>
-                                                    <i class="fas fa-star fa-xs"></i>
+                                                <div class="d-flex flex-column client-review">
+                                                    <p class="text-muted review-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                        Cum iure quo sequi veniam, cumque obcaecati corrupti distinctio, quos expedita quas esse 
+                                                        eveniet enim vitae quia labore perspiciatis modi nobis illo 
+                                                        voluptatibus dolorum aspernatur accusamus minima.
+                                                    </p>
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="text-muted small mb-2">2nd Jun,2022</span>
+                                                    </div>
                                                 </div>
-                                                <p class="text-center text-muted text-md-left review-description">
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, repudiandae itaque.
-                                                </p>
-                                                <span class="text-muted small mb-3">5th Jun,2022</span>
                                             </div>
                                         </div>
                                         <div class="row align-items-center px-md-5 mb-2">
-                                            <div class="col-md-8 d-flex flex-column align-items-center align-items-md-start">
-                                                <div class="d-flex">
-                                                    <img class="mr-3 round-edge-img" src="assets/client-10.jpg" alt="">
+                                            <div class="col d-flex flex-column review">
+                                                <div class="d-flex mb-2">
+                                                    <img src="assets/client-10.jpg" class="round-edge-img mr-3" alt="Reviewer-image">
                                                     <div class="d-flex flex-column">
-                                                        <span class="text-secondary">George Kibe</span>
-                                                        <span class="font-weight-bold success-text small">Verified Purchase</span>
+                                                        <h6 class="font-weight-bold text-secondary mb-1">Park Suen</h6>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="rating">
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                                <i class="fas fa-star fa-xs"></i>
+                                                            </div>
+                                                            <span class="ml-2 text-muted small mr-auto">4/5</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="rating py-2">
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
-                                                    <i class="fas fa-star fa-xs"></i>
+                                                <div class="d-flex flex-column client-review">
+                                                    <p class="text-muted review-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                        Cum iure quo sequi veniam, cumque obcaecati corrupti distinctio, quos expedita quas esse 
+                                                        eveniet enim vitae quia labore perspiciatis modi nobis illo 
+                                                        voluptatibus dolorum aspernatur accusamus minima.
+                                                    </p>
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="text-muted small mb-2">2nd Jun,2022</span>
+                                                    </div>
                                                 </div>
-                                                <p class="text-center text-muted text-md-left review-description">
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, repudiandae itaque.
-                                                </p>
-                                                <span class="text-muted small mb-2">2nd Jun,2022</span>
                                             </div>
                                         </div>
                                         <a href="" class="align-self-end d-flex align-items-center mt-3 reviews-anchor">

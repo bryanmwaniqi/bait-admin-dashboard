@@ -23,6 +23,9 @@
         <!-- owl carousel css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <!-- Box icons font cdn -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         
         <!-- custom css -->
         <link rel="stylesheet" href="css/style.css">
@@ -32,25 +35,25 @@
         <!-- main navbar section -->
         <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
             <!-- sm screen and below sidemenu toggler -->
-            <button id="sideMenuToggler" class="btn d-lg-none" type="button">
+            <button id="sideMenuToggler" class="btn d-lg-none d-flex align-items-center" type="button">
                 <i class="fas fa-bars text-purple"></i>
             </button>
-            <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none " id="logo" href="offers-landing.html"> 
-                <!-- <img src="assets/eatout-logo.png" alt="eatout pizza restaurant logo"> -->
+            <!-- <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none " id="logo" href="offers-landing.html"> 
                 <i class="fab fa-lg fa-html5"></i>
                 <span class="ml-1">Bait Logo</span>
-            </a>
+            </a> -->
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
                     <a href="orders.html" class="btn primary-btn rounded-btn track-btn ml-2">Track Order</a>
                 </li>
             </ul>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            <!-- <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
+                <i name='bx bx-menu-alt-left bx-lg'></i>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-sm-flex align-items-center d-none">
@@ -189,9 +192,8 @@
                 <div class="sidemenu d-flex justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-shopping-cart mb-2"></i>
-                                <span class="menu-link">Bait Logo</span>
+                            <a class="nav-link logo-container" href="#">
+                                <i class="fas fa-lg fa-shopping-cart"></i>
                             </a>
                         </li>
                         <li class="nav-item active">
@@ -269,7 +271,7 @@
                         <div class="col-12 col-md-3 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between flex-wrap">
-                                    <h6 class="text-muted">Overall Sales</h6>
+                                    <h6 class="text-muted">Sales</h6>
                                     <div class="d-flex align-items-center">
                                         <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
                                         <span class="small text-muted">0.90%</span>
@@ -314,7 +316,7 @@
                         <div class="col-12 col-md-3 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between flex-wrap">
-                                    <h6 class="text-muted">Returned Products</h6>
+                                    <h6 class="text-muted">Returns</h6>
                                     <div class="d-flex align-items-center">
                                         <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
                                         <span class="small text-muted">1.05%</span>
@@ -328,32 +330,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-7 mt-2 mb-4">
+                        <div class="col-12 col-md-8 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <div class="d-flex justify-content-between flex-wrap">
-                                    <h6 class="text-muted mb-3">Sales v Targets</h6>
-                                    <div class="d-flex mb-3">
-                                        <div class="d-flex align-items-center mr-3 mr-md-4">
-                                            <div class="label-tag bg-pink"></div>
-                                            <span class="text-secondary ">targets</span>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <div class="label-tag bg-purple"></div>
-                                            <span class="text-secondary">sales</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h6 class="text-muted mb-3">Sales Breakdown</h6>
                                 <div class="h-100">
                                     <canvas id="mixed-chart" height="152"></canvas>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-5 mt-2 mb-4">
+                        <div class="col-12 col-md-4 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between mb-3">
                                     <h6 class="text-muted mb-2">Best Sellers</h6>
                                     <div class="d-flex">
-                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-3">
+                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-2">
                                             <a href="#products" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">products</a>
                                             <a href="#categories" class="mx-1 mx-sm-2" data-toggle="tab">categories</a>
                                         </nav>
@@ -371,7 +361,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Iphone 6S 2015</h6>
-                                                <span class="text-muted mid-size-text">10 units @ $5000</span>
+                                                <span class="text-muted mid-size-text">10 units</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $51,932</h6>
                                         </div>
@@ -381,7 +371,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
-                                                <span class="text-muted mid-size-text">9 units @ $764</span>
+                                                <span class="text-muted mid-size-text">9 units</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $49,321</h6>
                                         </div>
@@ -391,7 +381,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Matte Lip gloss</h6>
-                                                <span class="text-muted mid-size-text">1461 units @ $50</span>
+                                                <span class="text-muted mid-size-text">1461 units</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $42,189</h6>
                                         </div>
@@ -401,7 +391,7 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
-                                                <span class="text-muted mid-size-text">10 units @ $360</span>
+                                                <span class="text-muted mid-size-text">10 units</span>
                                             </div>
                                             <h6 class="font-weight-bold ml-auto align-self-center"> $38,407</h6>
                                         </div>
@@ -476,36 +466,81 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row flex-column flex-md-row justify-content-center">
-                        <div class="col-12 col-lg-6 mt-2 h-100 d-sm-block d-none">
+                    <!-- <div class="row flex-column flex-md-row justify-content-center"> -->
+                        <!-- <div class="col-12 col-lg-6 mt-2 h-100 d-sm-block d-none">
                             <div class="row sales-traffic justify-content-between">
                                 <div class="col col-sm-4 d-flex mb-4 active">
-                                    <div id="all" class="bg-white rounded-edges flex-column flex-fill p-2">
-                                        <h6 class="text-muted">All</h6>
-                                        <h5 class="font-weight-bold"> 1,286,932</h5>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
-                                            <span class="small text-muted">2.86%</span>
+                                    <div id="all" class="bg-white rounded-edges d-flex flex-column flex-fill p-2 justify-content-between">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge primary-badge d-flex align-items-center mr-2">
+                                                <i class="fa-solid fa-sitemap"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Organic</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                                    <span class="small text-muted">2.86%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">486,932</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">40%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div id="organic" class="progress-bar round-progress" style="width:40%"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col col-sm-4 d-flex mb-4">
                                     <div id="europe" class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Europe</h6>
-                                        <h5 class="font-weight-bold">1,243</h5>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
-                                            <span class="small text-muted">0.90%</span>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge warning-badge d-flex align-items-center mr-2">
+                                                <i class="fa-brands fa-google"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Google</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                                    <span class="small text-muted">0.90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">95,251</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div id="google" class="progress-bar round-progress" style="width:10%"></div>
                                         </div> 
                                     </div>
                                 </div>
                                 <div class="col col-sm-4 d-flex mb-4">
                                     <div id="usa" class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">USA</h6>
-                                        <h5 class="font-weight-bold">126,243</h5>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
-                                            <span class="small text-muted">2.86%</span>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge danger-badge d-flex align-items-center mr-2">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">YouTube</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                                    <span class="small text-muted">2.86%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">236,932</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">15%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div id="youtube" class="progress-bar round-progress" style="width:15%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -513,40 +548,85 @@
                             <div class="row sales-traffic justify-content-between align-items-end mb-1">
                                 <div class="col col-sm-4 d-flex mb-4">
                                     <div id="asia" class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Asia</h6>
-                                        <h5 class="font-weight-bold">8,673</h5>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
-                                            <span class="small text-muted">0.90%</span>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge warning-badge d-flex align-items-center mr-2">
+                                                <i class="fa-brands fa-facebook"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Facebook</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                                    <span class="small text-muted">0.90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">26,743</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div id="facebook" class="progress-bar round-progress" style="width:10%"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col col-sm-4 d-flex mb-4">
                                     <div id="africa" class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Africa</h6>
-                                        <h5 class="font-weight-bold"> 95,251</h5>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
-                                            <span class="small text-muted">2.86%</span>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge danger-badge d-flex align-items-center mr-2">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Instagram</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                                    <span class="small text-muted">2.86%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">1,243</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">5%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div id="instagram" class="progress-bar round-progress" style="width:5%"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col col-sm-4 d-flex mb-4">
                                     <div id="australia" class="bg-white rounded-edges flex-fill p-2">
-                                        <h6 class="text-muted">Australia</h6>
-                                        <h5 class="font-weight-bold">26,743</h5>
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
-                                            <span class="small text-muted">0.90%</span>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge warning-badge d-flex align-items-center mr-2">
+                                                <i class="fa-solid fa-layer-group"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Others</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                                    <span class="small text-muted">0.90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">13,971</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">20%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div id="facebook" class="progress-bar round-progress" style="width:20%"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg-6 mt-2 mb-4">
-                            <div class="bg-white rounded-edges h-100 p-3">
-                                <h6 class="text-muted">Sales Traffic Distribution</h6>
-                                <div id="traffic-distro-tab">
+                        </div> -->
+                        <!-- <div class="col-12 col-lg-6 mt-2 mb-4"> -->
+                            <!-- <div class="bg-white rounded-edges h-100 p-3"> -->
+                                <!-- <h6 class="text-muted">Sales Traffic Distribution</h6> -->
+                                <!-- <div id="traffic-distro-tab">
                                     <div id="all-tab" class="">
                                         <div class="d-flex justify-content-around align-items-center flex-wrap">
                                             <div class="traffic-doughnut-chart mb-2">
@@ -811,6 +891,210 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <div class="row flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-lg-6 h-100 d-sm-block d-none">
+                            <div class="row sales-traffic justify-content-between">
+                                <div class="col col-sm-4 d-flex mb-4 active">
+                                    <div id="all" class="bg-white rounded-edges d-flex flex-column flex-fill p-2 justify-content-between">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i class="fa-solid fa-sitemap text-purple"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Organic</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                                    <span class="small text-muted">2.86%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">486,932</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">40%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-4 d-flex mb-4">
+                                    <div id="europe" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="google" class="fa-brands fa-google"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Google</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                                    <span class="small text-muted">0.90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">95,251</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:10%"></div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col col-sm-4 d-flex mb-4">
+                                    <div id="usa" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="youtube" class="fa-brands fa-youtube"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">YouTube</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                                    <span class="small text-muted">2.86%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">236,932</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">15%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:15%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row sales-traffic justify-content-between align-items-end">
+                                <div class="col col-sm-4 d-flex mb-4">
+                                    <div id="asia" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="facebook" class="fa-brands fa-facebook-f"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Facebook</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                                    <span class="small text-muted">0.90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">26,743</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:10%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-4 d-flex mb-4">
+                                    <div id="africa" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="instagram" class="fa-brands fa-instagram"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Instagram</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                                    <span class="small text-muted">2.86%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">1,243</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">5%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:5%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-4 d-flex mb-4">
+                                    <div id="australia" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i class="fa-solid fa-layer-group text-purple"></i>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <h6 class="text-muted small mb-0">Others</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                                    <span class="small text-muted">0.90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">13,971</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">20%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:20%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-2">
+                                            <svg class="conversion-rate">
+                                                <circle cx="62" cy="62" r="62"/>
+                                                <circle cx="62" cy="62" r="62"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h4 class="font-weight-bold mb-0">73%</h4>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
+                                                    <span class="small text-muted">2.55%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-tag bg-purple"></div>
+                                            <span class="text-muted mb-0">Conversion Rate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-2">
+                                            <svg class="cart-abandonment">
+                                                <circle cx="62" cy="62" r="62"/>
+                                                <circle cx="62" cy="62" r="62"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h4 class="font-weight-bold mb-0">57%</h4>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
+                                                    <span class="small text-muted">0.55%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-tag bg-purple"></div>
+                                            <span class="text-muted mb-0">Desertion Rate</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1062,85 +1346,65 @@
                         <div class="col col-lg-3 mb-4 order-0 order-lg-1">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
-                                    <div>
-                                        <span class="success-text mid-size-text">delivered</span>
-                                        <h3 class="mb-0 text-secondary">257,901</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">delivered</span>
+                                            <h3 class="mb-0">257,901</h3>
+                                        </div>
+                                        <a href="" class="badge success-badge p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
-                                    <div>
-                                        <span class="danger-text mid-size-text">rejected</span>
-                                        <h3 class="mb-0 text-secondary">3,075</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">rejected</span>
+                                            <h3 class="mb-0">3,075</h3>
+                                        </div>
+                                        <a href="" class="badge danger-badge p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
-                                    <div>
-                                        <span class="text-purple mid-size-text">pending</span>
-                                        <h3 class="mb-0 text-secondary">49,901</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">pending</span>
+                                            <h3 class="mb-0">49,901</h3>
+                                        </div>
+                                        <a href="" class="badge primary-badge p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill">
-                                    <div>
-                                        <span class="text-warning mid-size-text">approved</span>
-                                        <h3 class="mb-0 text-secondary">89,419</h3>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">approved</span>
+                                            <h3 class="mb-0">89,419</h3>
+                                        </div>
+                                        <a href="" class="badge warning-badge p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row mb-5 mb-md-4">
-                        <div class="col col-md-6 mb-4">
+                        <div class="col col-md-8 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <h6 class="text-muted mb-3">Traffic % Breakdown</h6>
                                 <div>
-                                    <canvas id="stackedBarChart"></canvas>
+                                    <!-- <canvas id="stackedBarChart"></canvas> -->
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-md-6 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
-                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
-                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
-                                        <div class="pie-progress-bar mb-3">
-                                            <svg class="conversion-rate">
-                                                <circle cx="62" cy="62" r="62"/>
-                                                <circle cx="62" cy="62" r="62"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h3 class="font-weight-bold mb-0">73%</h3>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
-                                                    <span class="small text-muted">2.55%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h6 class="font-weight-bold">Conversion Rate</h6>
-                                        <span class="small text-center text-muted">
-                                            Lorem ipsum dolor sit amet consectetur elit.
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
-                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
-                                        <div class="pie-progress-bar mb-3">
-                                            <svg class="cart-abandonment">
-                                                <circle cx="62" cy="62" r="62"/>
-                                                <circle cx="62" cy="62" r="62"/>
-                                            </svg>
-                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
-                                                <h3 class="font-weight-bold mb-0">57%</h3>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
-                                                    <span class="small text-muted">0.55%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h6 class="font-weight-bold">Cart Abandonment</h6>
-                                        <span class="small text-center text-muted">
-                                            Lorem ipsum dolor sit amet consectetur elit.
-                                        </span>
-                                    </div>
-                                </div>
+                        <div class="col col-md-4 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted mb-3">Top Customers</h6>
+                                <div></div>
                             </div>
                         </div>
                     </div>
