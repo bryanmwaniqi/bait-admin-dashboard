@@ -1,6 +1,6 @@
 :root{
     /* Theme colors */
-    --primary-color: #6c38e6;
+    --primary-color: #6630e6;
     --secondary-color: #ff0077;
     --text-color: #232323;
     --body-color: #f4f4f8;
@@ -819,13 +819,32 @@ span.search-icon{
     width: 13rem;
 }
 .doughnut-key{
-    width: 0.55rem;
-    height: 0.6rem;
+    width: 0.5rem;
+    height: 0.5rem;
     margin-right: 0.5rem;
     border-radius: 50%;
 }
+.doughnut-key#americas{
+    background-color: var(--primary-color);
+}
+.doughnut-key#europe{
+    /* background: #F4B400; */
+    background-color: #F4B400;
+}
+.doughnut-key#asia{
+    background-color: #FF0000;
+}
+.doughnut-key#africa{
+    background-color: #C13584;
+}
+.doughnut-key#australia{
+    background-color: #4267B2;
+}
+.doughnut-key#others{
+    background-color: var(--success-color);
+}
 #organic{
-    background: var(--primary-color);
+    color: var(--primary-color);
 }
 #google{
     /* background: #F4B400; */
@@ -1040,13 +1059,35 @@ span.input-icon{
 }
 
 /* settings page styling */
-.color-panel{
+/* .color-panel{
     width: 1.5rem;
     height: 1rem;
     border-radius: 0.25rem;
-}
+} */
 .color-scheme{
     display: none;
+}
+.color-mode{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.25rem;
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+#purple-mode{
+    background-color: #6c38e6;
+}
+#orange-mode{
+    background-color: #ffb30e;
+}
+#magenta-mode{
+    background-color: #ff0077;
+}
+#dark-mode{
+    background-color: #222736;
 }
 .form-check-inline > label{
     background-color: var(--body-color);

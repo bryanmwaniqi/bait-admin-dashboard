@@ -126,8 +126,8 @@ $(function () {
         datasets: [{
           data: [38, 59, 45, 40, 45, 40, 45],
           fill: false,
-          borderColor: '#5d39ff',
-          hoverBackgroundColor: '#5d39ff',
+          borderColor: '#6630e6',
+          hoverBackgroundColor: '#6630e6',
           pointRadius: 4,
           hitRadius: 8,
           hoverRadius: 8,
@@ -158,8 +158,8 @@ $(function () {
         datasets: [{
           data: [45, 40, 45, 40, 45, 59, 38],
           fill: false,
-          borderColor: '#ff0077',
-          hoverBackgroundColor: '#ff0077',
+          borderColor: '#6630e6',
+          hoverBackgroundColor: '#6630e6',
           pointRadius: 4,
           hitRadius: 8,
           hoverRadius: 8,
@@ -190,7 +190,7 @@ $(function () {
         datasets: [{
             data: [65, 59, 71, 65, 56, 55, 72],
             label: 'Sales',
-            backgroundColor: '#5d39ff',
+            backgroundColor: '#6630e6',
             borderWidth: 0,
             borderRadius: 50
         }, {
@@ -242,7 +242,7 @@ $(function () {
             label: 'My First Dataset',
             data: [200, 50, 100, 80, 90],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#4267B2',
                 '#F4B400',
                 '#C13584',
@@ -270,7 +270,7 @@ $(function () {
             label: 'My First Dataset',
             data: [ 50, 200, 80, 90, 100],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#4267B2',
                 '#F4B400',
                 '#C13584',
@@ -298,7 +298,7 @@ $(function () {
             label: 'My First Dataset',
             data: [ 90, 80, 100, 200, 50],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#4267B2',
                 '#F4B400',
                 '#C13584',
@@ -326,7 +326,7 @@ $(function () {
             label: 'My First Dataset',
             data: [ 50, 80, 90, 100, 200],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#4267B2',
                 '#F4B400',
                 '#C13584',
@@ -354,7 +354,7 @@ $(function () {
             label: 'My First Dataset',
             data: [ 80, 50, 200, 80, 90],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#4267B2',
                 '#F4B400',
                 '#C13584',
@@ -382,7 +382,7 @@ $(function () {
             label: 'My First Dataset',
             data: [ 100, 80, 90, 200, 50],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#4267B2',
                 '#F4B400',
                 '#C13584',
@@ -411,7 +411,7 @@ $(function () {
         datasets: [{
             data: [45, 59, 75, 26, 56],
             backgroundColor: [
-                '#5d39ff',
+                '#6630e6',
                 '#C13584',
                 '#F4B400',
                 '#4267B2',
@@ -468,7 +468,7 @@ $(function () {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
-            backgroundColor: '#5d39ff',
+            backgroundColor: '#6630e6',
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
             borderRadius: 50,
@@ -512,7 +512,7 @@ $(function () {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
-            backgroundColor: '#5d39ff',
+            backgroundColor: '#6630e6',
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
             borderRadius: 50,
@@ -556,7 +556,7 @@ $(function () {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
-            backgroundColor: '#5d39ff',
+            backgroundColor: '#6630e6',
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
             borderRadius: 50,
@@ -600,7 +600,7 @@ $(function () {
         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
         datasets: [{
             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
-            backgroundColor: '#5d39ff',
+            backgroundColor: '#6630e6',
             hoverBackgroundColor: '#ff0077',
             borderWidth: 0,
             borderRadius: 50,
@@ -655,7 +655,7 @@ $(function () {
             backgroundColor: gradient,
             hoverBackgroundColor: '#ff0077',
             fill: true,
-            borderColor: '#5d39ff',
+            borderColor: '#6630e6',
             tension: 0.3,
             hitRadius: 15,
             pointRadius: 0,
@@ -702,7 +702,7 @@ $(function () {
         datasets: [{
             data: [45, 59, 81, 65, 56, 40, 55, 60, 65, 75, 55, 43],
             label: 'Actual sales',
-            backgroundColor: '#5d39ff',
+            backgroundColor: '#6630e6',
             barThickness: 20,
             borderWidth: 0,
             borderRadius: 50,

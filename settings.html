@@ -35,10 +35,6 @@
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
                 <i class="fas fa-bars text-purple"></i>
             </button>
-            <!-- <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
-                <i class="fab fa-lg fa-html5"></i>
-                <span class="ml-1">Bait Logo</span>
-            </a> -->
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
                     <a href="orders.html" class="btn primary-btn rounded-btn track-btn ml-2">Track Order</a>
@@ -242,92 +238,75 @@
                 <div class="container-fluid py-2">
                     <div class="row">
                         <div class="col mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100 order-section">
-                                <h6 class="text-muted mb-3">Color Scheme</h6>
-                                <div class="d-flex justify-content-between px-md-2 flex-wrap">
-                                    <div class="d-flex flex-column my-2">
-                                        <div class="form-check-inline mb-3">
+                            <div class="rounded-edges bg-white p-3">
+                                <h6 class="text-muted mb-3">Color Schemes</h6>
+                                <div class="row product-images-container">
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between p-2">
+                                            <div class="d-flex align-items-center">
+                                                <div id="purple-mode" class="color-mode">
+                                                    <h3 class="font-weight-bold mb-0">P</h3>
+                                                </div>
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Purple mode</h6>
+                                                    <span class="text-muted small">purple, pink, grey, green</span>
+                                                </div>
+                                            </div>
                                             <label class="form-check-label d-flex align-items-center">
-                                              <input type="radio" checked class="form-check-input color-scheme" name="color-scheme">
-                                              <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                              <span>Purple mode</span>
+                                                <input type="radio" checked class="form-check-input color-scheme" name="color-scheme">
+                                                <div class="d-flex align-items-center justify-content-center custom-radio"></div>
                                             </label>
-                                          </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color: #5d39ff;"></div>
-                                            <span class="text-muted">primary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2 bg-pink"></div>
-                                            <span class="text-muted">secondary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2 body-color"></div>
-                                            <span class="text-muted">body color</span>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column my-2">
-                                        <div class="form-check-inline mb-3">
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between align-items-center p-2">
+                                            <div class="d-flex align-items-center">
+                                                <div id="orange-mode" class="color-mode">
+                                                    <h3 class="font-weight-bold mb-0">O</h3>
+                                                </div>
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Orange mode</h6>
+                                                    <span class="text-muted small">orange, red, grey, green</span>
+                                                </div>
+                                            </div>
                                             <label class="form-check-label d-flex align-items-center">
                                                 <input type="radio" class="form-check-input color-scheme" name="color-scheme">
                                                 <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                <span>Orange mode</span>
                                             </label>
                                         </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color:#ffb30e;"></div>
-                                            <span class="text-muted">primary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color: 
-                                            #DF362D;"></div>
-                                            <span class="text-muted">secondary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2 body-color"></div>
-                                            <span class="text-muted">body color</span>
-                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column my-2">
-                                        <div class="form-check-inline mb-3">
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between p-2">
+                                            <div class="d-flex">
+                                                <div id="magenta-mode" class="color-mode">
+                                                    <h3 class="font-weight-bold mb-0">M</h3>
+                                                </div>
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Magenta mode</h6>
+                                                    <span class="text-muted small">magenta, purple, grey, green</span>
+                                                </div>
+                                            </div>
                                             <label class="form-check-label d-flex align-items-center">
                                                 <input type="radio" class="form-check-input color-scheme" name="color-scheme">
                                                 <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                <span>Magenta mode</span>
                                             </label>
                                         </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color: #ff0077;"></div>
-                                            <span class="text-muted">primary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background: #00cece" ></div>
-                                            <span class="text-muted">secondary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2 body-color"></div>
-                                            <span class="text-muted">body color</span>
-                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column my-2">
-                                        <div class="form-check-inline mb-3">
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between p-2">
+                                            <div class="d-flex">
+                                                <div id="dark-mode" class="color-mode">
+                                                    <h3 class="font-weight-bold mb-0">D</h3>
+                                                </div>
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Dark mode</h6>
+                                                    <span class="text-muted small">black, dark-grey, light-grey, green</span>
+                                                </div>
+                                            </div>
                                             <label class="form-check-label d-flex align-items-center">
                                                 <input type="radio" class="form-check-input color-scheme" name="color-scheme">
                                                 <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                <span>Dark mode</span>
                                             </label>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color: #5d39ff;"></div>
-                                            <span class="text-muted">primary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color: #a6b0cf;"></div>
-                                            <span class="text-muted">secondary color</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="rounded-edges color-panel mr-2" style="background-color: #222736;"></div>
-                                            <span class="text-muted">body color</span>
                                         </div>
                                     </div>
                                 </div>
