@@ -734,8 +734,8 @@ span.search-icon{
     height: 100%;
 }
 .pie-progress-bar svg circle{
-    height: 150px;
-    width: 150px;
+    /* height: 150px;
+    width: 150px; */
     fill: none;
     stroke-width: 0.6rem;
     stroke: #f1f1f1;
@@ -744,7 +744,7 @@ span.search-icon{
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
 }
-.pie-progress-bar svg.conversion-rate circle:nth-child(1){
+.pie-progress-bar svg circle:nth-child(1){
     stroke: var(--body-color);
     stroke-dashoffset: 0;
 }
@@ -752,7 +752,7 @@ span.search-icon{
     stroke: var(--primary-color);
     stroke-dashoffset: calc(440 - (440 * 73) / 100);
 }
-.pie-progress-bar svg.cart-abandonment circle:nth-child(1){
+.pie-progress-bar svg circle:nth-child(1){
     stroke: var(--body-color);
     stroke-dashoffset: 0;
 }
@@ -847,7 +847,6 @@ span.search-icon{
     color: var(--primary-color);
 }
 #google{
-    /* background: #F4B400; */
     color: #F4B400;
 }
 #youtube{
@@ -858,6 +857,24 @@ span.search-icon{
 }
 #facebook{
     color: #4267B2;
+}
+#linkedin{
+    color: rgb( 0, 119, 181);
+}
+#twitter{
+    color: rgb(29, 161, 242);
+}
+#twitter-container{
+    background-color: rgba(29, 161, 242, 0.3);
+}
+#linkedin-container{
+    background-color: rgba(0, 119, 181, 0.3);
+}
+#instagram-container{
+    background-color: rgba(193, 53, 132, 0.3);
+}
+#facebook-container{
+    background-color: rgba(66, 103, 178, 0.3);
 }
 img.country-flag{
     height: 1.5rem;
@@ -1018,11 +1035,11 @@ i#action-toggle:hover{
     right: 1.95rem;
     top: 5.55rem;
 }
-#skills > div{
+/* #skills > div{
     flex-basis: 22%;
     flex-grow: 1;
     margin-bottom: 1rem;
-}
+} */
 .profile-details i{
     line-height: 0.8rem;
     font-size: 0.75rem;
@@ -1038,8 +1055,31 @@ i#action-toggle:hover{
     justify-content: center;
     background-color: var(--body-color);
 }
-#skills i{
+#social-links a{
+    color: #7e7e7e;
+}
+/* #skills i{
     line-height: 3rem;
+} */
+.skills-container{
+    width: 90px;
+    max-height: 90px;
+}
+.skills-container svg{
+    width: 90px;
+}
+.skills-container svg circle{
+    fill: none;
+    stroke-width: 0.4rem;
+    stroke: #f1f1f1;
+    transform: translate(10px, 10px);
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.skills-container svg circle:nth-child(2){
+    stroke: var(--primary-color);
+    stroke-dashoffset: calc(440 - (440 * 20) / 100);
 }
 label.required::after{
     content: '*';

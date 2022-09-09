@@ -35,10 +35,6 @@
             <button id="sideMenuToggler" class="btn d-lg-none" type="button">
                 <i class="fas fa-bars text-purple"></i>
             </button>
-            <!-- <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none" id="logo" href="offers-landing.html"> 
-                <i class="fab fa-lg fa-html5"></i>
-                <span class="ml-1">Bait Logo</span>
-            </a> -->
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
                     <a href="orders.html" class="btn primary-btn rounded-btn track-btn ml-2">Track Order</a>
@@ -274,7 +270,7 @@
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between mb-4">
                                     <h6 class="text-muted">Profile Details</h6>
-                                    <a href="#profile" class="btn primary-btn">Update</a>
+                                    <a href="#update-profile" class="btn primary-btn py-1">Update</a>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-around flex-wrap">
                                     <div class="pie-container d-flex flex-column justify-content-center align-items-center">
@@ -326,46 +322,140 @@
                         <div class="col-12 col-lg-6 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <h6 class="text-muted mb-4">Socials</h6>
-                                <div id="skills" class="d-flex justify-content-between align-items-center flex-wrap">
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-html5  fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">HTML5</span>
+                                <div id="social-links" class="d-flex flex-column pl-md-3 pl-2 justify-content-between">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div id="linkedin-container" class="icon-wrapper">
+                                            <i id="linkedin" class="fa-brands fa-sm fa-linkedin-in"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mid-size-text mb-1">LinkedIn</h6>
+                                            <a class="small" href="">https://LinkedIn.com/souk-jackson-mckenzie</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div id="twitter-container" class="icon-wrapper">
+                                            <i id="twitter" class="fa-brands fa-sm fa-twitter"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mid-size-text mb-1">Twitter</h6>
+                                            <a class="small" href="">https://twitter.com/souk-jackson-mckenzie</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div id="facebook-container" class="icon-wrapper">
+                                            <i id="facebook" class="fa-brands fa-sm fa-facebook-f"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mid-size-text mb-1" >Facebook</h6>
+                                            <a class="small" href="">https://facebook.com/souk-jackson-mckenzie</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div id="instagram-container" class="icon-wrapper">
+                                            <i id="instagram" class="fa-brands fa-sm fa-instagram"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mid-size-text mb-1" >Instagram</h6>
+                                            <a class="small" href="">https://instagram.com/souk-jackson-mckenzie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-4 col-sm-6 col-md-3">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fa-brands fa-html5 fa-lg text-purple mr-2"></i>
+                                            <span class="font-weight-bold small">HTML5</span>
+                                        </div>
                                         <span class="text-muted">expert</span>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-css3-alt  fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">CSS3</span>
+                                    <div class="pie-container skills-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar">
+                                            <svg class="">
+                                                <circle cx="35" cy="65" r="25"/>
+                                                <circle cx="35" cy="65" r="25"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h6 class="font-weight-bold mb-0">65%</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4 col-sm-6 col-md-3">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fa-brands fa-css3-alt fa-lg text-purple mr-2"></i>
+                                            <span class="font-weight-bold small">CSS3</span>
+                                        </div>
                                         <span class="text-muted">expert</span>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-php  fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">PHP</span>
-                                        <span class="text-muted">expert</span>
+                                    <div class="pie-container skills-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar">
+                                            <svg class="">
+                                                <circle cx="35" cy="65" r="25"/>
+                                                <circle cx="35" cy="65" r="25"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h6 class="font-weight-bold mb-0">85%</h6>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-java fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">JAVA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4 col-sm-6 col-md-3">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fa-brands fa-php  fa-lg text-purple mr-2"></i>
+                                            <span class="font-weight-bold small">PHP</span>
+                                        </div>
+                                        <span class="text-muted">intermediate</span>
+                                    </div>
+                                    <div class="pie-container skills-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar">
+                                            <svg class="">
+                                                <circle cx="35" cy="65" r="25"/>
+                                                <circle cx="35" cy="65" r="25"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h6 class="font-weight-bold mb-0">57%</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4 col-sm-6 col-md-3">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fa-brands fa-java fa-lg text-purple mr-2"></i>
+                                            <span class="font-weight-bold small">Java</span>
+                                        </div>
                                         <span class="text-muted">novice</span>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-python fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">PYTHON</span>
-                                        <span class="text-muted">amateur</span>
-                                    </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-js-square fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">JAVASCRIPT</span>
-                                        <span class="text-muted">expert</span>
-                                    </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-react fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">REACT</span>
-                                        <span class="text-muted">guru</span>
-                                    </div>
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <i class="fa-brands fa-angular fa-xl text-purple"></i>
-                                        <span class="font-weight-bold small">ANGULAR</span>
-                                        <span class="text-muted">expert</span>
+                                    <div class="pie-container skills-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar">
+                                            <svg class="">
+                                                <circle cx="35" cy="65" r="25"/>
+                                                <circle cx="35" cy="65" r="25"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h6 class="font-weight-bold mb-0">35%</h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
