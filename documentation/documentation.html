@@ -169,6 +169,23 @@
                         <li>Registration page</li>
                         <li>Login page</li>
                     </ul>
+                    <span class="fw-bold">Components</span>
+                    <ul>
+                        <li>Circular progress bar</li>
+                        <p>The circular progress bar is used in a couple of instance in this template such as;</p>
+                        <ul class="mb-4">
+                            <li>Conversion rate</li>
+                            <li>Cart abandonment rate</li>
+                            <li>Profile completion progress</li>
+                            <li>Skills progress</li>
+                        </ul>
+                        <span class="">To calculate the svg circle percentage, below is the formula on how to go about it</span>
+                        <p>To get the full stroke-dasharray of the circle, calculate the circumference of the circle with 2*3.14*r</p>
+                        <p>
+                            To get the value to input as stroke-dashoffset, the formula is as; <br>
+                            stroke-dasharray - (stroke-dasharray * (%/100))
+                        </p>
+                    </ul>
                 </div>
                 <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                     <h2 class="fw-bold">Custom CSS</h2>

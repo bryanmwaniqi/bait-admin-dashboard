@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ecommerce Dashboard</title>
 
+        <!-- favicon -->
+        <link rel="icon" href="assets/souk-purple.png">
+
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -99,7 +102,7 @@
                             <span class="badge badge-pill notification-badge">4</span>
                         </a>
                         <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
-                            <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 bg-purple">
+                            <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 primary-bg">
                                 <span class="text-white">Notifications</span>
                                 <div>
                                     <span class="badge badge-pill bg-pink text-white">4 New</span>
@@ -178,9 +181,8 @@
                 <div class="sidemenu d-flex justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-lg fa-shopping-cart"></i>
-                                <!-- <span class="menu-link">Bait Logo</span> -->
+                            <a class="nav-link logo-container" href="dashboard.html">
+                                <img src="assets/souk-white.png" alt="souk logo image">
                             </a>
                         </li>
                         <li class="nav-item">
@@ -298,84 +300,78 @@
                                         </p>
                                         <div class="row">
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-brands fa-bluetooth mb-1"></i>
-                                                    <span class="small text-secondary">bluetooth</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-brands fa-bluetooth mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-secondary mb-0">Bluetooth</span>
+                                                        <span class="small text-secondary">20m range</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-volume-high mb-1"></i>
-                                                    <span class="small text-secondary">Touch sensor</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-volume-high mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-secondary">Volume</span>
+                                                        <span class="small text-secondary">Touch sensor</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-radio mb-1"></i>
-                                                    <span class="small text-secondary">Radio</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-radio mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-secondary">Radio</span>
+                                                        <span class="small text-secondary">88 - 110 mHz</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-music mb-1"></i>
-                                                    <span class="small text-secondary">Playlists</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-music mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-secondary">Playlists</span>
+                                                        <span class="small text-secondary">Music Player</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-battery-full mb-1"></i>
-                                                    <span class="small text-secondary">Battery</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-battery-full mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-secondary">Battery</span>
+                                                        <span class="small text-secondary">18hrs longevity</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-microphone mb-1"></i>
-                                                    <span class="small text-secondary">Microphone</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-microphone mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-secondary">Microphone</span>
+                                                        <span class="small text-secondary">Noise Distortion</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-battery-full mb-1"></i>
-                                                    <span class="small text-muted">Battery</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-battery-full mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-muted">Battery</span>
+                                                        <span class="small text-muted">Li-ion lithium</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-6 col-md-3 p-2">
-                                                <div class="feature d-flex flex-column align-items-center justify-content-center">
-                                                    <i class="fa-solid fa-certificate mb-1"></i>
-                                                    <span class="small text-muted">Certified</span>
+                                                <div class="feature d-flex align-items-center">
+                                                    <i class="fa-solid fa-certificate mr-3"></i>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="small text-muted">Certified</span>
+                                                        <span class="small text-muted">Iso:90001-28167</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="d-flex justify-content-between">
-                                            <div class="d-flex mb-3 mr-5">
-                                                <label class="form-check-label d-flex align-items-center">
-                                                    <input type="radio" checked class="form-check-input color-scheme" name="headphone-size">
-                                                    <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                </label>
-                                                <span class="text-muted">Small</span>
-                                            </div>
-                                            <div class="d-flex mb-3 mr-5">
-                                                <label class="form-check-label d-flex align-items-center">
-                                                    <input type="radio" class="form-check-input color-scheme" name="headphone-size">
-                                                    <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                </label>
-                                                <span class="text-muted">Medium</span>
-                                            </div>
-                                            <div class="d-flex mb-3 mr-5">
-                                                <label class="form-check-label d-flex align-items-center">
-                                                    <input type="radio" class="form-check-input color-scheme" name="headphone-size">
-                                                    <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                </label>
-                                                <span class="text-muted">Large</span>
-                                            </div>
-                                            <div class="d-flex mb-3 mr-5">
-                                                <label class="form-check-label d-flex align-items-center">
-                                                    <input type="radio" class="form-check-input color-scheme" name="headphone-size">
-                                                    <div class="d-flex align-items-center justify-content-center custom-radio"></div>
-                                                </label>
-                                                <span class="text-muted">Extra-large</span>
-                                            </div>
-                                        </div> -->
                                         <div class="d-flex flex-wrap">
                                             <button class="btn primary-btn d-flex align-items-center mr-3 mt-3 product-info-btn">
                                                 <i class="fa-solid fa-pen fa-sm mr-2"></i>
@@ -466,7 +462,7 @@
                                                         voluptatibus dolorum aspernatur accusamus minima.
                                                     </p>
                                                     <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap">
-                                                        <button href="" class="d-flex align-items-center btn primary-btn py-1 mb-2 comment-btn">
+                                                        <button href="" class="d-flex align-items-center btn primary-btn primary-solid-btn py-1 mb-2 comment-btn">
                                                             <i class="fa-regular fa-sm fa-comment mr-2"></i>
                                                             <span class="small">Comment</span>
                                                         </button>
@@ -500,7 +496,7 @@
                                                         voluptatibus dolorum aspernatur accusamus minima.
                                                     </p>
                                                     <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap">
-                                                        <button class="d-flex align-items-center btn primary-btn py-1 mb-2 comment-btn">
+                                                        <button class="d-flex align-items-center btn primary-btn primary-solid-btn py-1 mb-2 comment-btn">
                                                             <i class="fa-regular fa-sm fa-comment mr-2"></i>
                                                             <span class="small">Comment</span>
                                                         </button>
@@ -534,7 +530,7 @@
                                                         voluptatibus dolorum aspernatur accusamus minima.
                                                     </p>
                                                     <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap">
-                                                        <button  class="d-flex align-items-center btn primary-btn py-1 mb-2 comment-btn">
+                                                        <button  class="d-flex align-items-center btn primary-btn primary-solid-btn py-1 mb-2 comment-btn">
                                                             <i class="fa-regular fa-sm fa-comment mr-2"></i>
                                                             <span class="small">Comment</span>
                                                         </button>

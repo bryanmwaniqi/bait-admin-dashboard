@@ -69,6 +69,10 @@ img{
 .rounded-edges{
     border-radius: 0.4rem;
 }
+#souk-full-logo{
+    width: 3rem;
+    height: 3rem;
+}
 /* Utility Classes */
 .mid-size-text{
     font-size: 0.95rem;
@@ -82,7 +86,7 @@ img{
 .success-bg{
     background-color: var(--success-color);
 }
-.bg-purple{
+.primary-bg{
     background-color: var(--primary-color);
 }
 /* Custom buttons */
@@ -94,6 +98,10 @@ img{
 .primary-btn:hover{
     background-color: transparent;
     color: var(--primary-color);
+}
+.primary-solid-btn:hover{
+    background-color: #4220bd;
+    color: #fff;
 }
 .primary-outline-btn{
     border: 1.8px solid var(--primary-color);
@@ -588,6 +596,10 @@ span.search-icon{
 /* #sidebar ::-webkit-scrollbar{
     width: 10px;
 } */
+.logo-container img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
 .sidemenu{
     position: fixed;
     background-color: var(--primary-color);
@@ -650,7 +662,7 @@ span.search-icon{
 }
 #sidebar .navbar-nav li:nth-child(1){
     margin-bottom: 0.8rem;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 #sidebar .navbar-nav li a.nav-link{
     display: flex;
@@ -734,31 +746,31 @@ span.search-icon{
     height: 100%;
 }
 .pie-progress-bar svg circle{
-    /* height: 150px;
-    width: 150px; */
     fill: none;
     stroke-width: 0.6rem;
     stroke: #f1f1f1;
     transform: translate(10px, 10px);
     stroke-linecap: round;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
+    stroke-dasharray: 390;
+    stroke-dashoffset: 390;
 }
 .pie-progress-bar svg circle:nth-child(1){
     stroke: var(--body-color);
     stroke-dashoffset: 0;
 }
+.pie-progress-bar svg circle:nth-child(2){
+    stroke: var(--primary-color);
+}
 .pie-progress-bar svg.conversion-rate circle:nth-child(2){
     stroke: var(--primary-color);
-    stroke-dashoffset: calc(440 - (440 * 73) / 100);
+    stroke-dashoffset: calc(390 - (390 * 73) / 100);
 }
 .pie-progress-bar svg circle:nth-child(1){
     stroke: var(--body-color);
     stroke-dashoffset: 0;
 }
 .pie-progress-bar svg.cart-abandonment circle:nth-child(2){
-    stroke: var(--primary-color);
-    stroke-dashoffset: calc(440 - (440 * 57) / 100);
+    stroke-dashoffset: calc(390 - (390 * 57) / 100);
 }
 /* best sellers section styling */
 #best-sellers a{
@@ -1071,15 +1083,22 @@ i#action-toggle:hover{
 .skills-container svg circle{
     fill: none;
     stroke-width: 0.4rem;
-    stroke: #f1f1f1;
     transform: translate(10px, 10px);
     stroke-linecap: round;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
+    stroke-dasharray: 157;
+    stroke-dashoffset: 157;
 }
-.skills-container svg circle:nth-child(2){
-    stroke: var(--primary-color);
-    stroke-dashoffset: calc(440 - (440 * 20) / 100);
+#html circle:nth-child(2){
+    stroke-dashoffset: calc(157 - (157 * 65) / 100);
+}
+#css circle:nth-child(2){
+    stroke-dashoffset: calc(157 - (157 * 85) / 100);
+}
+#php circle:nth-child(2){
+    stroke-dashoffset: calc(157 - (157 * 57) / 100);
+}
+#java circle:nth-child(2){
+    stroke-dashoffset: calc(157 - (157 * 35) / 100);
 }
 label.required::after{
     content: '*';
@@ -1584,11 +1603,13 @@ input[type="range"]::-moz-range-thumb{
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     cursor: pointer;
-    background-color: var(--body-color);
-    color: var(--primary-color);
+    /* border: 1px solid var(--body-color); */
+    padding-left: 0.2rem ;
+    /* background-color: var(--body-color); */
+    /* color: var(--primary-color); */
 }
 .feature i{
-    color: #777777;
+    color: #3f3f3f;
 }
 .product-info-btn{
     width: 9rem;
@@ -1812,6 +1833,10 @@ ul.email-list{
     vertical-align: bottom;
     padding-top: 0.35rem;
     padding-bottom: 0.35rem;
+}
+#invoice-logo{
+    max-width: 4rem;
+    max-height: 4rem;
 }
 #invoice-table td{
     padding-top: 0.55rem;
