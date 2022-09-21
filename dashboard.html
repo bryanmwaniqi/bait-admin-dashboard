@@ -41,13 +41,9 @@
             <button id="sideMenuToggler" class="btn d-lg-none d-flex align-items-center" type="button">
                 <i class="fas fa-bars text-purple"></i>
             </button>
-            <!-- <a class="navbar-brand font-weight-bold ml-auto mr-auto d-none " id="logo" href="offers-landing.html"> 
-                <i class="fab fa-lg fa-html5"></i>
-                <span class="ml-1">Bait Logo</span>
-            </a> -->
             <ul class="navbar-nav toggler-nav active mt-lg-0">
                 <li class="nav-item d-flex align-items-center">
-                    <a href="orders.html" class="btn primary-btn rounded-btn track-btn ml-2">Track Order</a>
+                    <a href="orders.html" class="btn primary-outline-btn py-0 rounded-btn track-btn ml-2">Track Order</a>
                 </li>
             </ul>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -328,13 +324,13 @@
                     <div class="row">
                         <div class="col-12 col-md-8 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Regional Sales</h6>
+                                <h6 class="text-muted mb-1">Regional Sales</h6>
                                 <!-- <div class="h-100">
                                     <canvas id="mixed-chart" height="152"></canvas>
                                 </div> -->
                                 <div class="d-flex flex-wrap align-items-center justify-content-center h-100">
-                                    <div class="mb-3">
-                                        <canvas id="circleRadialChart" height="152"></canvas>
+                                    <div id="regional-sales" class="mb-3 mr-lg-5">
+                                        <div id="salesDistroChart"></div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
@@ -343,42 +339,42 @@
                                                     <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Americas</span>
                                                 </div> 
-                                                <span class="text-secondary mid-size-text">721,416</span>
+                                                <span class="mid-size-text">721,416</span>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
                                                 <div class="d-flex align-items-center">
                                                     <div id="europe" class="doughnut-key"></div>
                                                     <span class="text-muted">Europe</span>
                                                 </div>
-                                                <span class="text-secondary mid-size-text">251,938</span>
+                                                <span class="mid-size-text">251,938</span>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
                                                 <div class="d-flex align-items-center">
                                                     <div id="asia" class="doughnut-key"></div>
                                                     <span class="text-muted">Asia</span>
                                                 </div>
-                                                <span class="text-secondary mid-size-text">99,071</span>
+                                                <span class="mid-size-text">99,071</span>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
                                                 <div class="d-flex align-items-center">
                                                     <div id="africa" class="doughnut-key"></div>
                                                     <span class="text-muted">Africa</span>
                                                 </div>
-                                                <span class="text-secondary mid-size-text">78,231</span>
+                                                <span class="mid-size-text">78,231</span>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
                                                 <div class="d-flex align-items-center">
                                                     <div id="australia" class="doughnut-key"></div>
                                                     <span class="text-muted">Australia</span>
                                                 </div>
-                                                <span class="text-secondary mid-size-text">24,906</span>
+                                                <span class="mid-size-text">24,906</span>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
                                                 <div class="d-flex align-items-center">
                                                     <div id="others" class="doughnut-key"></div>
                                                     <span class="text-muted">Others</span>
                                                 </div>
-                                                <span class="text-secondary mid-size-text">43,387</span>
+                                                <span class="mid-size-text">43,387</span>
                                             </div>
                                         </div>
                                     </div>
@@ -402,46 +398,49 @@
                                 <div class="tab-content menu-tab">
                                     <!-- products tab content -->
                                     <div id="products" class="tab-pane show fade active p-0">
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/iphone.jpg" alt="">
+                                        <div class="d-flex flex-column align-self-stretch justify-content-between">
+                                            <div class="d-flex mb-4">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/iphone.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Iphone 6S 2015</h6>
+                                                    <span class="text-muted mid-size-text">10 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $51,932</h6>
                                             </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold">Iphone 6S 2015</h6>
-                                                <span class="text-muted mid-size-text">10 units</span>
+                                            <div class="d-flex mb-4">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/galaxy.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
+                                                    <span class="text-muted mid-size-text">9 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $49,321</h6>
                                             </div>
-                                            <h6 class="font-weight-bold ml-auto align-self-center"> $51,932</h6>
+                                            <div class="d-flex mb-4">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/lip-gloss.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Matte Lip gloss</h6>
+                                                    <span class="text-muted mid-size-text">1461 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $42,189</h6>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/hennessy-xo.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
+                                                    <span class="text-muted mid-size-text">10 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $38,407</h6>
+                                            </div>
                                         </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/galaxy.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
-                                                <span class="text-muted mid-size-text">9 units</span>
-                                            </div>
-                                            <h6 class="font-weight-bold ml-auto align-self-center"> $49,321</h6>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/lip-gloss.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold">Matte Lip gloss</h6>
-                                                <span class="text-muted mid-size-text">1461 units</span>
-                                            </div>
-                                            <h6 class="font-weight-bold ml-auto align-self-center"> $42,189</h6>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <div class="best-product-img text-center rounded-edges mr-4">
-                                                <img class="" src="assets/hennessy-xo.jpg" alt="">
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
-                                                <span class="text-muted mid-size-text">10 units</span>
-                                            </div>
-                                            <h6 class="font-weight-bold ml-auto align-self-center"> $38,407</h6>
-                                        </div>
+                                        
                                     </div>
                                     <!-- end of best sellers products tab content -->
                                     
@@ -513,435 +512,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row flex-column flex-md-row justify-content-center"> -->
-                        <!-- <div class="col-12 col-lg-6 mt-2 h-100 d-sm-block d-none">
-                            <div class="row sales-traffic justify-content-between">
-                                <div class="col col-sm-4 d-flex mb-4 active">
-                                    <div id="all" class="bg-white rounded-edges d-flex flex-column flex-fill p-2 justify-content-between">
-                                        <div class="d-flex align-items-start mb-3">
-                                            <div class="badge traffic-badge primary-badge d-flex align-items-center mr-2">
-                                                <i class="fa-solid fa-sitemap"></i>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-muted small mb-0">Organic</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
-                                                    <span class="small text-muted">2.86%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-auto mb-2">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold mb-0">486,932</h6>
-                                            </div>
-                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">40%</h6>
-                                        </div>
-                                        <div class="progress traffic-progress">
-                                            <div id="organic" class="progress-bar round-progress" style="width:40%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-4 d-flex mb-4">
-                                    <div id="europe" class="bg-white rounded-edges flex-fill p-2">
-                                        <div class="d-flex align-items-start mb-3">
-                                            <div class="badge traffic-badge warning-badge d-flex align-items-center mr-2">
-                                                <i class="fa-brands fa-google"></i>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-muted small mb-0">Google</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
-                                                    <span class="small text-muted">0.90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-auto mb-2">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold mb-0">95,251</h6>
-                                            </div>
-                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
-                                        </div>
-                                        <div class="progress traffic-progress">
-                                            <div id="google" class="progress-bar round-progress" style="width:10%"></div>
-                                        </div> 
-                                    </div>
-                                </div>
-                                <div class="col col-sm-4 d-flex mb-4">
-                                    <div id="usa" class="bg-white rounded-edges flex-fill p-2">
-                                        <div class="d-flex align-items-start mb-3">
-                                            <div class="badge traffic-badge danger-badge d-flex align-items-center mr-2">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-muted small mb-0">YouTube</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
-                                                    <span class="small text-muted">2.86%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-auto mb-2">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold mb-0">236,932</h6>
-                                            </div>
-                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">15%</h6>
-                                        </div>
-                                        <div class="progress traffic-progress">
-                                            <div id="youtube" class="progress-bar round-progress" style="width:15%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row sales-traffic justify-content-between align-items-end mb-1">
-                                <div class="col col-sm-4 d-flex mb-4">
-                                    <div id="asia" class="bg-white rounded-edges flex-fill p-2">
-                                        <div class="d-flex align-items-start mb-3">
-                                            <div class="badge traffic-badge warning-badge d-flex align-items-center mr-2">
-                                                <i class="fa-brands fa-facebook"></i>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-muted small mb-0">Facebook</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
-                                                    <span class="small text-muted">0.90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-auto mb-2">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold mb-0">26,743</h6>
-                                            </div>
-                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
-                                        </div>
-                                        <div class="progress traffic-progress">
-                                            <div id="facebook" class="progress-bar round-progress" style="width:10%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-4 d-flex mb-4">
-                                    <div id="africa" class="bg-white rounded-edges flex-fill p-2">
-                                        <div class="d-flex align-items-start mb-3">
-                                            <div class="badge traffic-badge danger-badge d-flex align-items-center mr-2">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-muted small mb-0">Instagram</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
-                                                    <span class="small text-muted">2.86%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-auto mb-2">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold mb-0">1,243</h6>
-                                            </div>
-                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">5%</h6>
-                                        </div>
-                                        <div class="progress traffic-progress">
-                                            <div id="instagram" class="progress-bar round-progress" style="width:5%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-4 d-flex mb-4">
-                                    <div id="australia" class="bg-white rounded-edges flex-fill p-2">
-                                        <div class="d-flex align-items-start mb-3">
-                                            <div class="badge traffic-badge warning-badge d-flex align-items-center mr-2">
-                                                <i class="fa-solid fa-layer-group"></i>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-muted small mb-0">Others</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
-                                                    <span class="small text-muted">0.90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-auto mb-2">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="font-weight-bold mb-0">13,971</h6>
-                                            </div>
-                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">20%</h6>
-                                        </div>
-                                        <div class="progress traffic-progress">
-                                            <div id="facebook" class="progress-bar round-progress" style="width:20%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="col-12 col-lg-6 mt-2 mb-4"> -->
-                            <!-- <div class="bg-white rounded-edges h-100 p-3"> -->
-                                <!-- <h6 class="text-muted">Sales Traffic Distribution</h6> -->
-                                <!-- <div id="traffic-distro-tab">
-                                    <div id="all-tab" class="">
-                                        <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                            <div class="traffic-doughnut-chart mb-2">
-                                                <canvas id="allRegionsChart"></canvas>
-                                            </div>
-                                            <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="organic" class="doughnut-key"></div>
-                                                        <span class="text-muted">Organic Search</span>
-                                                    </div> 
-                                                    <span >721,416</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="google" class="doughnut-key"></div>
-                                                        <span class="text-muted">Google ads</span>
-                                                    </div>
-                                                    <span>251,938</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="youtube" class="doughnut-key"></div>
-                                                        <span class="text-muted">Youtube</span>
-                                                    </div>
-                                                    <span>99,071</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="instagram" class="doughnut-key"></div>
-                                                        <span class="text-muted">Instagram</span>
-                                                    </div>
-                                                    <span class="">78,231</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="facebook" class="doughnut-key"></div>
-                                                        <span class="text-muted">Facebook</span>
-                                                    </div>
-                                                    <span>24,906</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="europe-tab" class="d-none">
-                                        <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                            <div class="traffic-doughnut-chart mb-2">
-                                                <canvas id="europeRegionChart"></canvas>
-                                            </div>
-                                            <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="organic" class="doughnut-key"></div>
-                                                        <span class="text-muted">Organic Search</span>
-                                                    </div> 
-                                                    <span >90,505</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="google" class="doughnut-key"></div>
-                                                        <span class="text-muted">Google ads</span>
-                                                    </div>
-                                                    <span>110,032</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="youtube" class="doughnut-key"></div>
-                                                        <span class="text-muted">Youtube</span>
-                                                    </div>
-                                                    <span>161,620</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="instagram" class="doughnut-key"></div>
-                                                        <span class="text-muted">Instagram</span>
-                                                    </div>
-                                                    <span class="">150,980</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="facebook" class="doughnut-key"></div>
-                                                        <span class="text-muted">Facebook</span>
-                                                    </div>
-                                                    <span>604,121</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="usa-tab" class="d-none">
-                                        <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                            <div class="traffic-doughnut-chart mb-2">
-                                                <canvas id="usaRegionChart"></canvas>
-                                            </div>
-                                            <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="organic" class="doughnut-key"></div>
-                                                        <span class="text-muted">Organic Search</span>
-                                                    </div> 
-                                                    <span >101,221</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="google" class="doughnut-key"></div>
-                                                        <span class="text-muted">Google ads</span>
-                                                    </div>
-                                                    <span>341,909</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="youtube" class="doughnut-key"></div>
-                                                        <span class="text-muted">Youtube</span>
-                                                    </div>
-                                                    <span>63,431</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="instagram" class="doughnut-key"></div>
-                                                        <span class="text-muted">Instagram</span>
-                                                    </div>
-                                                    <span class="">705,827</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="facebook" class="doughnut-key"></div>
-                                                        <span class="text-muted">Facebook</span>
-                                                    </div>
-                                                    <span>89,423</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="asia-tab" class="d-none">
-                                        <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                            <div class="traffic-doughnut-chart mb-2">
-                                                <canvas id="asiaRegionChart"></canvas>
-                                            </div>
-                                            <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="organic" class="doughnut-key"></div>
-                                                        <span class="text-muted">Organic Search</span>
-                                                    </div> 
-                                                    <span >88,224</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="google" class="doughnut-key"></div>
-                                                        <span class="text-muted">Google ads</span>
-                                                    </div>
-                                                    <span>90,302</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="youtube" class="doughnut-key"></div>
-                                                        <span class="text-muted">Youtube</span>
-                                                    </div>
-                                                    <span>551,223</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="instagram" class="doughnut-key"></div>
-                                                        <span class="text-muted">Instagram</span>
-                                                    </div>
-                                                    <span class="">302,667</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="facebook" class="doughnut-key"></div>
-                                                        <span class="text-muted">Facebook</span>
-                                                    </div>
-                                                    <span>89,045</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="africa-tab" class="d-none">
-                                        <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                            <div class="traffic-doughnut-chart mb-2">
-                                                <canvas id="africaRegionChart"></canvas>
-                                            </div>
-                                            <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="organic" class="doughnut-key"></div>
-                                                        <span class="text-muted">Organic Search</span>
-                                                    </div> 
-                                                    <span >156,424</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="google" class="doughnut-key"></div>
-                                                        <span class="text-muted">Google ads</span>
-                                                    </div>
-                                                    <span>890,724</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="youtube" class="doughnut-key"></div>
-                                                        <span class="text-muted">Youtube</span>
-                                                    </div>
-                                                    <span>23,922</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="instagram" class="doughnut-key"></div>
-                                                        <span class="text-muted">Instagram</span>
-                                                    </div>
-                                                    <span class="">100,018</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="facebook" class="doughnut-key"></div>
-                                                        <span class="text-muted">Facebook</span>
-                                                    </div>
-                                                    <span>88,003</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="australia-tab" class="d-none">
-                                        <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                            <div class="traffic-doughnut-chart mb-2">
-                                                <canvas id="australiaRegionChart"></canvas>
-                                            </div>
-                                            <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="organic" class="doughnut-key"></div>
-                                                        <span class="text-muted">Organic Search</span>
-                                                    </div> 
-                                                    <span >681,821</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="google" class="doughnut-key"></div>
-                                                        <span class="text-muted">Google ads</span>
-                                                    </div>
-                                                    <span>44,251</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="youtube" class="doughnut-key"></div>
-                                                        <span class="text-muted">Youtube</span>
-                                                    </div>
-                                                    <span>312,082</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="instagram" class="doughnut-key"></div>
-                                                        <span class="text-muted">Instagram</span>
-                                                    </div>
-                                                    <span class="">92,192</span>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
-                                                    <div class="d-flex align-items-center">
-                                                        <div id="facebook" class="doughnut-key"></div>
-                                                        <span class="text-muted">Facebook</span>
-                                                    </div>
-                                                    <span>72,621</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            <!-- </div> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
                     <div class="row flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-lg-6 h-100 d-sm-block d-none">
                             <div class="row sales-traffic justify-content-between">
@@ -1398,7 +968,7 @@
                                             <span class="text-muted mid-size-text">delivered</span>
                                             <h3 class="mb-0">257,901</h3>
                                         </div>
-                                        <a href="" class="badge success-badge p-2">
+                                        <a href="orders.html" class="muted-link p-2">
                                             <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
@@ -1409,7 +979,7 @@
                                             <span class="text-muted mid-size-text">rejected</span>
                                             <h3 class="mb-0">3,075</h3>
                                         </div>
-                                        <a href="" class="badge danger-badge p-2">
+                                        <a href="orders.html" class="muted-link p-2">
                                             <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
@@ -1420,7 +990,7 @@
                                             <span class="text-muted mid-size-text">pending</span>
                                             <h3 class="mb-0">49,901</h3>
                                         </div>
-                                        <a href="" class="badge primary-badge p-2">
+                                        <a href="orders.html" class="muted-link p-2">
                                             <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
@@ -1431,7 +1001,7 @@
                                             <span class="text-muted mid-size-text">approved</span>
                                             <h3 class="mb-0">89,419</h3>
                                         </div>
-                                        <a href="" class="badge warning-badge p-2">
+                                        <a href="orders.html" class="muted-link p-2">
                                             <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
@@ -1439,22 +1009,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row mb-5 mb-md-4">
-                        <div class="col col-md-8 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Traffic % Breakdown</h6>
-                                <div>
-                                    <canvas id="stackedBarChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-md-4 mb-4">
-                            <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-3">Top Customers</h6>
-                                <div></div>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="row text-muted mt-4 align-items-center footer-content">
                         <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-start">
                             <span class="mb-2">Designed By Bryan Mwaniki</span>
@@ -1474,6 +1028,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script src="js/script.js"></script>
         <script>
             // mixed chart

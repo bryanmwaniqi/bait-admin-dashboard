@@ -13,6 +13,7 @@
     box-sizing: border-box;
 }
 .ql-snow{
+    /* quill js editor snow-theme styling */
     border-radius: 0.25rem 0.25rem 0 0;
     background-color: var(--body-color);
 }
@@ -45,6 +46,12 @@ a:hover{
 a:active {
     text-decoration: none;
     background-color: inherit !important;
+}
+a.muted-link{
+    color: #6c757d !important;
+}
+a.muted-link:hover{
+    color: var(--primary-color)!important;
 }
 ::-webkit-scrollbar{
     width: 12.5px;
@@ -728,6 +735,9 @@ span.search-icon{
         padding: 0rem;
     }
 }
+/* #salesDistroChart{
+    transform: scaleX(-1);
+} */
 .pie-container{
     position: relative;
     width: 150px;      
@@ -799,11 +809,10 @@ span.search-icon{
 .traffic-progress{
     height: 0.25rem;
 }
-.sales-traffic-container{
+/* .sales-traffic-container{
     align-content: space-between;
-}
+} */
 .sales-traffic .col > div{
-    cursor: pointer;
     border-style: solid;
     border-width: 0.1rem;
     border-color: #fff;
@@ -823,10 +832,10 @@ span.search-icon{
 /* .sales-traffic .active > div, .sales-traffic .col > div:hover{
     border-color: var(--primary-color);
 } */
-.traffic-doughnut-chart{
+/* .traffic-doughnut-chart{
     width: 9.65rem;
     height: 9.65rem;
-}
+} */
 .traffic-source{
     width: 13rem;
 }
@@ -1218,7 +1227,7 @@ span.input-icon{
     border-radius: 0.25rem
 }
 .remove-integration{
-    color: #838383;
+    /* color: #838383; */
     font-size: 0.9rem;
 }
 .integration-toggle{
@@ -1521,6 +1530,10 @@ input[type="range"]::-moz-range-thumb{
     overflow: hidden;
     margin-bottom: 1rem;
 }
+.product-details{
+    /* border: 1px solid var(--body-color); */
+    /* background-color: none; */
+}
 .discount-badge{
     position: absolute;
     top: 15px;
@@ -1582,7 +1595,7 @@ input[type="range"]::-moz-range-thumb{
     width: 3.8rem;
     height: 3.8rem;
     padding: 0.3rem;
-    border: 1px solid var(--body-color);
+    border: 1px solid #fff;
     border-radius: 0.22rem;
     cursor: pointer;
 }
@@ -1607,6 +1620,15 @@ input[type="range"]::-moz-range-thumb{
     padding-left: 0.2rem ;
     /* background-color: var(--body-color); */
     /* color: var(--primary-color); */
+}
+.product-feature-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #3f3f3f;
 }
 .feature i{
     color: #3f3f3f;
@@ -1638,12 +1660,6 @@ table#specs tbody td{
     .review-date{
         order: 0;
     }
-}
-.reviews-anchor{
-    color: #999999;
-}
-.reviews-anchor:hover{
-    color: var(--primary-color);
 }
 
 /* email inbox page styling */

@@ -411,6 +411,51 @@ $(function () {
         returnsConfig
     );
 
+    // Apex sale distribution radial chart
+    var options1 = {
+        chart: {
+          height: 340,
+          type: "radialBar",
+        },
+        series: [67, 84, 97, 55, 61],
+        colors: ["#6630e6", "#4267B2", "#F4B400", "#00cece", "#C13584"],
+        plotOptions: {
+          radialBar: {
+            hollow: {
+                margin: 75,
+                size: "45%"
+            },
+            dataLabels: {
+                name: {
+                    offsetY: -1,
+                    show: true,
+                    color: "#888",
+                    fontSize: "10px"
+                },
+                value: {
+                    color: "#888",
+                    fontSize: "20px",
+                    show: true
+                },
+                total: {
+                    show: true,
+                    label: 'TOTAL'
+              }
+            }
+          }
+        },
+        stroke: {
+            lineCap: "round",
+        },
+        labels: ['Americas', 'Europe', 'Asia', 'Africa'],
+        responsive: [{
+            breakpoint: undefined,
+            options: {},
+        }]
+      };
+      
+    new ApexCharts(document.querySelector("#salesDistroChart"), options1).render();
+
 
     // Overall sales line chart
     var lineGradientCtx = document.getElementById('lineGradientChart').getContext('2d');
@@ -515,4 +560,5 @@ $(function () {
         $('#targetSalesChart'),
         targetConfig
     );  
+      
 })
