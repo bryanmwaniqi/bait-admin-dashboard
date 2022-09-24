@@ -812,7 +812,7 @@ span.search-icon{
 /* .sales-traffic-container{
     align-content: space-between;
 } */
-.sales-traffic .col > div{
+.traffic .col > div{
     border-style: solid;
     border-width: 0.1rem;
     border-color: #fff;
