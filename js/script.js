@@ -559,6 +559,10 @@ $(function () {
     const targetSalesChart = new Chart(
         $('#targetSalesChart'),
         targetConfig
-    );  
+    ); 
       
+    $('#sales-map').vectorMap({
+        map: 'world_mill',
+        backgroundColor: '#f4f4f8'
+    });
 })
