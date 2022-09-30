@@ -414,32 +414,34 @@ $(function () {
     // Apex sale distribution radial chart
     var options1 = {
         chart: {
-          height: 340,
+          height: 280,
           type: "radialBar",
         },
-        series: [67, 84, 97, 55, 61],
-        colors: ["#6630e6", "#4267B2", "#F4B400", "#00cece", "#C13584"],
+        series: [67, 84, 97, 55],
+        colors: ["#6630e6",  "#00cece", "#F4B400", "#ff0077"],
         plotOptions: {
           radialBar: {
             hollow: {
-                margin: 75,
-                size: "45%"
+                margin: 35,
+                size: "55%"
             },
             dataLabels: {
                 name: {
                     offsetY: -1,
                     show: true,
-                    color: "#888",
-                    fontSize: "10px"
+                    color: "#000",
+                    fontSize: "25px"
                 },
                 value: {
                     color: "#888",
-                    fontSize: "20px",
+                    fontSize: "15px",
                     show: true
                 },
                 total: {
+                    color: "#000",
+                    fontSize: "20px",
                     show: true,
-                    label: 'TOTAL'
+                    label: 'Total'
               }
             }
           }
@@ -447,7 +449,7 @@ $(function () {
         stroke: {
             lineCap: "round",
         },
-        labels: ['Americas', 'Europe', 'Asia', 'Africa'],
+        labels: ['Fashion', 'Cosmetics', 'Electronics', 'Food & Drinks'],
         responsive: [{
             breakpoint: undefined,
             options: {},
@@ -561,8 +563,8 @@ $(function () {
         targetConfig
     ); 
       
-    $('#sales-map').vectorMap({
-        map: 'world_mill',
-        backgroundColor: '#f4f4f8'
-    });
+    // $('#sales-map').vectorMap({
+    //     map: 'world_mill',
+    //     backgroundColor: '#f4f4f8'
+    // });
 })

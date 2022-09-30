@@ -25,6 +25,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- owl carousel css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -32,6 +35,11 @@
 
         <!-- Box icons font cdn -->
         <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
+
+        <!-- jVectormap css -->
+        <!-- <link rel="stylesheet" href="jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.5/jquery-jvectormap.min.css" type="text/css" media="screen"/> -->
+        <link rel="stylesheet" href="css/jquery-jvectormap-2.0.5.css">
         
         <!-- custom css -->
         <link rel="stylesheet" href="css/style.css">
@@ -327,57 +335,55 @@
                     <div class="row">
                         <div class="col-12 col-md-8 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
-                                <h6 class="text-muted mb-1">Sales Distribution</h6>
-                                <!-- <div class="h-100">
-                                    <canvas id="mixed-chart" height="152"></canvas>
-                                </div> -->
-                                <div class="d-flex flex-wrap align-items-center justify-content-center h-100">
-                                    <div id="regional-sales" class="mb-3 mr-lg-5">
-                                        <div id="salesDistroChart"></div>
+                                <h6 class="text-muted mb-3">Sales Distribution</h6>
+                                <!-- <div id="sales-map"></div> -->
+                                <div class="d-flex  align-items-center justify-content-center">
+                                    <div class="sales-map-container">
+                                        <div id="sales-map"></div>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 d-none d-lg-block">
                                         <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
-                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap mb-1">
                                                 <div class="d-flex align-items-center">
                                                     <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Americas</span>
                                                 </div> 
-                                                <span class="mid-size-text">721,416</span>
+                                                <span class="font-weight-bold">$721,416</span>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap mb-1">
                                                 <div class="d-flex align-items-center">
-                                                    <div id="europe" class="doughnut-key"></div>
+                                                    <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Europe</span>
                                                 </div>
-                                                <span class="mid-size-text">251,938</span>
+                                                <span class="font-weight-bold">$251,938</span>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap mb-1">
                                                 <div class="d-flex align-items-center">
-                                                    <div id="asia" class="doughnut-key"></div>
+                                                    <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Asia</span>
                                                 </div>
-                                                <span class="mid-size-text">99,071</span>
+                                                <span class="font-weight-bold">$99,071</span>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap mb-1">
                                                 <div class="d-flex align-items-center">
-                                                    <div id="africa" class="doughnut-key"></div>
+                                                    <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Africa</span>
                                                 </div>
-                                                <span class="mid-size-text">78,231</span>
+                                                <span class="font-weight-bold">$78,231</span>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap mb-1">
                                                 <div class="d-flex align-items-center">
-                                                    <div id="australia" class="doughnut-key"></div>
+                                                    <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Australia</span>
                                                 </div>
-                                                <span class="mid-size-text">24,906</span>
+                                                <span class="font-weight-bold">$24,906</span>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap">
+                                            <div class="d-flex align-items-center justify-content-between traffic-source flex-wrap mb-1">
                                                 <div class="d-flex align-items-center">
-                                                    <div id="others" class="doughnut-key"></div>
+                                                    <div id="americas" class="doughnut-key"></div>
                                                     <span class="text-muted">Others</span>
                                                 </div>
-                                                <span class="mid-size-text">43,387</span>
+                                                <span class="font-weight-bold">$43,387</span>
                                             </div>
                                         </div>
                                     </div>
@@ -395,6 +401,7 @@
                                         </nav>
                                     </div>
                                 </div>
+
                                 <!-- <div>
                                     <canvas id="bestSellersChart"></canvas>
                                 </div> -->
@@ -449,69 +456,27 @@
                                     
                                     <!-- categories tab content -->
                                     <div id="categories" class="tab-pane fade p-0">
-                                        <div class="mb-3">
-                                            <div class="d-flex mb-1">
-                                                <div class="d-flex flex-column">
-                                                    <h6 class="font-weight-bold mb-0">Electronics</h6>
-                                                    <span class="text-muted small">phones, T.v's, sound, home-theaters, consoles</span>
+                                        <div class="">
+                                            <div id="salesDistroChart"></div>
+                                            <div class="d-flex justify-content-center">
+                                                <div class="d-flex align-items-center mr-3">
+                                                    <div id="europe" class="doughnut-key"></div>
+                                                    <span class="text-muted">Electronics</span>
                                                 </div>
-                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">67%</h6>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:70%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h6 class="font-weight-bold mb-0">cosmetics</h6>
-                                                    <span class="text-muted small">lipstic, mascara, lipgloss, acrylics, mousse</span>
+                                                <div class="d-flex align-items-center mr-3">
+                                                    <div id="americas" class="doughnut-key"></div>
+                                                    <span class="text-muted">Cosmetics</span>
                                                 </div>
-                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h6>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h6 class="font-weight-bold mb-0">fashion</h6>
-                                                    <span class="text-muted small">fabrics, tops, pants, shoes, accessories</span>
+                                                <div class="d-flex align-items-center mr-2">
+                                                    <div id="africa" class="doughnut-key"></div>
+                                                    <span class="text-muted">Fashion</span>
                                                 </div>
-                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">58%</h6>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:58%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h6 class="font-weight-bold mb-0">food & drinks</h6>
-                                                    <span class="text-muted small">wine, whiskey, oil, rice, flour</span>
-                                                </div>
-                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">80%</h6>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:80%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-2">
-                                            <div class="d-flex">
-                                                <div class="d-flex flex-column">
-                                                    <h6 class="font-weight-bold mb-0">art crafts</h6>
-                                                    <span class="text-muted small">bracelets, wristbands, bangles, wall watches</span>
-                                                </div>
-                                                <h6 class="font-weight-bold mb-0 align-self-end ml-auto">40%</h6>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar round-progress" style="width:40%"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- end of categories tab content -->
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -1030,71 +995,116 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-stacked100@1.0.0"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="js/jquery-jvectormap-2.0.5.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.5/jquery-jvectormap.js"></script> -->
+        <script src="js/jquery-jvectormap-world-merc.js"></script>
         <script src="js/script.js"></script>
         <script>
-            // mixed chart
-            var mixedGradientCtx = document.getElementById('mixed-chart').getContext('2d');
-
-            var mixedGradient = mixedGradientCtx.createLinearGradient(0, 0, 0, 307); 
-            mixedGradient.addColorStop(0, 'rgba(93, 57, 255, 0.8)');
-            mixedGradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
-
-
-            new Chart(mixedGradientCtx, {
-                data: {
-                    type: 'line',
-                    labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
-                    datasets: [{
-                        type: "line",
-                        borderColor: "#5d39ff",
-                        backgroundColor: mixedGradient,
-                        tension: 0.3,
-                        hitRadius: 15,
-                        pointRadius: 0,
-                        borderWidth: 3,
-                        hoverRadius: 10,
-                        hoverPointRadius: 8,
-                        hoverBackgroundColor: "#5d39ff",
-                        data: [20, 30, 50, 40, 30, 32, 26, 35, 40, 55, 40, 30],
-                        fill: true
-                        },{
-                        type: "bar",
-                        borderRadius: 50,
-                        barThickness: 20,
-                        backgroundColor: "#ececf0",
-                        data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
-                        }
-                    ]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: false
+            $(function(){
+                $('#sales-map').vectorMap({
+                    map: 'world_merc',
+                    backgroundColor: 'white',
+                    regionStyle: {
+                        initial: {
+                            fill: '#dadada',
+                            "fill-opacity": 1,
+                            stroke: 'none',
+                            "stroke-width": 0,
+                            "stroke-opacity": 1
+                        },
+                        hover: {
+                            "fill-opacity": 0.8,
+                            cursor: 'pointer'
+                        },
+                        selected: {
+                            fill: 'yellow'
+                        },
+                        selectedHover: {
                         }
                     },
-                    // title: {
-                    //     display: true,
-                    //     text: 'Population growth (millions): Europe & Africa'
-                    // },
-                    // legend: { display: false },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: {
-                                drawBorder: false,
-                            }
+                    markers: [
+                        { latLng: [40.09, -95.71], name: 'USA' },
+                        { latLng: [-14.24, -51.93], name: 'Brazil' },
+                        { latLng: [41.90, 12.45], name: 'Italy' },
+                        { latLng: [61.52, 105.32], name: 'Russia' },
+                        { latLng: [0.02, 37.91], name: 'Kenya' },
+                        { latLng: [-25.52, 133.77], name: 'Australia' }
+                    ],
+                    markerStyle: {
+                        initial: {
+                            fill: '#6630e6',
+                            stroke: '#6630e6',
+                            "fill-opacity": 1,
+                            "stroke-width": 7,
+                            "stroke-opacity": 0.4,
+                            r: 7
                         },
-                        x: {
-                            grid: {
-                                display: false,
-                                drawBorder: false
-                            }
+                        hover: {
+                            fill: '#6630e6',
+                            stroke: '#6630e6',
+                            "stroke-width": 12,
+                            cursor: 'pointer'
                         }
                     }
-                }
+                });
             });
+            // mixed chart
+            // var mixedGradientCtx = document.getElementById('mixed-chart').getContext('2d');
+
+            // var mixedGradient = mixedGradientCtx.createLinearGradient(0, 0, 0, 307); 
+            // mixedGradient.addColorStop(0, 'rgba(93, 57, 255, 0.8)');
+            // mixedGradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+
+
+            // new Chart(mixedGradientCtx, {
+            //     data: {
+            //         type: 'line',
+            //         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+            //         datasets: [{
+            //             type: "line",
+            //             borderColor: "#5d39ff",
+            //             backgroundColor: mixedGradient,
+            //             tension: 0.3,
+            //             hitRadius: 15,
+            //             pointRadius: 0,
+            //             borderWidth: 3,
+            //             hoverRadius: 10,
+            //             hoverPointRadius: 8,
+            //             hoverBackgroundColor: "#5d39ff",
+            //             data: [20, 30, 50, 40, 30, 32, 26, 35, 40, 55, 40, 30],
+            //             fill: true
+            //             },{
+            //             type: "bar",
+            //             borderRadius: 50,
+            //             barThickness: 20,
+            //             backgroundColor: "#ececf0",
+            //             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
+            //             }
+            //         ]
+            //     },
+            //     options: {
+            //         plugins: {
+            //             legend: {
+            //                 display: false
+            //             }
+            //         },
+            //         scales: {
+            //             y: {
+            //                 beginAtZero: true,
+            //                 grid: {
+            //                     drawBorder: false,
+            //                 }
+            //             },
+            //             x: {
+            //                 grid: {
+            //                     display: false,
+            //                     drawBorder: false
+            //                 }
+            //             }
+            //         }
+            //     }
+            // });
         </script>
     </body>
 </html>
