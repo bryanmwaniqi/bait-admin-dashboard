@@ -10,7 +10,7 @@
         <title> Souk | E-commerce admin Dashboard</title>
 
         <!-- favicon -->
-        <link rel="icon" href="assets/souk-purple.png">
+        <link rel="icon" type="image/x-icon" href="assets/souk-purple.png">
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,8 +37,6 @@
         <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
 
         <!-- jVectormap css -->
-        <!-- <link rel="stylesheet" href="jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/> -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.5/jquery-jvectormap.min.css" type="text/css" media="screen"/> -->
         <link rel="stylesheet" href="css/jquery-jvectormap-2.0.5.css">
         
         <!-- custom css -->
@@ -271,7 +269,7 @@
                         </div>   
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-3 mt-2 mb-4">
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Sales</h6>
@@ -286,7 +284,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-3 mt-2 mb-4">
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Orders</h6>
@@ -301,7 +299,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-3 mt-2 mb-4">
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Invoices</h6>
@@ -316,7 +314,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-3 mt-2 mb-4">
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
                             <div class="bg-white rounded-edges p-3 h-100">
                                 <div class="d-flex justify-content-between flex-wrap">
                                     <h6 class="text-muted">Returns</h6>
@@ -456,8 +454,8 @@
                                     
                                     <!-- categories tab content -->
                                     <div id="categories" class="tab-pane fade p-0">
-                                        <div class="">
-                                            <div id="salesDistroChart"></div>
+                                        <div class="d-flex flex-column">
+                                            <div id="bestSellersChart"></div>
                                             <div class="d-flex justify-content-center">
                                                 <div class="d-flex align-items-center mr-3">
                                                     <div id="europe" class="doughnut-key"></div>
@@ -997,9 +995,9 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script src="js/jquery-jvectormap-2.0.5.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.5/jquery-jvectormap.js"></script> -->
         <script src="js/jquery-jvectormap-world-merc.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/charts.js"></script>
         <script>
             $(function(){
                 $('#sales-map').vectorMap({

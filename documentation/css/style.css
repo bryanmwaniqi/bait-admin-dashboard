@@ -55,6 +55,10 @@ body{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+#souk-full-logo{
+    width: 2.2rem;
+    height: 2.2rem;
+}
 .content{
     min-height: 100vh;
     width: 100%;
