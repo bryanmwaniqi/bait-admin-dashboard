@@ -310,7 +310,7 @@ $(function () {
         returnsConfig
     );
 
-    // Apex sale distribution radial chart
+    // Apex best sellers radial chart
     var options1 = {
         chart: {
           height: 280,

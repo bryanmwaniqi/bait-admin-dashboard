@@ -22,6 +22,9 @@
 
     <!-- Box icons font cdn -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Highlight JS CDN -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
     
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
@@ -78,7 +81,7 @@
                         Souk is a minimalistic HTML e-commerce admin dashboard template designed using bootstrap and 
                         consideration to UI and UX principles, to achieve not only an aesthetically appealing user interface 
                         but also ensure practicality to whichever developer uses it as a base for developing an 
-                        e-commerce backend.
+                        e-commerce admin dashboard.
                         With a single glimpse of the dashboard page, one is able to get a clear picture of the performance and 
                         progress of the business serving the data being laid bare and also analysed.
                         This template can also be used as a multipurpose dashboard with a little twitching here and there, given
@@ -94,6 +97,7 @@
                         <li>Data visualization charts</li>
                         <li>Minimalist design</li>
                         <li>Bootstrap 4</li>
+                        <li>Well documented</li>
                     </ul>
                     <h6 class="fw-bold">Folder structure</h6>
                     <p>This project structure is as follows:</p>
@@ -101,6 +105,10 @@
                         <li>assets</li>
                         <li>css</li>
                         <li>documentation</li>
+                        <ul>
+                            <li>css</li>
+                            <li>js</li>
+                        </ul>
                         <li>js</li>
                         <li>*.html files</li>
                     </ul>
@@ -127,108 +135,537 @@
                 </div>
                 <div class="tab-pane fade" id="gettingStarted" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                     <h2 class="fw-bold">Getting Started</h2>
+                    <p>
+                        Before you get to customizing this awesome template, make sure you're connected to the internet and have downloaded 
+                        the necessary jvectormap files from the links below and place them in the js folder, or else replace the jvectormap 
+                        css and js local links with the appropriate CDN links should you opt for such.
+                        <ul>
+                            <li>
+                                <a href="https://jvectormap.com/download/">jvectormap library</a>
+                            </li>
+                            <li>
+                                <a href="https://jvectormap.com/maps/world/world/">jvectormap world map</a>
+                            </li>
+                        </ul>
+                    </p>
+                    <h6 class="fw-bold">Customization</h6>
+                    <p>
+                        Here are the points worth noting when customizing this template.
+                    </p>
+                    <ul>
+                        <li class="fw-bold">Theme colors</li>
+                        <p>
+                            The main theme color is stored in a variable named --primary-color. <br>
+                            The opposing theme color is stored in a variable named --secondary-color. <br>
+                            <pre>
+                                <code>
+:root{
+    /* Theme colors */
+    --primary-color: #6630e6;
+    --secondary-color: #ff0077;
+    --text-color: #232323;
+    --body-color: #f4f4f8;
+    --success-color: #00cece;
+}
+                                </code>
+                            </pre>
+                        </p>
+                    </ul>
                 </div>
                 <div class="tab-pane fade" id="dependencies" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                     <h2 class="fw-bold">The Dependencies</h2>
+                    <p>
+                        Most of the dependencies used in this project have been included through CDN links, so make sure 
+                        you have internet connection before you use or open the project to avoid broken links. Also make 
+                        sure to preserve the order in which the links are added since some of them are dependent on others.<br>
+                        Please take note of the following dependencies that have been used in powering this template:
+                        <ul>
+                            <li>HTML 5</li>
+                            <li>CSS 3</li>
+                            <li>JS ES6</li>
+                            <li>Bootstrap 4</li>
+                            <li>jQuery</li>
+                            <li>Fontawesome 6</li>
+                            <li>Google fonts</li>
+                            <li>Owl carousel</li>
+                            <li>Chart JS</li>
+                            <li>ApexCharts</li>
+                            <li>Quill JS</li>
+                            <li>Jvector maps</li>
+                        </ul>
+                        <p>
+                            While most of them are self explanatory, I'll have to walk you through the implementation of 
+                            some of them. <br>
+                            At the top of the HTML pages in the head section are the CSS links while the JS links are inside 
+                            the body tag at the very bottom.
+                        </p>
+                        <h6 class="fw-bold">Google fonts</h6>
+                        <p>
+                            The Google font used in this project is Lato which is a sans serif font.
+                        </p>
+                        <h6 class="fw-bold">Owl carousel</h6>
+                        <p>
+                            Owl carousel is used to implement the features slider carousel in the register and login pages. The features 
+                            slider carousel is meant to list the features of the dashboard in a brief but detailed way using icons and text.
+                            Below is a piece of code showing the implementation.
+                        </p>
+                        <pre>
+                            <code class="language-js">
+$('#features-slider').owlCarousel({ 
+    items: 1,
+    margin: 0,
+    loop: true,
+    autoplay: true,
+    dots: true,
+    autoplayHoverPause: true
+});
+                            </code>
+                        </pre>
+                        <h6 class="fw-bold">Chart JS</h6>
+                        <p>
+                            Chart JS is a data visualization library used to create HTML5 based javascript charts.
+                            This chart has been used to spin up all but the best sellers radial chart in this template 
+                        </p>
+                        <h6 class="fw-bold">ApexCharts JS</h6>
+                        <p>
+                            Apex charts is also a charting library that has been used to implement best sellers radial chart in this project. 
+                        </p>
+                        <small>For more information on the charts in this template navigate to the charts tab</small>
+                        <h6 class="fw-bold mt-2">Quill JS</h6>
+                        <p>
+                            Quill is a free, open-source WYSIWYG editor for the web. The compose modal in the email 
+                            page has a powerful editor embedded courtesy of quill that enables customization of the message being 
+                            composed to the users liking. 
+                        </p>
+                        <h6 class="fw-bold">jVectorMap</h6>
+                        <p>
+                            jVectorMap is a vector-based, cross-browser and cross-platform component for interactive geography-related data 
+                            visualization on the web. It's been used to create the sales distribution map. <br>
+                            You can download jvectormap zip-archive including only the most important files from <a href="https://jvectormap.com/download/">here</a>
+                            and the jvectormap world map from <a href="https://jvectormap.com/maps/world/world/">here</a> and include them 
+                            in the js folder or go for the CDN options.
+                        </p>
+                    </p>
                 </div>
                 <div class="tab-pane fade" id="html" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
                     <h2 class="fw-bold">HTML Structure</h2>
                     <p>
                         The HTML version used in this project is HTML 5. Some of the HTML markup is common to several HTML 
-                        pages and is applied and styled as is in the various pages that share common markup such as the main
-                        navbar, sidebar menu, footer, etc.
-                        A breakdown of the general flow of the markup is as follows;
+                        pages and is layed out and styled in a similar way in the various pages that share common markup. A good example 
+                        is the account pages which include, register and login pages, while the other example is that of the rest of the pages that have a main top navbar, a 
+                        sidebar menu, main content container that includes even the footer. First, lets list out the pages of this template which are as follows;
                     </p>
-                    <span class="fw-bold">CSS and other 3rd party dependencies links.</span>
-                    <ul>
-                        <li>Fontawesome 6 CDN link</li>
-                        <li>Google Fonts CSS link</li>
-                        <li>Bootstrap CDN links</li>
-                        <li>Owl-carousel CSS CDN link</li>
-                        <li>Custom CSS link</li>
-                    </ul>
-                    <span class="fw-bold">Body markup</span>
-                    <ul>
-                        <li>Main navbar</li>
-                        <li>Sidebar menu</li>
-                        <li>Main content</li>
-                        <li>Footer</li>
-                    </ul>
-                    <span class="fw-bold">JS dependencies</span>
-                    <ul>
-                        <li>jQuery CDN link</li>
-                        <li>Popper JS CDN link</li>
-                        <li>Bootstrap JS CDN links</li>
-                        <li>Owl-carousel CSS CDN link</li>
-                        <li>Chart CSS link</li>
-                        <li>Custom CSS link</li>
-                    </ul>
                     <span class="fw-bold">HTML pages</span> <br>
                     <span class="">The HTML pages designed in this template include:-</span>
                     <ul>
-                        <li>Index page - for presentation purposes</li>
-                        <li>Dashboard page</li>
-                        <li>Sales page</li>
-                        <li>Analytics page</li>
-                        <li>Products page</li>
-                        <li>Orders page</li>
-                        <li>Customers page</li>
-                        <li>Profile page</li>
-                        <li>Invoice page</li>
-                        <li>Add-customer page</li>
-                        <li>Add-product page</li>
-                        <li>Settings page</li>
-                        <li>Email page</li>
-                        <li>Registration page</li>
-                        <li>Login page</li>
+                        <li>index page</li>
+                        <li>sales page</li>
+                        <li>analytics page</li>
+                        <li>products page</li>
+                        <li>orders page</li>
+                        <li>customers page</li>
+                        <li>profile page</li>
+                        <li>invoice page</li>
+                        <li>add-customer page</li>
+                        <li>add-product page</li>
+                        <li>settings page</li>
+                        <li>email page</li>
+                        <li>register page</li>
+                        <li>login page</li>
                     </ul>
-                    <span class="fw-bold">Components</span>
+                    <p>
+                        There are two sets of styles and general markup which determine the overall look of an HTML page in this template based on 
+                        the type of page, i.e whether it is an account page such as register or login page, or an internal/restricted page.
+                    </p>
                     <ul>
-                        <li>Circular progress bar</li>
-                        <p>The circular progress bar is used in a couple of instance in this template such as;</p>
-                        <ul class="mb-4">
-                            <li>Conversion rate</li>
-                            <li>Cart abandonment rate</li>
-                            <li>Profile completion progress</li>
-                            <li>Skills progress</li>
+                        <li class="fw-bold">Account pages</li>
+                        <span> A breakdown of the general flow of the markup of the Account pages,i.e register and login is as follows;</span> <br>
+                        <span class="fw-bold mt-2">Body markup</span>
+                        <ul>
+                            <li>top navbar</li>
+                            <li>content area</li>
+                            <p>
+                                This area contains a jumbotron that contains the project features carousel and the login and 
+                                registration input fields.
+                            </p>
+                            <li>footer</li>
+                            <p>
+                                In this section/part is where you'll find the footer content such as copyright text.
+                            </p>
                         </ul>
-                        <span class="">To calculate the svg circle percentage, below is the formula on how to go about it</span>
-                        <p>To get the full stroke-dasharray of the circle, calculate the circumference of the circle with 2*3.14*r</p>
+                        <pre>
+                            <code>
+&lt;body class="content-wrapper"&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;!-- top navbar -->
+    &lt;/nav&gt;
+    &lt;div class="jumbo-con"&gt;
+        &lt;!-- content area -->
+    &lt;/div&gt;
+    &lt;div class="footer-section"&gt;
+        &lt;!-- footer content -->
+    &lt;/div&gt;
+&lt;/body&gt;
+                            </code>
+                        </pre>
+                        <li class="fw-bold">Internal/Restricted pages</li>
                         <p>
-                            To get the value to input as stroke-dashoffset, the formula is as; <br>
-                            stroke-dasharray - (stroke-dasharray * (%/100))
+                            Internal/restricted pages include all but the login and register html pages.<br>
+                            A breakdown of the general flow of the markup of the internal pages is as follows;</p> 
+                        </p>
+                    <span class="fw-bold mt-2">Body markup</span>
+                    <ul>
+                        <li>Main navbar</li>
+                        <p>
+                            The main navbar contains navigation links to some of the HTML pages as well as UI for necessary functionalities such as search,
+                            language toggling etc.
+                        </p>
+                        <li>Sidebar menu</li>
+                        <p>
+                            contains menu links to the various HTML pages of the template. The menu is fixed  to the side to ensure easy accessibility 
+                            of the various pages.
+                        </p>
+                        <li>Main content</li>
+                        <p>
+                            In this section/part is where you'll find the main content as well as the footer.
                         </p>
                     </ul>
+                    <pre>
+                        <code>
+&lt;body class="body-color"&gt;
+    &lt;nav id="main-navbar" class="navbar"&gt;
+        &lt;!-- main navbar content -->
+    &lt;/nav&gt;
+    &lt;div class="wrapper"&gt; 
+        &lt;div id="main-navbar" class="navbar"&gt;
+            &lt;!-- sidebar menu content -->
+        &lt;/div&gt;
+        &lt;div id="main" &gt;
+            &lt;!-- main body content -->
+            &lt;div class="footer-content"&gt;
+                &lt;!-- footer content -->
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+                        </code>
+                    </pre>
+                    </ul>
+                    
                 </div>
                 <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                    <h2 class="fw-bold">Custom CSS</h2>
+                    <h2 class="fw-bold">CSS</h2>
                     <p>
-                        The custom CSS file, style.css, is located in the css folder and its structure is as follows;
+                        Here are the css files that you'll find in this template:
+                        <ul>
+                            <li class="fw-bold">Bootstrap 4 css</li>
+                            <p>
+                                Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites. The link 
+                                provided is to a CDN where the files are hosted.
+                            </p>
+                            <li class="fw-bold">fontawesome css</li>
+                            <p>
+                                Fontawesome css been included to enable use of fontawesome icons in this template. The link 
+                                provided is to a CDN where the file is hosted.
+                            </p>
+                            <li class="fw-bold">Owl carousel css</li>
+                            <p>
+                                Owl Carousel is a carousel library. There are two CDN links for the two css files required to use owl carousel.
+                                owl.carousel.min.css <br>
+                                owl.theme.default.min.css
+                            </p>
+                            <li class="fw-bold">css/jquery-jvectormap-2.0.5.css</li>
+                            <p>
+                                VectorMap is a vector-based component for interactive geography-related data visualization on the web. Since the css 
+                                file is not included with the project, download the css file and place it in css folder or add own CDN link to the css file
+                            </p>
+                            <li class="fw-bold">quill.snow.css</li>
+                            <p>
+                                Quill is a  WYSIWYG editor for the web. The link provided points to a CDN where the quill theme file is hosted.
+                            </p>
+                            <li class="fw-bold">css/style.css</li>
+                            <p>
+                                This css file contains the custom styles applied on this template. Its located in the css folder.
+                            </p>
+                        </ul>
+                        The custom CSS file, style.css, is located in the css folder and its structure is as follows; <br>
                         The more general styles are at the top of the css file, e.g variables, tables, buttons, utility classes etc.
                         This is immmediately followed by specific CSS classes and id's which are grouped in terms of 
-                        pages using CSS comments, like the first page should be the dashboard page then the rest of pages follow.
-                        Each grouping of page styling has a header and a footer comment to demarcate the styling.
-                        For the circular SVG shapes, to determine the percentage of the circle, the calculation should be as follows
+                        pages using CSS comments, like the first page should be the dashboard/index page then the rest of pages follow.
+                        Each grouping of page styling that is unique to that page has a header and a footer comment to demarcate the styling.
+                        <pre>
+                            <code>
+/* CSS variables */
+
+/* Common styles for tags and utility classes */
+
+/* individual pages styles */
+                            </code>
+                        </pre>
+                        <h6 class="fw-bold">Styles implementation worth noting</h6>
+                        <p>
+                            <span class="fw-bold">Circular progress bar</span>
+                            <p>The circular progress bar is used in a couple of instances using SVG in this template such as;</p>
+                            <ul class="mb-4">
+                                <li>Conversion rate</li>
+                                <li>Cart abandonment rate</li>
+                                <li>Profile completion progress</li>
+                                <li>Skills progress</li>
+                            </ul>
+                            <span class="">To calculate the svg circle percentage, below is the formula on how to go about it</span>
+                            <p>To get the full stroke-dasharray of the circle, calculate the circumference of the circle with 2*3.14*r</p>
+                            <p>
+                                To get the value to input as stroke-dashoffset, the formula is as; <br>
+                                stroke-dasharray - (stroke-dasharray * (%/100))
+                            </p>
+                            <pre>
+                                <code>
+.pie-progress-bar svg circle{
+    fill: none;
+    stroke-width: 0.6rem;
+    stroke: #f1f1f1;
+    transform: translate(10px, 10px);
+    stroke-linecap: round;
+    stroke-dasharray: 390;
+    stroke-dashoffset: 390;
+}
+.pie-progress-bar svg.conversion-rate circle:nth-child(2){
+    stroke: var(--primary-color);
+    stroke-dashoffset: calc(390 - (390 * 73) / 100);
+}
+                                </code>
+                            </pre>
+                        </p>
                     </p>
                 </div>
                 <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                     <h2 class="fw-bold">Custom Javascript</h2>
+                    <p>
+                        The javascript files are arranged in order of dependencies to avoid broken links. Since this Template
+                        is developed bootstrap 4, the first dependency is definitely jQuery, followed by popper JS then minified
+                        bootstrap js CDN, proceeded by other JS libraries and finally custom js which is script.js.
+                        Here are the css files that you'll find in this template:
+                        <ul>
+                            <li class="fw-bold">jQuery</li>
+                            <p>
+                                jQuery is feature rich javascript library used to make HTML document traversal and manipulation, event handling, animation etc.
+                            </p>
+                            <li class="fw-bold">popper js</li>
+                            <p>
+                                Popper js is include since we are not adding the bundled bootstrap js. Popper js is required since some of 
+                                the functionality of bootstrap components such as popovers rely on popper js. The js link provided points to
+                                a CDN where the file is hosted.
+                            </p>
+                            <li class="fw-bold">bootstrap js</li>
+                            <p>
+                                Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites. The link 
+                                provided points to a minified file of the bootstrap js hosted in a CDN .
+                            </p>
+                            <li class="fw-bold">owlcarousel js</li>
+                            <p>
+                                Owl Carousel is a carousel library used to create slider carousels. The link points to a CDN hosted js file used to define the behaviour of the carousel
+                                you configure.
+                            </p>
+                            <li class="fw-bold">chart js</li>
+                            <p>
+                                Chart JS is a data visualization library used to create HTML5 based javascript charts.
+                                This library has been used to spin up all but the best sellers radial chart in this template.The js link 
+                                provided points to a CDN where the file is hosted.
+                            </p>
+                            <li class="fw-bold">apexcharts js</li>
+                            <p>
+                                Link to a CDN hosted js file for creating charts. This file has been used to power the best sellers radial chart.
+                            </p>
+                            <li class="fw-bold">js/jquery-jvectormap-2.0.5.min.js</li>
+                            <p>
+                                This js file has to be downloaded and included in the js folder since it is not included in the project to avoid a broken 
+                                link, or update it to a CDN link. You can download jvectormap zip-archive including only the most important files from <a href="https://jvectormap.com/download/">here</a>
+                                and transfer this file on extracting into the js folder of the project.
+                            </p>
+                            <li class="fw-bold">jquery-jvectormap-world-merc.js</li>
+                            <p>
+                                This js file has to be downloaded and included in the js folder since it is not included in the project to avoid a broken 
+                                link, or update it to a CDN link. You can download the jvectormap world map from <a href="https://jvectormap.com/maps/world/world/">here</a> and include it
+                                in the js folder.
+                            </p>
+                            <li class="fw-bold">js/script.js</li>
+                            <p>
+                                This file contains javascript logic applied on the pages of this template. The syntax used is that of the jQuery library. 
+                                The file is located in the js folder.
+                            </p>
+                            <li class="fw-bold">js/charts.js</li>
+                            <p>
+                                This is a custom js file containing the charts configuration logic used to visualize data in this template, created using chart js and apexcharts js.
+                                the js file is located in the js folder.
+                            </p>
+                        </ul>
+                    </p>
                 </div>
                 <div class="tab-pane fade" id="charts" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
                     <h2 class="fw-bold">Charts</h2>
+                    <p>
+                        The charts in this template are courtesy of Chartjs and ApexChartsjs. The logic of all this charts is 
+                        in a separate js file named charts.js located in the js folder. While there are many options to bring the 
+                        charts to life, the opted option is just for demonstration purposes. Kindly make sure you familiarise 
+                        yourself with the said libraries.
+                    </p>
+                    <ul>
+                        <li class="fw-bold">Chart.js Charts</li>
+                        <p>The following are the charts created using Chart JS;</p>
+                        <ul class="mb-4">
+                            <li>conversion rate line chart</li>
+                            <p>
+                                This chart is used to show the rate at which visitors who make a purchase and its implemented in the 
+                                analytics page.
+                            </p>
+                            <li>cart abandonment rate line chart</li>
+                            <p>
+                                This chart is used to show the number of shoppers who don't complete a transaction and is also implemented in the
+                                analytics page.
+                            </p>
+                            <li>sales v expenses v profit bar chart</li>
+                            <p>
+                                This chart shows comparison of sales, expenses and profits and is implemented in the analytics page.
+                            </p>
+                            <li>sales bar chart</li>
+                            <p>
+                                This chart visualises annual sales perfomance and is implemented in the index/dashboard page.
+                            </p>
+                            <li>orders bar chart</li>
+                            <p>
+                                This chart visualises annual orders received and is implemented in the index/dashboard page.
+                            </p>
+                            <li>invoices bar chart</li>
+                            <p>
+                                This chart visualises annual invoice issued and is implemented in the index/dashboard page.
+                            </p>
+                            <li>returns bar chart</li>
+                            <p>
+                                This chart visualises annual returns of orderd products and is implemented in the index/dashboard page.
+                            </p>
+                            <li>sales line chart</li>
+                            <p>
+                                This chart visualises annual sales perfomance but in a gradient line chart and is implemented in the sales page.
+                            </p>
+                            <!-- <li>target v sales bar chart</li>
+                            <p>
+                                This chart shows sales perfomance against their targets and is implemented in the sales page.
+                            </p> -->
+                        </ul>
+                        <li class="fw-bold">apexcharts.js Charts</li>
+                        <p>The following are the charts created using ApexCharts JS;</p>
+                        <ul class="mb-4">
+                            <li>Best sellers radial chart</li>
+                            <p>
+                                The configuration of the best sellers chart is as follows;
+                                <pre>
+                                    <code class="language-js">
+var options1 = {
+    chart: {
+        height: 280,
+        type: "radialBar",
+    },
+    series: [67, 84, 97, 55],
+    colors: ["#6630e6",  "#00cece", "#F4B400", "#ff0077"],
+    plotOptions: {
+        radialBar: {
+        hollow: {
+            margin: 35,
+            size: "55%"
+        },
+        dataLabels: {
+            name: {
+                offsetY: -1,
+                show: true,
+                color: "#000",
+                fontSize: "25px"
+            },
+            value: {
+                color: "#888",
+                fontSize: "15px",
+                show: true
+            },
+            total: {
+                color: "#000",
+                fontSize: "20px",
+                show: true,
+                label: 'Total'
+            }
+        }
+        }
+    },
+    stroke: {
+        lineCap: "round",
+    },
+    labels: ['Fashion', 'Cosmetics', 'Electronics', 'Food & Drinks'],
+    responsive: [{
+        breakpoint: undefined,
+        options: {},
+    }]
+    };
+    
+new ApexCharts(document.querySelector("#bestSellersChart"), options1).render();
+                                    </code>
+                                </pre>
+                            </p>
+                        </ul>
+                    </ul>
                 </div>
                 <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
                     <h2 class="fw-bold">Support</h2>
+                    <p>
+                        Kindly feel free to contact me on <a href="mailto:niqney@gmail.com">niqney@gmail.com</a> for enquiries and support.
+                    </p>
                 </div>
                 <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
                     <h2 class="fw-bold">Credits</h2>
+                    <p>
+                        Take note of the following sites that have been resourceful in bringing this template to life.
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://www.rawpixel.com/">Rawpixel</a>
+                        </li>
+                        <li>
+                            <a href="https://www.pexels.com/">Pexels</a>
+                        </li>
+                        <li>
+                            <a href="https://pixabay.com/">Pixabay</a>
+                        </li>
+                        <li>
+                            <a href="https://jquery.com/">jQuery</a>
+                        </li>
+                        <li>
+                            <a href="https://getbootstrap.com/">Bootstrap</a>
+                        </li>
+                        <li>
+                            <a href="https://fontawesome.com/">Fontawesome</a>
+                        </li>
+                        <li>
+                            <a href="https://fonts.google.com/">Google fonts</a>
+                        </li>
+                        <li>
+                            <a href="https://www.chartjs.org/">Chart.js</a>
+                        </li>
+                        <li>
+                            <a href="https://apexcharts.com/">Apexcharts.js</a>
+                        </li>
+                        <li>
+                            <a href="https://quilljs.com/">Quill</a>
+                        </li>
+                        <li>
+                            <a href="https://jvectormap.com/">jvectormap</a>
+                        </li>
+                    </ul>
                 </div>
               </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script>
+        hljs.highlightAll();
         $(function () {
             let toggler = $('#toggler')
             let sidebar = $('.sidebar')

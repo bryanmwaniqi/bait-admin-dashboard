@@ -1,3 +1,4 @@
+/* CSS variables */
 :root{
     /* Theme colors */
     --primary-color: #6630e6;
@@ -6,16 +7,12 @@
     --body-color: #f4f4f8;
     --success-color: #00cece;
 }
+/* Common styles */
 *{
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-}
-.ql-snow{
-    /* quill js editor snow-theme styling */
-    border-radius: 0.25rem 0.25rem 0 0;
-    background-color: var(--body-color);
 }
 button:focus{
     outline: none;
@@ -699,8 +696,8 @@ span.search-icon{
     width: 100%;
     min-height: 100vh;
 }
-.analytics-description{
-    max-width: 25rem;
+.banner-description{
+    max-width: 25.7rem;
 }
 @media (max-width:576px) {
     #main{
@@ -819,7 +816,7 @@ span.search-icon{
     height: 9.65rem;
 } */
 .traffic-source{
-    width: 13rem;
+    min-width: 13rem;
 }
 .doughnut-key{
     width: 0.5rem;
@@ -827,25 +824,21 @@ span.search-icon{
     margin-right: 0.5rem;
     border-radius: 50%;
 }
-.doughnut-key#americas{
+#cosmetics{
     background-color: var(--primary-color);
 }
-.doughnut-key#europe{
-    /* background: #F4B400; */
+#electronics{
     background-color: #F4B400;
 }
-.doughnut-key#asia{
+#asia{
     background-color: #FF0000;
 }
-.doughnut-key#africa{
+#fashion{
     background-color: #C13584;
 }
-.doughnut-key#australia{
-    background-color: #4267B2;
-}
-.doughnut-key#others{
+/* .doughnut-key#others{
     background-color: var(--success-color);
-}
+} */
 #organic{
     color: var(--primary-color);
 }
@@ -1711,6 +1704,11 @@ a.comment-btn{
 }
 .email-search-btn:active{
     border-style: inset;
+}
+.ql-snow{
+    /* quill js editor snow-theme styling */
+    border-radius: 0.25rem 0.25rem 0 0;
+    background-color: var(--body-color);
 }
 #messageEditor{
     border-radius: 0 0 0.25rem 0.25rem;

@@ -9,6 +9,9 @@
 *{
     color: var(--text-color);
 }
+a{
+    text-decoration: none;
+}
 .mid-size-text{
     font-size: 0.95rem;
 }
@@ -20,6 +23,7 @@ body{
 } */
 .main-container{
     display: flex;
+    overflow-x: hidden;
 }
 .sidebar{
     background-color: var(--primary-color);
@@ -114,4 +118,13 @@ body{
   }
   .overlay.enabled {
     display: initial;
-  }
+}
+code {
+    background-color: #eee;
+    display: block;
+    overflow-x: hidden;
+    border-radius: 4px;
+}
+pre{
+    padding: 3px 8px;
+}
