@@ -993,7 +993,7 @@
         <script src="js/script.js"></script>
         <script src="js/charts.js"></script>
         <script>
-            $(function(){
+            $(function () {
                 $('#sales-map').vectorMap({
                     map: 'world_merc',
                     backgroundColor: 'white',
@@ -1041,62 +1041,7 @@
                     }
                 });
             });
-            // mixed chart
-            // var mixedGradientCtx = document.getElementById('mixed-chart').getContext('2d');
-
-            // var mixedGradient = mixedGradientCtx.createLinearGradient(0, 0, 0, 307); 
-            // mixedGradient.addColorStop(0, 'rgba(93, 57, 255, 0.8)');
-            // mixedGradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
-
-
-            // new Chart(mixedGradientCtx, {
-            //     data: {
-            //         type: 'line',
-            //         labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
-            //         datasets: [{
-            //             type: "line",
-            //             borderColor: "#5d39ff",
-            //             backgroundColor: mixedGradient,
-            //             tension: 0.3,
-            //             hitRadius: 15,
-            //             pointRadius: 0,
-            //             borderWidth: 3,
-            //             hoverRadius: 10,
-            //             hoverPointRadius: 8,
-            //             hoverBackgroundColor: "#5d39ff",
-            //             data: [20, 30, 50, 40, 30, 32, 26, 35, 40, 55, 40, 30],
-            //             fill: true
-            //             },{
-            //             type: "bar",
-            //             borderRadius: 50,
-            //             barThickness: 20,
-            //             backgroundColor: "#ececf0",
-            //             data: [45, 59, 75, 65, 56, 55, 40, 55, 59, 70, 65, 56],
-            //             }
-            //         ]
-            //     },
-            //     options: {
-            //         plugins: {
-            //             legend: {
-            //                 display: false
-            //             }
-            //         },
-            //         scales: {
-            //             y: {
-            //                 beginAtZero: true,
-            //                 grid: {
-            //                     drawBorder: false,
-            //                 }
-            //             },
-            //             x: {
-            //                 grid: {
-            //                     display: false,
-            //                     drawBorder: false
-            //                 }
-            //             }
-            //         }
-            //     }
-            // });
+            
         </script>
     </body>
 </html>

@@ -27,20 +27,18 @@ a{
     text-transform: none;
     -webkit-text-decoration: none;
     -moz-text-decoration: none;
-    -ms-text-decoration: none;
-    -o-text-decoration: none;
     text-decoration: none;
 }
 a:hover{
     color: var(--primary-color);
     -webkit-text-decoration: none;
     -moz-text-decoration: none;
-    -ms-text-decoration: none;
-    -o-text-decoration: none;
     text-decoration: none;
     cursor: pointer;
 }
 a:active {
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
     text-decoration: none;
     background-color: inherit !important;
 }
@@ -118,19 +116,12 @@ img{
 .rounded-btn{
     -webkit-text-decoration: none;
     -moz-text-decoration: none;
-    -ms-text-decoration: none;
-    -o-text-decoration: none;
     text-decoration: none;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     border-radius: 50px;
-    /* color: var(--body-color); */
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
 .pale-btn{
@@ -401,10 +392,6 @@ span.form-icon{
     -ms-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
 #login-remember-me::before{
@@ -731,8 +718,8 @@ span.search-icon{
     stroke: #f1f1f1;
     transform: translate(10px, 10px);
     stroke-linecap: round;
-    stroke-dasharray: 390;
-    stroke-dashoffset: 390;
+    stroke-dasharray: 390px;
+    stroke-dashoffset: 390px;
 }
 .pie-progress-bar svg circle:nth-child(1){
     stroke: var(--body-color);
@@ -743,14 +730,14 @@ span.search-icon{
 }
 .pie-progress-bar svg.conversion-rate circle:nth-child(2){
     stroke: var(--primary-color);
-    stroke-dashoffset: calc(390 - (390 * 73) / 100);
+    stroke-dashoffset: calc(390px - (390px * 73) / 100);;
 }
 .pie-progress-bar svg circle:nth-child(1){
     stroke: var(--body-color);
     stroke-dashoffset: 0;
 }
 .pie-progress-bar svg.cart-abandonment circle:nth-child(2){
-    stroke-dashoffset: calc(390 - (390 * 57) / 100);
+    stroke-dashoffset: calc(390px - (390px * 57) / 100);
 }
 /* sales distribution map section */
 .sales-map-container{
@@ -1031,15 +1018,14 @@ i#action-toggle:hover{
     right: 1.95rem;
     top: 5.55rem;
 }
-/* #skills > div{
-    flex-basis: 22%;
-    flex-grow: 1;
-    margin-bottom: 1rem;
-} */
 .profile-details i{
     line-height: 0.8rem;
     font-size: 0.75rem;
     color: var(--primary-color);
+}
+.pie-progress-bar svg.profile-completion-rate circle:nth-child(2){
+    stroke: var(--primary-color);
+    stroke-dashoffset: calc(390px - (390px * 65) / 100);;
 }
 .icon-wrapper{
     width: 1.8rem;
@@ -1073,16 +1059,16 @@ i#action-toggle:hover{
     stroke-dashoffset: 157;
 }
 #html circle:nth-child(2){
-    stroke-dashoffset: calc(157 - (157 * 65) / 100);
+    stroke-dashoffset: calc(157px - (157px * 65) / 100);
 }
 #css circle:nth-child(2){
-    stroke-dashoffset: calc(157 - (157 * 85) / 100);
+    stroke-dashoffset: calc(157px - (157px * 85) / 100);
 }
 #php circle:nth-child(2){
-    stroke-dashoffset: calc(157 - (157 * 57) / 100);
+    stroke-dashoffset: calc(157px - (157px * 57) / 100);
 }
 #java circle:nth-child(2){
-    stroke-dashoffset: calc(157 - (157 * 35) / 100);
+    stroke-dashoffset: calc(157px - (157px * 35) / 100);
 }
 label.required::after{
     content: '*';
@@ -1180,10 +1166,6 @@ span.input-icon{
     -ms-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
 .color-scheme:checked + .custom-radio::before{

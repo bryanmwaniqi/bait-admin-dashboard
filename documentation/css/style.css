@@ -10,6 +10,8 @@
     color: var(--text-color);
 }
 a{
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
     text-decoration: none;
 }
 .mid-size-text{
