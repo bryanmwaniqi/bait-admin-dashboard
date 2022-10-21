@@ -52,12 +52,12 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-sm-flex align-items-center d-none">
-                        <a class="nav-link d-flex align-items-center" href="#">
+                        <div class="nav-link d-flex align-items-center">
                             <span class="form-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
-                        </a>
+                        </div>
                     </li>
                     <li class="nav-item d-sm-none align-items-center d-flex">
                         <a class="nav-link d-flex align-items-center" href="#">
@@ -65,10 +65,10 @@
                         </a>
                     </li>
                     <li id="language" class="nav-item d-flex align-items-center dropdown">
-                        <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link d-flex align-items-center" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
                         </a>
-                        <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="languagesDropdown">
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <img src="assets/icons8-usa-48.png" alt="" class="country-flag mr-3">
                                 <span>English</span>
@@ -87,11 +87,11 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item d-flex align-items-center dropdown">
-                        <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="entityAdditionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-plus-circle"></i>
                         </a>
-                        <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="entityAdditionDropdown">
                             <a class="dropdown-item d-flex align-items-center" href="add-product.html">
                                 <i class="fas fa-cog fa-sm mr-3"></i>
                                 <span>Add New Product</span>
@@ -103,11 +103,11 @@
                         </div>
                     </li>
                     <li class="nav-item notification d-flex align-items-center dropdown">
-                        <a id="notifications" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <a id="notificationsDropdown" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
                             <i class="fas fa-bell"></i>
                             <span class="badge badge-pill notification-badge">4</span>
                         </a>
-                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
+                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
                             <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 primary-bg">
                                 <span class="text-white">Notifications</span>
                                 <div>
@@ -153,12 +153,12 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="profile-pic text-center">
                                 <img class="" src="assets/client-2.jpg" alt="">
                             </div>
                         </a>
-                        <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="accountDropdown">
                             <a class="dropdown-item d-flex align-items-center" href="profile.html">
                                 <i class="fas fa-user fa-sm mr-2"></i>
                                 <span>Profile</span>
@@ -246,7 +246,7 @@
                 <div class="container-fluid py-2">
                     <div class="row">
                         <div class="col mb-4">
-                            <form id="email-search" action="" class="email-search-bar bg-white w-100">
+                            <form id="email-search" class="email-search-bar bg-white w-100">
                                 <input type="text" class="form-control secondary-search" placeholder="Search in mail...">
                                     <button class="btn email-search-btn d-flex align-items-center primary-solid-btn">
                                         <i class="fas fa-search mr-2"></i>
@@ -266,7 +266,7 @@
                                         </button>
                                         
                                         <!-- Modal -->
-                                        <div class="modal fade" id="composeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal fade" id="composeModal" tabindex="-1" role="dialog" aria-labelledby="compose" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:810px; max-height:650px;">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -278,16 +278,16 @@
                                                     <div class="modal-body">
                                                         <form>
                                                             <div class="form-group" id="receiver">
-                                                                <input type="email" class="form-control primary-input" id="receiverEmail" aria-describedby="emailHelp" placeholder="">
+                                                                <input type="email" class="form-control primary-input" id="receiverEmail" aria-describedby="receiverlabel" placeholder="">
                                                                 <span class="receiverlabel text-secondary">To:</span>
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="text" class="form-control primary-input" id="exampleInputPassword1" placeholder="Subject">
                                                             </div>
                                                             <div class="form-group">
-                                                                <div class="" name="" id="messageEditor"></div>
+                                                                <div class="" name="message" id="messageEditor"></div>
                                                             </div>
-                                                          </form>
+                                                        </form>
                                                     </div>
                                                     <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -300,25 +300,25 @@
                                             </div>
                                         </div>
                                         <nav id="email-nav" class="nav d-flex flex-column font-weight-bold mb-3">
-                                            <a href="#inbox" class="d-flex email-nav-item align-items-center active" data-toggle="tab" role="button">
+                                            <a href="#inbox" class="d-flex email-nav-item align-items-center active" id="inboxLabel" data-toggle="tab" role="button">
                                                 <i class="fa-solid fa-sm fa-inbox mr-2"></i>
                                                 <span class="mr-2">inbox</span> 
                                                 <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 success-bg text-white email-badge">6</span>
                                             </a>
-                                            <a href="#" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="starredLabel" data-toggle="tab">
                                                 <i class="fas fa-sm fa-star mr-2"></i>
                                                 <span class="mr-2">starred</span>
                                                 <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-pink text-white email-badge">1</span> 
                                             </a>
-                                            <a href="#" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="draftLabel" data-toggle="tab">
                                                 <i class="fa-solid fa-sm fa-file-lines mr-2"></i>
                                                 <span class="mr-2">draft</span> 
                                             </a>
-                                            <a href="#" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="sentLabel" data-toggle="tab">
                                                 <i class="fa-solid fa-sm fa-paper-plane mr-2"></i>
                                                 <span class="mr-2">sent</span> 
                                             </a>
-                                            <a href="#" class="d-flex email-nav-item align-items-center" data-toggle="tab">
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="spamLabel" data-toggle="tab">
                                                 <i class="fa-solid fa-sm fa-circle-exclamation mr-2"></i>
                                                 <span class="mr-2">spam</span> 
                                                 <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-warning text-white email-badge">2</span>
@@ -369,17 +369,17 @@
                                                 <div class="d-flex">
                                                     <span class="pagination-text mr-3 align-self-center d-none d-sm-block">1-11 of 50</span>
                                                     <div class="d-flex email-pagination">
-                                                        <a href="#" id="previous" class="d-flex align-items-center justify-content-center mr-3">
+                                                        <a href="#" class="d-flex align-items-center justify-content-center mr-3 previous">
                                                             <i class="fa-solid fa-angle-left"></i>
                                                         </a>
-                                                        <a href="#" id="next" class="d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="d-flex align-items-center justify-content-center next">
                                                             <i class="fa-solid fa-angle-right"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="tab-content">
-                                                <div class="tab-pane fade show active" id="inbox" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                <div class="tab-pane fade show active" id="inbox" role="tabpanel" aria-labelledby="inboxLabel">
                                                     <ul class="email-list">
                                                         <li class="email-item d-flex align-items-center justify-content-between">
                                                             <div class="d-flex align-items-center">
@@ -523,8 +523,8 @@
                                                         </li>
                                                         <li class="email-item d-flex align-items-center justify-content-between">
                                                             <div class="d-flex align-items-center">
-                                                                <label for="email-3" class="checkbox-group d-flex align-items-center mr-1 mt-2">
-                                                                    <input type="checkbox" id="email-3" class="default-checkbox">
+                                                                <label for="email-9" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-9" class="default-checkbox">
                                                                     <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                                 </label>
                                                                 <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
@@ -539,8 +539,8 @@
                                                         </li>
                                                         <li class="email-item d-flex align-items-center justify-content-between">
                                                             <div class="d-flex align-items-center">
-                                                                <label for="email-4" class="checkbox-group d-flex align-items-center mr-1 mt-2">
-                                                                    <input type="checkbox" id="email-4" class="default-checkbox">
+                                                                <label for="email-10" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-10" class="default-checkbox">
                                                                     <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                                 </label>
                                                                 <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
@@ -555,8 +555,8 @@
                                                         </li>
                                                         <li class="email-item d-flex align-items-center justify-content-between">
                                                             <div class="d-flex align-items-center">
-                                                                <label for="email-5" class="checkbox-group d-flex align-items-center mr-1 mt-2">
-                                                                    <input type="checkbox" id="email-5" class="default-checkbox">
+                                                                <label for="email-11" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-11" class="default-checkbox">
                                                                     <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
                                                                 </label>
                                                                 <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
@@ -574,10 +574,10 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="tab-pane fade" id="starred" role="tabpanel" aria-labelledby="starred"></div>
-                                                <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draft"></div>
-                                                <div class="tab-pane fade" id="sent" role="tabpanel" aria-labelledby="sent"></div>
-                                                <div class="tab-pane fade" id="spam" role="tabpanel" aria-labelledby="spam"></div>
+                                                <div class="tab-pane fade" id="starred" role="tabpanel" aria-labelledby="starredLabel"></div>
+                                                <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draftLabel"></div>
+                                                <div class="tab-pane fade" id="sent" role="tabpanel" aria-labelledby="sentLabel"></div>
+                                                <div class="tab-pane fade" id="spam" role="tabpanel" aria-labelledby="spamLabel"></div>
                                             </div>
                                         </div>
                                         <div id="read-email-tab" class=" d-none">
@@ -603,10 +603,10 @@
                                                     <div class="d-flex ml-auto">
                                                         <span class="pagination-text mr-3 align-self-center">3 of 50</span>
                                                         <div class="d-flex email-pagination">
-                                                            <a href="#" id="previous" class="d-flex align-items-center justify-content-center mr-3">
+                                                            <a href="#" class="d-flex align-items-center justify-content-center mr-3 previous">
                                                                 <i class="fa-solid fa-angle-left"></i>
                                                             </a>
-                                                            <a href="#" id="next" class="d-flex align-items-center justify-content-center">
+                                                            <a href="#" class="d-flex align-items-center justify-content-center next">
                                                                 <i class="fa-solid fa-angle-right"></i>
                                                             </a>
                                                         </div>
@@ -634,7 +634,7 @@
                                                 <div class="py-2 px-2">
                                                     <div id="accordion" class="email-accordion">
                                                         <div class="card">
-                                                          <div class="card-header d-flex align-items-center" id="email-chat-1" data-toggle="collapse" data-target="#email-chat-1-collapse" aria-expanded="true" aria-controls="email-chat-1-collapse">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-1" data-toggle="collapse" data-target="#email-chat-1-collapse" aria-expanded="false" aria-controls="email-chat-1-collapse">
                                                             <div class="d-flex">
                                                                 <img class="round-img mr-2" src="assets/client-3.jpg" alt="">
                                                                 <div class="d-flex flex-column">
@@ -648,12 +648,12 @@
                                                                     <span class="small text-muted">9:03AM</span>
                                                                 </div>
                                                                 <div class="dropdown">
-                                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                         <div class="email-icon-container d-flex justify-content-center">
                                                                             <i class="fa-solid fa-ellipsis-vertical"></i>
                                                                         </div>
                                                                     </a>
-                                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
                                                                         <a class="dropdown-item d-flex align-items-center" href="#">
                                                                             <div class="action-icon mr-1 d-flex align-items-center">
                                                                                 <i class="fa-solid fa-envelope-open"></i>
@@ -687,7 +687,7 @@
                                                           </div>
                                                         </div>
                                                         <div class="card">
-                                                          <div class="card-header d-flex align-items-center" id="email-chat-2" data-toggle="collapse" data-target="#email-chat-2-collapse" aria-expanded="true" aria-controls="email-chat-2-collapse">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-2" data-toggle="collapse" data-target="#email-chat-2-collapse" aria-expanded="false" aria-controls="email-chat-2-collapse">
                                                             <div class="d-flex">
                                                                 <img class="round-img mr-2" src="assets/avatar.jpg" alt="">
                                                                 <div class="d-flex flex-column">
@@ -701,12 +701,12 @@
                                                                     <span class="small text-muted">9:03AM</span>
                                                                 </div>
                                                                 <div class="dropdown">
-                                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                         <div class="email-icon-container d-flex justify-content-center">
                                                                             <i class="fa-solid fa-ellipsis-vertical"></i>
                                                                         </div>
                                                                     </a>
-                                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
                                                                         <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                                                             <div class="action-icon mr-1 d-flex align-items-center">
                                                                                 <i class="fa-solid fa-envelope-open"></i>
@@ -750,12 +750,12 @@
                                                                     <span class="small text-muted">9:03AM</span>
                                                                 </div>
                                                                 <div class="dropdown">
-                                                                    <a class="d-flex align-items-center" href="#" role="button" id="ordersActionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                         <div class="email-icon-container d-flex justify-content-center">
                                                                             <i class="fa-solid fa-ellipsis-vertical"></i>
                                                                         </div>
                                                                     </a>
-                                                                    <div id="action-dropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="ordersActionsMenu">
+                                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
                                                                         <a class="dropdown-item d-flex align-items-center" href="#">
                                                                             <div class="action-icon mr-1 d-flex align-items-center">
                                                                                 <i class="fa-solid fa-envelope-open"></i>

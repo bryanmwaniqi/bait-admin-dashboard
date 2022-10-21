@@ -20,9 +20,6 @@ a{
 body{
     background-color: var(--body-color);
 }
-/* button:focus{
-    outline: none;
-} */
 .main-container{
     display: flex;
     overflow-x: hidden;

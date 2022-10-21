@@ -20,7 +20,6 @@ button:focus{
 .btn:focus, .btn:active, .btn.active, .btn:focus:active {
     background-image: none;
     outline: none;
-    -webkit-box-shadow: none;
     box-shadow: none;
 }
 a{
@@ -449,14 +448,14 @@ span.search-icon{
     font-size: 1rem;
     margin-top: 0.1rem;
 }
-#main-navbar #account-overview .dropdown-item{
+#main-navbar .minimal-dropdown .dropdown-item{
     color: #616161;
     font-size: 0.9rem;
 }
-#main-navbar #account-overview .dropdown-item:hover{
+#main-navbar .minimal-dropdown .dropdown-item:hover{
     color: var(--primary-color);
 }
-#main-navbar #account-overview .dropdown-item i{
+#main-navbar .minimal-dropdown .dropdown-item i{
     font-size: 0.9rem;
 }
 #notification-dropdown ::-webkit-scrollbar{
@@ -714,7 +713,7 @@ span.search-icon{
 }
 .pie-progress-bar svg circle{
     fill: none;
-    stroke-width: 0.6rem;
+    stroke-width: 0.5rem;
     stroke: #f1f1f1;
     transform: translate(10px, 10px);
     stroke-linecap: round;
@@ -889,17 +888,17 @@ img.country-flag{
     width: 3rem;
     border-radius: 50px;
 }
-i#action-toggle{
+i.action-toggle{
     font-size: 1.5rem;
 }
-i#action-toggle:hover{
+i.action-toggle:hover{
     color: var(--primary-color) !important;
 }
 .action-icon{
     width: 2rem;
     height: 2rem;
 }
-#action-dropdown .dropdown-item:hover{
+.action-dropdown .dropdown-item:hover{
     color: var(--primary-color);
 }
 .order-section ::-webkit-scrollbar{
@@ -1735,19 +1734,19 @@ a.comment-btn{
 .email-item-date{
     white-space: nowrap;
 }
-#next,#previous{
+.next,.previous{
     width: 1.8rem;
     height: 1.8rem;
     background-color: var(--body-color);
     border-radius: 0.3rem;
 }
-#next i,#previous i,#increment i,#decrement i{
+.next i,.previous i,#increment i,#decrement i{
     color: var(--primary-color);
 }
-#next:hover i,#previous:hover i,#increment:hover i,#decrement:hover i{
+.next:hover i,.previous:hover i,#increment:hover i,#decrement:hover i{
     color: var(--body-color);
 }
-#next:hover,#previous:hover,#increment:hover,#decrement:hover{
+.next:hover,.previous:hover,#increment:hover,#decrement:hover{
     background-color: var(--primary-color);
 }
 ul.email-list{

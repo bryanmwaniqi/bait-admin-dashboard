@@ -49,12 +49,12 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item d-sm-flex align-items-center d-none">
-                        <a class="nav-link d-flex align-items-center" href="#">
+                        <div class="nav-link d-flex align-items-center">
                             <span class="form-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                             <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
-                        </a>
+                        </div>
                     </li>
                     <li class="nav-item d-sm-none align-items-center d-flex">
                         <a class="nav-link d-flex align-items-center" href="#">
@@ -62,10 +62,10 @@
                         </a>
                     </li>
                     <li id="language" class="nav-item d-flex align-items-center dropdown">
-                        <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link d-flex align-items-center" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
                         </a>
-                        <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="languagesDropdown">
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <img src="assets/icons8-usa-48.png" alt="" class="country-flag mr-3">
                                 <span>English</span>
@@ -85,10 +85,10 @@
                         </div>
                     </li>
                     <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
-                        <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link d-flex align-items-center" href="#" id="entityAdditionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-plus-circle"></i>
                         </a>
-                        <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="entityAdditionDropdown">
                             <a class="dropdown-item d-flex align-items-center" href="add-product.html">
                                 <i class="fas fa-cog fa-sm mr-3"></i>
                                 <span>Add New Product</span>
@@ -100,11 +100,11 @@
                         </div>
                     </li>
                     <li class="nav-item notification d-flex align-items-center dropdown">
-                        <a id="notifications" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <a id="notificationsDropdown" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
                             <i class="fas fa-bell"></i>
                             <span class="badge badge-pill notification-badge">4</span>
                         </a>
-                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
+                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
                             <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 primary-bg">
                                 <span class="text-white">Notifications</span>
                                 <div>
@@ -150,12 +150,12 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="profile-pic text-center">
                                 <img class="" src="assets/client-2.jpg" alt="">
                             </div>
                         </a>
-                        <div id="account-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="accountDropdown">
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="fas fa-user fa-sm mr-2"></i>
                                 <span>Profile</span>
@@ -261,7 +261,7 @@
                                 </div>
                                 <div class="profile-pic-container d-none d-sm-block">
                                     <img class="profile-page-pic" src="assets/client-2.jpg" alt="">
-                                    <img src="assets/verified .png" alt="" class="verified">
+                                    <img src="assets/verified.png" alt="" class="verified">
                                 </div>
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                                                 <i class="fa-solid fa-location-dot fa-sm"></i>
                                             </div>
                                             <address class="text-muted">
-                                                10824 5th Wyoming-Street</br>
+                                                10824 5th Wyoming-Street </br>
                                                 Melbourne, Australia
                                             </address>
                                         </div>
@@ -402,11 +402,11 @@
                                                 <input type="text" class="form-control primary-input" id="firstName" placeholder="first name">                                                </div>
                                                 <div class="form-group col-12 col-md-4 px-md-3">
                                                     <label for="lastName">DOB</label>
-                                                    <input type="date" class="form-control primary-input" id="lastName" placeholder="Date of Birth">
+                                                    <input type="date" class="form-control primary-input" id="lastName">
                                                 </div>
                                                 <div class="form-group col-12 col-md-4 px-md-3">
-                                                    <label for="customerId">Country</label>
-                                                    <select class="form-control category-selectors form-control-lg" id="exampleFormControlSelect1">
+                                                    <label for="country">Country</label>
+                                                    <select class="form-control category-selectors form-control-lg" id="country">
                                                         <option>Australia</option>
                                                         <option>China</option>
                                                         <option>Kenya</option>
@@ -416,17 +416,17 @@
                                         </div>
                                         <div class="form-row p-2">
                                             <div class="form-group col-12 col-md-4 px-md-3">
-                                                <label for="exampleInputEmail1" class="required">Email address</label>
-                                                <input type="email" class="form-control primary-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <label for="email-address" class="required">Email address</label>
+                                                <input type="email" class="form-control primary-input" id="email-address" aria-describedby="emailHelp" placeholder="Enter email">
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                             </div>
                                             <div class="form-group col-12 col-md-4 px-md-3">
-                                                <label for="exampleInputPassword1" class="required">Phone</label>
-                                                <input type="text" class="form-control primary-input" id="exampleInputPassword1" placeholder="+254 1234 5678">
+                                                <label for="phone-number" class="required">Phone</label>
+                                                <input type="text" class="form-control primary-input" id="phone-number" placeholder="+254 1234 5678">
                                             </div>
                                             <div class="form-group col-12 col-md-4 px-md-3">
-                                                <label for="exampleInputPassword1">Phone 2</label>
-                                                <input type="text" class="form-control primary-input" id="exampleInputPassword1" placeholder="+254 8765 4321">
+                                                <label for="phone-number-2">Phone 2</label>
+                                                <input type="text" class="form-control primary-input" id="phone-number-2" placeholder="+254 8765 4321">
                                             </div>
                                         </div>
                                         <div class="form-row p-2">
