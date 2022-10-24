@@ -100,26 +100,5 @@ $(function () {
             $(this).parent().addClass('active').siblings();
             $('#australia-tab').removeClass('d-none').siblings().addClass('d-none');
         }
-    });
-
-    // Toggling product select-dropdown filters
-    // $('#category-select').on('click', function() {
-    //     $(this).siblings().removeClass('active');
-    //     $(this).toggleClass('active');
-    // });
-    // $('#sub-category-select').on('click', function() {
-    //     $(this).siblings().removeClass('active');
-    //     $(this).toggleClass('active');
-    // });
-    // $('#brand-select').on('click', function() {
-    //     $(this).siblings().removeClass('active');
-    //     $(this).toggleClass('active');
-    // });
-    // $('#model-select').on('click', function() {
-    //     $(this).toggleClass('active')
-    // });
-
-
-     
-      
+    });    
 })
