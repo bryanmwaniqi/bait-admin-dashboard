@@ -7,4 +7,8 @@ operational or analytical, which are very critical, especially in this data driv
 
 ## contributors
 
+[Souk admin dashboard link](http://www.souk.baitthemes.com/)
+
+## contributors
+
 - Brian Mwaniki <bryanmwaniqi@gmail.com>

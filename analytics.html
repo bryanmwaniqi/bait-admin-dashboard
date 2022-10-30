@@ -246,13 +246,18 @@
                             <div class="bg-white rounded-edges p-3">
                                 <div class="d-flex justify-content-between flex-wrap mb-3">
                                     <h6 class="text-muted">Conversion rates</h6>
-                                    <div class="selector">
-                                        <select class="custom">
+                                    <div class="d-flex">
+                                        <h6 class="mr-1 small">monthly</h6>
+                                        <h6 class="mr-1 small text-muted">weekly</h6>
+                                        <h6 class="mr-1 small text-muted">daily</h6>
+                                    </div>
+                                    <!-- <div class="selector"> -->
+                                        <!-- <select class="custom">
                                             <option class="small" selected value="monthly">Monthly</option>
                                             <option class="small" value="weekly">Weekly</option>
                                             <option class="small" value="daily">Daily</option>
-                                        </select>
-                                    </div>
+                                        </select> -->
+                                    <!-- </div> -->
                                 </div>
                                 <div>
                                     <canvas id="conversionChart" height="100"></canvas>
@@ -263,13 +268,18 @@
                             <div class="bg-white rounded-edges p-3">
                                 <div class="d-flex justify-content-between flex-wrap mb-3">
                                     <h6 class="text-muted">Cart Abandonment rates</h6>
-                                    <div class="selector">
-                                        <select class="custom">
+                                    <div class="d-flex">
+                                        <h6 class="mr-1 small">monthly</h6>
+                                        <h6 class="mr-1 small text-muted">weekly</h6>
+                                        <h6 class="mr-1 small text-muted">daily</h6>
+                                    </div>
+                                    <!-- <div class="selector"> -->
+                                        <!-- <select class="custom">
                                             <option class="small" selected value="monthly">Monthly</option>
                                             <option class="small" value="weekly">Weekly</option>
                                             <option class="small" value="daily">Daily</option>
-                                        </select>
-                                    </div>
+                                        </select> -->
+                                    <!-- </div> -->
                                 </div>
                                 <div>
                                     <canvas id="cartAbandonmentChart" height="100"></canvas>
@@ -336,6 +346,7 @@
                                 </div>
                                 <div>
                                     <canvas id="lineGradientChart"></canvas>
+                                    <!-- <canvas id="targetComparisonChart"></canvas> -->
                                 </div>
                             </div>
                         </div>
@@ -357,8 +368,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="js/script.js"></script>
         <script src="js/charts.js"></script>
     </body>

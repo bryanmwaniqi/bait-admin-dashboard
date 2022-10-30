@@ -408,7 +408,6 @@ span.form-icon{
     background-color: #fff;
 }
 #main-navbar{
-    /* padding: 0.1rem 0.5rem; */
     min-height: 3.5rem;
 }
 #main-navbar a.nav-link{
@@ -505,11 +504,6 @@ span.search-icon{
 .notification-icons-wrapper i{
     object-fit: contain;
 }
-/* @media (max-width:576px) {
-    #main-navbar .toggler-nav{
-        display: none;
-    }
-} */
 
 #main-navbar .navbar-nav li a{
     padding: 0.4rem 1rem;
@@ -534,9 +528,6 @@ span.search-icon{
     }
 }
 @media (min-width:992px) {
-    /* #track-order{
-        margin-left: 5.5rem;
-    } */
     #main-navbar .toggler-nav{
         margin-left: 5.5rem;
     }
@@ -735,6 +726,13 @@ span.search-icon{
     width: 100%;
     height: 300px;
 }
+.doughnut-chart-key{
+    font-size: 0.85rem;
+}
+.sales-source{
+    min-width: 13rem;
+    margin-bottom: 0.7rem;
+}
 /* best sellers section styling */
 #best-sellers a{
     color: #858585;
@@ -766,9 +764,6 @@ span.search-icon{
     border-style: solid;
     border-width: 0.1rem;
     border-color: #fff;
-}
-.traffic-source{
-    min-width: 13rem;
 }
 .doughnut-key{
     width: 0.5rem;
