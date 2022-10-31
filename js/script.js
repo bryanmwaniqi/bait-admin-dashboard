@@ -21,25 +21,13 @@ $(function () {
     });
 
     $(document).on('click', function(e) {
-        if (e.target.id != "sideMenuToggler" && e.target.id != "sidebar") {
+        if (e.target.id != "sideMenuToggler" || e.target.id != "sidebar" || e.target.className == "nav-link") {
             $('#sidebar').removeClass("active");
             setTimeout(function(){
                 $('.overlay').removeClass('enabled')
             },100);
         }  
     });
-
-
-    // Show & hide sub-menu on sidemenu item click
-    // $('li.account-dropdown').on('click', function () {
-    //     $(this).children('.sub-menu').toggleClass('active');
-    // });
-    
-    // $('#main').on('click', function(e) {
-    //     if ($('.sub-menu').hasClass('active')) {
-    //         $('.sub-menu').removeClass("active");
-    //     }  
-    // });
 
     // show scrollbar on hover
     $('#sideMenuToggler').on('click', function () {
