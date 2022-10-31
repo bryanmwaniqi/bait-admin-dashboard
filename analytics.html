@@ -247,20 +247,19 @@
                                 <div class="d-flex justify-content-between flex-wrap mb-3">
                                     <h6 class="text-muted">Conversion rates</h6>
                                     <div class="d-flex">
-                                        <h6 class="mr-1 small">monthly</h6>
-                                        <h6 class="mr-1 small text-muted">weekly</h6>
-                                        <h6 class="mr-1 small text-muted">daily</h6>
+                                        <nav id="conversionRates" class="nav justify-content-center font-weight-bold mb-2">
+                                            <a href="#monthlyConversion" class=" btn pale-bg small mr-1 mb-1 active" data-toggle="tab" role="button">monthly</a>
+                                            <a href="#weeklyConversion" class="btn pale-bg small mr-1 mb-1" data-toggle="tab" role="button">weekly</a>
+                                            <a href="#dailyConversion" class="btn pale-bg small mr-1 mb-1" data-toggle="tab" role="button">daily</a>
+                                        </nav>
                                     </div>
-                                    <!-- <div class="selector"> -->
-                                        <!-- <select class="custom">
-                                            <option class="small" selected value="monthly">Monthly</option>
-                                            <option class="small" value="weekly">Weekly</option>
-                                            <option class="small" value="daily">Daily</option>
-                                        </select> -->
-                                    <!-- </div> -->
                                 </div>
-                                <div>
-                                    <canvas id="conversionChart" height="100"></canvas>
+                                <div class="tab-content">
+                                    <div id="monthlyConversion" class="tab-pane fade show active">
+                                        <canvas id="conversionChart" height="100"></canvas>
+                                    </div>
+                                    <div id="" class="tab-pane fade"></div>
+                                    <div id="" class="tab-pane fade"></div>
                                 </div>
                             </div>
                         </div>
@@ -269,20 +268,19 @@
                                 <div class="d-flex justify-content-between flex-wrap mb-3">
                                     <h6 class="text-muted">Cart Abandonment rates</h6>
                                     <div class="d-flex">
-                                        <h6 class="mr-1 small">monthly</h6>
-                                        <h6 class="mr-1 small text-muted">weekly</h6>
-                                        <h6 class="mr-1 small text-muted">daily</h6>
+                                        <nav id="abandonmentRates" class="nav justify-content-center font-weight-bold mb-2">
+                                            <a href="#monthlyAbandonment" class=" btn pale-bg small mr-1 mb-1 active" data-toggle="tab" role="button">monthly</a>
+                                            <a href="#weeklyAbandonment" class="btn pale-bg small mr-1 mb-1" data-toggle="tab" role="button">weekly</a>
+                                            <a href="#dailyAbandonment" class="btn pale-bg small mr-1 mb-1" data-toggle="tab" role="button">daily</a>
+                                        </nav>
                                     </div>
-                                    <!-- <div class="selector"> -->
-                                        <!-- <select class="custom">
-                                            <option class="small" selected value="monthly">Monthly</option>
-                                            <option class="small" value="weekly">Weekly</option>
-                                            <option class="small" value="daily">Daily</option>
-                                        </select> -->
-                                    <!-- </div> -->
                                 </div>
-                                <div>
-                                    <canvas id="cartAbandonmentChart" height="100"></canvas>
+                                <div class="tab-content">
+                                    <div id="monthlyAbandonment" class="tab-pane fade show active">
+                                        <canvas id="cartAbandonmentChart" height="100"></canvas>
+                                    </div>
+                                    <div id="" class="tab-pane fade"></div>
+                                    <div id="" class="tab-pane fade"></div>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +288,7 @@
                     <div class="row">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3">
-                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
                                     <h6 class="text-muted mb-2">Sales Analytics</h6>
                                     <div class="d-flex mb-2">
                                         <div class="selector">
@@ -310,43 +308,27 @@
                     <div class="row mb-4">
                         <div class="col mb-4">
                             <div class="bg-white rounded-edges p-3">
-                                <h6 class="text-muted mb-3">Products analytics</h6>
-                                <div class="row mt-3 py-3">
-                                    <div class="col-12 mb-2 col-md-3 col-sm-6">
-                                        <select class="form-control category-selectors form-control-lg" id="categorySelector">
-                                            <option value="" disabled selected>Category</option>
-                                            <option>All</option>
-                                            <option>Electronics</option>
-                                            <option>Cosmetics</option>
-                                            <option>Fashion</option>
-                                            <option>Food & Drinks</option>
-                                            <option>Art crafts</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 mb-2 col-md-3 col-sm-6">
-                                        <select class="form-control category-selectors form-control-lg" id="subCategorySelector">
-                                            <option value="" disabled selected>Sub-category</option>
-                                            <option>Phones</option>
-                                            <option>Tablets</option>
-                                            <option>T.v's</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 mb-2 col-md-3 col-sm-6">
-                                        <select class="form-control category-selectors form-control-lg" id="brandSelector">
-                                            <option value="" disabled selected>Brand</option>
-                                            <option>Iphone</option>
-                                            <option>Samsung</option>
-                                            <option>Nokia</option>
-                                            <option>Tecno</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 mb-2 col-md-3 col-sm-6">
-                                        <button class="btn primary-btn w-100 py-2">Apply Filters</button>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                    <h6 class="text-muted mb-3">Sales analytics</h6>
+                                    <div class="d-flex mb-2">
+                                        <div class="selector">
+                                            <select id="year-one-analytics" class="custom success-bg mr-2">
+                                                <option selected value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2022">2022</option>
+                                            </select>
+                                        </div>
+                                        <div class="selector">
+                                            <select class="custom">
+                                                <option selected value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2021">2020</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <canvas id="lineGradientChart"></canvas>
-                                    <!-- <canvas id="targetComparisonChart"></canvas> -->
+                                    <canvas id="salesTargetChart" height="90"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -372,5 +354,178 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="js/script.js"></script>
         <script src="js/charts.js"></script>
+        <script>
+            // conversion rate line chart
+            var conversionGradientCtx = document.getElementById('conversionChart').getContext('2d');
+
+            var conversionGradient = conversionGradientCtx.createLinearGradient(0, 0, 0, 307); 
+            conversionGradient.addColorStop(0, 'rgba(102, 48, 230, 0.65)');
+            conversionGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+            const conversionData = {
+                labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
+                datasets: [{
+                    data: [25, 89, 50, 30, 55, 30, 45],
+                    backgroundColor: conversionGradient,
+                    fill: true,
+                    tension: 0.3,
+                    borderColor: '#6630e6',
+                    hoverBackgroundColor: '#6630e6',
+                    pointRadius: 0,
+                    hitRadius: 8,
+                    hoverRadius: 8,
+                }]
+            };
+
+            const conversionConfig = {
+                type: 'line',
+                data: conversionData,
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y:{
+                            grid: {
+                                drawBorder: false
+                            },
+                            beginAtZero: true,
+                            ticks: {
+                                autoSkip: false,
+                                stepSize: 50,
+                                max: 100
+                            }
+                        },
+                        x:{
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                        }
+                    }
+                },
+            };
+
+            const conversionChart = new Chart(
+                conversionGradientCtx,
+                conversionConfig
+            );
+
+            // Cart Abandonment Rate Chart
+            var abandonmentGradientCtx = document.getElementById('cartAbandonmentChart').getContext('2d');
+
+            var abandonmentGradient = abandonmentGradientCtx.createLinearGradient(0, 0, 0, 307); 
+            abandonmentGradient.addColorStop(0, 'rgba(102, 48, 230, 0.65)');
+            abandonmentGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+            const cartAbandonmentData = {
+                labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
+                datasets: [{
+                    data: [45, 30, 55, 30, 55, 89, 25],
+                    backgroundColor: abandonmentGradient,
+                    fill: true,
+                    borderColor: '#6630e6',
+                    tension: 0.3,
+                    hoverBackgroundColor: '#6630e6',
+                    pointRadius: 0,
+                    hitRadius: 8,
+                    hoverRadius: 8,
+                }]
+            };
+
+            const cartAbandonmentConfig = {
+                type: 'line',
+                data: cartAbandonmentData,
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y:{
+                            grid: {
+                                drawBorder: false
+                            },
+                            beginAtZero: true,
+                            ticks: {
+                                autoSkip: false,
+                                stepSize: 50,
+                                max: 100
+                            }
+                        },
+                        x:{
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                },
+            };
+
+            const cartAbandonmentChart = new Chart(
+                abandonmentGradientCtx,
+                cartAbandonmentConfig
+            );
+
+            // sales v target comparison chart
+            const targetData = {
+                labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul'],
+                datasets: [{
+                    data: [35, 75, 52, 30, 52, 76, 35],
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 0,
+                    label: 'Target',
+                    backgroundColor: 'rgba(102, 48, 230, 0.7)'
+                },{
+                    data: [73, 43, 60, 89, 60, 43, 76],
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 0,
+                    label: 'Target',
+                    backgroundColor: 'rgba(0, 206, 206, 0.9)'
+                }]
+            };
+
+            const targetConfig = {
+                type: 'line',
+                data: targetData,
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y:{
+                            grid: {
+                                drawBorder: false
+                            },
+                            beginAtZero: true,
+                            ticks: {
+                                autoSkip: false,
+                                stepSize: 30,
+                                beginAtZero: false
+                            }
+                        },
+                        x:{
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                },
+            };
+
+            const targetChart = new Chart(
+                document.getElementById('salesTargetChart'),
+                targetConfig
+            );
+        </script>
     </body>
 </html>

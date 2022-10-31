@@ -895,6 +895,24 @@ i.action-toggle:hover{
 #secondary-select{
     background-color: var(--secondary-color);
 }
+#conversionRates a, #abandonmentRates a{
+    color: #858585;
+    font-size: 12px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+#conversionRates a:hover, #abandonmentRates a:hover{
+    color: var(--primary-color) !important; 
+    background-color: rgba(102, 48, 230, 0.2);
+}
+#conversionRates a.active, #abandonmentRates a.active{
+    color: var(--primary-color) !important; 
+    background-color: rgba(102, 48, 230, 0.2);
+}
+#year-one-analytics{
+    background-color: var(--success-color);
+}
 
 /* profile page styling */
 .profile-pic-container{
