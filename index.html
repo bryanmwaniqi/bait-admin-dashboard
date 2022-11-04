@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Souk | E-commerce admin dashboard">
+        <meta name="author" content="Bait themes Bryan Mwaniki">
+        <meta name="keywords" content="admin, ecommerce, analytics, dashboard, bootstrap admin template, ecommerce backend, HTML5 admin dashboard template, admin dashboard UI">
+        <title> Souk | E-commerce admin Dashboard</title>
+
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/souk-purple.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- fontawesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+        <!-- font awesome 6 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+        <!-- jVectormap css -->
+        <link rel="stylesheet" href="css/jquery-jvectormap-2.0.5.css">
+        
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="body-color">
+
+        <!-- main navbar section -->
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
+            <!-- sm screen and below sidemenu toggler -->
+            <button id="sideMenuToggler" class="btn d-lg-none d-flex align-items-center" type="button">
+                <i class="fas fa-bars text-purple"></i>
+            </button>
+            <ul class="navbar-nav toggler-nav active mt-lg-0">
+                <li class="nav-item d-flex align-items-center">
+                    <a href="orders.html" class="btn primary-outline-btn py-0 rounded-btn track-btn ml-2">Track Order</a>
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-sm-flex align-items-center d-none">
+                        <div class="nav-link d-flex align-items-center">
+                            <span class="form-icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
+                        </div>
+                    </li>
+                    <li class="nav-item d-sm-none align-items-center d-flex">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li id="language" class="nav-item d-flex align-items-center dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
+                        </a>
+                        <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="languagesDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <img src="assets/icons8-usa-48.png" alt="" class="country-flag mr-3">
+                                <span>English</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <img src="assets/icons8-spain-flag-48.png" alt="" class="country-flag mr-3">
+                                <span>Spanish</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <img src="assets/icons8-france-48.png" alt="" class="country-flag mr-3">
+                                <span>French</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <img src="assets/icons8-germany-48.png" alt="" class="country-flag mr-3">
+                                <span>German</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="entityAdditionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-plus-circle"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="entityAdditionDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="add-product.html">
+                                <i class="fas fa-cog fa-sm mr-3"></i>
+                                <span>Add New Product</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="add-customer.html">
+                                <i class="fas fa-user fa-sm mr-3"></i>
+                                <span>Add New Customer</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item notification d-flex align-items-center dropdown">
+                        <a id="notificationsDropdown" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-pill notification-badge">4</span>
+                        </a>
+                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+                            <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 primary-bg">
+                                <span class="text-white">Notifications</span>
+                                <div>
+                                    <span class="badge badge-pill bg-pink text-white">4 New</span>
+                                </div>
+                            </div>
+                            <div class="notification-list">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas text-warning fa-chart-area w-100 mb-2"></i> 
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1 mt-2">You're low on stock</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>                                    
+                                        <p class="small text-muted">1 hour ago</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas fa-bullseye text-success mb-2"></i>
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1">Cosmetics sales target hit</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>                                    
+                                        <p class="small text-muted">1 hour ago</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center mb-0" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas fa-file-invoice-dollar text-danger mb-2"></i>
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1">Overdelayed order</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>
+                                        <p class="small text-muted">2 days ago</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-divider my-0"></div>
+                            <a class="dropdown-item d-flex justify-content-center align-items-center notifications-link" href="inbox.html">
+                                <span class="">View More...</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="profile-pic text-center">
+                                <img class="" src="assets/client-2.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="accountDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                                <i class="fas fa-user fa-sm mr-2"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                                <i class="fas fa-cog fa-sm mr-2"></i>
+                                <span>Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <i class="fas fa-sign-out-alt mr-2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of main navbar section -->
+
+        <div class="overlay"></div>
+
+        <!-- sidebar and main content -->
+        <div class="wrapper d-flex">
+            <div id="sidebar" class="">
+                <div class="sidemenu d-flex justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link logo-container" href="#">
+                                <img src="assets/souk-white.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-md fa-tachometer-alt"></i> 
+                                <span class="menu-link">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                <i class="fas fa-md fa-clipboard-list"></i> 
+                                <span class="menu-link">Products</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="orders.html">
+                                <i class="fas fa-md fa-file-invoice-dollar"></i> 
+                                <span class="menu-link">Orders</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="customers.html">
+                                <i class="fas fa-md fa-users"></i> 
+                                <span class="menu-link">Customers</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="analytics.html">
+                                <i class="fas fa-md fa-chart-area"></i> 
+                                <span class="menu-link">Analytics</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sales.html">
+                                <i class="fas fa-md fa-money-bill"></i> 
+                                <span class="menu-link">sales</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inbox.html">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="menu-link">email</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="invoice.html">
+                                <i class="fas fa-store"></i>
+                                <span class="menu-link">Invoice</span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div class="container-fluid py-2">
+                    <div class="row flex-column flex-md-row justify-content-center">
+                        <div class="col mb-4">
+                            <div class="primary-bg rounded-edges p-3 h-100 d-flex justify-content-between align-items-center">
+                                <div class="">
+                                    <div class="d-flex align-items-end flex-wrap">
+                                        <h4 class=" text-white mr-2">over</h4> 
+                                        <h2 class="font-weight-bold text-white mr-2">2,964,532</h2> 
+                                        <h4 class=" text-white">site visits</h4>
+                                    </div>
+                                    <p class="banner-description text-white small">
+                                        Get to visualize and analyse performance of your ecommerce store. <br>
+                                        Make informed decisions based on substantiated and quantifiable metrics.
+                                    </p>
+                                </div>
+                                <a class="btn secondary-btn mr-md-3 d-none d-sm-block" href="orders.html">View Orders</a>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <h6 class="text-muted">Sales</h6>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
+                                        <span class="small text-muted">0.90%</span>
+                                    </div>
+                                </div>
+                                <h6 class="font-weight-bold">257,901</h6>
+                                <div>
+                                    <canvas id="salesBarChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <h6 class="text-muted">Orders</h6>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
+                                        <span class="small text-muted">2.55%</span>
+                                    </div>
+                                </div>
+                                <h6 class="font-weight-bold">65,231</h6>
+                                <div>
+                                    <canvas id="ordersChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <h6 class="text-muted">Invoices</h6>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
+                                        <span class="small text-muted">0.90%</span>
+                                    </div>
+                                </div>
+                                <h6 class="font-weight-bold">188,075</h6>
+                                <div>
+                                    <canvas id="invoicesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <h6 class="text-muted">Returns</h6>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
+                                        <span class="small text-muted">1.05%</span>
+                                    </div>
+                                </div>
+                                <h6 class="font-weight-bold">19,419</h6>
+                                <div>
+                                    <canvas id="returnsChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-8 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <h6 class="text-muted mb-3">Sales Distribution</h6>
+                                <div class="d-flex  align-items-center justify-content-center">
+                                    <div class="sales-map-container">
+                                        <div id="sales-map"></div>
+                                    </div>
+                                    <div class="mb-3 d-none d-lg-block">
+                                        <div class="doughnut-chart-key mb-2 d-flex flex-column align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center justify-content-between sales-source flex-wrap ">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/icons8-usa-48.png" class="mr-2 country-flag" alt="">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-muted mb-0">USA</span>
+                                                    </div>
+                                                </div>
+                                                <span class="font-weight-bold">$721,416</span> 
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between sales-source flex-wrap ">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/icons8-australia-48.png" class="mr-2 country-flag" alt="">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-muted mb-0">AUS</span>
+                                                    </div>
+                                                </div>
+                                                <span class="font-weight-bold">$249,906</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between sales-source flex-wrap ">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/icons8-france-48.png" class="mr-2 country-flag" alt="">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-muted mb-0">FRA</span>
+                                                    </div>
+                                                </div>
+                                                <span class="font-weight-bold">$231,071</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between sales-source flex-wrap ">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/icons8-germany-48.png" class="mr-2 country-flag" alt="">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-muted mb-0">GER</span>
+                                                    </div>
+                                                </div>
+                                                <span class="font-weight-bold">$99,938</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between sales-source flex-wrap ">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/icons8-kenya-48.png" class="mr-2 country-flag" alt="">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-muted mb-0">KEN</span>
+                                                    </div>
+                                                </div>
+                                                <span class="font-weight-bold">$78,231</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between sales-source flex-wrap ">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/icons8-south-africa-48.png" class="mr-2 country-flag" alt="">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-muted mb-0">RSA</span>
+                                                    </div>
+                                                </div>
+                                                <span class="font-weight-bold">$43,387</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mt-2 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="text-muted mb-2">Best Sellers</h6>
+                                    <div class="d-flex">
+                                        <nav id="best-sellers" class="nav justify-content-center font-weight-bold mb-2">
+                                            <a href="#categories" class="mx-1 mx-sm-2 active" data-toggle="tab" role="button">categories</a>
+                                            <a href="#products" class="mx-1 mx-sm-2" data-toggle="tab" role="button">products</a>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <!-- <div>
+                                    <canvas id="bestSellersChart"></canvas>
+                                </div> -->
+                                <div class="tab-content menu-tab">
+                                    <!-- products tab content -->
+                                    <div id="products" class="tab-pane fade p-0">
+                                        <div class="d-flex flex-column align-self-stretch justify-content-between">
+                                            <div class="d-flex mb-4">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/iphone.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Iphone 6S 2015</h6>
+                                                    <span class="text-muted mid-size-text">10 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $51,932</h6>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/galaxy.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Samsung Galaxy S6</h6>
+                                                    <span class="text-muted mid-size-text">9 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $49,321</h6>
+                                            </div>
+                                            <div class="d-flex mb-4">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/lip-gloss.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Matte Lip gloss</h6>
+                                                    <span class="text-muted mid-size-text">1461 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $42,189</h6>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="best-product-img text-center rounded-edges mr-4">
+                                                    <img class="" src="assets/hennessy-xo.jpg" alt="">
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="font-weight-bold">Hennessy XO 500ml</h6>
+                                                    <span class="text-muted mid-size-text">10 units</span>
+                                                </div>
+                                                <h6 class="font-weight-bold ml-auto align-self-end d-block d-md-none d-lg-block"> $38,407</h6>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- end of best sellers products tab content -->
+                                    
+                                    <!-- categories tab content -->
+                                    <div id="categories" class="tab-pane active show fade p-0">
+                                        <div class="d-flex flex-column">
+                                            <div id="bestSellersChart"></div>
+                                            <div class="d-flex justify-content-center flex-wrap">
+                                                <div class="d-flex align-items-center mr-3">
+                                                    <div id="electronics" class="doughnut-key"></div>
+                                                    <span class="text-muted">Electronics</span>
+                                                </div>
+                                                <div class="d-flex align-items-center mr-3">
+                                                    <div id="cosmetics" class="doughnut-key"></div>
+                                                    <span class="text-muted">Cosmetics</span>
+                                                </div>
+                                                <div class="d-flex align-items-center mr-2">
+                                                    <div id="fashion" class="doughnut-key"></div>
+                                                    <span class="text-muted">Fashion</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of categories tab content -->
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-lg-6 h-100 ">
+                            <div class="row traffic justify-content-between">
+                                <div class="col-12 col-sm-4 d-flex mb-4 active">
+                                    <div id="all" class="bg-white rounded-edges d-flex flex-column flex-fill p-2 justify-content-between">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i class="fa-solid fa-sitemap text-purple"></i>
+                                            </div>
+                                            <h6 class="text-secondary mb-0">Organic</h6>
+                                            
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">486,932</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">40%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 d-flex mb-4">
+                                    <div id="europe" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="google" class="fa-brands fa-google"></i>
+                                            </div>
+                                            <h6 class="text-secondary mb-0">Google</h6>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">95,251</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:45%"></div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 d-flex mb-4">
+                                    <div id="usa" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="youtube" class="fa-brands fa-youtube"></i>
+                                            </div>
+                                            <h6 class="text-secondary mb-0">YouTube</h6>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">236,932</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">65%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row traffic justify-content-between align-items-end">
+                                <div class="col-12 col-sm-4 d-flex mb-4">
+                                    <div id="asia" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="facebook" class="fa-brands fa-facebook-f"></i>
+                                            </div>
+                                            <h6 class="text-secondary mb-0">Facebook</h6>
+
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">26,743</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">10%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:35%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 d-flex mb-4">
+                                    <div id="africa" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i id="instagram" class="fa-brands fa-instagram"></i>
+                                            </div>
+                                            <h6 class="text-secondary mb-0">Instagram</h6>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">1,243</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">75%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 d-flex mb-4">
+                                    <div id="australia" class="bg-white rounded-edges flex-fill p-2">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="badge traffic-badge pale-bg d-flex align-items-center mr-2">
+                                                <i class="fa-solid fa-layer-group text-purple"></i>
+                                            </div>
+                                            <h6 class="text-secondary mb-0">Others</h6>
+                                        </div>
+                                        <div class="d-flex mt-auto mb-2">
+                                            <div class="d-flex flex-column">
+                                                <h6 class="font-weight-bold mb-0">13,971</h6>
+                                            </div>
+                                            <h6 class="mb-0 align-self-end ml-auto small text-muted">20%</h6>
+                                        </div>
+                                        <div class="progress traffic-progress">
+                                            <div class="progress-bar round-progress" style="width:60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-4">
+                            <div class="bg-white rounded-edges p-3 h-100 d-flex flex-column flex-sm-row">
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-2">
+                                            <svg class="conversion-rate">
+                                                <circle cx="62" cy="62" r="62"/>
+                                                <circle cx="62" cy="62" r="62"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h4 class="font-weight-bold mb-0">73%</h4>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs danger-text fa-arrow-down mr-1"></i>
+                                                    <span class="small text-muted">2.55%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-tag primary-bg"></div>
+                                            <span class="text-muted mid-size-text mb-0">Conversion rate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-fill flex-column align-items-center justify-content-center mb-2">
+                                    <div class="pie-container d-flex flex-column justify-content-center align-items-center">
+                                        <div class="pie-progress-bar mb-2">
+                                            <svg class="cart-abandonment">
+                                                <circle cx="62" cy="62" r="62"/>
+                                                <circle cx="62" cy="62" r="62"/>
+                                            </svg>
+                                            <div class="percentage d-flex flex-column justify-content-center align-items-center">
+                                                <h4 class="font-weight-bold mb-0">57%</h4>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-xs success-text fa-arrow-up mr-1"></i>
+                                                    <span class="small text-muted">0.55%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-tag primary-bg"></div>
+                                            <span class="text-muted mid-size-text mb-0">Abandonment rate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-9 mb-4 order-1 order-lg-0">
+                            <div class="bg-white rounded-edges p-3 pb-1 h-100 order-section">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-muted">Recent Orders</h6>
+                                    <div class="d-flex align-items-center">
+                                        <a href="aproducts.html" class="d-flex align-items-center justify-content-center btn primary-btn py-1">
+                                            view orders
+                                        </a>
+                                    </div>
+                                </div>
+                                <table id="orders-table" class="table table-responsive table-borderless table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Customer</th>
+                                            <th>Country</th>
+                                            <th>Order Date</th>
+                                            <th>Qty</th>
+                                            <th>Total</th>
+                                            <th>status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle">BC-0001</td>
+                                            <td class="d-flex align-items-center align-middle">
+                                                <img class="mr-3 round-edge-img" src="assets/avatar.jpg" alt="">
+                                                <span class="">Scott McGoldbridge</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <img class="country-flag" src="assets/icons8-kenya-48.png" alt="">
+                                            </td>
+                                            <td class="align-middle">14 Apr, 2022</td>
+                                            <td class="align-middle">12</td>
+                                            <td class="align-middle">$1,239</td>
+                                            <td class="align-middle">
+                                                <span class="badge primary-badge status-badge p-2">pending</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Stock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                            </div>
+                                                            <span>Dispatch</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">BC-6901</td>
+                                            <td class="d-flex align-items-center align-middle">
+                                                <img class="mr-3 round-edge-img" src="assets/client-2.jpg" alt="">
+                                                <span class="">Peter Gorvian</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <img class="country-flag" src="assets/icons8-australia-48.png" alt="">
+                                            </td>
+                                            <td class="align-middle">11 Apr, 2022</td>
+                                            <td class="align-middle">8</td>
+                                            <td class="align-middle">$802</td>
+                                            <td class="align-middle">
+                                                <span class="badge warning-badge status-badge p-2">Approved</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Stock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                            </div>
+                                                            <span>Dispatch</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">BC-1393</td>
+                                            <td class="d-flex align-items-center align-middle">
+                                                <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
+                                                <span class="">Claire Anne</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <img class="country-flag" src="assets/icons8-usa-48.png" alt="">
+                                            </td>
+                                            <td class="align-middle">10 Apr, 2022</td>
+                                            <td class="align-middle">16</td>
+                                            <td class="align-middle">$9,154</td>
+                                            <td class="align-middle">
+                                                <span class="badge success-badge status-badge p-2">Delivered</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Stock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                            </div>
+                                                            <span>Dispatch</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">BC-0712</td>
+                                            <td class="d-flex align-items-center align-middle">
+                                                <img class="mr-3 round-edge-img" src="assets/client-4.jpg" alt="">
+                                                <span class="">Mitchy Mohammed</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <img class="country-flag" src="assets/icons8-canada-48.png" alt="">
+                                            </td>
+                                            <td class="align-middle">08 Apr, 2022</td>
+                                            <td class="align-middle">10</td>
+                                            <td class="align-middle">$1,239</td>
+                                            <td class="align-middle">
+                                                <span class="badge danger-badge status-badge p-2">rejected</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Stock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                            </div>
+                                                            <span>Dispatch</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">BC-1482</td>
+                                            <td class="d-flex align-items-center align-middle">
+                                                <img class="mr-3 round-edge-img" src="assets/client-5.jpg" alt="">
+                                                <span class="">Lee Maywather</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <img class="country-flag" src="assets/icons8-france-48.png" alt="">
+                                            </td>
+                                            <td class="align-middle">01 Apr, 2022</td>
+                                            <td class="align-middle">4</td>
+                                            <td class="align-middle">$20,239</td>
+                                            <td class="align-middle">
+                                                <span class="badge primary-badge status-badge p-2">pending</span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Stock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                            </div>
+                                                            <span>Dispatch</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 mb-4 order-0 order-lg-1">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">delivered</span>
+                                            <h3 class="mb-0">257,901</h3>
+                                        </div>
+                                        <a href="orders.html" class="muted-link p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">rejected</span>
+                                            <h3 class="mb-0">3,075</h3>
+                                        </div>
+                                        <a href="orders.html" class="muted-link p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">pending</span>
+                                            <h3 class="mb-0">49,901</h3>
+                                        </div>
+                                        <a href="orders.html" class="muted-link p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-edges d-flex flex-column justify-content-center p-3 flex-fill">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <span class="text-muted mid-size-text">approved</span>
+                                            <h3 class="mb-0">89,419</h3>
+                                        </div>
+                                        <a href="orders.html" class="muted-link p-2">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+                                    <h6 class="text-muted mb-4">Top customers</h6>
+                                    <a class="btn primary-btn py-1" href="customers.html">view all</a>
+                                </div>
+                                <div class="row product-images-container mb-0">
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between align-items-center p-2">
+                                            <div class="d-flex align-items-center">
+                                                <img class="mr-3 round-edge-img" src="assets/client-3.jpg" alt="">
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Mitchy Mohammed</h6>
+                                                    <div class="d-flex small">
+                                                        <span class="text-secondary mr-1">Orders:</span>
+                                                        <span class="text-secondary">432</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-lg text-secondary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between align-items-center p-2">
+                                            <div class="d-flex align-items-center">
+                                                <img class="mr-3 round-edge-img" src="assets/client-5.jpg" alt="">
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Lee Mayweather</h6>
+                                                    <div class="d-flex small">
+                                                        <span class="text-secondary mr-1">Orders:</span>
+                                                        <span class="text-secondary">407</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-lg text-secondary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between align-items-center p-2">
+                                            <div class="d-flex">
+                                                <img class="mr-3 round-edge-img" src="assets/client-9.jpg" alt="">
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Wavy so Wavy</h6>
+                                                    <div class="d-flex small">
+                                                        <span class="text-secondary mr-1">Orders:</span>
+                                                        <span class="text-secondary">213</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class="fa-solid fa-award fa-lg text-secondary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb-4">
+                                        <div class="pale-bg d-flex justify-content-between align-items-center p-2">
+                                            <div class="d-flex">
+                                                <img class="mr-3 round-edge-img" src="assets/client-6.jpg" alt="">
+                                                <div class="d-flex flex-column mr-1 mr-md-0">
+                                                    <h6 class="font-weight-bold">Precious Claire</h6>
+                                                    <div class="d-flex small">
+                                                        <span class="text-secondary mr-1">Orders:</span>
+                                                        <span class="text-secondary">110</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class="fa-solid fa-award fa-lg text-secondary"></i>
+                                        </div>
+                                    </div>
+                                </div>               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-muted mt-4 align-items-center footer-content">
+                        <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-start">
+                            <span class="mb-2">Designed By Bryan Mwaniki</span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-end">
+                            <span class="copyright mb-2">© Copyright Bait Themes 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="js/jquery-jvectormap-2.0.5.min.js"></script>
+        <script src="js/jquery-jvectormap-world-merc.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/charts.js"></script>
+        <script>
+            $(function () {
+                $('#sales-map').vectorMap({
+                    map: 'world_merc',
+                    backgroundColor: 'white',
+                    regionStyle: {
+                        initial: {
+                            fill: '#dadada',
+                            "fill-opacity": 1,
+                            stroke: 'none',
+                            "stroke-width": 0,
+                            "stroke-opacity": 1
+                        },
+                        hover: {
+                            "fill-opacity": 0.8,
+                            cursor: 'pointer'
+                        },
+                        selected: {
+                            fill: 'yellow'
+                        },
+                        selectedHover: {
+                        }
+                    },
+                    markers: [
+                        { latLng: [40.09, -95.71], name: 'USA' },
+                        { latLng: [-14.24, -51.93], name: 'Brazil' },
+                        { latLng: [41.90, 12.45], name: 'Italy' },
+                        { latLng: [61.52, 105.32], name: 'Russia' },
+                        { latLng: [0.02, 37.91], name: 'Kenya' },
+                        { latLng: [-25.52, 133.77], name: 'Australia' }
+                    ],
+                    markerStyle: {
+                        initial: {
+                            fill: '#6630e6',
+                            stroke: '#6630e6',
+                            "fill-opacity": 1,
+                            "stroke-width": 7,
+                            "stroke-opacity": 0.4,
+                            r: 7
+                        },
+                        hover: {
+                            fill: '#6630e6',
+                            stroke: '#6630e6',
+                            "stroke-width": 12,
+                            cursor: 'pointer'
+                        }
+                    }
+                });
+            });
+            
+        </script>
+    </body>
+</html>

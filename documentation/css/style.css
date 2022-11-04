@@ -1,0 +1,129 @@
+:root{
+    /* Theme colors */
+    --primary-color: #6630e6;
+    --secondary-color: #ff0077;
+    --text-color: #2c2c2c;
+    --body-color: #f4f4f8;
+    --success-color: #00cece;
+}
+*{
+    color: var(--text-color);
+}
+a{
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    text-decoration: none;
+}
+.mid-size-text{
+    font-size: 0.95rem;
+}
+body{
+    background-color: var(--body-color);
+}
+.main-container{
+    display: flex;
+    overflow-x: hidden;
+}
+.sidebar{
+    background-color: var(--primary-color);
+    min-width: 220px;
+    max-width: 220px;
+    padding: 0 0.6rem;
+    position: fixed;
+    height: 100%;
+    margin-left: 0px;
+    transition: all ease .2s;
+    z-index: 2;
+}
+.sidebar .nav-link{
+    width: 100%;
+    text-align: left;
+    border-width: 0;
+    border-radius: 0.25rem;
+    margin-bottom: 0.4rem;
+    color: #fff;
+    background-color: transparent;
+    font-size: 0.95rem;
+}
+.sidebar .nav-link:hover{
+    background-color: #fff;
+    color: var(--primary-color);
+}
+.sidebar .nav-link.active{
+    background-color: #fff;
+    color: var(--primary-color);
+}
+.logo-container{
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#souk-full-logo{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+    margin-left: 220px;
+    transition: all ease .2s;
+}
+.toggler-container{
+    padding: 12px 0px;
+    display: none;
+}
+.toggler-container i{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    .content{
+        padding-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sidebar{
+        margin-left: -222px; 
+        transition: all ease .2s;
+    }
+    .sidebar.active-sidebar{
+        margin-left: 0px;
+        transition: all ease .2s;
+    }
+    .content{ 
+        margin-left: 0px;
+    }
+    .toggler-container{
+        padding: 12px 0px;
+        display: block;
+    }
+}
+#documentation-content{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 2rem;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.3);
+  }
+  .overlay.enabled {
+    display: initial;
+}
+code {
+    background-color: #eee;
+    display: block;
+    overflow-x: hidden;
+    border-radius: 4px;
+}
+pre{
+    padding: 3px 8px;
+}
