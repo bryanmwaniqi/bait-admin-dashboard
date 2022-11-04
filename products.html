@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Souk | E-commerce admin dashboard">
+    <meta name="author" content="Bait themes Bryan Mwaniki">
+    <meta name="keywords" content="admin, ecommerce, analytics, dashboard, bootstrap admin template, ecommerce backend, HTML5 admin dashboard template, admin dashboard UI">
+    <title> Souk | Products catalog</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/souk-purple.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- font awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- DataTables Bootstrap styling integration -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/dataTables.bootstrap4.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-color">
+
+    <!-- main navbar section -->
+    <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
+        <!-- sm screen and below sidemenu toggler -->
+        <button id="sideMenuToggler" class="btn d-lg-none" type="button">
+            <i class="fas fa-bars text-purple"></i>
+        </button>
+        <ul class="navbar-nav toggler-nav active mt-lg-0">
+            <li class="nav-item d-flex align-items-center">
+                <a href="orders.html" class="btn primary-btn rounded-btn track-btn ml-2">Track Order</a>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-sm-flex align-items-center d-none">
+                    <div class="nav-link d-flex align-items-center">
+                        <span class="form-icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" id="search-input" class="form-control round-input" autocomplete="on"
+                            placeholder="Search...">
+                    </div>
+                </li>
+                <li class="nav-item d-sm-none align-items-center d-flex">
+                    <a class="nav-link d-flex align-items-center" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                <li id="language" class="nav-item d-flex align-items-center dropdown">
+                    <a class="nav-link d-flex align-items-center" href="#" id="languagesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
+                    </a>
+                    <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="languagesDropdown">
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <img src="assets/icons8-usa-48.png" alt="" class="country-flag mr-3">
+                            <span>English</span>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <img src="assets/icons8-spain-flag-48.png" alt="" class="country-flag mr-3">
+                            <span>Spanish</span>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="login.html">
+                            <img src="assets/icons8-france-48.png" alt="" class="country-flag mr-3">
+                            <span>French</span>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="login.html">
+                            <img src="assets/icons8-germany-48.png" alt="" class="country-flag mr-3">
+                            <span>German</span>
+                        </a>
+                    </div>
+                </li>
+                <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
+                    <a class="nav-link d-flex align-items-center" href="#" id="entityAdditionDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="entityAdditionDropdown">
+                        <a class="dropdown-item d-flex align-items-center" href="add-product.html">
+                            <i class="fas fa-cog fa-sm mr-3"></i>
+                            <span>Add New Product</span>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="add-customer.html">
+                            <i class="fas fa-user fa-sm mr-3"></i>
+                            <span>Add New Customer</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item notification d-flex align-items-center dropdown">
+                    <a id="notificationsDropdown" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown"
+                        role="button" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge badge-pill notification-badge">4</span>
+                    </a>
+                    <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+                        <div
+                            class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 primary-bg">
+                            <span class="text-white">Notifications</span>
+                            <div>
+                                <span class="badge badge-pill bg-pink text-white">4 New</span>
+                            </div>
+                        </div>
+                        <div class="notification-list">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="notification-icons-wrapper mr-4">
+                                    <i class="fas text-warning fa-chart-area w-100 mb-2"></i>
+                                </div>
+                                <div class="d-flex text-wrap flex-column">
+                                    <span class="font-weight-bold text-muted mb-1 mt-2">You're low on stock</span>
+                                    <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Quos, ducimus.</span>
+                                    <p class="small text-muted">1 hour ago</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="notification-icons-wrapper mr-4">
+                                    <i class="fas fa-bullseye text-success mb-2"></i>
+                                </div>
+                                <div class="d-flex text-wrap flex-column">
+                                    <span class="font-weight-bold text-muted mb-1">Cosmetics sales target hit</span>
+                                    <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Quos, ducimus.</span>
+                                    <p class="small text-muted">1 hour ago</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center mb-0" href="#">
+                                <div class="notification-icons-wrapper mr-4">
+                                    <i class="fas fa-file-invoice-dollar text-danger mb-2"></i>
+                                </div>
+                                <div class="d-flex text-wrap flex-column">
+                                    <span class="font-weight-bold text-muted mb-1">Overdelayed order</span>
+                                    <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Quos, ducimus.</span>
+                                    <p class="small text-muted">2 days ago</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-divider my-0"></div>
+                        <a class="dropdown-item d-flex justify-content-center align-items-center notifications-link"
+                            href="inbox.html">
+                            <span class="">View More...</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="accountDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="profile-pic text-center">
+                            <img class="" src="assets/client-2.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right minimal-dropdown"
+                        aria-labelledby="accountDropdown">
+                        <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                            <i class="fas fa-user fa-sm mr-2"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                            <i class="fas fa-cog fa-sm mr-2"></i>
+                            <span>Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item d-flex align-items-center" href="login.html">
+                            <i class="fas fa-sign-out-alt mr-2"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of main navbar section -->
+
+    <div class="overlay"></div>
+
+    <!-- sidebar and main content -->
+    <div class="wrapper d-flex">
+        <div id="sidebar" class="">
+            <div class="sidemenu d-flex justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link logo-container" href="index.html">
+                            <img src="assets/souk-white.png" alt="souk logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-md fa-tachometer-alt"></i>
+                            <span class="menu-link">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">
+                            <i class="fas fa-md fa-clipboard-list"></i>
+                            <span class="menu-link">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html">
+                            <i class="fas fa-md fa-file-invoice-dollar"></i>
+                            <span class="menu-link">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customers.html">
+                            <i class="fas fa-md fa-users"></i>
+                            <span class="menu-link">Customers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analytics.html">
+                            <i class="fas fa-md fa-chart-area"></i>
+                            <span class="menu-link">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sales.html">
+                            <i class="fas fa-md fa-money-bill"></i>
+                            <span class="menu-link">sales</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inbox.html">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="menu-link">email</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="invoice.html">
+                            <i class="fas fa-store"></i>
+                            <span class="menu-link">Invoice</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container-fluid py-2">
+                <div class="row flex-column flex-md-row justify-content-center">
+                    <div class="col col-md-6 mb-4">
+                        <div class="bg-white h-100 rounded-edges p-3 d-flex align-items-center justify-content-between">
+                            <div class="d-flex flex-column">
+                                <h6 class="text-muted">Overall Stock</h6>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-xs danger-text fa-arrow-down mr-2"></i>
+                                    <span class="small text-muted">2.86%</span>
+                                </div>
+                            </div>
+                            <h5 class="font-weight-bold align-self-end">798,673</h5>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 mb-4">
+                        <div class="bg-white h-100 rounded-edges p-3 d-flex align-items-center justify-content-between">
+                            <div class="d-flex flex-column">
+                                <h6 class="text-muted">Total ordered Products</h6>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-xs success-text fa-arrow-up mr-2"></i>
+                                    <span class="small text-muted">0.90%</span>
+                                </div>
+                            </div>
+                            <h5 class="font-weight-bold align-self-end">325,671</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col mb-4">
+                        <div class="bg-white rounded-edges p-3 h-100">
+                            <h6 class="text-muted">Products Catalog</h6>
+
+                            <!-- Products table content -->
+                            <div class="d-flex justify-content-between align-items-stretch mt-3 flex-wrap">
+                                <form id="product-search" class="search-bar mb-2">
+                                    <input type="text" class="form-control primary-search" placeholder="Search...">
+                                    <button class="btn">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </form>
+                                <div class="btn-group mb-2 table-icons" role="group" aria-label="Table action icons">
+                                    <button type="button" class="btn pale-btn">
+                                        <i class="fa-solid fa-arrow-up-from-bracket mr-1"></i>
+                                    </button>
+                                    <button type="button" class="btn pale-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                    <button type="button" class="btn pale-btn">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <a href="add-product.html" class="btn pale-btn">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="products-table" class="d-flex flex-column">
+                                <table class="table table-responsive-sm table-borderless table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="align-middle">
+                                                <label for="all-products-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="all-products-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </th>
+                                            <th>Id</th>
+                                            <th>Product</th>
+                                            <th>Category</th>
+                                            <th>Price</th>
+                                            <th>Stock</th>
+                                            <th>Status</th>
+                                            <th>Rating</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="">
+                                                <label for="product-1-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-1-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/iphone.jpg" alt="">
+                                                <span class="">Iphone 6 pro-max 2015</span>
+                                            </td>
+                                            <td>Electronics</td>
+                                            <td>$120</td>
+                                            <td>47</td>
+                                            <td>
+                                                <span class="badge success-badge status-badge p-2">In
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-2-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-2-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/galaxy.jpg" alt="">
+                                                <span class="">Samsung Galaxy 6S</span>
+                                            </td>
+                                            <td>Electronics</td>
+                                            <td>$120</td>
+                                            <td>8</td>
+                                            <td>
+                                                <span class="badge warning-badge status-badge p-2">low
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs text-warning"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-3-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-3-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/lip-gloss.jpg" alt="">
+                                                <span class="">Matte Lip Gloss</span>
+                                            </td>
+                                            <td>Electronics</td>
+                                            <td>$120</td>
+                                            <td>1</td>
+                                            <td>
+                                                <span class="badge danger-badge status-badge p-2">Out of
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-4-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-4-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/hennessy-xo.jpg" alt="">
+                                                <span class="">Hennesy-xo 500ml</span>
+                                            </td>
+                                            <td>Cosmetics</td>
+                                            <td>$120</td>
+                                            <td>10</td>
+                                            <td>
+                                                <span class="badge warning-badge status-badge p-2">low
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-5-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-5-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/sneakers.jpg" alt="">
+                                                <span class="">Nike Air sneakers</span>
+                                            </td>
+                                            <td>Fashion</td>
+                                            <td>$120</td>
+                                            <td>52</td>
+                                            <td>
+                                                <span class="badge success-badge status-badge p-2">In
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-6-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-6-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/headphones.jpg" alt="">
+                                                <span class="">Beats by dre</span>
+                                            </td>
+                                            <td>Electronics</td>
+                                            <td>$13</td>
+                                            <td>26</td>
+                                            <td>
+                                                <span class="badge success-badge status-badge p-2">In
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked text-warning"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-7-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-7-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/makeup-kit.jpg" alt="">
+                                                <span class="">Reu Makeup Kit</span>
+                                            </td>
+                                            <td>Cosmetics</td>
+                                            <td>$85</td>
+                                            <td>18</td>
+                                            <td>
+                                                <span class="badge warning-badge status-badge p-2">In
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-8-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-8-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/imac.jpg" alt="">
+                                                <span class="">Apple imac</span>
+                                            </td>
+                                            <td>Electronics</td>
+                                            <td>$699</td>
+                                            <td>4</td>
+                                            <td>
+                                                <span class="badge danger-badge status-badge p-2">Out of
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-9-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-9-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/bracelet.jpg" alt="">
+                                                <span class="">Maasai Bracelet</span>
+                                            </td>
+                                            <td>Art Crafts</td>
+                                            <td>$8</td>
+                                            <td>26</td>
+                                            <td>
+                                                <span class="badge success-badge status-badge p-2">In
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="product-10-check"
+                                                    class="checkbox-group d-flex align-items-center">
+                                                    <input type="checkbox" id="product-10-check"
+                                                        class="default-checkbox">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center custom-checkbox">
+                                                    </div>
+                                                </label>
+                                            </td>
+                                            <td>#0101</td>
+                                            <td>
+                                                <img class="mr-3 round-edge-img" src="assets/airforce.jpg" alt="">
+                                                <span class="">Nike Airforce</span>
+                                            </td>
+                                            <td>Fashion</td>
+                                            <td>$399</td>
+                                            <td>9</td>
+                                            <td>
+                                                <span class="badge warning-badge status-badge p-2">Low
+                                                    stock</span>
+                                            </td>
+                                            <td>
+                                                <div class="rating py-2 ">
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs checked  text-warning"></i>
+                                                    <i class="fas fa-star fa-xs"></i>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="dropdown dropup">
+                                                    <a class="d-flex align-items-center" href="#" role="button"
+                                                     data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas text-muted fa-ellipsis-h action-toggle"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                        <a class="dropdown-item d-flex align-items-center"
+                                                            href="product-info.html">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fa-solid fa-barcode"></i>
+                                                            </div>
+                                                            <span>Details</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-layer-group"></i>
+                                                            </div>
+                                                            <span>Restock</span>
+                                                        </a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </div>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- Pagination -->
+                                <div class="d-flex align-self-end my-2">
+                                    <div class="d-flex pagination">
+                                        <a href="#" class="d-flex align-items-center justify-content-center mr-3 previous">
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </a>
+                                        <div class="page-numbers d-flex align-items-center">
+                                            <span class="active mr-3">1</span>
+                                            <span class="mr-3">2</span>
+                                            <span class="mr-3">3</span>
+                                            <span class="mr-3">4</span>
+                                        </div>
+                                        <a href="#" class="d-flex align-items-center justify-content-center next">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-muted mt-4 align-items-center footer-content">
+                    <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-start">
+                        <span class="mb-2 mt-1">Designed By Bryan Mwaniki</span>
+                    </div>
+                    <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-end">
+                        <span class="copyright mb-2 mt-1">© Copyright Bait Themes 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

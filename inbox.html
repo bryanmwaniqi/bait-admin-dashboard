@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Souk | E-commerce admin dashboard">
+        <meta name="author" content="Bait themes Bryan Mwaniki">
+        <meta name="keywords" content="admin, ecommerce, analytics, dashboard, bootstrap admin template, ecommerce backend, HTML5 admin dashboard template, admin dashboard UI">
+        <title> Souk | Email App</title>
+
+        <!-- favicon -->
+        <link rel="icon" href="assets/souk-purple.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- fontawesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+        <!-- font awesome 6 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <!-- Quill Theme included stylesheets -->
+        <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="body-color">
+
+        <!-- main navbar section -->
+        <nav id="main-navbar" class="navbar fixed-top navbar-expand background-light bg-white">
+            <!-- sm screen and below sidemenu toggler -->
+            <button id="sideMenuToggler" class="btn d-lg-none" type="button">
+                <i class="fas fa-bars text-purple"></i>
+            </button>
+            <ul class="navbar-nav toggler-nav active mt-lg-0">
+                <li class="nav-item d-flex align-items-center">
+                    <a href="orders.html" class="btn primary-outline-btn rounded-btn track-btn ml-2">Track Order</a>
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-sm-flex align-items-center d-none">
+                        <div class="nav-link d-flex align-items-center">
+                            <span class="form-icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" id="search-input" class="form-control round-input" autocomplete="on" placeholder="Search...">
+                        </div>
+                    </li>
+                    <li class="nav-item d-sm-none align-items-center d-flex">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li id="language" class="nav-item d-flex align-items-center dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/icons8-usa-48.png" alt="" class="country-flag">
+                        </a>
+                        <div id="language-overview" class="dropdown-menu dropdown-menu-right" aria-labelledby="languagesDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <img src="assets/icons8-usa-48.png" alt="" class="country-flag mr-3">
+                                <span>English</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <img src="assets/icons8-spain-flag-48.png" alt="" class="country-flag mr-3">
+                                <span>Spanish</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <img src="assets/icons8-france-48.png" alt="" class="country-flag mr-3">
+                                <span>French</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <img src="assets/icons8-germany-48.png" alt="" class="country-flag mr-3">
+                                <span>German</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li id="entity-addition" class="nav-item d-flex align-items-center dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="entityAdditionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-plus-circle"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="entityAdditionDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="add-product.html">
+                                <i class="fas fa-cog fa-sm mr-3"></i>
+                                <span>Add New Product</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="add-customer.html">
+                                <i class="fas fa-user fa-sm mr-3"></i>
+                                <span>Add New Customer</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item notification d-flex align-items-center dropdown">
+                        <a id="notificationsDropdown" class="nav-link d-flex align-items-center" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-pill notification-badge">4</span>
+                        </a>
+                        <div id="notification-dropdown" class="py-0 dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+                            <div class="dropdown-header d-flex justify-content-between align-items-center py-2 px-2 primary-bg">
+                                <span class="text-white">Notifications</span>
+                                <div>
+                                    <span class="badge badge-pill bg-pink text-white">4 New</span>
+                                </div>
+                            </div>
+                            <div class="notification-list">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas text-warning fa-chart-area w-100 mb-2"></i> 
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1 mt-2">You're low on stock</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>                                    
+                                        <p class="small text-muted">1 hour ago</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas fa-bullseye text-success mb-2"></i>
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1">Cosmetics sales target hit</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>                                    
+                                        <p class="small text-muted">1 hour ago</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center mb-0" href="#">
+                                    <div class="notification-icons-wrapper mr-4">
+                                        <i class="fas fa-file-invoice-dollar text-danger mb-2"></i>
+                                    </div>
+                                    <div class="d-flex text-wrap flex-column">
+                                        <span class="font-weight-bold text-muted mb-1">Overdelayed order</span>
+                                        <span class="small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ducimus.</span>
+                                        <p class="small text-muted">2 days ago</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-divider my-0"></div>
+                            <a class="dropdown-item d-flex justify-content-center align-items-center notifications-link" href="#">
+                                <span class="">View More...</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="profile-pic text-center">
+                                <img class="" src="assets/client-2.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right minimal-dropdown" aria-labelledby="accountDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                                <i class="fas fa-user fa-sm mr-2"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                                <i class="fas fa-cog fa-sm mr-2"></i>
+                                <span>Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                                <i class="fas fa-sign-out-alt mr-2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of main navbar section -->
+        
+        <div class="overlay"></div>
+
+        <!-- sidebar and main content -->
+        <div class="wrapper d-flex">
+            <div id="sidebar" class="">
+                <div class="sidemenu d-flex justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link logo-container" href="index.html">
+                                <img src="assets/souk-white.png" alt="souk logo">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-md fa-tachometer-alt"></i> 
+                                <span class="menu-link">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                <i class="fas fa-md fa-clipboard-list"></i> 
+                                <span class="menu-link">Products</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="orders.html">
+                                <i class="fas fa-md fa-file-invoice-dollar"></i> 
+                                <span class="menu-link">Orders</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="customers.html">
+                                <i class="fas fa-md fa-users"></i> 
+                                <span class="menu-link">Customers</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="analytics.html">
+                                <i class="fas fa-md fa-chart-area"></i> 
+                                <span class="menu-link">Analytics</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sales.html">
+                                <i class="fas fa-md fa-money-bill"></i> 
+                                <span class="menu-link">sales</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="inbox.html">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="menu-link">email</span> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="invoice.html">
+                                <i class="fas fa-store"></i>
+                                <span class="menu-link">Invoice</span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div class="container-fluid py-2">
+                    <div class="row">
+                        <div class="col mb-4">
+                            <form id="email-search" class="email-search-bar bg-white w-100">
+                                <input type="text" class="form-control secondary-search" placeholder="Search in mail...">
+                                    <button class="btn email-search-btn d-flex align-items-center primary-solid-btn">
+                                        <i class="fas fa-search mr-2"></i>
+                                        Search
+                                    </button>
+                            </form>
+                        </div>    
+                    </div>
+                    <div class="row flex-column flex-md-row justify-content-center mb-4">
+                        <div class="col mb-4">
+                            <div class="bg-white rounded-edges p-3">
+                                <div class="row">
+                                    <div class="col col-md-3 d-flex flex-column">
+                                        <button id="compose" class="btn  secondary-btn d-flex justify-content-center align-items-center mb-3" data-toggle="modal" data-target="#composeModal">
+                                            <i class="fa-solid fa-sm fa-pen mr-2"></i>
+                                            Compose
+                                        </button>
+                                        
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="composeModal" tabindex="-1" role="dialog" aria-labelledby="compose" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:810px; max-height:650px;">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold text-secondary mid-size-text" id="composeTitle">New Message</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="form-group" id="receiver">
+                                                                <input type="email" class="form-control primary-input" id="receiverEmail" aria-describedby="receiverlabel" placeholder="">
+                                                                <span class="receiverlabel text-secondary">To:</span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control primary-input" id="exampleInputPassword1" placeholder="Subject">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="" name="message" id="messageEditor"></div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn primary-btn">
+                                                        <i class="fa-solid fa-paper-plane mr-2"></i>
+                                                        Send
+                                                    </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav id="email-nav" class="nav d-flex flex-column font-weight-bold mb-3">
+                                            <a href="#inbox" class="d-flex email-nav-item align-items-center active" id="inboxLabel" data-toggle="tab" role="button">
+                                                <i class="fa-solid fa-sm fa-inbox mr-2"></i>
+                                                <span class="mr-2">inbox</span> 
+                                                <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 success-bg text-white email-badge">6</span>
+                                            </a>
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="starredLabel" data-toggle="tab">
+                                                <i class="fas fa-sm fa-star mr-2"></i>
+                                                <span class="mr-2">starred</span>
+                                                <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-pink text-white email-badge">1</span> 
+                                            </a>
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="draftLabel" data-toggle="tab">
+                                                <i class="fa-solid fa-sm fa-file-lines mr-2"></i>
+                                                <span class="mr-2">draft</span> 
+                                            </a>
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="sentLabel" data-toggle="tab">
+                                                <i class="fa-solid fa-sm fa-paper-plane mr-2"></i>
+                                                <span class="mr-2">sent</span> 
+                                            </a>
+                                            <a href="#" class="d-flex email-nav-item align-items-center" id="spamLabel" data-toggle="tab">
+                                                <i class="fa-solid fa-sm fa-circle-exclamation mr-2"></i>
+                                                <span class="mr-2">spam</span> 
+                                                <span class="badge ml-auto d-flex align-items-center justify-content-center p-2 bg-warning text-white email-badge">2</span>
+                                            </a>
+                                        </nav>
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <h6 class="text-secondary">Labels</h6>
+                                                <i class="fas fa-plus-circle fa-md label-addition"></i>
+                                            </div>
+                                            <div class="d-flex align-items-center p-2">
+                                                <div class="label-tag label-1"></div>
+                                                <span class="text-secondary ">approvals</span>
+                                            </div>
+                                            <div class="d-flex align-items-center p-2">
+                                                <div class="label-tag label-2"></div>
+                                                <span class="text-secondary">sales</span>
+                                            </div>
+                                            <div class="d-flex align-items-center p-2">
+                                                <div class="label-tag label-3"></div>
+                                                <span class="text-secondary">integrations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-12">
+                                        <div id="email-tab">
+                                            <div class="email-actions d-flex justify-content-between align-items-center py-2">
+                                                <div class="d-flex align-items-center flex-wrap">
+                                                    <label for="all-emails" class="checkbox-group d-flex align-items-center mr-1">
+                                                        <input type="checkbox" id="all-emails" class="default-checkbox">
+                                                        <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                    </label>
+                                                    <div class="btn-group mb-2 mr-2 py-0" role="group" aria-label="Email action icons">
+                                                        <button type="button" class="btn pale-btn">
+                                                            <i class="fa-solid fa-bookmark"></i>
+                                                        </button>
+                                                        <button type="button" class="btn pale-btn">
+                                                            <i class="fa-solid fa-box-archive"></i>
+                                                        </button>
+                                                        <button type="button" class="btn pale-btn">
+                                                            <i class="fa-solid fa-envelope-open"></i>
+                                                        </button>
+                                                        <button class="btn pale-btn">
+                                                            <i class="fas fa-sm fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <span class="pagination-text mr-3 align-self-center d-none d-sm-block">1-11 of 50</span>
+                                                    <div class="d-flex email-pagination">
+                                                        <a href="#" class="d-flex align-items-center justify-content-center mr-3 previous">
+                                                            <i class="fa-solid fa-angle-left"></i>
+                                                        </a>
+                                                        <a href="#" class="d-flex align-items-center justify-content-center next">
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="inbox" role="tabpanel" aria-labelledby="inboxLabel">
+                                                    <ul class="email-list">
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-1" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-1" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-2" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-2" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Dolor ipsum et, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-3" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-3" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Kakum pepchut sit, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-4" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-4" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-5" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-5" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Sotyo marenain greta, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-6" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-6" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-7" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-7" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Pepkut fin comut, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-8" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-8" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-9" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-9" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Kakum pepchut sit, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-10" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-10" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Tough Steel</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <span class="email-item-date">Jun 4</span>
+                                                        </li>
+                                                        <li class="email-item d-flex align-items-center justify-content-between">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="email-11" class="checkbox-group d-flex align-items-center mr-1 mt-2">
+                                                                    <input type="checkbox" id="email-11" class="default-checkbox">
+                                                                    <div class="d-flex align-items-center justify-content-center custom-checkbox"></div>
+                                                                </label>
+                                                                <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                    <i class="star-toggle far fa-star"></i>
+                                                                </div>
+                                                                <span class="mr-md-3 mr-2 email-header font-weight-bold d-flex">Hop Scotch</span>
+                                                            </div>
+                                                                <span class="email-body mr-md-2">
+                                                                    Sotyo marenain greta, sit amet consectetur adipisicing elit. Voluptas, repudiandae deserunt.
+                                                                </span>
+                                                            <div class="email-icon-container d-flex align-items-center justify-content-center mr-3">
+                                                                <i class="fa-solid fa-paperclip"></i>
+                                                            </div>
+                                                            <span class="email-item-date">Jun 3</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="starred" role="tabpanel" aria-labelledby="starredLabel"></div>
+                                                <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draftLabel"></div>
+                                                <div class="tab-pane fade" id="sent" role="tabpanel" aria-labelledby="sentLabel"></div>
+                                                <div class="tab-pane fade" id="spam" role="tabpanel" aria-labelledby="spamLabel"></div>
+                                            </div>
+                                        </div>
+                                        <div id="read-email-tab" class=" d-none">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex py-2 px-1 align-items-center">
+                                                    <div id="back-to-email" class="email-icon-container mr-2 mr-md-2">
+                                                        <i class="fa-solid fa-arrow-left"></i>
+                                                    </div>
+                                                    <div class="btn-group mb-2 mr-2 py-0" role="group" aria-label="Email action icons">
+                                                        <button type="button" class="btn pale-btn">
+                                                            <i class="fa-solid fa-bookmark"></i>
+                                                        </button>
+                                                        <button type="button" class="btn pale-btn">
+                                                            <i class="fa-solid fa-box-archive"></i>
+                                                        </button>
+                                                        <button type="button" class="btn pale-btn">
+                                                            <i class="fa-solid fa-envelope-open"></i>
+                                                        </button>
+                                                        <button class="btn pale-btn">
+                                                            <i class="fas fa-sm fa-trash-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="d-flex ml-auto">
+                                                        <span class="pagination-text mr-3 align-self-center">3 of 50</span>
+                                                        <div class="d-flex email-pagination">
+                                                            <a href="#" class="d-flex align-items-center justify-content-center mr-3 previous">
+                                                                <i class="fa-solid fa-angle-left"></i>
+                                                            </a>
+                                                            <a href="#" class="d-flex align-items-center justify-content-center next">
+                                                                <i class="fa-solid fa-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center py-3 px-1 justify-content-between">
+                                                    <div class="d-flex flex-column">
+                                                        <h5 class="">Template #1523424 has been approved to webstore</h5>
+                                                        <div class="d-flex">
+                                                            <div class="d-flex align-items-center p-2">
+                                                                <div class="label-tag label-1"></div>
+                                                                <span class="text-secondary ">approvals</span>
+                                                            </div>
+                                                            <div class="d-flex align-items-center p-2">
+                                                                <div class="label-tag label-2"></div>
+                                                                <span class="text-secondary">sales</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn primary-btn d-sm-flex align-items-center d-none">
+                                                        <i class="fa-solid fa-print mr-md-1"></i>
+                                                        <span>print</span>
+                                                    </button>
+                                                </div>
+                                                <div class="py-2 px-2">
+                                                    <div id="accordion" class="email-accordion">
+                                                        <div class="card">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-1" data-toggle="collapse" data-target="#email-chat-1-collapse" aria-expanded="false" aria-controls="email-chat-1-collapse">
+                                                            <div class="d-flex">
+                                                                <img class="round-img mr-2" src="assets/client-3.jpg" alt="">
+                                                                <div class="d-flex flex-column">
+                                                                    <span class="text-muted">mitchymoh@envato.com</span>
+                                                                    <span class="text-muted small">to me cc: 12 others</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex ml-auto align-items-center">
+                                                                <div class="d-flex flex-column align-items-end mr-2">
+                                                                    <span class="small text-muted">jun 4, 2022</span>
+                                                                    <span class="small text-muted">9:03AM</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <div class="email-icon-container d-flex justify-content-center">
+                                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fa-solid fa-envelope-open"></i>
+                                                                            </div>
+                                                                            <span>Reply</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-paper-plane"></i>
+                                                                            </div>
+                                                                            <span>forward</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </div>
+                                                                            <span>Delete</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                      
+                                                          <div id="email-chat-1-collapse" class="collapse" aria-labelledby="email-chat-1" data-parent="#accordion">
+                                                            <div class="card-body email-chat text-secondary">
+                                                                <span>Dear Brian,</span> <br> 
+                                                                <span class="mt-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, harum?</span> <br>
+                                                                <span>Regards,</span> <br>
+                                                                <span>Mitchy Moh</span>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="card">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-2" data-toggle="collapse" data-target="#email-chat-2-collapse" aria-expanded="false" aria-controls="email-chat-2-collapse">
+                                                            <div class="d-flex">
+                                                                <img class="round-img mr-2" src="assets/avatar.jpg" alt="">
+                                                                <div class="d-flex flex-column">
+                                                                    <span class="text-muted">neybait@bait.com</span>
+                                                                    <span class="text-muted small">to mitchymoh@envato.com</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex ml-auto align-items-center">
+                                                                <div class="d-flex flex-column align-items-end mr-2">
+                                                                    <span class="small text-muted">jun 4, 2022</span>
+                                                                    <span class="small text-muted">9:03AM</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <div class="email-icon-container d-flex justify-content-center">
+                                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-paper-plane"></i>
+                                                                            </div>
+                                                                            <span>forward</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </div>
+                                                                            <span>Delete</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                          <div id="email-chat-2-collapse" class="collapse" aria-labelledby="email-chat-2" data-parent="#accordion">
+                                                            <div class="card-body email-chat text-secondary">
+                                                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="card">
+                                                          <div class="card-header d-flex align-items-center" id="email-chat-3" data-toggle="collapse" data-target="#email-chat-3-collapse" aria-expanded="true" aria-controls="email-chat-3-collapse">
+                                                            <div class="d-flex">
+                                                                <img class="round-img mr-2" src="assets/client-3.jpg" alt="">
+                                                                <div class="d-flex flex-column">
+                                                                    <span class="text-muted">mitchymoh@envato.com</span>
+                                                                    <span class="text-muted small">to me cc: 12 others</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex ml-auto align-items-center">
+                                                                <div class="d-flex flex-column align-items-end mr-2">
+                                                                    <span class="small text-muted">jun 4, 2022</span>
+                                                                    <span class="small text-muted">9:03AM</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <a class="d-flex align-items-center" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        <div class="email-icon-container d-flex justify-content-center">
+                                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right action-dropdown">
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fa-solid fa-envelope-open"></i>
+                                                                            </div>
+                                                                            <span>Reply</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-paper-plane"></i>
+                                                                            </div>
+                                                                            <span>forward</span>
+                                                                        </a>
+                                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                                            <div class="action-icon mr-1 d-flex align-items-center">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </div>
+                                                                            <span>Delete</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                          <div id="email-chat-3-collapse" class="collapse show" aria-labelledby="email-chat-3" data-parent="#accordion">
+                                                            <div class="card-body email-chat text-secondary">
+                                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                                <button class="btn primary-btn d-flex align-items-center mt-4">
+                                                                    <i class="fa-solid fa-reply mr-2"></i>
+                                                                    <span>reply</span>
+                                                                </button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-md-row justify-content-center">
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                    </div>
+                    <div class="row text-muted mt-4 align-items-center footer-content">
+                        <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-start">
+                            <span class="mb-2 mt-1">Designed By Bryan Mwaniki</span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex justify-content-center justify-content-sm-end">
+                            <span class="copyright mb-2 mt-1">© Copyright Bait Themes 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            var quill = new Quill('#messageEditor', {
+                theme: 'snow'
+            });
+        </script>
+    </body>
+</html>
