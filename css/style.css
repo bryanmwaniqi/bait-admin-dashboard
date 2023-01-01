@@ -156,6 +156,15 @@ img{
 form i{
     color: #3f3f3f;
 }
+.page-numbers{
+    color: #858585;
+}
+.page-numbers span{
+    cursor: pointer;
+}
+.page-numbers span.active{
+    color: var(--primary-color);
+}
 .primary-input{
     background-color: var(--body-color);
     border: none;
