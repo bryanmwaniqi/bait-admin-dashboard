@@ -7,9 +7,11 @@ operational or analytical, which are very critical, especially in this data driv
 
 ## Docker version
 
+```
 docker image pull bryanney/bait-admin-dashboard:latest
 
 docker container run -p 8080:80 bryanney/bait-admin-dashboard:latest
+```
 
 ## Project Demo Link
 
