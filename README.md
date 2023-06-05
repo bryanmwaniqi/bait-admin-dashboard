@@ -5,6 +5,12 @@
 A user-friendly HTML5 admin dashboard UI to serve as a management platform for visualizing data pertaining to your enterprise, be it
 operational or analytical, which are very critical, especially in this data driven era.
 
+## Docker version
+
+docker image pull bryanney/bait-admin-dashboard:latest
+
+docker container run -p 8080:80 bryanney/bait-admin-dashboard:latest
+
 ## Project Demo Link
 
 [Souk admin dashboard link](http://www.souk.baitthemes.com/)
